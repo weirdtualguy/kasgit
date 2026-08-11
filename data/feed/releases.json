@@ -1,5 +1,470 @@
 {
-  "generatedAt": null,
+  "generatedAt": "2026-08-11T09:52:45.983607+00:00",
   "lookbackDays": 180,
-  "releases": []
+  "releases": [
+    {
+      "repo": "kaspanet/kaspa-python-sdk",
+      "name": "2.0.2rc1",
+      "tag": "v2.0.2.rc1",
+      "publishedAt": "2026-07-23T13:07:56Z",
+      "url": "https://github.com/kaspanet/kaspa-python-sdk/releases/tag/v2.0.2.rc1",
+      "prerelease": true
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.59.0",
+      "tag": "v2.59.0",
+      "publishedAt": "2026-07-13T05:33:53Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.59.0",
+      "prerelease": false
+    },
+    {
+      "repo": "bzminer/bzminer",
+      "name": "BzMiner v25.0.1b2 BETA",
+      "tag": "v25.0.1b2",
+      "publishedAt": "2026-07-10T19:35:29Z",
+      "url": "https://github.com/bzminer/bzminer/releases/tag/v25.0.1b2",
+      "prerelease": false
+    },
+    {
+      "repo": "bzminer/bzminer",
+      "name": "BzMiner v25.0.1b1 BETA",
+      "tag": "v25.0.1b1",
+      "publishedAt": "2026-07-09T23:34:16Z",
+      "url": "https://github.com/bzminer/bzminer/releases/tag/v25.0.1b1",
+      "prerelease": false
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.58.1",
+      "tag": "v2.58.1",
+      "publishedAt": "2026-07-07T08:19:20Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.58.1",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspa-ng/kaspa-rest-server",
+      "name": "v2.3.0",
+      "tag": "v2.3.0",
+      "publishedAt": "2026-07-06T17:40:43Z",
+      "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.3.0",
+      "prerelease": false
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.58.0",
+      "tag": "v2.58.0",
+      "publishedAt": "2026-07-03T09:02:28Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.58.0",
+      "prerelease": false
+    },
+    {
+      "repo": "bzminer/bzminer",
+      "name": "BzMiner v25.0.0b9 BETA",
+      "tag": "v25.0.0b9",
+      "publishedAt": "2026-07-01T19:32:15Z",
+      "url": "https://github.com/bzminer/bzminer/releases/tag/v25.0.0b9",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspa-ng/kaspa-rest-server",
+      "name": "v2.2.3",
+      "tag": "v2.2.3",
+      "publishedAt": "2026-06-30T09:19:01Z",
+      "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.2.3",
+      "prerelease": false
+    },
+    {
+      "repo": "aspectron/kaspa-ng",
+      "name": "2.0.1 - 2026-06-29 - Toccata",
+      "tag": "v2.0.1",
+      "publishedAt": "2026-06-29T13:17:54Z",
+      "url": "https://github.com/aspectron/kaspa-ng/releases/tag/v2.0.1",
+      "prerelease": false
+    },
+    {
+      "repo": "bzminer/bzminer",
+      "name": "BzMiner v25.0.0b8 BETA",
+      "tag": "v25.0.0b8",
+      "publishedAt": "2026-06-27T00:44:54Z",
+      "url": "https://github.com/bzminer/bzminer/releases/tag/v25.0.0b8",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspa-ng/kaspa-rest-server",
+      "name": "v2.2.0",
+      "tag": "v2.2.0",
+      "publishedAt": "2026-06-23T20:54:49Z",
+      "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.2.0",
+      "prerelease": false
+    },
+    {
+      "repo": "kasplex/go-krc20d",
+      "name": "for-docker-compose-kaspad-2.0.1-only",
+      "tag": "docker-compose-kaspad-2.0.1",
+      "publishedAt": "2026-06-22T09:11:24Z",
+      "url": "https://github.com/kasplex/go-krc20d/releases/tag/docker-compose-kaspad-2.0.1",
+      "prerelease": false
+    },
+    {
+      "repo": "bzminer/bzminer",
+      "name": "BzMiner v25.0.0b7 BETA",
+      "tag": "v25.0.0b7",
+      "publishedAt": "2026-06-22T00:57:04Z",
+      "url": "https://github.com/bzminer/bzminer/releases/tag/v25.0.0b7",
+      "prerelease": true
+    },
+    {
+      "repo": "kaspanet/kaspa-python-sdk",
+      "name": "2.0.1",
+      "tag": "v2.0.1",
+      "publishedAt": "2026-06-18T13:06:52Z",
+      "url": "https://github.com/kaspanet/kaspa-python-sdk/releases/tag/v2.0.1",
+      "prerelease": false
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.57.0",
+      "tag": "v2.57.0",
+      "publishedAt": "2026-06-18T11:24:19Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.57.0",
+      "prerelease": false
+    },
+    {
+      "repo": "bzminer/bzminer",
+      "name": "BzMiner v25.0.0b6 BETA",
+      "tag": "v25.0.0b6",
+      "publishedAt": "2026-06-17T22:41:11Z",
+      "url": "https://github.com/bzminer/bzminer/releases/tag/v25.0.0b6",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspanet/kaspa-python-sdk",
+      "name": "2.0.0",
+      "tag": "v2.0.0",
+      "publishedAt": "2026-06-17T12:38:01Z",
+      "url": "https://github.com/kaspanet/kaspa-python-sdk/releases/tag/v2.0.0",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspanet/rusty-kaspa",
+      "name": "Mainnet Toccata Release - v2.0.1",
+      "tag": "v2.0.1",
+      "publishedAt": "2026-06-15T19:14:22Z",
+      "url": "https://github.com/kaspanet/rusty-kaspa/releases/tag/v2.0.1",
+      "prerelease": false
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.56.0",
+      "tag": "v2.56.0",
+      "publishedAt": "2026-06-15T10:53:16Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.56.0",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspanet/rusty-kaspa",
+      "name": "Mainnet Toccata Release - v2.0.0",
+      "tag": "v2.0.0",
+      "publishedAt": "2026-06-05T12:09:13Z",
+      "url": "https://github.com/kaspanet/rusty-kaspa/releases/tag/v2.0.0",
+      "prerelease": false
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.55.0",
+      "tag": "v2.55.0",
+      "publishedAt": "2026-06-05T10:29:21Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.55.0",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspanet/kaspad",
+      "name": "v0.12.23",
+      "tag": "v0.12.23",
+      "publishedAt": "2026-06-05T09:05:27Z",
+      "url": "https://github.com/kaspanet/kaspad/releases/tag/v0.12.23",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspanet/rusty-kaspa",
+      "name": "v1.3.0-toc.5",
+      "tag": "v1.3.0-toc.5",
+      "publishedAt": "2026-06-03T13:34:34Z",
+      "url": "https://github.com/kaspanet/rusty-kaspa/releases/tag/v1.3.0-toc.5",
+      "prerelease": true
+    },
+    {
+      "repo": "bzminer/bzminer",
+      "name": "BzMiner v25.0.0b2 BETA",
+      "tag": "v25.0.0b2",
+      "publishedAt": "2026-05-30T16:49:48Z",
+      "url": "https://github.com/bzminer/bzminer/releases/tag/v25.0.0b2",
+      "prerelease": true
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.54.2",
+      "tag": "v2.54.2",
+      "publishedAt": "2026-05-29T10:26:58Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.54.2",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspanet/kaspad",
+      "name": "toc-prep",
+      "tag": "toc-prep",
+      "publishedAt": "2026-05-27T20:17:49Z",
+      "url": "https://github.com/kaspanet/kaspad/releases/tag/toc-prep",
+      "prerelease": true
+    },
+    {
+      "repo": "kaspanet/rusty-kaspa",
+      "name": "tn10-toc3",
+      "tag": "tn10-toc3",
+      "publishedAt": "2026-05-27T19:04:15Z",
+      "url": "https://github.com/kaspanet/rusty-kaspa/releases/tag/tn10-toc3",
+      "prerelease": true
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.54.1",
+      "tag": "v2.54.1",
+      "publishedAt": "2026-05-20T08:32:58Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.54.1",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspanet/rusty-kaspa",
+      "name": "tn10-toc2",
+      "tag": "tn10-toc2",
+      "publishedAt": "2026-05-16T19:09:09Z",
+      "url": "https://github.com/kaspanet/rusty-kaspa/releases/tag/tn10-toc2",
+      "prerelease": true
+    },
+    {
+      "repo": "kaspa-ng/kaspa-rest-server",
+      "name": "v2.1.6",
+      "tag": "v2.1.6",
+      "publishedAt": "2026-05-09T19:41:41Z",
+      "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.1.6",
+      "prerelease": false
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.54.0",
+      "tag": "v2.54.0",
+      "publishedAt": "2026-05-06T09:51:32Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.54.0",
+      "prerelease": false
+    },
+    {
+      "repo": "bzminer/bzminer",
+      "name": "BzMiner v24.0.2",
+      "tag": "v24.0.2",
+      "publishedAt": "2026-04-29T17:10:48Z",
+      "url": "https://github.com/bzminer/bzminer/releases/tag/v24.0.2",
+      "prerelease": false
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.53.0",
+      "tag": "v2.53.0",
+      "publishedAt": "2026-04-23T10:33:10Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.53.0",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspa-ng/kaspa-rest-server",
+      "name": "v2.1.5",
+      "tag": "v2.1.5",
+      "publishedAt": "2026-04-22T18:10:52Z",
+      "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.1.5",
+      "prerelease": false
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.52.0",
+      "tag": "v2.52.0",
+      "publishedAt": "2026-04-20T12:22:58Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.52.0",
+      "prerelease": false
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.51.0",
+      "tag": "v2.51.0",
+      "publishedAt": "2026-04-17T08:20:36Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.51.0",
+      "prerelease": false
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.50.0",
+      "tag": "v2.50.0",
+      "publishedAt": "2026-04-16T11:57:00Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.50.0",
+      "prerelease": false
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.49.0",
+      "tag": "v2.49.0",
+      "publishedAt": "2026-04-16T08:22:13Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.49.0",
+      "prerelease": false
+    },
+    {
+      "repo": "kasplex/go-krc20d",
+      "name": "krc20d-3.01.260412",
+      "tag": "krc20d-3.01.260412",
+      "publishedAt": "2026-04-12T12:24:18Z",
+      "url": "https://github.com/kasplex/go-krc20d/releases/tag/krc20d-3.01.260412",
+      "prerelease": false
+    },
+    {
+      "repo": "kasplex/go-krc20d",
+      "name": "krc20d-3.01.260403",
+      "tag": "krc20d-3.01.260403",
+      "publishedAt": "2026-04-09T07:23:19Z",
+      "url": "https://github.com/kasplex/go-krc20d/releases/tag/krc20d-3.01.260403",
+      "prerelease": false
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.48.0",
+      "tag": "v2.48.0",
+      "publishedAt": "2026-04-08T11:04:52Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.48.0",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspa-ng/kaspa-rest-server",
+      "name": "v2.1.4",
+      "tag": "v2.1.4",
+      "publishedAt": "2026-03-30T15:53:36Z",
+      "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.1.4",
+      "prerelease": false
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.47.0",
+      "tag": "v2.47.0",
+      "publishedAt": "2026-03-30T11:12:46Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.47.0",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspa-ng/kaspa-rest-server",
+      "name": "v2.1.3",
+      "tag": "v2.1.3",
+      "publishedAt": "2026-03-29T13:03:36Z",
+      "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.1.3",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspanet/rusty-kaspa",
+      "name": "musl cross-compilation toolchain",
+      "tag": "musl-toolchain-v1",
+      "publishedAt": "2026-03-27T12:10:25Z",
+      "url": "https://github.com/kaspanet/rusty-kaspa/releases/tag/musl-toolchain-v1",
+      "prerelease": false
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.46.0",
+      "tag": "v2.46.0",
+      "publishedAt": "2026-03-27T10:09:31Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.46.0",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspa-ng/kaspa-rest-server",
+      "name": "v2.1.2",
+      "tag": "v2.1.2",
+      "publishedAt": "2026-03-26T07:56:54Z",
+      "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.1.2",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspa-ng/kaspa-rest-server",
+      "name": "v2.1.1",
+      "tag": "v2.1.1",
+      "publishedAt": "2026-03-24T08:06:22Z",
+      "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.1.1",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspa-ng/kaspa-rest-server",
+      "name": "v2.1.0",
+      "tag": "v2.1.0",
+      "publishedAt": "2026-03-18T07:34:22Z",
+      "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.1.0",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspa-ng/kaspa-rest-server",
+      "name": "v2.0.1",
+      "tag": "v2.0.1",
+      "publishedAt": "2026-03-17T21:01:24Z",
+      "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.0.1",
+      "prerelease": false
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.45.0",
+      "tag": "v2.45.0",
+      "publishedAt": "2026-03-06T07:47:39Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.45.0",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspanet/kaspa-python-sdk",
+      "name": "1.1.0",
+      "tag": "v1.1.0",
+      "publishedAt": "2026-03-04T22:19:13Z",
+      "url": "https://github.com/kaspanet/kaspa-python-sdk/releases/tag/v1.1.0",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspanet/rusty-kaspa",
+      "name": "Release v1.1.0",
+      "tag": "v1.1.0",
+      "publishedAt": "2026-03-04T15:04:45Z",
+      "url": "https://github.com/kaspanet/rusty-kaspa/releases/tag/v1.1.0",
+      "prerelease": false
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.44.0",
+      "tag": "v2.44.0",
+      "publishedAt": "2026-03-02T08:19:00Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.44.0",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspa-ng/kaspa-rest-server",
+      "name": "v2.0.0",
+      "tag": "v2.0.0",
+      "publishedAt": "2026-03-01T09:30:53Z",
+      "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.0.0",
+      "prerelease": false
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.43.2",
+      "tag": "v2.43.2",
+      "publishedAt": "2026-02-26T08:37:58Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.43.2",
+      "prerelease": false
+    },
+    {
+      "repo": "bzminer/bzminer",
+      "name": "BzMiner v24.0.1",
+      "tag": "v24.0.1",
+      "publishedAt": "2026-02-16T21:24:54Z",
+      "url": "https://github.com/bzminer/bzminer/releases/tag/v24.0.1",
+      "prerelease": false
+    }
+  ]
 }

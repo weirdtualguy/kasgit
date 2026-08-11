@@ -1,13 +1,22 @@
 {
-  "generatedAt": null,
-  "orgs": [],
-  "extraTargetOrgTypes": ["company-affiliated", "community org"],
-  "verifiedTargetCount": 0,
-  "repoCount": 0,
-  "starsCaptured": 0,
+  "generatedAt": "2026-08-11T09:52:45.983607+00:00",
+  "orgs": [
+    "kaspanet"
+  ],
+  "extraTargetOrgTypes": [
+    "company-affiliated",
+    "community org"
+  ],
+  "verifiedTargetCount": 1,
+  "repoCount": 37,
+  "starsCaptured": 37,
   "starHistoryBackfills": 0,
-  "releaseFeedItems": 0,
-  "failed": [],
+  "releaseFeedItems": 58,
+  "contributorsCaptured": 52,
+  "failed": [
+    "kaspanet/big-test-data",
+    "kaspanet/ghostdag-prototype"
+  ],
   "lookbackDays": 400,
-  "status": "not-yet-run"
+  "status": "ok"
 }

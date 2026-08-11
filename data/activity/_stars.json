@@ -1,4 +1,264 @@
 {
-  "generatedAt": null,
-  "repos": {}
+  "generatedAt": "2026-08-11T09:52:45.983607+00:00",
+  "repos": {
+    "kaspanet/silverscript": {
+      "stars": 46,
+      "forks": 23,
+      "watchers": 6,
+      "openIssues": 24,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kaspanet/rusty-kaspa": {
+      "stars": 842,
+      "forks": 290,
+      "watchers": 72,
+      "openIssues": 196,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kaspanet/kaspa-python-sdk": {
+      "stars": 8,
+      "forks": 4,
+      "watchers": 1,
+      "openIssues": 17,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kaspanet/vprogs": {
+      "stars": 52,
+      "forks": 10,
+      "watchers": 4,
+      "openIssues": 25,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kaspanet/kccs": {
+      "stars": 7,
+      "forks": 4,
+      "watchers": 1,
+      "openIssues": 6,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kaspanet/kips": {
+      "stars": 56,
+      "forks": 27,
+      "watchers": 15,
+      "openIssues": 16,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kaspanet/docs": {
+      "stars": 66,
+      "forks": 29,
+      "watchers": 7,
+      "openIssues": 16,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kaspanet/kaspad": {
+      "stars": 528,
+      "forks": 243,
+      "watchers": 58,
+      "openIssues": 177,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kaspanet/research": {
+      "stars": 14,
+      "forks": 7,
+      "watchers": 5,
+      "openIssues": 6,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kaspanet/dnsseeder": {
+      "stars": 34,
+      "forks": 41,
+      "watchers": 10,
+      "openIssues": 5,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kaspanet/rusty-kaspa-corpus": {
+      "stars": 4,
+      "forks": 3,
+      "watchers": 5,
+      "openIssues": 1,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kaspanet/whitepaper": {
+      "stars": 11,
+      "forks": 4,
+      "watchers": 6,
+      "openIssues": 0,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kaspanet/go-secp256k1": {
+      "stars": 5,
+      "forks": 13,
+      "watchers": 7,
+      "openIssues": 0,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kaspanet/go-muhash": {
+      "stars": 5,
+      "forks": 13,
+      "watchers": 5,
+      "openIssues": 1,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kaspanet/quick-start": {
+      "stars": 3,
+      "forks": 3,
+      "watchers": 7,
+      "openIssues": 0,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kaspanet/procedures": {
+      "stars": 2,
+      "forks": 2,
+      "watchers": 8,
+      "openIssues": 0,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "aspectron/kaspa-ng": {
+      "stars": 103,
+      "forks": 31,
+      "watchers": 8,
+      "openIssues": 12,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "aspectron/kaspa-wasm": {
+      "stars": 1,
+      "forks": 1,
+      "watchers": 1,
+      "openIssues": 0,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "aspectron/kaspa-resolver": {
+      "stars": 4,
+      "forks": 11,
+      "watchers": 1,
+      "openIssues": 1,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "aspectron/kaspa-wallet-cli": {
+      "stars": 2,
+      "forks": 5,
+      "watchers": 5,
+      "openIssues": 2,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "aspectron/kaspa-wallet": {
+      "stars": 1,
+      "forks": 1,
+      "watchers": 1,
+      "openIssues": 0,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "aspectron/kdx": {
+      "stars": 31,
+      "forks": 26,
+      "watchers": 8,
+      "openIssues": 23,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kaspa-live/kaspa-graph-inspector": {
+      "stars": 12,
+      "forks": 21,
+      "watchers": 4,
+      "openIssues": 10,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kaspa-ng/kaspa-rest-server": {
+      "stars": 8,
+      "forks": 25,
+      "watchers": 1,
+      "openIssues": 11,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "bzminer/bzminer": {
+      "stars": 288,
+      "forks": 37,
+      "watchers": 28,
+      "openIssues": 283,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "forbole/kastle": {
+      "stars": 16,
+      "forks": 3,
+      "watchers": 2,
+      "openIssues": 11,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "KASPACOM/kaspacom-web-wallet": {
+      "stars": 10,
+      "forks": 1,
+      "watchers": 2,
+      "openIssues": 7,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "ScopeLift/kaspa-wallet": {
+      "stars": 4,
+      "forks": 3,
+      "watchers": 1,
+      "openIssues": 41,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kasplex/sdk-kiwi": {
+      "stars": 8,
+      "forks": 2,
+      "watchers": 3,
+      "openIssues": 2,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kasplex/go-krc20d": {
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "openIssues": 0,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kasplex/indexer-executor": {
+      "stars": 13,
+      "forks": 3,
+      "watchers": 2,
+      "openIssues": 0,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kasplex/evm-l2-relayer": {
+      "stars": 13,
+      "forks": 2,
+      "watchers": 0,
+      "openIssues": 1,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kasplex/evm-l2-nodes-docker": {
+      "stars": 3,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 1,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kasplex/evm-l2-audit": {
+      "stars": 2,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "kaspacom/swap-widget": {
+      "stars": 1,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "K-Kluster/kaspa-js": {
+      "stars": 21,
+      "forks": 5,
+      "watchers": 3,
+      "openIssues": 7,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    },
+    "Aaditya1273/K-SYNCHRONY": {
+      "stars": 0,
+      "forks": 1,
+      "watchers": 0,
+      "openIssues": 0,
+      "capturedAt": "2026-08-11T09:52:45.983607+00:00"
+    }
+  }
 }
