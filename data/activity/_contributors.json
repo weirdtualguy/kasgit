@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T09:52:45.983607+00:00",
+  "generatedAt": "2026-08-11T10:28:35.188487+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector \u2014 there is no per-day breakdown per contributor, only per repo. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork.",
   "contributors": [
@@ -7,18 +7,18 @@
       "login": "giladm11",
       "avatarUrl": "https://avatars.githubusercontent.com/u/13984392?v=4",
       "htmlUrl": "https://github.com/giladm11",
-      "commits": 344,
+      "commits": 347,
       "repos": [
         {
           "repo": "KASPACOM/kaspacom-web-wallet",
-          "commits": 246
+          "commits": 249
         },
         {
           "repo": "kaspacom/swap-widget",
           "commits": 98
         }
       ],
-      "lastCommitAt": "2026-08-10T17:32:59Z",
+      "lastCommitAt": "2026-08-11T10:12:22Z",
       "repoCount": 2
     },
     {
