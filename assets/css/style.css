@@ -1,0 +1,328 @@
+body {
+  background:
+    radial-gradient(circle at top left, rgba(34, 211, 238, 0.09), transparent 32%),
+    radial-gradient(circle at top right, rgba(45, 212, 191, 0.08), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(56, 189, 248, 0.05), transparent 30%),
+    #050810;
+}
+
+.glass-panel {
+  background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.016));
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.34);
+}
+
+.card {
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.016));
+  box-shadow: 0 18px 55px rgba(0,0,0,0.34);
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, black 0%, transparent 88%);
+}
+
+.tab-btn {
+  padding: 0.55rem 0.9rem;
+  border-radius: 0.9rem;
+  color: #94a3b8;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  transition: all 0.18s ease;
+  font-size: 0.875rem;
+  cursor: pointer;
+  background: transparent;
+}
+
+.tab-btn:hover {
+  color: #e2e8f0;
+  background: rgba(255,255,255,0.05);
+}
+
+.tab-btn.tab-active {
+  color: white;
+  background: rgba(45, 212, 191, 0.10);
+  border-color: rgba(45, 212, 191, 0.22);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03), 0 0 25px rgba(45,212,191,0.08);
+}
+
+.chip {
+  padding: 0.42rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.09);
+  background: rgba(255,255,255,0.035);
+  color: #94a3b8;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  transition: all 0.16s ease;
+  cursor: pointer;
+}
+
+.chip:hover {
+  color: #e2e8f0;
+  transform: translateY(-1px);
+}
+
+.chip-active {
+  color: white;
+  background: rgba(45, 212, 191, 0.13);
+  border-color: rgba(45, 212, 191, 0.35);
+  box-shadow: 0 0 22px rgba(45,212,191,0.10);
+}
+
+.range-btn {
+  padding: 0.42rem 0.72rem;
+  border-radius: 0.75rem;
+  color: #94a3b8;
+  transition: all 0.16s ease;
+  font-size: 0.8rem;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  cursor: pointer;
+  background: transparent;
+}
+
+.range-btn:hover {
+  color: #e2e8f0;
+  background: rgba(255,255,255,0.05);
+}
+
+.range-active {
+  color: white;
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.12);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+}
+
+.input-base,
+.select-base {
+  width: 100%;
+  border-radius: 0.95rem;
+  border: 1px solid rgba(255,255,255,0.09);
+  background: rgba(255,255,255,0.035);
+  color: #e2e8f0;
+  outline: none;
+  padding: 0.68rem 0.85rem;
+  font-size: 0.875rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.input-base::placeholder {
+  color: #64748b;
+}
+
+.input-base:focus,
+.select-base:focus {
+  border-color: rgba(45,212,191,0.45);
+  box-shadow: 0 0 0 3px rgba(45,212,191,0.12);
+  background: rgba(255,255,255,0.045);
+}
+
+.select-base option {
+  background: #0a101d;
+  color: #e2e8f0;
+}
+
+.table-shell {
+  overflow: hidden;
+  border-radius: 1.25rem;
+}
+
+.data-table {
+  width: 100%;
+  min-width: 920px;
+  border-collapse: collapse;
+}
+
+.data-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: rgba(7, 11, 20, 0.94);
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 1rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #64748b;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.data-table tbody td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  vertical-align: middle;
+  font-size: 0.875rem;
+  color: #cbd5e1;
+}
+
+.data-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.data-table tbody tr:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem 0.58rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
+  color: #cbd5e1;
+  white-space: nowrap;
+}
+
+.badge-emerald {
+  color: #6ee7b7;
+  border-color: rgba(110, 231, 183, 0.18);
+  background: rgba(16, 185, 129, 0.10);
+}
+
+.badge-amber {
+  color: #fcd34d;
+  border-color: rgba(252, 211, 77, 0.18);
+  background: rgba(245, 158, 11, 0.10);
+}
+
+.badge-slate {
+  color: #cbd5e1;
+  border-color: rgba(148, 163, 184, 0.18);
+  background: rgba(148, 163, 184, 0.08);
+}
+
+.badge-cyan {
+  color: #67e8f9;
+  border-color: rgba(103, 232, 249, 0.18);
+  background: rgba(34, 211, 238, 0.10);
+}
+
+.badge-rose {
+  color: #fda4af;
+  border-color: rgba(253, 164, 175, 0.18);
+  background: rgba(244, 63, 94, 0.10);
+}
+
+.badge-violet {
+  color: #c4b5fd;
+  border-color: rgba(196, 181, 253, 0.18);
+  background: rgba(139, 92, 246, 0.10);
+}
+
+.heatmap-cell {
+  transition: transform 0.12s ease, outline-color 0.12s ease;
+  outline: 1px solid transparent;
+}
+
+.heatmap-cell:hover {
+  transform: scale(1.12);
+  outline-color: rgba(255,255,255,0.22);
+  z-index: 10;
+}
+
+.spin-once {
+  animation: spinOnce 0.6s ease;
+}
+
+@keyframes spinOnce {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148,163,184,0.22);
+  border-radius: 999px;
+  border: 2px solid rgba(5,8,16,0.8);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148,163,184,0.34);
+}
+
+.soft-link {
+  color: #94a3b8;
+  transition: color 0.15s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.soft-link:hover {
+  color: #ffffff;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #ffffff, #8be9dc 42%, #4cc3ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 37%, rgba(255,255,255,0.04) 63%);
+  background-size: 400% 100%;
+  animation: skeletonWave 1.4s ease infinite;
+  border-radius: 0.5rem;
+}
+
+@keyframes skeletonWave {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+.fallback-banner {
+  border: 1px solid rgba(252, 165, 165, 0.25);
+  background: rgba(248, 113, 113, 0.08);
+  color: #fecaca;
+}
+
+@media (max-width: 480px) {
+  .tab-btn {
+    padding: 0.42rem 0.62rem;
+    font-size: 0.78rem;
+  }
+
+  .chip {
+    padding: 0.34rem 0.6rem;
+    font-size: 0.74rem;
+  }
+
+  .range-btn {
+    padding: 0.36rem 0.55rem;
+    font-size: 0.74rem;
+  }
+
+  .card {
+    border-radius: 1rem;
+  }
+
+  .badge {
+    padding: 0.24rem 0.5rem;
+    font-size: 0.68rem;
+  }
+
+  .data-table {
+    min-width: 760px;
+  }
+}

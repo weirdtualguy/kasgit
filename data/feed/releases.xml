@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Kaspa GitHub Ecosystem — Releases</title>
+    <description>Recent releases across tracked Kaspa ecosystem repositories. Populated by the ingestion workflow — empty until its first run.</description>
+    <link>https://github.com/kaspanet</link>
+  </channel>
+</rss>

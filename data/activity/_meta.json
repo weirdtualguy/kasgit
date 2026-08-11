@@ -1,0 +1,13 @@
+{
+  "generatedAt": null,
+  "orgs": [],
+  "extraTargetOrgTypes": ["company-affiliated", "community org"],
+  "verifiedTargetCount": 0,
+  "repoCount": 0,
+  "starsCaptured": 0,
+  "starHistoryBackfills": 0,
+  "releaseFeedItems": 0,
+  "failed": [],
+  "lookbackDays": 400,
+  "status": "not-yet-run"
+}
