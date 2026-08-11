@@ -210,9 +210,14 @@ Commit the regenerated `assets/css/tailwind.built.css` alongside your change.
   everything else (see Methodology tab and the "● Live" / "○ Modeled"
   badges) — extend `ORGS`, `EXTRA_ORG_TYPE_PREFIXES`, or the CSV's
   `verified` column to bring more repos onto real data.
-- Contributor identities are synthetic placeholders, not real GitHub
-  handles — the "This Week" and "Start Here" panels are read-only summaries
-  of real registry/activity data, not a contributor feature.
+- Contributor identities are real GitHub commit authors (login, avatar,
+  profile link, commit count) once the ingestion workflow has run — see
+  `data/activity/_contributors.json` — but only commits, not PRs, reviews,
+  or issues, are attributed per author; those columns show "—" for live
+  contributors rather than a fabricated number. Falls back to synthetic
+  placeholder handles before the workflow's first run. Commit counts are
+  cumulative over the ingestion lookback window, not sliced by the
+  dashboard's range selector.
 - No repo-to-repo relationship data yet (e.g. "this wallet depends on that
   SDK") — would need a `related_to` column added to the registry CSV and
   corresponding UI, intentionally left out rather than guessed at.

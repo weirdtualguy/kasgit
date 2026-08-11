@@ -9,7 +9,16 @@ This folder is populated automatically by
   issues, releases, approximate active devs) across all ingested repos.
 - `_repos.json` — map of `"org/repo"` → path to that repo's daily series file.
 - `_stars.json` — latest star/fork/watcher/open-issue snapshot per repo.
-- `_meta.json` — last run timestamp, orgs covered, repo/star counts, any failures.
+- `_meta.json` — last run timestamp, orgs covered, repo/star/contributor counts, any failures.
+- `_contributors.json` — top contributors aggregated across all ingested repos:
+  real GitHub login, avatar URL, profile URL, cumulative commit count, which
+  repos they committed to, and last commit date. Only commits linked to a
+  real GitHub account are included — an unlinked commit-author email has no
+  login to attribute to, so it's excluded rather than guessed at. Counts are
+  cumulative over the ingestion lookback window (not sliced by the
+  dashboard's 7/30/90/365-day range selector), and PRs/reviews/issues are
+  not attributed per author — the dashboard shows "—" for those on live
+  contributor rows.
 - `<owner>/<repo>.json` — per-repo `series` (daily commits/PRs/issues/releases)
   plus `starHistory` (one point-in-time stars/forks/watchers/openIssues
   snapshot appended per ingestion run, so a real history builds up day by day).

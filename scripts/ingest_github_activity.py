@@ -258,6 +258,12 @@ def ingest_repo_activity(owner, repo_name, since_dt):
     full = f"{owner}/{repo_name}"
     since_iso = since_dt.strftime("%Y-%m-%dT%H:%M:%SZ")
     days = defaultdict(empty_day)
+    # login -> {commits, avatarUrl, htmlUrl, lastCommitAt}. Only commits with a
+    # real linked GitHub account (commit.author.login) are counted here —
+    # commits from an email not linked to a GitHub account have no login to
+    # attribute to, so they're excluded from contributor identity entirely
+    # rather than guessed at from the free-text commit author name.
+    contributors = {}
 
     commits = api_get(
         f"{API_ROOT}/repos/{full}/commits",
@@ -268,11 +274,23 @@ def ingest_repo_activity(owner, repo_name, since_dt):
         bucket = date_bucket(author_date)
         if not bucket:
             continue
-        login = (commit.get("author") or {}).get("login") or (
-            commit.get("commit", {}).get("author", {}) or {}
-        ).get("name", "unknown")
+        author = commit.get("author") or {}
+        login = author.get("login")
+        fallback_name = (commit.get("commit", {}).get("author", {}) or {}).get("name", "unknown")
         days[bucket]["commits"] += 1
-        days[bucket]["_authors"].add(login)
+        days[bucket]["_authors"].add(login or fallback_name)
+
+        if login:
+            entry = contributors.setdefault(login, {
+                "login": login,
+                "avatarUrl": author.get("avatar_url"),
+                "htmlUrl": author.get("html_url"),
+                "commits": 0,
+                "lastCommitAt": author_date,
+            })
+            entry["commits"] += 1
+            if author_date and (not entry["lastCommitAt"] or author_date > entry["lastCommitAt"]):
+                entry["lastCommitAt"] = author_date
 
     pulls = api_get(
         f"{API_ROOT}/repos/{full}/pulls",
@@ -319,7 +337,7 @@ def ingest_repo_activity(owner, repo_name, since_dt):
             "prerelease": bool(release.get("prerelease")),
         })
 
-    return days, release_items
+    return days, release_items, contributors
 
 
 def zero_filled_series(days_map, since_dt, until_dt):
@@ -542,6 +560,8 @@ def main():
     stars_summary = {}
     all_release_items = []
     summary_days = defaultdict(lambda: {"commits": 0, "prs": 0, "issues": 0, "releases": 0, "_authors": set()})
+    # login -> aggregated contributor record across every tracked repo.
+    contributors_agg = {}
     ingested_count = 0
     stars_captured_count = 0
     star_backfills_performed = 0
@@ -556,7 +576,7 @@ def main():
         out_path = os.path.join(owner_dir, f"{repo_name}.json")
 
         try:
-            days_map, release_items = ingest_repo_activity(owner, repo_name, since_dt)
+            days_map, release_items, repo_contributors = ingest_repo_activity(owner, repo_name, since_dt)
             series = zero_filled_series(days_map, since_dt, now)
         except Exception as exc:  # noqa: BLE001
             log(f"  activity fetch failed: {exc}")
@@ -564,6 +584,25 @@ def main():
             continue
 
         all_release_items.extend(release_items)
+
+        for login, info in repo_contributors.items():
+            agg = contributors_agg.setdefault(login, {
+                "login": login,
+                "avatarUrl": info["avatarUrl"],
+                "htmlUrl": info["htmlUrl"],
+                "commits": 0,
+                "repos": {},
+                "lastCommitAt": None,
+            })
+            # A contributor's avatar/profile URL can't change mid-run, but keep
+            # the most recently seen non-null value just in case an earlier
+            # repo's API response had a gap.
+            agg["avatarUrl"] = agg["avatarUrl"] or info["avatarUrl"]
+            agg["htmlUrl"] = agg["htmlUrl"] or info["htmlUrl"]
+            agg["commits"] += info["commits"]
+            agg["repos"][full] = agg["repos"].get(full, 0) + info["commits"]
+            if info["lastCommitAt"] and (not agg["lastCommitAt"] or info["lastCommitAt"] > agg["lastCommitAt"]):
+                agg["lastCommitAt"] = info["lastCommitAt"]
 
         star_history = load_existing_star_history(out_path)
         if not star_history:
@@ -641,6 +680,34 @@ def main():
             "repos": stars_summary,
         }, fh, indent=2)
 
+    # Sorted by commit count, capped to keep the file small — this is a
+    # "top contributors" list, not a full org member directory.
+    CONTRIBUTOR_CAP = 100
+    contributors_out = sorted(
+        contributors_agg.values(), key=lambda c: c["commits"], reverse=True
+    )[:CONTRIBUTOR_CAP]
+    for entry in contributors_out:
+        entry["repoCount"] = len(entry["repos"])
+        entry["repos"] = [
+            {"repo": repo, "commits": count}
+            for repo, count in sorted(entry["repos"].items(), key=lambda kv: kv[1], reverse=True)
+        ]
+
+    with open(os.path.join(OUTPUT_DIR, "_contributors.json"), "w", encoding="utf-8") as fh:
+        json.dump({
+            "generatedAt": now.isoformat(),
+            "lookbackDays": LOOKBACK_DAYS,
+            "note": (
+                "Commit counts are cumulative over lookbackDays, not sliced by "
+                "the dashboard's 7/30/90/365-day range selector — there is no "
+                "per-day breakdown per contributor, only per repo. Only commits "
+                "linked to a real GitHub account are included; commits from an "
+                "email with no linked account are excluded, not attributed by "
+                "guesswork."
+            ),
+            "contributors": contributors_out,
+        }, fh, indent=2)
+
     with open(os.path.join(OUTPUT_DIR, "_meta.json"), "w", encoding="utf-8") as fh:
         json.dump({
             "generatedAt": now.isoformat(),
@@ -651,14 +718,15 @@ def main():
             "starsCaptured": stars_captured_count,
             "starHistoryBackfills": star_backfills_performed,
             "releaseFeedItems": feed_count,
+            "contributorsCaptured": len(contributors_out),
             "failed": failed,
             "lookbackDays": LOOKBACK_DAYS,
             "status": "ok" if ingested_count else "no-data",
         }, fh, indent=2)
 
     log(f"Done. Ingested {ingested_count} repos ({stars_captured_count} star snapshots, "
-        f"{star_backfills_performed} star-history backfills, {feed_count} release feed items), "
-        f"{len(failed)} failed.")
+        f"{star_backfills_performed} star-history backfills, {feed_count} release feed items, "
+        f"{len(contributors_out)} contributors captured), {len(failed)} failed.")
 
 
 if __name__ == "__main__":

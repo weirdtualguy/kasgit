@@ -66,7 +66,7 @@
   // Live GitHub activity data, populated asynchronously by loadLiveActivity()
   // from data/activity/*.json (written by the scheduled ingestion workflow).
   // Any repo not present here falls back to modeled placeholder data.
-  const LIVE = { repos: {}, meta: null, releases: [] };
+  const LIVE = { repos: {}, meta: null, releases: [], contributors: [] };
 
   // ---------------------------------------------------------------------
   // Utilities
@@ -400,6 +400,50 @@
     return { commits, prs, reviews, issues, repos, lastActive };
   }
 
+  /**
+   * Normalized contributor rows for both renderTopContributors and
+   * renderContributorTable. Prefers real data from data/activity/_contributors.json
+   * (see ingest_github_activity.py) once the ingestion workflow has run;
+   * falls back to the fully-synthetic CONTRIBUTOR_HANDLES/contributorMetrics
+   * generator otherwise, so the tab still shows something before first ingest.
+   *
+   * IMPORTANT ASYMMETRY: live rows only have real commits + repos + last-commit
+   * date (that's what the GitHub commits API gives us per author). PRs, reviews,
+   * and issues are NOT attributed per-author by the ingestion script, so live
+   * rows report those as null — rendered as "—", never as a fabricated 0 or a
+   * modeled guess. Also note live commit counts are cumulative over the
+   * ingestion's lookback window (currently 400 days), not sliced by the
+   * dashboard's range selector — there's no per-day-per-author breakdown.
+   */
+  function contributorRows() {
+    if (LIVE.contributors.length) {
+      const now = Date.now();
+      return LIVE.contributors.map(entry => ({
+        handle: entry.login,
+        htmlUrl: entry.htmlUrl,
+        avatarUrl: entry.avatarUrl,
+        isLive: true,
+        metrics: {
+          commits: entry.commits,
+          prs: null,
+          reviews: null,
+          issues: null,
+          repos: entry.repoCount,
+          lastActive: entry.lastCommitAt
+            ? Math.max(0, Math.floor((now - new Date(entry.lastCommitAt).getTime()) / 86400000))
+            : null
+        }
+      }));
+    }
+    return CONTRIBUTOR_HANDLES.map(handle => ({
+      handle,
+      htmlUrl: null,
+      avatarUrl: null,
+      isLive: false,
+      metrics: contributorMetrics(handle, state.range)
+    }));
+  }
+
   function sparklineSvg(values, color, width = 96, height = 30) {
     const max = Math.max(...values, 1);
     const min = Math.min(...values, 0);
@@ -494,7 +538,7 @@
       const repos = filteredRepos();
       const liveRepoCount = repos.filter(repo => getRepoDailySeries(repo, state.range).isLive).length;
       liveNoteEl.textContent = repos.length
-        ? `KPI totals blend ${liveRepoCount} of ${repos.length} repos on live GitHub data with modeled placeholders for the rest (Contributors is fully modeled) — see Methodology.`
+        ? `KPI totals blend ${liveRepoCount} of ${repos.length} repos on live GitHub data with modeled placeholders for the rest (Contributors tab: ${LIVE.contributors.length ? "real GitHub commit authors" : "fully modeled — run ingestion to populate"}) — see Methodology.`
         : "--";
     }
 
@@ -794,27 +838,31 @@
     const root = document.getElementById("topContributorList");
     if (!root) return;
 
-    const rows = CONTRIBUTOR_HANDLES
-      .map(handle => ({ handle, metrics: contributorMetrics(handle, state.range) }))
+    const rows = contributorRows()
       .sort((a, b) => b.metrics.commits - a.metrics.commits)
       .slice(0, 6);
 
     const topCommits = rows[0]?.metrics.commits || 1;
 
     root.innerHTML = rows.map((row, index) => {
-      const initials = row.handle.split("_").slice(0, 2).map(part => part[0].toUpperCase()).join("");
+      const initials = row.handle.split(/[_-]/).slice(0, 2).map(part => part[0]?.toUpperCase() || "").join("");
       const color = avatarColor(row.handle);
       const focus = Math.min(100, Math.round((row.metrics.commits / topCommits) * 100));
+      const avatar = row.avatarUrl
+        ? `<img src="${escapeHtml(row.avatarUrl)}" alt="" class="h-9 w-9 rounded-2xl shrink-0" loading="lazy" />`
+        : `<div class="h-9 w-9 rounded-2xl flex items-center justify-center text-[11px] font-bold text-black/80 shrink-0" style="background:${color}">${escapeHtml(initials)}</div>`;
+      const nameLabel = row.htmlUrl
+        ? `<a href="${escapeHtml(row.htmlUrl)}" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-slate-100 truncate font-mono hover:underline">${escapeHtml(row.handle)}</a>`
+        : `<span class="text-sm font-medium text-slate-100 truncate font-mono">${escapeHtml(row.handle)}</span>`;
+      const prsLabel = row.metrics.prs === null ? "—" : `${formatNumber(row.metrics.prs)} PRs`;
 
       return `
         <div class="rounded-3xl border border-white/[0.06] bg-white/[0.02] p-3">
           <div class="flex items-center gap-3">
-            <div class="h-9 w-9 rounded-2xl flex items-center justify-center text-[11px] font-bold text-black/80 shrink-0" style="background:${color}">
-              ${escapeHtml(initials)}
-            </div>
+            ${avatar}
             <div class="min-w-0 flex-1">
               <div class="flex items-center justify-between gap-3">
-                <span class="text-sm font-medium text-slate-100 truncate font-mono">${escapeHtml(row.handle)}</span>
+                ${nameLabel}
                 <span class="text-xs text-slate-400">#${index + 1}</span>
               </div>
               <div class="mt-2 h-1.5 rounded-full bg-white/[0.06] overflow-hidden">
@@ -822,7 +870,7 @@
               </div>
               <div class="mt-2 flex items-center justify-between text-xs text-slate-400">
                 <span>${formatNumber(row.metrics.commits)} commits</span>
-                <span>${formatNumber(row.metrics.prs)} PRs</span>
+                <span>${prsLabel}</span>
               </div>
             </div>
           </div>
@@ -835,10 +883,16 @@
     const tbody = document.getElementById("contributorTableBody");
     if (!tbody) return;
 
+    const subtitleEl = document.getElementById("contributorSubtitle");
+    if (subtitleEl) {
+      subtitleEl.textContent = LIVE.contributors.length
+        ? `Real GitHub commit authors from ${LIVE.contributors.length} tracked contributors, aggregated across ingested repos. Commit counts are cumulative over the ingestion lookback window, not the range selector above — PRs/Reviews/Issues aren't attributed per-author yet, shown as "—".`
+        : "Placeholder contributor analytics — no ingestion data yet. Run the Ingest GitHub Activity workflow to populate real contributors.";
+    }
+
     const normalizedQuery = state.contributorQuery.trim().toLowerCase();
 
-    const rows = CONTRIBUTOR_HANDLES
-      .map(handle => ({ handle, metrics: contributorMetrics(handle, state.range) }))
+    const rows = contributorRows()
       .filter(row => !normalizedQuery || row.handle.toLowerCase().includes(normalizedQuery))
       .sort((a, b) => b.metrics.commits - a.metrics.commits);
 
@@ -848,25 +902,34 @@
     }
 
     tbody.innerHTML = rows.map((row, index) => {
-      const initials = row.handle.split("_").slice(0, 2).map(part => part[0].toUpperCase()).join("");
+      const initials = row.handle.split(/[_-]/).slice(0, 2).map(part => part[0]?.toUpperCase() || "").join("");
       const color = avatarColor(row.handle);
-      const lastActiveLabel = row.metrics.lastActive === 0 ? "Today" : `${row.metrics.lastActive}d ago`;
+      const lastActiveLabel = row.metrics.lastActive === null ? "—"
+        : row.metrics.lastActive === 0 ? "Today" : `${row.metrics.lastActive}d ago`;
+      const avatar = row.avatarUrl
+        ? `<img src="${escapeHtml(row.avatarUrl)}" alt="" class="h-8 w-8 rounded-xl shrink-0" loading="lazy" />`
+        : `<div class="h-8 w-8 rounded-xl flex items-center justify-center text-[10px] font-bold text-black/80 shrink-0" style="background:${color}">${escapeHtml(initials)}</div>`;
+      const nameLabel = row.htmlUrl
+        ? `<a href="${escapeHtml(row.htmlUrl)}" target="_blank" rel="noopener noreferrer" class="font-mono text-slate-100 hover:underline">${escapeHtml(row.handle)}</a>`
+        : `<span class="font-mono text-slate-100">${escapeHtml(row.handle)}</span>`;
+      const cell = (value) => value === null ? `<span class="text-slate-600">—</span>` : formatNumber(value);
 
       return `
         <tr>
           <td class="text-slate-500 font-mono">${index + 1}</td>
           <td>
             <div class="flex items-center gap-3">
-              <div class="h-8 w-8 rounded-xl flex items-center justify-center text-[10px] font-bold text-black/80 shrink-0" style="background:${color}">
-                ${escapeHtml(initials)}
-              </div>
-              <span class="font-mono text-slate-100">${escapeHtml(row.handle)}</span>
+              ${avatar}
+              <span class="flex items-center gap-2">
+                ${nameLabel}
+                ${row.isLive ? `<span class="h-1.5 w-1.5 rounded-full bg-emerald-400" title="Live GitHub data"></span>` : ""}
+              </span>
             </div>
           </td>
           <td class="text-right font-mono text-slate-200">${formatNumber(row.metrics.commits)}</td>
-          <td class="text-right font-mono text-slate-200">${formatNumber(row.metrics.prs)}</td>
-          <td class="text-right font-mono text-slate-200">${formatNumber(row.metrics.reviews)}</td>
-          <td class="text-right font-mono text-slate-200">${formatNumber(row.metrics.issues)}</td>
+          <td class="text-right font-mono text-slate-200">${cell(row.metrics.prs)}</td>
+          <td class="text-right font-mono text-slate-200">${cell(row.metrics.reviews)}</td>
+          <td class="text-right font-mono text-slate-200">${cell(row.metrics.issues)}</td>
           <td class="text-right font-mono text-slate-200">${formatNumber(row.metrics.repos)}</td>
           <td>${lastActiveLabel}</td>
           <td>
@@ -1223,6 +1286,23 @@
     }
   }
 
+  /**
+   * Fetches data/activity/_contributors.json — real GitHub commit authors
+   * aggregated across every ingested repo (see ingest_github_activity.py).
+   * Safe to call before that workflow has ever run; LIVE.contributors stays
+   * empty and the Contributors tab falls back to modeled placeholder handles.
+   */
+  async function loadLiveContributors() {
+    try {
+      const res = await fetch("data/activity/_contributors.json", { cache: "no-store" });
+      if (!res.ok) return;
+      const payload = await res.json();
+      LIVE.contributors = Array.isArray(payload.contributors) ? payload.contributors : [];
+    } catch (err) {
+      console.warn("Live contributor data unavailable — using modeled placeholders.", err);
+    }
+  }
+
   function exportRepoJson() {
     const rows = filteredRepos({ query: state.repoQuery }).map(repo => {
       const metrics = repoMetrics(repo, state.range);
@@ -1360,7 +1440,7 @@
     switchView("overview");
     updateDashboard(); // paint immediately with modeled fallback data
 
-    await Promise.all([loadLiveActivity(), loadReleaseFeed()]);
+    await Promise.all([loadLiveActivity(), loadReleaseFeed(), loadLiveContributors()]);
     updateDashboard(); // repaint with any live-ingested data merged in
   }
 

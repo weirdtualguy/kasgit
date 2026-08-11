@@ -1,0 +1,6 @@
+{
+  "generatedAt": null,
+  "lookbackDays": 400,
+  "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector — there is no per-day breakdown per contributor, only per repo. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork.",
+  "contributors": []
+}
