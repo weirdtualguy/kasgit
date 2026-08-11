@@ -85,8 +85,16 @@ def log(*args):
     print(*args, file=sys.stderr, flush=True)
 
 
-def api_get(url, params=None, headers=None):
-    """GET with pagination support, basic retry, and rate-limit backoff."""
+def api_get(url, params=None, headers=None, stop_when=None):
+    """GET with pagination support, basic retry, and rate-limit backoff.
+
+    stop_when: optional callable(page_items) -> bool, checked after each page
+    is fetched and appended to results. If it returns True, pagination stops
+    without requesting further pages — used for endpoints like /pulls that
+    don't support a `since` filter, so we can bound how many pages we pull
+    by watching a sort-order-derived cutoff instead of fetching full history
+    every run (see ingest_repo_activity).
+    """
     results = []
     next_url = url
     next_params = params
@@ -123,6 +131,8 @@ def api_get(url, params=None, headers=None):
         page_data = resp.json()
         if isinstance(page_data, list):
             results.extend(page_data)
+            if stop_when and stop_when(page_data):
+                return results
         else:
             return page_data
 
@@ -254,6 +264,27 @@ def load_extra_targets():
     return unique_targets
 
 
+def _page_fully_before_cutoff(page_items, since_dt, date_field):
+    """True once every item on this page is older than since_dt. Used as an
+    api_get stop_when for endpoints (like /pulls) that don't support a
+    `since` query param — safe only when the endpoint is sorted newest-first
+    by a field that is >= the field we actually care about (e.g. sorting
+    PRs by `updated_at` desc, where updated_at >= merged_at always, since a
+    merge itself counts as an update). The already-fetched page is still
+    kept in results; this only stops requesting further, guaranteed-older
+    pages."""
+    if not page_items:
+        return True
+    last_item = page_items[-1]
+    last_value = last_item.get(date_field)
+    if not last_value:
+        return False
+    try:
+        return datetime.fromisoformat(last_value.replace("Z", "+00:00")) < since_dt
+    except ValueError:
+        return False
+
+
 def ingest_repo_activity(owner, repo_name, since_dt):
     full = f"{owner}/{repo_name}"
     since_iso = since_dt.strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -295,6 +326,13 @@ def ingest_repo_activity(owner, repo_name, since_dt):
     pulls = api_get(
         f"{API_ROOT}/repos/{full}/pulls",
         {"state": "closed", "per_page": PER_PAGE, "sort": "updated", "direction": "desc"},
+        # /pulls has no `since` filter, so without this every run would
+        # re-fetch a repo's *entire* closed-PR history just to keep the last
+        # LOOKBACK_DAYS of it (previously the case — see audit). Sorted
+        # updated-desc, updated_at >= merged_at always, so once a page is
+        # fully older than since_dt every later page is guaranteed to be
+        # too — safe to stop there without missing anything in range.
+        stop_when=lambda page: _page_fully_before_cutoff(page, since_dt, "updated_at"),
     )
     for pr in pulls:
         merged_at = pr.get("merged_at")
