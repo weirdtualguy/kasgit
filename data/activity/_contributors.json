@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T10:28:35.188487+00:00",
+  "generatedAt": "2026-08-12T05:02:01.992097+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector \u2014 there is no per-day breakdown per contributor, only per repo. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork.",
   "contributors": [
@@ -402,6 +402,20 @@
       "repoCount": 1
     },
     {
+      "login": "LiveLaughLove13",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/153366933?v=4",
+      "htmlUrl": "https://github.com/LiveLaughLove13",
+      "commits": 12,
+      "repos": [
+        {
+          "repo": "kaspanet/rusty-kaspa",
+          "commits": 12
+        }
+      ],
+      "lastCommitAt": "2026-06-01T05:00:13Z",
+      "repoCount": 1
+    },
+    {
       "login": "Manyfestation",
       "avatarUrl": "https://avatars.githubusercontent.com/u/240733973?v=4",
       "htmlUrl": "https://github.com/Manyfestation",
@@ -418,20 +432,6 @@
       ],
       "lastCommitAt": "2026-04-26T12:44:16Z",
       "repoCount": 2
-    },
-    {
-      "login": "LiveLaughLove13",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/153366933?v=4",
-      "htmlUrl": "https://github.com/LiveLaughLove13",
-      "commits": 12,
-      "repos": [
-        {
-          "repo": "kaspanet/rusty-kaspa",
-          "commits": 12
-        }
-      ],
-      "lastCommitAt": "2026-06-01T05:00:13Z",
-      "repoCount": 1
     },
     {
       "login": "elldeeone",

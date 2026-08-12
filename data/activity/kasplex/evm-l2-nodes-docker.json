@@ -1,16 +1,8 @@
 {
   "repo": "kasplex/evm-l2-nodes-docker",
-  "generatedAt": "2026-08-11T10:28:35.188487+00:00",
+  "generatedAt": "2026-08-12T05:02:01.992097+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-07-07",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-07-08",
       "commits": 0,
@@ -3210,11 +3202,26 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-08-12",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "starHistory": [
     {
       "date": "2026-08-11",
+      "stars": 3,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 1
+    },
+    {
+      "date": "2026-08-12",
       "stars": 3,
       "forks": 0,
       "watchers": 0,
