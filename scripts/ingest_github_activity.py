@@ -8,16 +8,17 @@ JSON under data/activity/. The static front-end (assets/js/app.js) reads
 these files at runtime and falls back to modeled placeholder data for any
 repo that hasn't been ingested yet.
 
-Tracked repos come from three sources:
+Tracked repos come from two sources:
   1. ORGS — full auto-discovery of every non-archived, non-fork repo owned
      by these GitHub accounts (works for both orgs and users).
-  2. The registry CSV (data/kaspa_github_ecosystem_inventory.csv) — any row
-     whose org_type is "company-affiliated" or "community org" is ingested
-     individually, even if its owner isn't in ORGS.
-  3. Any registry row with verified=yes, regardless of org_type — this is
-     how independent-contributor repos graduate into live ingestion once
-     someone has actually checked them (edit the CSV's verified/verified_at
-     columns, no code change needed).
+  2. The registry CSV (data/kaspa_github_ecosystem_inventory.csv) — every
+     row with a github.com/<owner>/<repo> URL is ingested individually,
+     even if its owner isn't in ORGS. This is opt-out, not opt-in: a row
+     is skipped only if org_type is "uncertain" or its verified column is
+     explicitly "no" (someone checked it and it's wrong/dead/unrelated).
+     Rows with verified=yes are still tagged with that reason in logs/meta,
+     but no longer need it to be ingested — it's now just a "someone
+     actually confirmed this one" marker, not a gate.
 
 Each run also appends a point-in-time stars/forks/watchers snapshot to a
 per-repo starHistory array, and — on a repo's first ingestion — attempts a
@@ -53,8 +54,16 @@ ORGS = ["kaspanet"]
 
 # Which org_type values from the registry CSV get individually ingested
 # (in addition to whatever ORGS already covers), without pulling in the
-# rest of that owner's unrelated repos.
+# rest of that owner's unrelated repos. (Every other org_type is now
+# ingested too, by default — see EXCLUDED_ORG_TYPES below — this list just
+# controls the "reason" tag those rows get in logs/_meta.json.)
 EXTRA_ORG_TYPE_PREFIXES = ("company-affiliated", "community org")
+
+# org_type values that opt a registry row OUT of live ingestion. "Uncertain"
+# means nobody has confirmed the repo is legitimate/relevant yet, so it stays
+# on modeled placeholder data until the CSV's org_type or verified column
+# says otherwise.
+EXCLUDED_ORG_TYPES = ("uncertain",)
 
 LOOKBACK_DAYS = 400  # covers the dashboard's 1Y range with margin
 STAR_HISTORY_MAX_POINTS = 400
@@ -62,9 +71,28 @@ STARGAZER_BACKFILL_MAX_PAGES = 5   # 5 * 100 = up to 500 stargazers backfilled
 FEED_MAX_ITEMS = 150
 FEED_LOOKBACK_DAYS = 180
 
+# Idea board: open issues on THIS repo (the dashboard's own repo, not a
+# tracked ecosystem repo) labeled IDEAS_LABEL are published as a lightweight
+# "wanted" board — see data/ideas.json and the Ideas tab in app.js. Set
+# SELF_REPO_OVERRIDE to "owner/repo" for local/manual runs where
+# GITHUB_REPOSITORY isn't set (GitHub Actions sets it automatically).
+IDEAS_LABEL = "idea"
+IDEAS_MAX_ITEMS = 60
+SELF_REPO_OVERRIDE = None
+
+# Public data API manifest (data/api/index.json) — a stable, documented entry
+# point so someone can build a bot/alert/other-dashboard on top of this
+# project's ingested data without reverse-engineering file names out of
+# app.js. Bump MANIFEST_SCHEMA_VERSION only on a breaking change to an
+# existing resource's shape (renamed/removed field, changed meaning) — adding
+# a new optional field or a new resource doesn't require a bump.
+MANIFEST_SCHEMA_VERSION = 1
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUTPUT_DIR = os.path.join(BASE_DIR, "data", "activity")
 FEED_DIR = os.path.join(BASE_DIR, "data", "feed")
+IDEAS_PATH = os.path.join(OUTPUT_DIR, "ideas.json")
+MANIFEST_PATH = os.path.join(BASE_DIR, "data", "api", "index.json")
 CSV_PATH = os.path.join(BASE_DIR, "data", "kaspa_github_ecosystem_inventory.csv")
 REQUEST_TIMEOUT = 30
 PER_PAGE = 100
@@ -205,6 +233,64 @@ def list_owner_repos(owner):
     return [r for r in repos if not r.get("archived") and not r.get("fork")]
 
 
+def resolve_self_repo():
+    """(owner, repo) for the dashboard's own GitHub repo, used for the idea
+    board (issues live here, not on a tracked ecosystem repo). GitHub Actions
+    sets GITHUB_REPOSITORY as "owner/repo" automatically; for a manual/local
+    run (e.g. Termux) set SELF_REPO_OVERRIDE above. Returns None if neither
+    is available — the idea board is skipped, not fabricated."""
+    raw = SELF_REPO_OVERRIDE or os.environ.get("GITHUB_REPOSITORY")
+    if not raw or "/" not in raw:
+        return None
+    owner, repo = raw.split("/", 1)
+    return (owner, repo) if owner and repo else None
+
+
+def fetch_idea_issues(owner, repo):
+    """Open issues labeled IDEAS_LABEL on (owner, repo) — the community's
+    'someone should build this' board. Excludes pull requests (the /issues
+    endpoint returns both; PRs carry a "pull_request" key issues don't).
+    Returns normalized dicts, newest first, capped to IDEAS_MAX_ITEMS."""
+    raw_issues = api_get(
+        f"{API_ROOT}/repos/{owner}/{repo}/issues",
+        {"labels": IDEAS_LABEL, "state": "open", "per_page": PER_PAGE,
+         "sort": "created", "direction": "desc"},
+    )
+    ideas = []
+    for issue in raw_issues:
+        if "pull_request" in issue:
+            continue
+        author = issue.get("user") or {}
+        body = (issue.get("body") or "").strip()
+        # Plain-text excerpt only — the front end escapes and shows this as
+        # text, never renders it as markdown/HTML, so no sanitization beyond
+        # length-capping is needed here.
+        excerpt = " ".join(body.split())[:240]
+        reactions = issue.get("reactions") or {}
+        ideas.append({
+            "id": issue.get("id"),
+            "number": issue.get("number"),
+            "title": issue.get("title", ""),
+            "htmlUrl": issue.get("html_url"),
+            "author": {
+                "login": author.get("login"),
+                "avatarUrl": author.get("avatar_url"),
+                "htmlUrl": author.get("html_url"),
+            },
+            "createdAt": issue.get("created_at"),
+            "updatedAt": issue.get("updated_at"),
+            "commentsCount": issue.get("comments", 0),
+            "thumbsUp": reactions.get("+1", 0),
+            "labels": [
+                label.get("name") if isinstance(label, dict) else label
+                for label in (issue.get("labels") or [])
+            ],
+            "bodyExcerpt": excerpt,
+        })
+    ideas.sort(key=lambda item: (item["thumbsUp"], item["createdAt"] or ""), reverse=True)
+    return ideas[:IDEAS_MAX_ITEMS]
+
+
 def map_org_type(raw):
     r = raw.strip().lower()
     if r.startswith("official"):
@@ -220,11 +306,11 @@ def map_org_type(raw):
 
 def load_extra_targets():
     """Repos from the registry CSV that should be ingested individually even
-    if their owner isn't in ORGS: rows whose org_type matches
-    EXTRA_ORG_TYPE_PREFIXES, or any row explicitly marked verified=yes
-    (independent-contributor repos someone has actually checked). Returns
-    [(owner, repo, reason), ...]. Skips non-github.com URLs and bare
-    org/user rows (no repo path)."""
+    if their owner isn't in ORGS. Opt-out, not opt-in: every row with a
+    github.com/<owner>/<repo> URL is a live target unless org_type is in
+    EXCLUDED_ORG_TYPES or its verified column is explicitly a "no"-like
+    value. Returns [(owner, repo, reason), ...]. Skips non-github.com URLs
+    and bare org/user rows (no repo path)."""
     targets = []
     if not os.path.exists(CSV_PATH):
         log(f"Registry CSV not found at {CSV_PATH}, skipping extra targets.")
@@ -234,14 +320,19 @@ def load_extra_targets():
         reader = csv.DictReader(fh)
         for row in reader:
             org_type = map_org_type(row.get("org_type", ""))
-            verified = (row.get("verified") or "").strip().lower() in ("yes", "true", "1", "y")
+            verified_raw = (row.get("verified") or "").strip().lower()
+            verified_yes = verified_raw in ("yes", "true", "1", "y")
+            verified_no = verified_raw in ("no", "false", "0", "n")
+
+            if org_type in EXCLUDED_ORG_TYPES or verified_no:
+                continue
 
             if org_type in EXTRA_ORG_TYPE_PREFIXES:
                 reason = f"org_type:{org_type}"
-            elif verified:
+            elif verified_yes:
                 reason = "verified"
             else:
-                continue
+                reason = "registry_default"
 
             url = row.get("url", "").strip()
             parsed = urlparse(url)
@@ -289,11 +380,12 @@ def ingest_repo_activity(owner, repo_name, since_dt):
     full = f"{owner}/{repo_name}"
     since_iso = since_dt.strftime("%Y-%m-%dT%H:%M:%SZ")
     days = defaultdict(empty_day)
-    # login -> {commits, avatarUrl, htmlUrl, lastCommitAt}. Only commits with a
-    # real linked GitHub account (commit.author.login) are counted here —
-    # commits from an email not linked to a GitHub account have no login to
-    # attribute to, so they're excluded from contributor identity entirely
-    # rather than guessed at from the free-text commit author name.
+    # login -> {commits, avatarUrl, htmlUrl, firstCommitAt, lastCommitAt}.
+    # Only commits with a real linked GitHub account (commit.author.login)
+    # are counted here — commits from an email not linked to a GitHub
+    # account have no login to attribute to, so they're excluded from
+    # contributor identity entirely rather than guessed at from the
+    # free-text commit author name.
     contributors = {}
 
     commits = api_get(
@@ -317,11 +409,14 @@ def ingest_repo_activity(owner, repo_name, since_dt):
                 "avatarUrl": author.get("avatar_url"),
                 "htmlUrl": author.get("html_url"),
                 "commits": 0,
+                "firstCommitAt": author_date,
                 "lastCommitAt": author_date,
             })
             entry["commits"] += 1
             if author_date and (not entry["lastCommitAt"] or author_date > entry["lastCommitAt"]):
                 entry["lastCommitAt"] = author_date
+            if author_date and (not entry["firstCommitAt"] or author_date < entry["firstCommitAt"]):
+                entry["firstCommitAt"] = author_date
 
     pulls = api_get(
         f"{API_ROOT}/repos/{full}/pulls",
@@ -579,20 +674,21 @@ def main():
             targets.append((owner, repo["name"], "org_discovery"))
 
     extra_targets = load_extra_targets()
-    verified_count = 0
+    reason_counts = defaultdict(int)
     for owner, repo_name, reason in extra_targets:
         key = (owner.lower(), repo_name.lower())
         if key in covered:
             continue
         covered.add(key)
         targets.append((owner, repo_name, reason))
-        if reason == "verified":
-            verified_count += 1
+        reason_counts[reason] += 1
+    verified_count = reason_counts["verified"]
 
     log(f"Total tracked repos this run: {len(targets)} "
         f"({len(targets) - len(extra_targets)} via full org/user discovery, "
-        f"{len(extra_targets)} explicit registry targets, "
-        f"{verified_count} of those from verified=yes)")
+        f"{len(extra_targets)} registry targets: "
+        + ", ".join(f"{count} {reason}" for reason, count in sorted(reason_counts.items()))
+        + ")")
 
     repo_index = {}
     stars_summary = {}
@@ -630,6 +726,8 @@ def main():
                 "htmlUrl": info["htmlUrl"],
                 "commits": 0,
                 "repos": {},
+                "firstCommitAt": None,
+                "firstCommitRepo": None,
                 "lastCommitAt": None,
             })
             # A contributor's avatar/profile URL can't change mid-run, but keep
@@ -641,6 +739,16 @@ def main():
             agg["repos"][full] = agg["repos"].get(full, 0) + info["commits"]
             if info["lastCommitAt"] and (not agg["lastCommitAt"] or info["lastCommitAt"] > agg["lastCommitAt"]):
                 agg["lastCommitAt"] = info["lastCommitAt"]
+            # Earliest commit across every tracked repo, within the ingestion's
+            # LOOKBACK_DAYS window. This is what "new contributor" detection is
+            # built on (see NEW_CONTRIBUTOR_WINDOW_DAYS in app.js): if someone's
+            # earliest commit we've ever seen for them is recent, we haven't
+            # observed any commit from them in the prior LOOKBACK_DAYS, which is
+            # a reasonable proxy for "new to the project" without needing a full
+            # unbounded history lookup per author.
+            if info["firstCommitAt"] and (not agg["firstCommitAt"] or info["firstCommitAt"] < agg["firstCommitAt"]):
+                agg["firstCommitAt"] = info["firstCommitAt"]
+                agg["firstCommitRepo"] = full
 
         star_history = load_existing_star_history(out_path)
         if not star_history:
@@ -670,6 +778,19 @@ def main():
                 "lookbackDays": LOOKBACK_DAYS,
                 "series": series,
                 "starHistory": star_history,
+                # Per-repo contributor concentration, uncapped (unlike the
+                # org-wide top-100 in _contributors.json, which could miss a
+                # niche repo's dominant author if they're not otherwise very
+                # active). identifiedCommits is the sum of commits with a
+                # linked GitHub account — the correct denominator for a
+                # "bus factor" share, since some commits (bots, old
+                # unlinked-email commits) have no author to attribute.
+                # See repoBusFactor() in app.js.
+                "identifiedCommits": sum(c["commits"] for c in repo_contributors.values()),
+                "topContributors": [
+                    {"login": c["login"], "commits": c["commits"]}
+                    for c in sorted(repo_contributors.values(), key=lambda c: c["commits"], reverse=True)[:5]
+                ],
             }, fh, indent=2)
 
         repo_index[full] = f"activity/{owner}/{repo_name}.json"
@@ -741,9 +862,149 @@ def main():
                 "per-day breakdown per contributor, only per repo. Only commits "
                 "linked to a real GitHub account are included; commits from an "
                 "email with no linked account are excluded, not attributed by "
-                "guesswork."
+                "guesswork. firstCommitAt is the earliest commit seen for that "
+                "login within lookbackDays, used as a 'new contributor' signal "
+                "on the front end — not a claim about their GitHub history "
+                "before this window."
             ),
             "contributors": contributors_out,
+        }, fh, indent=2)
+
+    # Idea board — open issues labeled IDEAS_LABEL on the dashboard's own
+    # repo, not a tracked ecosystem repo. Skipped (not fabricated) if the
+    # repo can't be resolved, e.g. a local run without GITHUB_REPOSITORY set.
+    self_repo = resolve_self_repo()
+    ideas_out = []
+    if self_repo:
+        self_owner, self_name = self_repo
+        try:
+            ideas_out = fetch_idea_issues(self_owner, self_name)
+        except Exception as exc:
+            log(f"Idea board fetch failed for {self_owner}/{self_name}: {exc}")
+        with open(IDEAS_PATH, "w", encoding="utf-8") as fh:
+            json.dump({
+                "generatedAt": now.isoformat(),
+                "repo": f"{self_owner}/{self_name}",
+                "label": IDEAS_LABEL,
+                "note": (
+                    "Open issues labeled '{}' on this repo, sorted by 👍 reaction "
+                    "count then recency. bodyExcerpt is plain text, truncated to "
+                    "240 characters — render it as text, never as HTML/markdown."
+                ).format(IDEAS_LABEL),
+                "ideas": ideas_out,
+            }, fh, indent=2)
+    else:
+        log("Could not resolve the dashboard's own repo (no GITHUB_REPOSITORY "
+            "and no SELF_REPO_OVERRIDE) — skipping idea board, not writing ideas.json.")
+
+    os.makedirs(os.path.dirname(MANIFEST_PATH), exist_ok=True)
+    with open(MANIFEST_PATH, "w", encoding="utf-8") as fh:
+        json.dump({
+            "schemaVersion": MANIFEST_SCHEMA_VERSION,
+            "generatedAt": now.isoformat(),
+            "generator": "kasgit ingest_github_activity.py",
+            "sourceRepo": f"{self_repo[0]}/{self_repo[1]}" if self_repo else None,
+            "license": (
+                "This manifest and the resources it lists are derived from the public GitHub API "
+                "(commit/PR/issue/release metadata, star counts, public repo listings) and from this "
+                "project's own hand-maintained registry CSV. Treat the GitHub-derived fields as a mirror "
+                "of that public data, subject to GitHub's Terms of Service "
+                "(https://docs.github.com/site-policy/github-terms/github-terms-of-service). This "
+                "project's own code and registry curation are under the LICENSE file in the repo root."
+            ),
+            "notes": [
+                "All paths are relative to this site's root (e.g. https://<owner>.github.io/<repo>/<path>).",
+                "Static files — no auth, no API key, no rate limit imposed by this project. Normal HTTP "
+                "caching applies; see _meta.json's generatedAt or this file's generatedAt for freshness.",
+                "Updated once daily by the ingest-activity.yml GitHub Actions workflow.",
+                "schemaVersion only bumps on a breaking change (a field renamed, removed, or changed "
+                "meaning) to a resource already listed here — a new optional field or a new resource does "
+                "not bump it, so pin to a schemaVersion rather than an exact field list if you build "
+                "something long-lived on this.",
+            ],
+            "resources": [
+                {
+                    "id": "repoIndex",
+                    "path": "data/activity/_repos.json",
+                    "format": "json",
+                    "description": (
+                        "Map of every live-ingested repo (\"owner/repo\") to the relative path of its own "
+                        "activity file. Start here to discover what's actually being ingested this run."
+                    ),
+                },
+                {
+                    "id": "repoActivity",
+                    "path": "data/activity/{owner}/{repo}.json",
+                    "format": "json",
+                    "description": (
+                        "Per-repo daily commit/PR/issue/release series, star history, and "
+                        "identifiedCommits/topContributors (used for the Bus Factor Watch signal). One file "
+                        "per repo listed in repoIndex — repos outside live ingestion scope have no file here."
+                    ),
+                },
+                {
+                    "id": "orgSummary",
+                    "path": "data/activity/_summary.json",
+                    "format": "json",
+                    "description": (
+                        "Org-wide daily activity series, pre-aggregated across every ingested repo. The "
+                        "dashboard's own frontend does NOT use this (it recomputes totals client-side from "
+                        "repoActivity by design — see Methodology) — this exists for external consumers who "
+                        "want a ready-made rollup instead of summing every repo file themselves."
+                    ),
+                },
+                {
+                    "id": "orgStars",
+                    "path": "data/activity/_stars.json",
+                    "format": "json",
+                    "description": "Current star count per ingested repo, as of this run.",
+                },
+                {
+                    "id": "contributors",
+                    "path": "data/activity/_contributors.json",
+                    "format": "json",
+                    "description": (
+                        "Org-wide contributor list (commits, first/last commit date, repos touched), capped "
+                        "to the top 100 by total commits. For a specific repo's own contributor breakdown "
+                        "(uncapped), use that repo's file via repoIndex instead."
+                    ),
+                },
+                {
+                    "id": "ideas",
+                    "path": "data/activity/ideas.json",
+                    "format": "json",
+                    "description": f"Open issues labeled '{IDEAS_LABEL}' on {self_repo[0]}/{self_repo[1]}" if self_repo
+                        else f"Open issues labeled '{IDEAS_LABEL}' on this project's own repo — the community idea board.",
+                },
+                {
+                    "id": "releaseFeedJson",
+                    "path": "data/feed/releases.json",
+                    "format": "json",
+                    "description": "Combined release feed across every ingested repo, newest first.",
+                },
+                {
+                    "id": "releaseFeedRss",
+                    "path": "data/feed/releases.xml",
+                    "format": "rss",
+                    "description": "The same release feed as standard RSS 2.0 — subscribe directly in any feed reader.",
+                },
+                {
+                    "id": "registryCsv",
+                    "path": "data/kaspa_github_ecosystem_inventory.csv",
+                    "format": "csv",
+                    "description": (
+                        "The hand-maintained source registry (project name, category, org type, status, "
+                        "verified flag) that ingestion targets are computed from — the ground truth for "
+                        "what's tracked at all, live or modeled."
+                    ),
+                },
+                {
+                    "id": "runMeta",
+                    "path": "data/activity/_meta.json",
+                    "format": "json",
+                    "description": "This run's own stats — repo/contributor/idea counts, failures, timing. Useful for a freshness/health check before trusting the rest.",
+                },
+            ],
         }, fh, indent=2)
 
     with open(os.path.join(OUTPUT_DIR, "_meta.json"), "w", encoding="utf-8") as fh:
@@ -757,6 +1018,7 @@ def main():
             "starHistoryBackfills": star_backfills_performed,
             "releaseFeedItems": feed_count,
             "contributorsCaptured": len(contributors_out),
+            "ideasCaptured": len(ideas_out),
             "failed": failed,
             "lookbackDays": LOOKBACK_DAYS,
             "status": "ok" if ingested_count else "no-data",
@@ -764,7 +1026,8 @@ def main():
 
     log(f"Done. Ingested {ingested_count} repos ({stars_captured_count} star snapshots, "
         f"{star_backfills_performed} star-history backfills, {feed_count} release feed items, "
-        f"{len(contributors_out)} contributors captured), {len(failed)} failed.")
+        f"{len(contributors_out)} contributors captured, {len(ideas_out)} idea-board issues), "
+        f"{len(failed)} failed.")
 
 
 if __name__ == "__main__":

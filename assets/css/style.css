@@ -326,3 +326,42 @@ body {
     min-width: 760px;
   }
 }
+
+/*
+ * Manual patch: tailwind.built.css is a checked-in, purge-scanned build (see
+ * README's "rebuild" section) — it only contains utility classes the compiler
+ * found by scanning index.html/app.js at build time. These were added by hand
+ * in later edits without re-running the npm build (no network access at edit
+ * time to install tailwindcss), so they're defined here instead. Safe to
+ * delete this block once assets/css/tailwind.built.css is regenerated via:
+ *   npx tailwindcss -i ./assets/css/tailwind-src.css \
+ *     -o ./assets/css/tailwind.built.css -c ./tailwind.config.js --minify
+ */
+.inline-block { display: inline-block; }
+.leading-snug { line-height: 1.375; }
+.max-w-full { max-width: 100%; }
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-1\.5 { margin-bottom: 0.375rem; }
+.px-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+.py-2\.5 { padding-top: 0.625rem; padding-bottom: 0.625rem; }
+.rounded-lg { border-radius: 0.5rem; }
+.tracking-wide { letter-spacing: 0.025em; }
+.text-sky-100 { color: rgb(224 242 254); }
+.text-emerald-100 { color: rgb(209 250 229); }
+.bg-sky-300\/\[0\.05\] { background-color: rgba(125, 211, 252, 0.05); }
+.border-sky-300\/15 { border-color: rgba(125, 211, 252, 0.15); }
+.hover\:underline:hover { text-decoration-line: underline; }
+.hover\:text-teal-100:hover { color: rgb(204 251 241); }
+.hover\:bg-white\/\[0\.04\]:hover { background-color: hsla(0, 0%, 100%, 0.04); }
+.hover\:bg-white\/\[0\.06\]:hover { background-color: hsla(0, 0%, 100%, 0.06); }
+.text-slate-600 { color: rgb(71 85 105); }
+.w-1\.5 { width: 0.375rem; }
+
+@media (min-width: 768px) {
+  .md\:col-span-2 { grid-column: span 2 / span 2; }
+  .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1280px) {
+  .xl\:col-span-3 { grid-column: span 3 / span 3; }
+}

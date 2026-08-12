@@ -44,6 +44,7 @@
     { id: "repos", label: "Repositories" },
     { id: "contributors", label: "Contributors" },
     { id: "registry", label: "Registry" },
+    { id: "ideas", label: "Ideas" },
     { id: "methodology", label: "Methodology" }
   ];
 
@@ -66,7 +67,15 @@
   // Live GitHub activity data, populated asynchronously by loadLiveActivity()
   // from data/activity/*.json (written by the scheduled ingestion workflow).
   // Any repo not present here falls back to modeled placeholder data.
-  const LIVE = { repos: {}, meta: null, releases: [], contributors: [] };
+  const LIVE = { repos: {}, meta: null, releases: [], contributors: [], ideas: [] };
+
+  // Set to "owner/repo" if this dashboard is hosted on a custom domain —
+  // resolveRepoSlug() can only auto-detect the repo on the default
+  // *.github.io Pages URL. Leave null to rely on auto-detection.
+  const KASGIT_REPO_OVERRIDE = null;
+
+  // Must match IDEAS_LABEL in scripts/ingest_github_activity.py.
+  const IDEAS_LABEL = "idea";
 
   // ---------------------------------------------------------------------
   // Utilities
@@ -407,40 +416,53 @@
    * falls back to the fully-synthetic CONTRIBUTOR_HANDLES/contributorMetrics
    * generator otherwise, so the tab still shows something before first ingest.
    *
-   * IMPORTANT ASYMMETRY: live rows only have real commits + repos + last-commit
-   * date (that's what the GitHub commits API gives us per author). PRs, reviews,
+   * IMPORTANT ASYMMETRY: live rows only have real commits + repos + first/last-commit
+   * dates (that's what the GitHub commits API gives us per author). PRs, reviews,
    * and issues are NOT attributed per-author by the ingestion script, so live
    * rows report those as null — rendered as "—", never as a fabricated 0 or a
    * modeled guess. Also note live commit counts are cumulative over the
    * ingestion's lookback window (currently 400 days), not sliced by the
    * dashboard's range selector — there's no per-day-per-author breakdown.
+   * isNew is true when firstCommitAt falls within NEW_CONTRIBUTOR_WINDOW_DAYS —
+   * i.e. we have no record of a commit from them before that, within the
+   * ingestion's lookback window. Always false for modeled rows; never guessed.
    */
+  const NEW_CONTRIBUTOR_WINDOW_DAYS = 14;
+
   function contributorRows() {
     if (LIVE.contributors.length) {
       const now = Date.now();
-      return LIVE.contributors.map(entry => ({
-        handle: entry.login,
-        htmlUrl: entry.htmlUrl,
-        avatarUrl: entry.avatarUrl,
-        isLive: true,
-        metrics: {
-          commits: entry.commits,
-          prs: null,
-          reviews: null,
-          issues: null,
-          repos: entry.repoCount,
-          lastActive: entry.lastCommitAt
-            ? Math.max(0, Math.floor((now - new Date(entry.lastCommitAt).getTime()) / 86400000))
-            : null
-        }
-      }));
+      return LIVE.contributors.map(entry => {
+        const firstCommitDays = entry.firstCommitAt
+          ? Math.max(0, Math.floor((now - new Date(entry.firstCommitAt).getTime()) / 86400000))
+          : null;
+        return {
+          handle: entry.login,
+          htmlUrl: entry.htmlUrl,
+          avatarUrl: entry.avatarUrl,
+          isLive: true,
+          metrics: {
+            commits: entry.commits,
+            prs: null,
+            reviews: null,
+            issues: null,
+            repos: entry.repoCount,
+            lastActive: entry.lastCommitAt
+              ? Math.max(0, Math.floor((now - new Date(entry.lastCommitAt).getTime()) / 86400000))
+              : null,
+            firstCommitAt: entry.firstCommitAt || null,
+            firstCommitRepo: entry.firstCommitRepo || null,
+            isNew: firstCommitDays !== null && firstCommitDays <= NEW_CONTRIBUTOR_WINDOW_DAYS
+          }
+        };
+      });
     }
     return CONTRIBUTOR_HANDLES.map(handle => ({
       handle,
       htmlUrl: null,
       avatarUrl: null,
       isLive: false,
-      metrics: contributorMetrics(handle, state.range)
+      metrics: { ...contributorMetrics(handle, state.range), firstCommitAt: null, firstCommitRepo: null, isNew: false }
     }));
   }
 
@@ -757,10 +779,38 @@
     root.innerHTML = html;
   }
 
+  const BUS_FACTOR_MIN_COMMITS = 5;      // ignore repos too new/quiet to say anything meaningful
+  const BUS_FACTOR_SHARE_THRESHOLD = 0.85; // top contributor's share of identified commits
+
+  /**
+   * Single-maintainer risk for a repo, from real per-repo contributor data
+   * (see topContributors/identifiedCommits in ingest_github_activity.py).
+   * Returns null when there's no live data, too little identified commit
+   * history to say anything meaningful, or the top contributor's share is
+   * below threshold — never a modeled guess, since fabricating "who wrote
+   * this" would be actively misleading rather than just incomplete.
+   */
+  function repoBusFactor(repo) {
+    const liveRecord = LIVE.repos[repo.repoPath];
+    const top = liveRecord?.topContributors?.[0];
+    const identified = liveRecord?.identifiedCommits || 0;
+    if (!top || identified < BUS_FACTOR_MIN_COMMITS) return null;
+    const share = top.commits / identified;
+    if (share < BUS_FACTOR_SHARE_THRESHOLD) return null;
+    return { login: top.login, share, identifiedCommits: identified };
+  }
+
   function liveIndicator(isLive) {
     return isLive
       ? `<span class="badge badge-emerald" title="Live GitHub data (ingested)">● Live</span>`
       : `<span class="badge badge-slate" title="Modeled placeholder data — not yet ingested">○ Modeled</span>`;
+  }
+
+  function busFactorBadge(repo) {
+    const risk = repoBusFactor(repo);
+    if (!risk) return "";
+    const pct = Math.round(risk.share * 100);
+    return `<span class="badge badge-amber" title="${escapeHtml(`@${risk.login} authored ${pct}% of this repo's identified commits`)}">⚠ Bus factor 1</span>`;
   }
 
   function repoRowMarkup(repo, metrics, color, variant) {
@@ -775,7 +825,7 @@
           <span class="block text-xs text-slate-500 mt-1 ${descMaxWidth} truncate" title="${escapeHtml(repo.description)}">${escapeHtml(repo.description)}</span>
         </a>
       </td>
-      <td>${categoryBadge(repo.category)}${variant === "full" ? ` ${liveIndicator(metrics.isLive)}` : ""}</td>
+      <td>${categoryBadge(repo.category)}${variant === "full" ? ` ${liveIndicator(metrics.isLive)} ${busFactorBadge(repo)}` : ""}</td>
       ${variant === "full" ? `<td class="font-mono text-slate-300">Tier ${repo.tier}</td>` : ""}
       <td>${statusBadge(repo.status)}</td>
       ${variant === "full" ? `<td class="text-right font-mono ${metrics.starsLive ? "text-emerald-200" : "text-slate-200"}" title="${metrics.starsLive ? "Live star count" : "Modeled placeholder"}">${formatNumber(metrics.stars)}</td>` : ""}
@@ -854,6 +904,7 @@
       const nameLabel = row.htmlUrl
         ? `<a href="${escapeHtml(row.htmlUrl)}" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-slate-100 truncate font-mono hover:underline">${escapeHtml(row.handle)}</a>`
         : `<span class="text-sm font-medium text-slate-100 truncate font-mono">${escapeHtml(row.handle)}</span>`;
+      const newBadge = row.metrics.isNew ? `<span class="badge badge-emerald text-[10px]">New</span>` : "";
       const prsLabel = row.metrics.prs === null ? "—" : `${formatNumber(row.metrics.prs)} PRs`;
 
       return `
@@ -862,7 +913,7 @@
             ${avatar}
             <div class="min-w-0 flex-1">
               <div class="flex items-center justify-between gap-3">
-                ${nameLabel}
+                <span class="flex items-center gap-1.5 min-w-0">${nameLabel}${newBadge}</span>
                 <span class="text-xs text-slate-400">#${index + 1}</span>
               </div>
               <div class="mt-2 h-1.5 rounded-full bg-white/[0.06] overflow-hidden">
@@ -912,6 +963,7 @@
       const nameLabel = row.htmlUrl
         ? `<a href="${escapeHtml(row.htmlUrl)}" target="_blank" rel="noopener noreferrer" class="font-mono text-slate-100 hover:underline">${escapeHtml(row.handle)}</a>`
         : `<span class="font-mono text-slate-100">${escapeHtml(row.handle)}</span>`;
+      const newBadge = row.metrics.isNew ? `<span class="badge badge-emerald text-[10px]">New</span>` : "";
       const cell = (value) => value === null ? `<span class="text-slate-600">—</span>` : formatNumber(value);
 
       return `
@@ -923,6 +975,7 @@
               <span class="flex items-center gap-2">
                 ${nameLabel}
                 ${row.isLive ? `<span class="h-1.5 w-1.5 rounded-full bg-emerald-400" title="Live GitHub data"></span>` : ""}
+                ${newBadge}
               </span>
             </div>
           </td>
@@ -1099,6 +1152,7 @@
     const badgeEl = document.getElementById("weeklyDataBadge");
     const moversEl = document.getElementById("weeklyMovers");
     const releasesEl = document.getElementById("weeklyReleases");
+    const newBuildersEl = document.getElementById("weeklyNewBuilders");
     if (!moversEl || !releasesEl) return;
 
     const repos = filteredRepos();
@@ -1154,6 +1208,43 @@
           </a>
         `).join("")
       : `<p class="text-xs text-slate-500">No releases ingested yet — this fills in once the ingestion workflow has run (see Methodology).</p>`;
+
+    if (newBuildersEl) {
+      // Anyone whose first-ever tracked commit (within the ingestion lookback
+      // window) landed in the last NEW_CONTRIBUTOR_WINDOW_DAYS days. Live-data
+      // only — there's no honest way to model "someone is new" for a repo that
+      // hasn't been ingested yet, so this stays empty rather than guessing.
+      const newBuilders = contributorRows()
+        .filter(row => row.isLive && row.metrics.isNew)
+        .sort((a, b) => new Date(b.metrics.firstCommitAt) - new Date(a.metrics.firstCommitAt))
+        .slice(0, 5);
+
+      newBuildersEl.innerHTML = newBuilders.length
+        ? newBuilders.map(row => {
+            const initials = row.handle.split(/[_-]/).slice(0, 2).map(part => part[0]?.toUpperCase() || "").join("");
+            const color = avatarColor(row.handle);
+            const avatar = row.avatarUrl
+              ? `<img src="${escapeHtml(row.avatarUrl)}" alt="" class="h-7 w-7 rounded-lg shrink-0" loading="lazy" />`
+              : `<div class="h-7 w-7 rounded-lg flex items-center justify-center text-[10px] font-bold text-black/80 shrink-0" style="background:${color}">${escapeHtml(initials)}</div>`;
+            const nameLabel = row.htmlUrl
+              ? `<a href="${escapeHtml(row.htmlUrl)}" target="_blank" rel="noreferrer noopener" class="text-xs font-mono text-slate-100 hover:underline truncate">${escapeHtml(row.handle)}</a>`
+              : `<span class="text-xs font-mono text-slate-100 truncate">${escapeHtml(row.handle)}</span>`;
+            const repoName = (row.metrics.firstCommitRepo || "").split("/")[1] || row.metrics.firstCommitRepo || "";
+            return `
+              <div class="flex items-center gap-2 rounded-xl border border-white/[0.06] bg-white/[0.02] px-3 py-2">
+                ${avatar}
+                <div class="min-w-0 flex-1">
+                  <div class="flex items-center justify-between gap-2">
+                    ${nameLabel}
+                    <span class="text-[10px] text-slate-500 shrink-0">${escapeHtml(timeAgoLabel(row.metrics.firstCommitAt))}</span>
+                  </div>
+                  <span class="text-[10px] text-slate-500 truncate block">first commit → ${escapeHtml(repoName)}</span>
+                </div>
+              </div>
+            `;
+          }).join("")
+        : `<p class="text-xs text-slate-500">No new contributors detected in the last ${NEW_CONTRIBUTOR_WINDOW_DAYS} days of ingested history.</p>`;
+    }
   }
 
   function renderStartHere() {
@@ -1188,6 +1279,238 @@
           </a>
         `).join("")
       : `<p class="text-xs text-slate-500">No eligible repos found for the current filter.</p>`;
+  }
+
+  // Days since a repo's last commit, using the full ingested lookback window
+  // (not clipped to the dashboard's range selector). Returns null for repos
+  // with no live data yet — callers must not fabricate a value for those.
+  function repoLastCommitDays(repo) {
+    const liveRecord = LIVE.repos[repo.repoPath];
+    if (!liveRecord || !Array.isArray(liveRecord.series) || !liveRecord.series.length) return null;
+    let lastActiveDate = null;
+    for (const day of liveRecord.series) {
+      if (day.commits > 0) lastActiveDate = day.date;
+    }
+    if (!lastActiveDate) return null;
+    const then = new Date(`${lastActiveDate}T00:00:00Z`).getTime();
+    return Math.max(0, Math.floor((Date.now() - then) / 86400000));
+  }
+
+  const NEEDS_BUILDER_STALE_DAYS = 120;
+  const NEEDS_BUILDER_MAX_ITEMS = 6;
+  const NEEDS_BUILDER_THIN_COUNT = 4;
+
+  /**
+   * "Needs a Builder" — surfaces ecosystem gaps instead of just ranking what
+   * already exists. Two signals, both derived from data already on the page
+   * (no separate fetch, no manual curation):
+   *   - thin: category has the fewest non-archived/deprecated registry rows.
+   *   - stalled: category has live-ingested repos, and every single one of
+   *     them hasn't committed in NEEDS_BUILDER_STALE_DAYS+ days. Categories
+   *     with zero live-ingested repos can't earn this label — that would be
+   *     mistaking "not ingested yet" for "abandoned", which isn't true.
+   * A category can only appear once; "stalled" wins over "thin" when both
+   * apply, since it's backed by real commit history rather than just a count.
+   */
+  function renderNeedsBuilder() {
+    const badgeEl = document.getElementById("needsBuilderBadge");
+    const root = document.getElementById("needsBuilderList");
+    if (!root) return;
+
+    const categories = Object.keys(CATEGORY_META).filter(cat => cat !== "All");
+
+    const byCategory = categories.map(category => {
+      const repos = REPOS.filter(repo =>
+        repo.category === category && repo.status !== "Archived" && repo.status !== "Deprecated"
+      );
+      const withLastCommit = repos
+        .map(repo => ({ repo, lastCommitDays: repoLastCommitDays(repo) }))
+        .filter(item => item.lastCommitDays !== null)
+        .sort((a, b) => b.lastCommitDays - a.lastCommitDays);
+
+      const liveCount = withLastCommit.length;
+      const staleOnly = liveCount > 0 && withLastCommit.every(item => item.lastCommitDays >= NEEDS_BUILDER_STALE_DAYS);
+
+      return {
+        category,
+        repoCount: repos.length,
+        liveCount,
+        staleOnly,
+        stalest: withLastCommit[0] || null
+      };
+    });
+
+    const picks = new Map();
+    [...byCategory]
+      .sort((a, b) => a.repoCount - b.repoCount)
+      .slice(0, NEEDS_BUILDER_THIN_COUNT)
+      .forEach(item => picks.set(item.category, { ...item, reason: "thin" }));
+    byCategory
+      .filter(item => item.staleOnly)
+      .forEach(item => picks.set(item.category, { ...item, reason: "stalled" }));
+
+    const finalPicks = [...picks.values()].slice(0, NEEDS_BUILDER_MAX_ITEMS);
+    const liveSignalTotal = byCategory.reduce((sum, item) => sum + item.liveCount, 0);
+
+    if (badgeEl) {
+      badgeEl.className = liveSignalTotal > 0 ? "badge badge-emerald" : "badge badge-slate";
+      badgeEl.textContent = liveSignalTotal > 0
+        ? `${liveSignalTotal} repo${liveSignalTotal === 1 ? "" : "s"} of live signal`
+        : "Registry counts only — live signal pending ingestion";
+    }
+
+    root.innerHTML = finalPicks.length
+      ? finalPicks.map(item => {
+          const example = item.stalest?.repo;
+          const label = item.reason === "stalled"
+            ? `Only ${item.liveCount} tracked repo${item.liveCount === 1 ? "" : "s"} here — none has committed in ${Math.floor(item.stalest.lastCommitDays / 30)}+ months`
+            : `Smallest tracked category — ${item.repoCount} repo${item.repoCount === 1 ? "" : "s"} total`;
+          return `
+            <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] px-3 py-2.5">
+              <div class="flex items-center justify-between gap-2 mb-1.5">
+                ${categoryBadge(item.category)}
+                <span class="text-[10px] uppercase tracking-wide font-medium ${item.reason === "stalled" ? "text-amber-300" : "text-slate-500"}">
+                  ${item.reason === "stalled" ? "Stalled" : "Thin"}
+                </span>
+              </div>
+              <p class="text-xs text-slate-300 leading-snug">${escapeHtml(label)}</p>
+              ${example ? `
+                <a href="${escapeHtml(safeUrl(example.url))}" target="_blank" rel="noreferrer noopener"
+                   class="text-xs text-teal-200 hover:text-teal-100 mt-1.5 inline-block truncate max-w-full">
+                  ${escapeHtml(example.name)} →
+                </a>` : ""}
+            </div>
+          `;
+        }).join("")
+      : `<p class="text-xs text-slate-500 md:col-span-2 xl:col-span-3">Nothing stands out yet — every category has active coverage.</p>`;
+  }
+
+  /**
+   * Idea Board — open "idea"-labeled issues on the dashboard's own repo,
+   * fetched by loadIdeas(). Sorted by 👍 reaction count then recency (same
+   * order the ingestion script already sorts in, re-sorted defensively here
+   * in case a future data source doesn't). Live-data only: there's no
+   * modeled fallback, since fabricating community submissions would be
+   * actively misleading rather than just incomplete.
+   */
+  function renderIdeasView() {
+    const badgeEl = document.getElementById("ideasDataBadge");
+    const listEl = document.getElementById("ideasList");
+    const ctaEl = document.getElementById("newIdeaLink");
+    if (!listEl) return;
+
+    const repoSlug = resolveRepoSlug();
+    if (ctaEl) {
+      if (repoSlug) {
+        const title = encodeURIComponent("Idea: ");
+        ctaEl.href = `https://github.com/${repoSlug}/issues/new?labels=idea&title=${title}`;
+        ctaEl.classList.remove("hidden");
+      } else {
+        ctaEl.classList.add("hidden");
+      }
+    }
+
+    const ideas = [...LIVE.ideas].sort((a, b) =>
+      (b.thumbsUp - a.thumbsUp) || (new Date(b.createdAt) - new Date(a.createdAt))
+    );
+
+    if (badgeEl) {
+      badgeEl.className = ideas.length ? "badge badge-emerald text-[11px]" : "badge badge-slate text-[11px]";
+      badgeEl.textContent = ideas.length
+        ? `${ideas.length} open idea${ideas.length === 1 ? "" : "s"}`
+        : "No ideas ingested yet";
+    }
+
+    listEl.innerHTML = ideas.length
+      ? ideas.map(idea => {
+          const login = idea.author?.login || "unknown";
+          const initials = login.slice(0, 2).toUpperCase();
+          const color = avatarColor(login);
+          const avatar = idea.author?.avatarUrl
+            ? `<img src="${escapeHtml(idea.author.avatarUrl)}" alt="" class="h-7 w-7 rounded-lg shrink-0" loading="lazy" />`
+            : `<div class="h-7 w-7 rounded-lg flex items-center justify-center text-[10px] font-bold text-black/80 shrink-0" style="background:${color}">${escapeHtml(initials)}</div>`;
+          const labelBadges = (idea.labels || [])
+            .filter(label => label !== IDEAS_LABEL)
+            .slice(0, 3)
+            .map(label => `<span class="badge badge-slate text-[10px]">${escapeHtml(label)}</span>`)
+            .join("");
+
+          return `
+            <a href="${escapeHtml(safeUrl(idea.htmlUrl))}" target="_blank" rel="noreferrer noopener"
+               class="block rounded-xl border border-white/[0.06] bg-white/[0.02] px-3 py-2.5 hover:bg-white/[0.04] transition">
+              <div class="flex items-center justify-between gap-2 mb-1.5">
+                <span class="flex items-center gap-2 min-w-0">
+                  ${avatar}
+                  <span class="text-xs font-mono text-slate-400 truncate">@${escapeHtml(login)}</span>
+                </span>
+                <span class="text-[10px] text-slate-500 shrink-0">${escapeHtml(timeAgoLabel(idea.createdAt))}</span>
+              </div>
+              <p class="text-sm font-medium text-slate-100 truncate">${escapeHtml(idea.title)}</p>
+              ${idea.bodyExcerpt ? `<p class="text-xs text-slate-400 mt-1">${escapeHtml(idea.bodyExcerpt)}${idea.bodyExcerpt.length >= 240 ? "…" : ""}</p>` : ""}
+              <div class="flex items-center justify-between gap-2 mt-2">
+                <div class="flex items-center gap-3 text-[10px] text-slate-500">
+                  <span>👍 ${formatNumber(idea.thumbsUp || 0)}</span>
+                  <span>💬 ${formatNumber(idea.commentsCount || 0)}</span>
+                </div>
+                <div class="flex items-center gap-1.5">${labelBadges}</div>
+              </div>
+            </a>
+          `;
+        }).join("")
+      : `<p class="text-xs text-slate-500 md:col-span-2">
+           No open ideas yet. ${repoSlug ? `Be the first — file an issue labeled <span class="font-mono text-teal-200">idea</span> and it'll show up here on the next ingestion run.` : "Once someone opens an issue labeled idea on this repo, it'll show up here."}
+         </p>`;
+  }
+
+  const BUS_FACTOR_WATCH_MAX_ITEMS = 6;
+
+  /**
+   * "Bus Factor Watch" — surfaces repos where one person authored 85%+ of
+   * identified commits, using repoBusFactor() (real per-repo contributor
+   * data, live-ingested repos only). Sorted by identifiedCommits descending
+   * so the most active-yet-solo repos surface first — a quiet, barely-touched
+   * repo being bus-factor-1 is far less notable than a busy one being that way.
+   */
+  function renderBusFactorWatch() {
+    const badgeEl = document.getElementById("busFactorBadge");
+    const root = document.getElementById("busFactorList");
+    if (!root) return;
+
+    const liveRepoCount = REPOS.filter(repo => LIVE.repos[repo.repoPath]).length;
+
+    const flagged = REPOS
+      .filter(repo => repo.status !== "Archived" && repo.status !== "Deprecated")
+      .map(repo => ({ repo, risk: repoBusFactor(repo) }))
+      .filter(item => item.risk)
+      .sort((a, b) => b.risk.identifiedCommits - a.risk.identifiedCommits)
+      .slice(0, BUS_FACTOR_WATCH_MAX_ITEMS);
+
+    if (badgeEl) {
+      badgeEl.textContent = liveRepoCount > 0
+        ? `${flagged.length} flagged of ${liveRepoCount} live repos`
+        : "Live signal pending ingestion";
+    }
+
+    root.innerHTML = flagged.length
+      ? flagged.map(({ repo, risk }) => {
+          const pct = Math.round(risk.share * 100);
+          return `
+            <a href="${escapeHtml(safeUrl(repo.url))}" target="_blank" rel="noreferrer noopener"
+               class="block rounded-xl border border-white/[0.06] bg-white/[0.02] px-3 py-2.5 hover:bg-white/[0.04] transition">
+              <div class="flex items-center justify-between gap-2 mb-1">
+                ${categoryBadge(repo.category)}
+                <span class="text-[10px] uppercase tracking-wide font-medium text-amber-300">${pct}%</span>
+              </div>
+              <p class="text-sm font-medium text-slate-100 truncate">${escapeHtml(repo.name)}</p>
+              <p class="text-xs text-slate-400 mt-1">@${escapeHtml(risk.login)} authored ${pct}% of ${formatNumber(risk.identifiedCommits)} identified commits</p>
+            </a>
+          `;
+        }).join("")
+      : `<p class="text-xs text-slate-500 md:col-span-2 xl:col-span-3">${
+          liveRepoCount > 0
+            ? "No single-maintainer risk detected among live-ingested repos."
+            : "Needs live ingestion data to compute — see Methodology."
+        }</p>`;
   }
 
   function renderLiveBadge() {
@@ -1226,6 +1549,9 @@
     renderRegistryTable();
     renderWeeklyDigest();
     renderStartHere();
+    renderNeedsBuilder();
+    renderBusFactorWatch();
+    renderIdeasView();
     renderLiveBadge();
     updateLastUpdated();
   }
@@ -1301,6 +1627,39 @@
     } catch (err) {
       console.warn("Live contributor data unavailable — using modeled placeholders.", err);
     }
+  }
+
+  /**
+   * Fetches data/activity/ideas.json — open "idea"-labeled issues on the
+   * dashboard's own repo (see IDEAS_LABEL in ingest_github_activity.py).
+   * Safe to call before that workflow has ever run; LIVE.ideas stays empty
+   * and the Ideas tab shows an empty state rather than fabricated content.
+   */
+  async function loadIdeas() {
+    try {
+      const res = await fetch("data/activity/ideas.json", { cache: "no-store" });
+      if (!res.ok) return;
+      const payload = await res.json();
+      LIVE.ideas = Array.isArray(payload.ideas) ? payload.ideas : [];
+    } catch (err) {
+      console.warn("Idea board data unavailable.", err);
+    }
+  }
+
+  /**
+   * "owner/repo" for wherever this dashboard is actually hosted, used to
+   * build the "suggest an idea" new-issue link. Only auto-detectable on the
+   * default *.github.io Pages URL (owner from the subdomain, repo from the
+   * first path segment) — set KASGIT_REPO_OVERRIDE above for a custom
+   * domain. Returns null rather than guessing wrong.
+   */
+  function resolveRepoSlug() {
+    if (KASGIT_REPO_OVERRIDE) return KASGIT_REPO_OVERRIDE;
+    const match = window.location.hostname.match(/^([^.]+)\.github\.io$/i);
+    if (!match) return null;
+    const owner = match[1];
+    const repo = window.location.pathname.split("/").filter(Boolean)[0];
+    return repo ? `${owner}/${repo}` : null;
   }
 
   function exportRepoJson() {
@@ -1440,7 +1799,7 @@
     switchView("overview");
     updateDashboard(); // paint immediately with modeled fallback data
 
-    await Promise.all([loadLiveActivity(), loadReleaseFeed(), loadLiveContributors()]);
+    await Promise.all([loadLiveActivity(), loadReleaseFeed(), loadLiveContributors(), loadIdeas()]);
     updateDashboard(); // repaint with any live-ingested data merged in
   }
 

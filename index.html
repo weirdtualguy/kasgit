@@ -49,6 +49,20 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js" integrity="sha384-o5uz97et3bErHvpKfD4Jz4n0JfhJDWABFuF4NP+iEEDxE1VwMWJ19QGR0lqFZnr6" crossorigin="anonymous"></script>
+  <!--
+    Kaspicon (https://github.com/weirdtualguy/kaspicon) — deterministic
+    pixel-identicon fallback avatars for contributors/idea authors without a
+    GitHub photo (see avatarMarkup() in app.js). Pinned to @main rather than
+    a release tag: the project hasn't cut a GitHub Release/tag yet, so a
+    version pin (e.g. @v1.1.0) 404s on jsDelivr as of this writing. No
+    integrity hash for the same reason — SRI needs a fixed file to hash
+    against, which a branch pin doesn't give you. Once a tagged release
+    exists, switch this to `@vX.Y.Z` and add integrity, matching the echarts
+    line above. app.js falls back to a colored-initials tile if this script
+    fails to load or doesn't resolve, so its absence degrades gracefully
+    rather than breaking anything.
+  -->
+  <script src="https://cdn.jsdelivr.net/gh/weirdtualguy/kaspicon@main/src/kaspicon.js"></script>
 </head>
 
 <body class="font-sans text-slate-200 antialiased min-h-screen selection:bg-cyan-300/20">
@@ -280,12 +294,12 @@
           <div class="flex items-center justify-between gap-3 mb-4">
             <div>
               <h3 class="text-sm font-semibold text-white">This Week</h3>
-              <p class="text-xs text-slate-400">Biggest movers (last 7 days vs. the 7 before) and the newest releases across tracked repos.</p>
+              <p class="text-xs text-slate-400">Biggest movers (last 7 days vs. the 7 before), the newest releases, and anyone whose first tracked commit landed this week.</p>
             </div>
             <span class="badge badge-slate" id="weeklyDataBadge">--</span>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
               <h4 class="text-xs font-semibold uppercase tracking-[0.1em] text-slate-500 mb-2">Top movers</h4>
               <div id="weeklyMovers" class="space-y-2"></div>
@@ -293,6 +307,10 @@
             <div>
               <h4 class="text-xs font-semibold uppercase tracking-[0.1em] text-slate-500 mb-2">Recent releases</h4>
               <div id="weeklyReleases" class="space-y-2"></div>
+            </div>
+            <div>
+              <h4 class="text-xs font-semibold uppercase tracking-[0.1em] text-slate-500 mb-2">New builders</h4>
+              <div id="weeklyNewBuilders" class="space-y-2"></div>
             </div>
           </div>
         </article>
@@ -304,6 +322,28 @@
           </div>
           <div id="startHereList" class="space-y-2"></div>
         </article>
+      </section>
+
+      <section class="card p-4">
+        <div class="flex items-center justify-between gap-3 mb-1">
+          <div>
+            <h3 class="text-sm font-semibold text-white">Needs a Builder</h3>
+            <p class="text-xs text-slate-400">Thin categories and stalled-out repos, derived from registry counts and live commit history — not hand-picked. If something here is you, that's the point.</p>
+          </div>
+          <span class="badge badge-slate text-[11px]" id="needsBuilderBadge">--</span>
+        </div>
+        <div id="needsBuilderList" class="mt-3 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2"></div>
+      </section>
+
+      <section class="card p-4">
+        <div class="flex items-center justify-between gap-3 mb-1">
+          <div>
+            <h3 class="text-sm font-semibold text-white">Bus Factor Watch</h3>
+            <p class="text-xs text-slate-400">Live-ingested repos where one person authored 85%+ of identified commits. Not a criticism — a pointer at where a second maintainer would help most.</p>
+          </div>
+          <span class="badge badge-slate text-[11px]" id="busFactorBadge">--</span>
+        </div>
+        <div id="busFactorList" class="mt-3 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2"></div>
       </section>
 
       <section class="grid grid-cols-1 xl:grid-cols-3 gap-4">
@@ -473,6 +513,34 @@
       </section>
     </section>
 
+    <!-- IDEAS -->
+    <section id="view-ideas" role="tabpanel" aria-labelledby="tabbtn-ideas" class="view hidden space-y-4">
+      <section class="card p-4">
+        <div class="flex flex-col md:flex-row gap-3 md:items-center justify-between">
+          <div>
+            <h2 class="text-xl font-semibold text-white">Idea Board</h2>
+            <p class="text-sm text-slate-400 mt-1 max-w-2xl">
+              Open GitHub issues labeled <span class="font-mono text-teal-200">idea</span> on this repo — things the community
+              wants built. 👍-react to bump one, comment to claim it, or open your own.
+            </p>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <span class="badge badge-slate text-[11px]" id="ideasDataBadge">--</span>
+            <a id="newIdeaLink" href="#" target="_blank" rel="noreferrer noopener" class="hidden soft-link text-xs font-medium">+ Suggest an idea →</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="card p-4">
+        <div id="ideasList" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
+      </section>
+
+      <p class="text-xs text-slate-500 px-1">
+        Want to build something that reads this data directly instead of a GitHub issue? See
+        <button class="soft-link font-medium" data-goto="methodology">Build on this data →</button>
+      </p>
+    </section>
+
     <!-- METHODOLOGY -->
     <section id="view-methodology" role="tabpanel" aria-labelledby="tabbtn-methodology" class="view hidden space-y-4">
       <section class="card p-6">
@@ -490,15 +558,14 @@
             and still need manual verification — see each row's confidence badge.
           </p>
           <p class="text-sm text-slate-300 mt-3 max-w-4xl">
-            Commit/PR/issue/release activity — and now star/fork/watcher counts — are ingested daily from the real GitHub API for
-            <span class="font-mono text-amber-200">kaspanet</span> (auto-discovered in full) plus the company-affiliated and
-            community-org repos already listed in the registry (e.g. <span class="font-mono text-amber-200">aspectron</span>,
-            <span class="font-mono text-amber-200">kasplex</span>, <span class="font-mono text-amber-200">K-Kluster</span>). Those
-            rows carry a <span class="badge badge-emerald align-middle">● Live</span> badge in the Repositories tab and heatmap, and a
-            live star count highlighted in green. Independent-contributor and uncertain-status repos still show
-            <span class="badge badge-slate align-middle">○ Modeled</span> deterministic placeholder numbers until they're added to the
-            ingestion scope. The Contributors tab remains a modeled placeholder in all cases — contributor identities aren't
-            ingested yet.
+            Commit/PR/issue/release activity — and star/fork/watcher counts — are ingested daily from the real GitHub API for
+            <span class="font-mono text-amber-200">kaspanet</span> (auto-discovered in full) plus every other registry row with a
+            github.com URL, opt-out rather than opt-in (see Ingestion pipeline below for the exact rule). Those rows carry a
+            <span class="badge badge-emerald align-middle">● Live</span> badge in the Repositories tab and heatmap, and a live star
+            count highlighted in green. Rows excluded from live ingestion still show
+            <span class="badge badge-slate align-middle">○ Modeled</span> deterministic placeholder numbers. The Contributors tab
+            uses real commit-author identities (login, avatar, commit count, first/last commit date) for anyone who has committed to
+            an ingested repo, and falls back to placeholder identities only where no ingestion data exists yet at all.
           </p>
         </div>
 
@@ -552,17 +619,77 @@
           </p>
           <p class="text-sm text-slate-300 mt-3 max-w-4xl">
             Tracked repos: full auto-discovery for accounts in <span class="font-mono text-teal-200">ORGS</span> (currently
-            <span class="font-mono text-teal-200">kaspanet</span>), every registry repo individually tagged
-            <span class="font-mono text-teal-200">company-affiliated</span> or <span class="font-mono text-teal-200">community org</span>,
-            plus any row explicitly marked <span class="font-mono text-teal-200">verified=yes</span> in the registry CSV — the mechanism
-            for graduating an independent-contributor repo into live ingestion once someone has actually checked it (edit two CSV
-            columns, no code change needed). New repos also get a bounded backfill of real historical star growth from GitHub's
-            stargazer timestamps, not just a flat count starting today.
+            <span class="font-mono text-teal-200">kaspanet</span>), plus every registry row with a github.com URL — opt-out rather
+            than opt-in. A row is only skipped if its org type is <span class="font-mono text-teal-200">Uncertain</span> or it's
+            explicitly marked <span class="font-mono text-teal-200">verified=no</span> in the registry CSV. New repos also get a
+            bounded backfill of real historical star growth from GitHub's stargazer timestamps, not just a flat count starting today.
           </p>
           <p class="text-sm text-slate-300 mt-3 max-w-4xl">
             The same run publishes a combined release feed — <span class="font-mono text-teal-200">data/feed/releases.json</span> and
             an RSS-compatible <span class="font-mono text-teal-200">data/feed/releases.xml</span> — across every tracked repo, which
             powers the "This Week" panel on Overview and can be subscribed to directly.
+          </p>
+        </div>
+
+        <div class="mt-6 rounded-3xl border border-sky-300/15 bg-sky-300/[0.05] p-5">
+          <h3 class="text-sm font-semibold text-sky-100">Needs a Builder</h3>
+          <p class="text-sm text-slate-300 mt-2 max-w-4xl">
+            The Overview tab's <span class="font-mono text-sky-200">Needs a Builder</span> panel is computed client-side from the same
+            data as everything else, not curated: for each registry category it looks at repo count (thin categories) and, once a
+            category has live-ingested repos, whether every one of them has gone quiet for 120+ days (stalled categories). Categories
+            with no live data yet fall back to the count signal alone, and the panel's badge says so.
+          </p>
+          <p class="text-sm text-slate-300 mt-3 max-w-4xl">
+            The <span class="font-mono text-sky-200">New builders</span> column in This Week uses the same live contributor data:
+            anyone whose earliest tracked commit landed within the last 14 days gets listed with the repo it was to, plus a
+            <span class="badge badge-emerald text-[10px] align-middle">New</span> badge on the Contributors tab. This only fires for
+            live-ingested repos — there's no way to detect a "first commit" for a repo that hasn't been ingested yet, so it stays
+            empty rather than guessing.
+          </p>
+          <p class="text-sm text-slate-300 mt-3 max-w-4xl">
+            The <span class="font-mono text-sky-200">Ideas</span> tab is not modeled at all, live or otherwise — it's a direct read of
+            open GitHub issues labeled <span class="font-mono text-sky-200">idea</span> on this dashboard's own repo (see
+            <span class="font-mono text-sky-200">IDEAS_LABEL</span> and <span class="font-mono text-sky-200">resolve_self_repo()</span>
+            in the ingestion script), sorted by 👍 reaction count. It fetches same-origin
+            <span class="font-mono text-sky-200">data/activity/ideas.json</span> rather than calling the GitHub API from the browser,
+            for the same reasons the rest of the site avoids client-side third-party calls — no CSP exception needed, and no
+            unauthenticated per-visitor rate limit to worry about.
+          </p>
+          <p class="text-sm text-slate-300 mt-3 max-w-4xl">
+            <span class="font-mono text-sky-200">Bus Factor Watch</span> and the ⚠ badge on the Repositories tab flag a repo when
+            one contributor authored 85%+ of its <em>identified</em> commits (commits linked to a real GitHub account — bot commits
+            and old unlinked-email commits aren't counted either way), with at least 5 identified commits so a brand-new repo isn't
+            flagged just for being small. Computed per repo from <span class="font-mono text-sky-200">topContributors</span> in each
+            repo's own activity JSON, not from the org-wide contributor list (which is capped to the top 100 overall and could miss
+            who actually dominates a smaller repo). Live-ingested repos only — no modeled guess at who wrote what.
+          </p>
+          <p class="text-sm text-slate-300 mt-3 max-w-4xl">
+            Contributor and idea-author avatars without a GitHub photo fall back to a
+            <a href="https://github.com/weirdtualguy/kaspicon" target="_blank" rel="noreferrer noopener" class="text-sky-200 hover:underline">Kaspicon</a>
+            identicon — a deterministic pixel avatar generated from the handle itself, so the same person always gets the same face
+            across visits rather than a recomputed color tile. If that script hasn't loaded, everything falls back to the plain
+            colored-initials tile instead — nothing breaks either way.
+          </p>
+        </div>
+
+        <div class="mt-6 rounded-3xl border border-emerald-300/20 bg-emerald-400/10 p-5">
+          <h3 class="text-sm font-semibold text-emerald-100">Build on this data</h3>
+          <p class="text-sm text-slate-300 mt-2 max-w-4xl">
+            Every file this dashboard reads is a static, same-origin JSON file with no auth and no rate limit of its own — you can
+            fetch it directly, whether or not you ever touch this UI. Start at
+            <span class="font-mono text-emerald-200">data/api/index.json</span>: it's a versioned manifest listing every published
+            resource (per-repo activity, org-wide rollups, the release feed, the idea board, the source registry CSV) with a
+            description and path for each, regenerated every ingestion run. Two of those resources —
+            <span class="font-mono text-emerald-200">_summary.json</span> and <span class="font-mono text-emerald-200">_stars.json</span>
+            — are pre-aggregated org-wide rollups this dashboard's own frontend deliberately doesn't use (it recomputes everything
+            client-side from raw per-repo data instead, see above), published specifically for anyone who wants the ready-made
+            version instead of summing every repo file themselves.
+          </p>
+          <p class="text-sm text-slate-300 mt-3 max-w-4xl">
+            <span class="font-mono text-emerald-200">schemaVersion</span> in the manifest only changes on a breaking change to a
+            resource already listed — pin to it, not to today's exact field list, if you're building something long-lived. No
+            separate license is asserted over the GitHub-derived data itself; it's a mirror of GitHub's public API, subject to
+            GitHub's own Terms of Service (linked in the manifest).
           </p>
         </div>
       </section>
