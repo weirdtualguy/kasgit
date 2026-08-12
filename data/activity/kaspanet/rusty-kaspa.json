@@ -1,6 +1,6 @@
 {
   "repo": "kaspanet/rusty-kaspa",
-  "generatedAt": "2026-08-12T05:02:01.992097+00:00",
+  "generatedAt": "2026-08-12T11:17:55.398683+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3226,6 +3226,29 @@
       "forks": 292,
       "watchers": 72,
       "openIssues": 198
+    }
+  ],
+  "identifiedCommits": 227,
+  "topContributors": [
+    {
+      "login": "someone235",
+      "commits": 57
+    },
+    {
+      "login": "michaelsutton",
+      "commits": 48
+    },
+    {
+      "login": "IzioDev",
+      "commits": 30
+    },
+    {
+      "login": "biryukovmaxim",
+      "commits": 27
+    },
+    {
+      "login": "LiveLaughLove13",
+      "commits": 12
     }
   ]
 }

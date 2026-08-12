@@ -1,7 +1,63 @@
 {
-  "generatedAt": "2026-08-12T05:02:01.992097+00:00",
+  "generatedAt": "2026-08-12T11:17:55.398683+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.5.3",
+      "tag": "3.5.3",
+      "publishedAt": "2026-08-11T10:39:30Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.5.3",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.5.2",
+      "tag": "3.5.2",
+      "publishedAt": "2026-08-10T09:35:27Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.5.2",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.5.1",
+      "tag": "3.5.1",
+      "publishedAt": "2026-08-06T20:29:03Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.5.1",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.5.0",
+      "tag": "3.5.0",
+      "publishedAt": "2026-08-06T06:58:25Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.5.0",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.4.9",
+      "tag": "3.4.9",
+      "publishedAt": "2026-08-05T09:26:33Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.4.9",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.4.8",
+      "tag": "3.4.8",
+      "publishedAt": "2026-08-02T14:36:45Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.4.8",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.4.7",
+      "tag": "3.4.7",
+      "publishedAt": "2026-07-28T12:59:57Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.4.7",
+      "prerelease": false
+    },
     {
       "repo": "kaspanet/kaspa-python-sdk",
       "name": "2.0.2rc1",
@@ -19,11 +75,27 @@
       "prerelease": false
     },
     {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.4.6",
+      "tag": "3.4.6",
+      "publishedAt": "2026-07-11T14:28:47Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.4.6",
+      "prerelease": false
+    },
+    {
       "repo": "bzminer/bzminer",
       "name": "BzMiner v25.0.1b2 BETA",
       "tag": "v25.0.1b2",
       "publishedAt": "2026-07-10T19:35:29Z",
       "url": "https://github.com/bzminer/bzminer/releases/tag/v25.0.1b2",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.4.5",
+      "tag": "3.4.5",
+      "publishedAt": "2026-07-10T12:37:56Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.4.5",
       "prerelease": false
     },
     {
@@ -35,6 +107,22 @@
       "prerelease": false
     },
     {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.4.4",
+      "tag": "3.4.4",
+      "publishedAt": "2026-07-08T14:58:45Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.4.4",
+      "prerelease": false
+    },
+    {
+      "repo": "supertypo/simply-kaspa-indexer",
+      "name": "v2.3.1-beta1",
+      "tag": "v2.3.1-beta1",
+      "publishedAt": "2026-07-07T21:07:59Z",
+      "url": "https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.3.1-beta1",
+      "prerelease": true
+    },
+    {
       "repo": "forbole/kastle",
       "name": "v2.58.1",
       "tag": "v2.58.1",
@@ -43,11 +131,43 @@
       "prerelease": false
     },
     {
+      "repo": "thesheepcat/K-indexer",
+      "name": "Release 0.2.0",
+      "tag": "v0.2.0",
+      "publishedAt": "2026-07-06T20:03:05Z",
+      "url": "https://github.com/thesheepcat/K-indexer/releases/tag/v0.2.0",
+      "prerelease": false
+    },
+    {
       "repo": "kaspa-ng/kaspa-rest-server",
       "name": "v2.3.0",
       "tag": "v2.3.0",
       "publishedAt": "2026-07-06T17:40:43Z",
       "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.3.0",
+      "prerelease": false
+    },
+    {
+      "repo": "supertypo/simply-kaspa-indexer",
+      "name": "v2.3.0",
+      "tag": "v2.3.0",
+      "publishedAt": "2026-07-06T17:31:46Z",
+      "url": "https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.3.0",
+      "prerelease": false
+    },
+    {
+      "repo": "supertypo/simply-kaspa-indexer",
+      "name": "v2.2.1",
+      "tag": "v2.2.1",
+      "publishedAt": "2026-07-05T19:56:28Z",
+      "url": "https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.2.1",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.4.3",
+      "tag": "3.4.3",
+      "publishedAt": "2026-07-03T21:22:47Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.4.3",
       "prerelease": false
     },
     {
@@ -67,6 +187,14 @@
       "prerelease": false
     },
     {
+      "repo": "azbuky/kaspium_wallet",
+      "name": "Kaspium v1.2.0",
+      "tag": "v1.2.0",
+      "publishedAt": "2026-06-30T12:45:31Z",
+      "url": "https://github.com/azbuky/kaspium_wallet/releases/tag/v1.2.0",
+      "prerelease": false
+    },
+    {
       "repo": "kaspa-ng/kaspa-rest-server",
       "name": "v2.2.3",
       "tag": "v2.2.3",
@@ -83,6 +211,14 @@
       "prerelease": false
     },
     {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.4.2",
+      "tag": "3.4.2",
+      "publishedAt": "2026-06-27T13:34:50Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.4.2",
+      "prerelease": false
+    },
+    {
       "repo": "bzminer/bzminer",
       "name": "BzMiner v25.0.0b8 BETA",
       "tag": "v25.0.0b8",
@@ -91,11 +227,35 @@
       "prerelease": false
     },
     {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.4.1",
+      "tag": "3.4.1",
+      "publishedAt": "2026-06-25T13:28:35Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.4.1",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.4.0",
+      "tag": "3.4.0",
+      "publishedAt": "2026-06-24T19:32:27Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.4.0",
+      "prerelease": false
+    },
+    {
       "repo": "kaspa-ng/kaspa-rest-server",
       "name": "v2.2.0",
       "tag": "v2.2.0",
       "publishedAt": "2026-06-23T20:54:49Z",
       "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.2.0",
+      "prerelease": false
+    },
+    {
+      "repo": "supertypo/simply-kaspa-indexer",
+      "name": "v2.2.0",
+      "tag": "v2.2.0",
+      "publishedAt": "2026-06-23T18:28:40Z",
+      "url": "https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.2.0",
       "prerelease": false
     },
     {
@@ -147,6 +307,14 @@
       "prerelease": false
     },
     {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.3.9",
+      "tag": "3.3.9",
+      "publishedAt": "2026-06-15T20:51:08Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.3.9",
+      "prerelease": false
+    },
+    {
       "repo": "kaspanet/rusty-kaspa",
       "name": "Mainnet Toccata Release - v2.0.1",
       "tag": "v2.0.1",
@@ -160,6 +328,38 @@
       "tag": "v2.56.0",
       "publishedAt": "2026-06-15T10:53:16Z",
       "url": "https://github.com/forbole/kastle/releases/tag/v2.56.0",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.3.8",
+      "tag": "3.3.8",
+      "publishedAt": "2026-06-13T22:11:04Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.3.8",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.3.7",
+      "tag": "3.3.7",
+      "publishedAt": "2026-06-09T21:29:26Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.3.7",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.3.6",
+      "tag": "3.3.6",
+      "publishedAt": "2026-06-08T22:22:40Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.3.6",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.3.5",
+      "tag": "3.3.5",
+      "publishedAt": "2026-06-07T11:19:19Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.3.5",
       "prerelease": false
     },
     {
@@ -187,12 +387,44 @@
       "prerelease": false
     },
     {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.3.4",
+      "tag": "3.3.4",
+      "publishedAt": "2026-06-03T18:36:04Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.3.4",
+      "prerelease": false
+    },
+    {
       "repo": "kaspanet/rusty-kaspa",
       "name": "v1.3.0-toc.5",
       "tag": "v1.3.0-toc.5",
       "publishedAt": "2026-06-03T13:34:34Z",
       "url": "https://github.com/kaspanet/rusty-kaspa/releases/tag/v1.3.0-toc.5",
       "prerelease": true
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.3.3",
+      "tag": "3.3.3",
+      "publishedAt": "2026-06-01T21:29:31Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.3.3",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.3.2",
+      "tag": "3.3.2",
+      "publishedAt": "2026-05-31T20:55:23Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.3.2",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.3.1",
+      "tag": "3.3.1",
+      "publishedAt": "2026-05-31T14:57:50Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.3.1",
+      "prerelease": false
     },
     {
       "repo": "bzminer/bzminer",
@@ -227,6 +459,22 @@
       "prerelease": true
     },
     {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.3.0",
+      "tag": "3.3.0",
+      "publishedAt": "2026-05-23T12:05:23Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.3.0",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.2.9",
+      "tag": "3.2.9",
+      "publishedAt": "2026-05-21T21:30:01Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.2.9",
+      "prerelease": false
+    },
+    {
       "repo": "forbole/kastle",
       "name": "v2.54.1",
       "tag": "v2.54.1",
@@ -259,6 +507,22 @@
       "prerelease": false
     },
     {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.2.8",
+      "tag": "3.2.8",
+      "publishedAt": "2026-05-05T16:29:10Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.2.8",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.2.7",
+      "tag": "3.2.7",
+      "publishedAt": "2026-04-30T21:50:04Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.2.7",
+      "prerelease": false
+    },
+    {
       "repo": "bzminer/bzminer",
       "name": "BzMiner v24.0.2",
       "tag": "v24.0.2",
@@ -283,6 +547,14 @@
       "prerelease": false
     },
     {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.2.6",
+      "tag": "3.2.6",
+      "publishedAt": "2026-04-21T21:16:29Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.2.6",
+      "prerelease": false
+    },
+    {
       "repo": "forbole/kastle",
       "name": "v2.52.0",
       "tag": "v2.52.0",
@@ -296,6 +568,14 @@
       "tag": "v2.51.0",
       "publishedAt": "2026-04-17T08:20:36Z",
       "url": "https://github.com/forbole/kastle/releases/tag/v2.51.0",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspanet/cpuminer",
+      "name": "v0.2.7",
+      "tag": "v0.2.7",
+      "publishedAt": "2026-04-16T18:11:02Z",
+      "url": "https://github.com/kaspanet/cpuminer/releases/tag/v0.2.7",
       "prerelease": false
     },
     {
@@ -339,6 +619,22 @@
       "prerelease": false
     },
     {
+      "repo": "rigelminer/rigel",
+      "name": "Rigel 1.23.2",
+      "tag": "1.23.2",
+      "publishedAt": "2026-04-06T17:49:30Z",
+      "url": "https://github.com/rigelminer/rigel/releases/tag/1.23.2",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.2.5",
+      "tag": "3.2.5",
+      "publishedAt": "2026-03-31T17:03:46Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.2.5",
+      "prerelease": false
+    },
+    {
       "repo": "kaspa-ng/kaspa-rest-server",
       "name": "v2.1.4",
       "tag": "v2.1.4",
@@ -352,6 +648,14 @@
       "tag": "v2.47.0",
       "publishedAt": "2026-03-30T11:12:46Z",
       "url": "https://github.com/forbole/kastle/releases/tag/v2.47.0",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.2.4",
+      "tag": "3.2.4",
+      "publishedAt": "2026-03-29T21:24:17Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.2.4",
       "prerelease": false
     },
     {
@@ -371,6 +675,14 @@
       "prerelease": false
     },
     {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.2.3",
+      "tag": "3.2.3",
+      "publishedAt": "2026-03-27T11:16:28Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.2.3",
+      "prerelease": false
+    },
+    {
       "repo": "forbole/kastle",
       "name": "v2.46.0",
       "tag": "v2.46.0",
@@ -384,6 +696,22 @@
       "tag": "v2.1.2",
       "publishedAt": "2026-03-26T07:56:54Z",
       "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.1.2",
+      "prerelease": false
+    },
+    {
+      "repo": "supertypo/simply-kaspa-indexer",
+      "name": "v2.1.2",
+      "tag": "v2.1.2",
+      "publishedAt": "2026-03-25T23:36:01Z",
+      "url": "https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.1.2",
+      "prerelease": false
+    },
+    {
+      "repo": "supertypo/simply-kaspa-indexer",
+      "name": "v2.1.1",
+      "tag": "v2.1.1",
+      "publishedAt": "2026-03-25T20:55:34Z",
+      "url": "https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.1.1",
       "prerelease": false
     },
     {
@@ -403,11 +731,83 @@
       "prerelease": false
     },
     {
+      "repo": "supertypo/simply-kaspa-indexer",
+      "name": "v2.1.0",
+      "tag": "v2.1.0",
+      "publishedAt": "2026-03-18T07:31:32Z",
+      "url": "https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.1.0",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.2.2",
+      "tag": "3.2.2",
+      "publishedAt": "2026-03-17T22:54:49Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.2.2",
+      "prerelease": false
+    },
+    {
       "repo": "kaspa-ng/kaspa-rest-server",
       "name": "v2.0.1",
       "tag": "v2.0.1",
       "publishedAt": "2026-03-17T21:01:24Z",
       "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.0.1",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.2.1",
+      "tag": "3.2.1",
+      "publishedAt": "2026-03-16T15:55:11Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.2.1",
+      "prerelease": false
+    },
+    {
+      "repo": "supertypo/simply-kaspa-indexer",
+      "name": "v2.1.0-beta3",
+      "tag": "v2.1.0-beta3",
+      "publishedAt": "2026-03-15T09:58:01Z",
+      "url": "https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.1.0-beta3",
+      "prerelease": true
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.2.0",
+      "tag": "3.2.0",
+      "publishedAt": "2026-03-12T21:19:48Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.2.0",
+      "prerelease": false
+    },
+    {
+      "repo": "supertypo/simply-kaspa-indexer",
+      "name": "v2.1.0-beta2",
+      "tag": "v2.1.0-beta2",
+      "publishedAt": "2026-03-09T09:15:50Z",
+      "url": "https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.1.0-beta2",
+      "prerelease": true
+    },
+    {
+      "repo": "supertypo/simply-kaspa-indexer",
+      "name": "v2.1.0-beta1",
+      "tag": "v2.1.0-beta1",
+      "publishedAt": "2026-03-08T21:50:09Z",
+      "url": "https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.1.0-beta1",
+      "prerelease": true
+    },
+    {
+      "repo": "supertypo/simply-kaspa-indexer",
+      "name": "v1.6.3",
+      "tag": "v1.6.3",
+      "publishedAt": "2026-03-08T13:29:01Z",
+      "url": "https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v1.6.3",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.1.9",
+      "tag": "3.1.9",
+      "publishedAt": "2026-03-07T15:13:54Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.1.9",
       "prerelease": false
     },
     {
@@ -451,6 +851,22 @@
       "prerelease": false
     },
     {
+      "repo": "supertypo/simply-kaspa-indexer",
+      "name": "v2.0.0",
+      "tag": "v2.0.0",
+      "publishedAt": "2026-03-01T09:25:05Z",
+      "url": "https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.0.0",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.1.8",
+      "tag": "3.1.8",
+      "publishedAt": "2026-02-26T20:25:32Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.1.8",
+      "prerelease": false
+    },
+    {
       "repo": "forbole/kastle",
       "name": "v2.43.2",
       "tag": "v2.43.2",
@@ -459,11 +875,59 @@
       "prerelease": false
     },
     {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.1.7",
+      "tag": "3.1.7",
+      "publishedAt": "2026-02-24T21:09:01Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.1.7",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.1.6",
+      "tag": "3.1.6",
+      "publishedAt": "2026-02-23T13:36:30Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.1.6",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.1.5",
+      "tag": "3.1.5",
+      "publishedAt": "2026-02-18T13:57:32Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.1.5",
+      "prerelease": false
+    },
+    {
       "repo": "bzminer/bzminer",
       "name": "BzMiner v24.0.1",
       "tag": "v24.0.1",
       "publishedAt": "2026-02-16T21:24:54Z",
       "url": "https://github.com/bzminer/bzminer/releases/tag/v24.0.1",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.1.4",
+      "tag": "3.1.4",
+      "publishedAt": "2026-02-15T14:12:17Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.1.4",
+      "prerelease": false
+    },
+    {
+      "repo": "thesheepcat/K-indexer",
+      "name": "Release 0.1.18",
+      "tag": "v0.1.18",
+      "publishedAt": "2026-02-15T10:18:33Z",
+      "url": "https://github.com/thesheepcat/K-indexer/releases/tag/v0.1.18",
+      "prerelease": false
+    },
+    {
+      "repo": "thesheepcat/K-indexer",
+      "name": "Release 0.1.17",
+      "tag": "v0.1.17",
+      "publishedAt": "2026-02-14T19:56:28Z",
+      "url": "https://github.com/thesheepcat/K-indexer/releases/tag/v0.1.17",
       "prerelease": false
     }
   ]

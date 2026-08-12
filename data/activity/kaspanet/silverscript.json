@@ -1,6 +1,6 @@
 {
   "repo": "kaspanet/silverscript",
-  "generatedAt": "2026-08-12T05:02:01.992097+00:00",
+  "generatedAt": "2026-08-12T11:17:55.398683+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3226,6 +3226,29 @@
       "forks": 23,
       "watchers": 6,
       "openIssues": 24
+    }
+  ],
+  "identifiedCommits": 155,
+  "topContributors": [
+    {
+      "login": "someone235",
+      "commits": 124
+    },
+    {
+      "login": "michaelsutton",
+      "commits": 15
+    },
+    {
+      "login": "Manyfestation",
+      "commits": 9
+    },
+    {
+      "login": "IzioDev",
+      "commits": 4
+    },
+    {
+      "login": "elldeeone",
+      "commits": 2
     }
   ]
 }

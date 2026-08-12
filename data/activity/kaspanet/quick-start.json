@@ -1,6 +1,6 @@
 {
   "repo": "kaspanet/quick-start",
-  "generatedAt": "2026-08-12T05:02:01.992097+00:00",
+  "generatedAt": "2026-08-12T11:17:55.398683+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3227,5 +3227,7 @@
       "watchers": 7,
       "openIssues": 0
     }
-  ]
+  ],
+  "identifiedCommits": 0,
+  "topContributors": []
 }

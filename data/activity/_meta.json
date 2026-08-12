@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T05:02:01.992097+00:00",
+  "generatedAt": "2026-08-12T11:17:55.398683+00:00",
   "orgs": [
     "kaspanet"
   ],
@@ -8,11 +8,12 @@
     "community org"
   ],
   "verifiedTargetCount": 1,
-  "repoCount": 37,
-  "starsCaptured": 37,
+  "repoCount": 91,
+  "starsCaptured": 88,
   "starHistoryBackfills": 0,
-  "releaseFeedItems": 58,
-  "contributorsCaptured": 52,
+  "releaseFeedItems": 116,
+  "contributorsCaptured": 73,
+  "ideasCaptured": 0,
   "failed": [
     "kaspanet/big-test-data",
     "kaspanet/ghostdag-prototype"

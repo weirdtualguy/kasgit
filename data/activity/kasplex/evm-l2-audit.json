@@ -1,6 +1,6 @@
 {
   "repo": "kasplex/evm-l2-audit",
-  "generatedAt": "2026-08-12T05:02:01.992097+00:00",
+  "generatedAt": "2026-08-12T11:17:55.398683+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3226,6 +3226,13 @@
       "forks": 0,
       "watchers": 0,
       "openIssues": 0
+    }
+  ],
+  "identifiedCommits": 1,
+  "topContributors": [
+    {
+      "login": "jeanku",
+      "commits": 1
     }
   ]
 }

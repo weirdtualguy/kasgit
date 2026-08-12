@@ -1,6 +1,6 @@
 {
   "repo": "kaspanet/docs",
-  "generatedAt": "2026-08-12T05:02:01.992097+00:00",
+  "generatedAt": "2026-08-12T11:17:55.398683+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3226,6 +3226,29 @@
       "forks": 29,
       "watchers": 7,
       "openIssues": 16
+    }
+  ],
+  "identifiedCommits": 13,
+  "topContributors": [
+    {
+      "login": "elldeeone",
+      "commits": 6
+    },
+    {
+      "login": "michaelsutton",
+      "commits": 3
+    },
+    {
+      "login": "IzioDev",
+      "commits": 2
+    },
+    {
+      "login": "carlssonk",
+      "commits": 1
+    },
+    {
+      "login": "smartgoo",
+      "commits": 1
     }
   ]
 }

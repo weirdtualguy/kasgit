@@ -1,6 +1,6 @@
 {
   "repo": "kaspanet/vprogs",
-  "generatedAt": "2026-08-12T05:02:01.992097+00:00",
+  "generatedAt": "2026-08-12T11:17:55.398683+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3226,6 +3226,17 @@
       "forks": 10,
       "watchers": 4,
       "openIssues": 25
+    }
+  ],
+  "identifiedCommits": 79,
+  "topContributors": [
+    {
+      "login": "hmoog",
+      "commits": 45
+    },
+    {
+      "login": "biryukovmaxim",
+      "commits": 34
     }
   ]
 }

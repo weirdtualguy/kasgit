@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-12T05:02:01.992097+00:00",
+  "generatedAt": "2026-08-12T11:17:55.398683+00:00",
   "lookbackDays": 400,
-  "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector \u2014 there is no per-day breakdown per contributor, only per repo. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork.",
+  "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector \u2014 there is no per-day breakdown per contributor, only per repo. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window.",
   "contributors": [
     {
       "login": "giladm11",
@@ -18,8 +18,54 @@
           "commits": 98
         }
       ],
+      "firstCommitAt": "2025-07-11T12:10:17Z",
+      "firstCommitRepo": "kaspacom/swap-widget",
       "lastCommitAt": "2026-08-11T10:12:22Z",
       "repoCount": 2
+    },
+    {
+      "login": "supertypo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/6649964?v=4",
+      "htmlUrl": "https://github.com/supertypo",
+      "commits": 257,
+      "repos": [
+        {
+          "repo": "supertypo/simply-kaspa-indexer",
+          "commits": 142
+        },
+        {
+          "repo": "kaspa-ng/kaspa-rest-server",
+          "commits": 112
+        },
+        {
+          "repo": "kaspanet/cpuminer",
+          "commits": 2
+        },
+        {
+          "repo": "kaspanet/rusty-kaspa",
+          "commits": 1
+        }
+      ],
+      "firstCommitAt": "2025-07-10T17:54:19Z",
+      "firstCommitRepo": "kaspa-ng/kaspa-rest-server",
+      "lastCommitAt": "2026-07-07T19:57:03Z",
+      "repoCount": 4
+    },
+    {
+      "login": "thesheepcat",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/68336151?v=4",
+      "htmlUrl": "https://github.com/thesheepcat",
+      "commits": 229,
+      "repos": [
+        {
+          "repo": "thesheepcat/K-indexer",
+          "commits": 229
+        }
+      ],
+      "firstCommitAt": "2025-08-05T21:56:03Z",
+      "firstCommitRepo": "thesheepcat/K-indexer",
+      "lastCommitAt": "2026-07-06T19:44:19Z",
+      "repoCount": 1
     },
     {
       "login": "someone235",
@@ -44,47 +90,21 @@
           "commits": 1
         }
       ],
+      "firstCommitAt": "2025-10-23T08:51:02Z",
+      "firstCommitRepo": "kaspanet/rusty-kaspa",
       "lastCommitAt": "2026-08-11T07:47:06Z",
       "repoCount": 4
-    },
-    {
-      "login": "supertypo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/6649964?v=4",
-      "htmlUrl": "https://github.com/supertypo",
-      "commits": 113,
-      "repos": [
-        {
-          "repo": "kaspa-ng/kaspa-rest-server",
-          "commits": 112
-        },
-        {
-          "repo": "kaspanet/rusty-kaspa",
-          "commits": 1
-        }
-      ],
-      "lastCommitAt": "2026-07-06T17:36:29Z",
-      "repoCount": 2
-    },
-    {
-      "login": "dadamu",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/26020018?v=4",
-      "htmlUrl": "https://github.com/dadamu",
-      "commits": 92,
-      "repos": [
-        {
-          "repo": "forbole/kastle",
-          "commits": 92
-        }
-      ],
-      "lastCommitAt": "2026-07-10T09:56:24Z",
-      "repoCount": 1
     },
     {
       "login": "michaelsutton",
       "avatarUrl": "https://avatars.githubusercontent.com/u/6299204?v=4",
       "htmlUrl": "https://github.com/michaelsutton",
-      "commits": 76,
+      "commits": 158,
       "repos": [
+        {
+          "repo": "michaelsutton/argent",
+          "commits": 73
+        },
         {
           "repo": "kaspanet/rusty-kaspa",
           "commits": 48
@@ -92,6 +112,10 @@
         {
           "repo": "kaspanet/silverscript",
           "commits": 15
+        },
+        {
+          "repo": "kaspanet/cpuminer",
+          "commits": 9
         },
         {
           "repo": "kaspanet/kips",
@@ -110,29 +134,21 @@
           "commits": 2
         }
       ],
-      "lastCommitAt": "2026-08-02T09:42:27Z",
-      "repoCount": 6
-    },
-    {
-      "login": "ems-aleksandar",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/114085103?v=4",
-      "htmlUrl": "https://github.com/ems-aleksandar",
-      "commits": 74,
-      "repos": [
-        {
-          "repo": "KASPACOM/kaspacom-web-wallet",
-          "commits": 74
-        }
-      ],
-      "lastCommitAt": "2026-06-24T09:36:11Z",
-      "repoCount": 1
+      "firstCommitAt": "2025-07-14T10:54:33Z",
+      "firstCommitRepo": "kaspanet/kips",
+      "lastCommitAt": "2026-08-02T17:34:23Z",
+      "repoCount": 8
     },
     {
       "login": "biryukovmaxim",
       "avatarUrl": "https://avatars.githubusercontent.com/u/59533214?v=4",
       "htmlUrl": "https://github.com/biryukovmaxim",
-      "commits": 67,
+      "commits": 137,
       "repos": [
+        {
+          "repo": "biryukovmaxim/kaspa-xmss",
+          "commits": 69
+        },
         {
           "repo": "kaspanet/vprogs",
           "commits": 34
@@ -146,12 +162,82 @@
           "commits": 5
         },
         {
+          "repo": "kaspanet/cpuminer",
+          "commits": 1
+        },
+        {
           "repo": "aspectron/kaspa-ng",
           "commits": 1
         }
       ],
+      "firstCommitAt": "2025-07-21T04:50:48Z",
+      "firstCommitRepo": "kaspanet/rusty-kaspa",
       "lastCommitAt": "2026-07-28T11:24:41Z",
-      "repoCount": 4
+      "repoCount": 6
+    },
+    {
+      "login": "trillskillz",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/42254475?v=4",
+      "htmlUrl": "https://github.com/trillskillz",
+      "commits": 104,
+      "repos": [
+        {
+          "repo": "trillskillz/OpenSilver",
+          "commits": 104
+        }
+      ],
+      "firstCommitAt": "2026-05-23T18:51:36Z",
+      "firstCommitRepo": "trillskillz/OpenSilver",
+      "lastCommitAt": "2026-05-25T16:38:30Z",
+      "repoCount": 1
+    },
+    {
+      "login": "dadamu",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/26020018?v=4",
+      "htmlUrl": "https://github.com/dadamu",
+      "commits": 90,
+      "repos": [
+        {
+          "repo": "forbole/kastle",
+          "commits": 90
+        }
+      ],
+      "firstCommitAt": "2025-07-11T09:16:24Z",
+      "firstCommitRepo": "forbole/kastle",
+      "lastCommitAt": "2026-07-10T09:56:24Z",
+      "repoCount": 1
+    },
+    {
+      "login": "ems-aleksandar",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/114085103?v=4",
+      "htmlUrl": "https://github.com/ems-aleksandar",
+      "commits": 74,
+      "repos": [
+        {
+          "repo": "KASPACOM/kaspacom-web-wallet",
+          "commits": 74
+        }
+      ],
+      "firstCommitAt": "2025-12-08T14:15:16Z",
+      "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
+      "lastCommitAt": "2026-06-24T09:36:11Z",
+      "repoCount": 1
+    },
+    {
+      "login": "azbuky",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/567277?v=4",
+      "htmlUrl": "https://github.com/azbuky",
+      "commits": 65,
+      "repos": [
+        {
+          "repo": "azbuky/kaspium_wallet",
+          "commits": 65
+        }
+      ],
+      "firstCommitAt": "2024-11-03T10:11:54Z",
+      "firstCommitRepo": "azbuky/kaspium_wallet",
+      "lastCommitAt": "2026-06-29T13:45:57Z",
+      "repoCount": 1
     },
     {
       "login": "smartgoo",
@@ -172,6 +258,8 @@
           "commits": 1
         }
       ],
+      "firstCommitAt": "2025-11-29T14:29:35Z",
+      "firstCommitRepo": "kaspanet/kaspa-python-sdk",
       "lastCommitAt": "2026-07-31T13:16:38Z",
       "repoCount": 3
     },
@@ -179,7 +267,7 @@
       "login": "IzioDev",
       "avatarUrl": "https://avatars.githubusercontent.com/u/9900846?v=4",
       "htmlUrl": "https://github.com/IzioDev",
-      "commits": 59,
+      "commits": 61,
       "repos": [
         {
           "repo": "kaspanet/rusty-kaspa",
@@ -206,6 +294,10 @@
           "commits": 2
         },
         {
+          "repo": "thesheepcat/K-indexer",
+          "commits": 2
+        },
+        {
           "repo": "kaspanet/kccs",
           "commits": 1
         },
@@ -214,8 +306,10 @@
           "commits": 1
         }
       ],
+      "firstCommitAt": "2025-08-06T22:06:32Z",
+      "firstCommitRepo": "thesheepcat/K-indexer",
       "lastCommitAt": "2026-07-15T12:32:02Z",
-      "repoCount": 8
+      "repoCount": 9
     },
     {
       "login": "VeselinovicAleksandar",
@@ -228,6 +322,8 @@
           "commits": 54
         }
       ],
+      "firstCommitAt": "2025-12-08T16:38:23Z",
+      "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
       "lastCommitAt": "2026-08-04T08:32:15Z",
       "repoCount": 1
     },
@@ -246,8 +342,26 @@
           "commits": 1
         }
       ],
+      "firstCommitAt": "2026-01-21T13:41:27Z",
+      "firstCommitRepo": "kaspanet/vprogs",
       "lastCommitAt": "2026-07-02T17:50:21Z",
       "repoCount": 2
+    },
+    {
+      "login": "doktor83",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/6808360?v=4",
+      "htmlUrl": "https://github.com/doktor83",
+      "commits": 45,
+      "repos": [
+        {
+          "repo": "doktor83/SRBMiner-Multi",
+          "commits": 45
+        }
+      ],
+      "firstCommitAt": "2025-07-27T14:00:23Z",
+      "firstCommitRepo": "doktor83/SRBMiner-Multi",
+      "lastCommitAt": "2026-08-10T09:41:09Z",
+      "repoCount": 1
     },
     {
       "login": "forbole-release-please-bot[bot]",
@@ -260,6 +374,8 @@
           "commits": 40
         }
       ],
+      "firstCommitAt": "2025-09-25T06:11:23Z",
+      "firstCommitRepo": "forbole/kastle",
       "lastCommitAt": "2026-07-13T05:33:35Z",
       "repoCount": 1
     },
@@ -274,6 +390,8 @@
           "commits": 40
         }
       ],
+      "firstCommitAt": "2025-11-04T14:11:18Z",
+      "firstCommitRepo": "Aaditya1273/K-SYNCHRONY",
       "lastCommitAt": "2026-02-15T08:39:23Z",
       "repoCount": 1
     },
@@ -292,6 +410,8 @@
           "commits": 1
         }
       ],
+      "firstCommitAt": "2025-10-30T09:45:24Z",
+      "firstCommitRepo": "kasplex/indexer-executor",
       "lastCommitAt": "2026-06-16T07:39:39Z",
       "repoCount": 2
     },
@@ -310,6 +430,8 @@
           "commits": 1
         }
       ],
+      "firstCommitAt": "2026-01-08T10:00:57Z",
+      "firstCommitRepo": "kaspa-live/kaspa-graph-inspector",
       "lastCommitAt": "2026-05-11T12:39:42Z",
       "repoCount": 2
     },
@@ -324,6 +446,8 @@
           "commits": 35
         }
       ],
+      "firstCommitAt": "2025-08-30T20:32:39Z",
+      "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
       "lastCommitAt": "2026-02-10T19:04:45Z",
       "repoCount": 1
     },
@@ -338,6 +462,8 @@
           "commits": 31
         }
       ],
+      "firstCommitAt": "2025-12-08T13:35:54Z",
+      "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
       "lastCommitAt": "2026-07-24T07:52:09Z",
       "repoCount": 1
     },
@@ -352,7 +478,25 @@
           "commits": 27
         }
       ],
+      "firstCommitAt": "2026-04-16T09:30:05Z",
+      "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
       "lastCommitAt": "2026-07-15T13:32:46Z",
+      "repoCount": 1
+    },
+    {
+      "login": "edenbd1",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/157014423?v=4",
+      "htmlUrl": "https://github.com/edenbd1",
+      "commits": 24,
+      "repos": [
+        {
+          "repo": "edenbd1/oracle-kaspa",
+          "commits": 24
+        }
+      ],
+      "firstCommitAt": "2026-01-30T23:54:30Z",
+      "firstCommitRepo": "edenbd1/oracle-kaspa",
+      "lastCommitAt": "2026-02-18T09:57:08Z",
       "repoCount": 1
     },
     {
@@ -370,6 +514,8 @@
           "commits": 9
         }
       ],
+      "firstCommitAt": "2025-07-09T18:42:31Z",
+      "firstCommitRepo": "kaspanet/rusty-kaspa",
       "lastCommitAt": "2026-01-17T22:22:53Z",
       "repoCount": 2
     },
@@ -384,6 +530,8 @@
           "commits": 21
         }
       ],
+      "firstCommitAt": "2025-08-19T21:07:30Z",
+      "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
       "lastCommitAt": "2025-10-09T22:55:33Z",
       "repoCount": 1
     },
@@ -398,8 +546,66 @@
           "commits": 17
         }
       ],
+      "firstCommitAt": "2025-08-20T11:14:53Z",
+      "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
       "lastCommitAt": "2025-11-25T22:59:54Z",
       "repoCount": 1
+    },
+    {
+      "login": "cosmasken",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/15275726?v=4",
+      "htmlUrl": "https://github.com/cosmasken",
+      "commits": 16,
+      "repos": [
+        {
+          "repo": "cosmasken/kaspa402",
+          "commits": 16
+        }
+      ],
+      "firstCommitAt": "2026-02-02T07:00:00Z",
+      "firstCommitRepo": "cosmasken/kaspa402",
+      "lastCommitAt": "2026-02-18T11:49:23Z",
+      "repoCount": 1
+    },
+    {
+      "login": "KeenHero",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/34964366?v=4",
+      "htmlUrl": "https://github.com/KeenHero",
+      "commits": 15,
+      "repos": [
+        {
+          "repo": "KeenHero/kaspa-wallet",
+          "commits": 15
+        }
+      ],
+      "firstCommitAt": "2026-02-16T06:57:58Z",
+      "firstCommitRepo": "KeenHero/kaspa-wallet",
+      "lastCommitAt": "2026-08-04T18:31:20Z",
+      "repoCount": 1
+    },
+    {
+      "login": "Manyfestation",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/240733973?v=4",
+      "htmlUrl": "https://github.com/Manyfestation",
+      "commits": 13,
+      "repos": [
+        {
+          "repo": "kaspanet/silverscript",
+          "commits": 9
+        },
+        {
+          "repo": "kaspanet/rusty-kaspa",
+          "commits": 3
+        },
+        {
+          "repo": "michaelsutton/argent",
+          "commits": 1
+        }
+      ],
+      "firstCommitAt": "2025-11-26T15:46:15Z",
+      "firstCommitRepo": "kaspanet/rusty-kaspa",
+      "lastCommitAt": "2026-07-22T10:28:18Z",
+      "repoCount": 3
     },
     {
       "login": "LiveLaughLove13",
@@ -412,26 +618,34 @@
           "commits": 12
         }
       ],
+      "firstCommitAt": "2025-12-09T20:53:09Z",
+      "firstCommitRepo": "kaspanet/rusty-kaspa",
       "lastCommitAt": "2026-06-01T05:00:13Z",
       "repoCount": 1
     },
     {
-      "login": "Manyfestation",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/240733973?v=4",
-      "htmlUrl": "https://github.com/Manyfestation",
-      "commits": 12,
+      "login": "saefstroem",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/139136798?v=4",
+      "htmlUrl": "https://github.com/saefstroem",
+      "commits": 11,
       "repos": [
         {
-          "repo": "kaspanet/silverscript",
-          "commits": 9
+          "repo": "kaspanet/rusty-kaspa",
+          "commits": 5
         },
         {
-          "repo": "kaspanet/rusty-kaspa",
-          "commits": 3
+          "repo": "kaspanet/kips",
+          "commits": 5
+        },
+        {
+          "repo": "kaspanet/workflow-perf-monitor-rs",
+          "commits": 1
         }
       ],
-      "lastCommitAt": "2026-04-26T12:44:16Z",
-      "repoCount": 2
+      "firstCommitAt": "2025-12-07T07:04:53Z",
+      "firstCommitRepo": "kaspanet/kips",
+      "lastCommitAt": "2026-06-23T15:21:42Z",
+      "repoCount": 3
     },
     {
       "login": "elldeeone",
@@ -452,26 +666,10 @@
           "commits": 2
         }
       ],
+      "firstCommitAt": "2026-01-27T00:39:50Z",
+      "firstCommitRepo": "kaspanet/kaspa-python-sdk",
       "lastCommitAt": "2026-08-07T08:53:38Z",
       "repoCount": 3
-    },
-    {
-      "login": "saefstroem",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/139136798?v=4",
-      "htmlUrl": "https://github.com/saefstroem",
-      "commits": 10,
-      "repos": [
-        {
-          "repo": "kaspanet/rusty-kaspa",
-          "commits": 5
-        },
-        {
-          "repo": "kaspanet/kips",
-          "commits": 5
-        }
-      ],
-      "lastCommitAt": "2026-06-23T15:21:42Z",
-      "repoCount": 2
     },
     {
       "login": "yeren0914",
@@ -484,14 +682,32 @@
           "commits": 10
         }
       ],
+      "firstCommitAt": "2025-07-31T10:30:58Z",
+      "firstCommitRepo": "kasplex/sdk-kiwi",
       "lastCommitAt": "2026-04-27T08:00:35Z",
+      "repoCount": 1
+    },
+    {
+      "login": "0xhappyboy",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/25763248?v=4",
+      "htmlUrl": "https://github.com/0xhappyboy",
+      "commits": 10,
+      "repos": [
+        {
+          "repo": "0xhappyboy/kaspa-sdk",
+          "commits": 10
+        }
+      ],
+      "firstCommitAt": "2025-10-26T00:17:17Z",
+      "firstCommitRepo": "0xhappyboy/kaspa-sdk",
+      "lastCommitAt": "2025-10-26T08:59:01Z",
       "repoCount": 1
     },
     {
       "login": "coderofstuff",
       "avatarUrl": "https://avatars.githubusercontent.com/u/114628839?v=4",
       "htmlUrl": "https://github.com/coderofstuff",
-      "commits": 8,
+      "commits": 9,
       "repos": [
         {
           "repo": "kaspanet/rusty-kaspa",
@@ -504,10 +720,16 @@
         {
           "repo": "kaspanet/kaspad",
           "commits": 1
+        },
+        {
+          "repo": "coderofstuff/kasvault",
+          "commits": 1
         }
       ],
-      "lastCommitAt": "2026-06-05T07:33:26Z",
-      "repoCount": 3
+      "firstCommitAt": "2025-12-31T11:49:30Z",
+      "firstCommitRepo": "kaspanet/rusty-kaspa",
+      "lastCommitAt": "2026-06-25T23:34:28Z",
+      "repoCount": 4
     },
     {
       "login": "aspect",
@@ -520,6 +742,8 @@
           "commits": 7
         }
       ],
+      "firstCommitAt": "2026-06-26T09:15:07Z",
+      "firstCommitRepo": "aspectron/kaspa-ng",
       "lastCommitAt": "2026-06-29T13:14:47Z",
       "repoCount": 1
     },
@@ -534,7 +758,41 @@
           "commits": 7
         }
       ],
+      "firstCommitAt": "2025-12-18T15:12:18Z",
+      "firstCommitRepo": "bzminer/bzminer",
       "lastCommitAt": "2026-04-29T17:09:11Z",
+      "repoCount": 1
+    },
+    {
+      "login": "w00c00",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/46839097?v=4",
+      "htmlUrl": "https://github.com/w00c00",
+      "commits": 7,
+      "repos": [
+        {
+          "repo": "w00c00/kaspa-arena",
+          "commits": 7
+        }
+      ],
+      "firstCommitAt": "2026-07-09T01:26:02Z",
+      "firstCommitRepo": "w00c00/kaspa-arena",
+      "lastCommitAt": "2026-07-09T03:01:02Z",
+      "repoCount": 1
+    },
+    {
+      "login": "nadaamd",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/224854596?v=4",
+      "htmlUrl": "https://github.com/nadaamd",
+      "commits": 7,
+      "repos": [
+        {
+          "repo": "edenbd1/oracle-kaspa",
+          "commits": 7
+        }
+      ],
+      "firstCommitAt": "2026-02-18T09:09:09Z",
+      "firstCommitRepo": "edenbd1/oracle-kaspa",
+      "lastCommitAt": "2026-02-18T09:46:12Z",
       "repoCount": 1
     },
     {
@@ -548,6 +806,8 @@
           "commits": 6
         }
       ],
+      "firstCommitAt": "2026-02-09T18:16:12Z",
+      "firstCommitRepo": "kaspanet/rusty-kaspa",
       "lastCommitAt": "2026-06-15T11:31:19Z",
       "repoCount": 1
     },
@@ -562,6 +822,8 @@
           "commits": 6
         }
       ],
+      "firstCommitAt": "2025-11-01T22:09:35Z",
+      "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
       "lastCommitAt": "2025-11-11T18:38:31Z",
       "repoCount": 1
     },
@@ -576,6 +838,8 @@
           "commits": 4
         }
       ],
+      "firstCommitAt": "2025-08-15T01:23:06Z",
+      "firstCommitRepo": "kaspanet/rusty-kaspa",
       "lastCommitAt": "2026-03-03T20:29:54Z",
       "repoCount": 1
     },
@@ -590,7 +854,25 @@
           "commits": 4
         }
       ],
+      "firstCommitAt": "2025-08-29T13:36:33Z",
+      "firstCommitRepo": "forbole/kastle",
       "lastCommitAt": "2025-08-29T13:37:53Z",
+      "repoCount": 1
+    },
+    {
+      "login": "tdejoigny-ledger",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/123755370?v=4",
+      "htmlUrl": "https://github.com/tdejoigny-ledger",
+      "commits": 4,
+      "repos": [
+        {
+          "repo": "coderofstuff/app-kaspa",
+          "commits": 4
+        }
+      ],
+      "firstCommitAt": "2025-09-26T18:15:50Z",
+      "firstCommitRepo": "coderofstuff/app-kaspa",
+      "lastCommitAt": "2025-09-30T11:49:37Z",
       "repoCount": 1
     },
     {
@@ -608,8 +890,26 @@
           "commits": 1
         }
       ],
+      "firstCommitAt": "2026-01-01T12:07:58Z",
+      "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
       "lastCommitAt": "2026-02-17T17:03:37Z",
       "repoCount": 2
+    },
+    {
+      "login": "rigelminer",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/119491468?v=4",
+      "htmlUrl": "https://github.com/rigelminer",
+      "commits": 3,
+      "repos": [
+        {
+          "repo": "rigelminer/rigel",
+          "commits": 3
+        }
+      ],
+      "firstCommitAt": "2025-12-12T15:14:42Z",
+      "firstCommitRepo": "rigelminer/rigel",
+      "lastCommitAt": "2026-04-06T18:06:28Z",
+      "repoCount": 1
     },
     {
       "login": "leobragaz",
@@ -622,6 +922,8 @@
           "commits": 3
         }
       ],
+      "firstCommitAt": "2025-09-26T11:15:18Z",
+      "firstCommitRepo": "forbole/kastle",
       "lastCommitAt": "2026-07-29T10:05:17Z",
       "repoCount": 1
     },
@@ -636,7 +938,25 @@
           "commits": 3
         }
       ],
+      "firstCommitAt": "2025-10-27T19:04:55Z",
+      "firstCommitRepo": "K-Kluster/kaspa-js",
       "lastCommitAt": "2025-10-27T19:04:56Z",
+      "repoCount": 1
+    },
+    {
+      "login": "Dr-Liberty",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/219956288?v=4",
+      "htmlUrl": "https://github.com/Dr-Liberty",
+      "commits": 3,
+      "repos": [
+        {
+          "repo": "Dr-Liberty/Kaspa-University-KU-Protocol",
+          "commits": 3
+        }
+      ],
+      "firstCommitAt": "2026-02-06T05:09:18Z",
+      "firstCommitRepo": "Dr-Liberty/Kaspa-University-KU-Protocol",
+      "lastCommitAt": "2026-02-06T05:16:21Z",
       "repoCount": 1
     },
     {
@@ -650,6 +970,8 @@
           "commits": 2
         }
       ],
+      "firstCommitAt": "2026-07-08T10:06:29Z",
+      "firstCommitRepo": "kaspanet/rusty-kaspa",
       "lastCommitAt": "2026-07-27T06:37:03Z",
       "repoCount": 1
     },
@@ -664,6 +986,8 @@
           "commits": 2
         }
       ],
+      "firstCommitAt": "2026-04-01T05:18:15Z",
+      "firstCommitRepo": "kaspanet/rusty-kaspa",
       "lastCommitAt": "2026-04-01T13:23:07Z",
       "repoCount": 1
     },
@@ -678,8 +1002,30 @@
           "commits": 2
         }
       ],
+      "firstCommitAt": "2026-01-08T14:54:39Z",
+      "firstCommitRepo": "kaspanet/rusty-kaspa",
       "lastCommitAt": "2026-01-14T04:00:51Z",
       "repoCount": 1
+    },
+    {
+      "login": "HLXEasy",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/41438338?v=4",
+      "htmlUrl": "https://github.com/HLXEasy",
+      "commits": 2,
+      "repos": [
+        {
+          "repo": "kaspanet/rusty-kaspa",
+          "commits": 1
+        },
+        {
+          "repo": "azbuky/kaspium_wallet",
+          "commits": 1
+        }
+      ],
+      "firstCommitAt": "2025-07-16T08:55:47Z",
+      "firstCommitRepo": "azbuky/kaspium_wallet",
+      "lastCommitAt": "2025-11-11T14:52:24Z",
+      "repoCount": 2
     },
     {
       "login": "github-actions[bot]",
@@ -692,7 +1038,25 @@
           "commits": 2
         }
       ],
+      "firstCommitAt": "2025-08-29T08:08:48Z",
+      "firstCommitRepo": "forbole/kastle",
       "lastCommitAt": "2025-08-29T08:10:42Z",
+      "repoCount": 1
+    },
+    {
+      "login": "ibrucelei",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/16091492?v=4",
+      "htmlUrl": "https://github.com/ibrucelei",
+      "commits": 2,
+      "repos": [
+        {
+          "repo": "kasware-wallet/extension",
+          "commits": 2
+        }
+      ],
+      "firstCommitAt": "2026-01-08T14:02:26Z",
+      "firstCommitRepo": "kasware-wallet/extension",
+      "lastCommitAt": "2026-03-03T15:55:46Z",
       "repoCount": 1
     },
     {
@@ -706,7 +1070,25 @@
           "commits": 2
         }
       ],
+      "firstCommitAt": "2026-04-08T08:58:07Z",
+      "firstCommitRepo": "kasplex/evm-l2-nodes-docker",
       "lastCommitAt": "2026-04-08T09:26:45Z",
+      "repoCount": 1
+    },
+    {
+      "login": "a19q3",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/195739804?v=4",
+      "htmlUrl": "https://github.com/a19q3",
+      "commits": 2,
+      "repos": [
+        {
+          "repo": "michaelsutton/argent",
+          "commits": 2
+        }
+      ],
+      "firstCommitAt": "2026-06-26T07:51:20Z",
+      "firstCommitRepo": "michaelsutton/argent",
+      "lastCommitAt": "2026-07-05T23:34:06Z",
       "repoCount": 1
     },
     {
@@ -720,6 +1102,8 @@
           "commits": 1
         }
       ],
+      "firstCommitAt": "2026-01-08T15:42:08Z",
+      "firstCommitRepo": "kaspanet/rusty-kaspa",
       "lastCommitAt": "2026-01-08T15:42:08Z",
       "repoCount": 1
     },
@@ -734,6 +1118,8 @@
           "commits": 1
         }
       ],
+      "firstCommitAt": "2025-11-18T18:24:07Z",
+      "firstCommitRepo": "kaspanet/rusty-kaspa",
       "lastCommitAt": "2025-11-18T18:24:07Z",
       "repoCount": 1
     },
@@ -748,21 +1134,9 @@
           "commits": 1
         }
       ],
+      "firstCommitAt": "2025-11-18T16:43:58Z",
+      "firstCommitRepo": "kaspanet/rusty-kaspa",
       "lastCommitAt": "2025-11-18T16:43:58Z",
-      "repoCount": 1
-    },
-    {
-      "login": "HLXEasy",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/41438338?v=4",
-      "htmlUrl": "https://github.com/HLXEasy",
-      "commits": 1,
-      "repos": [
-        {
-          "repo": "kaspanet/rusty-kaspa",
-          "commits": 1
-        }
-      ],
-      "lastCommitAt": "2025-11-11T14:52:24Z",
       "repoCount": 1
     },
     {
@@ -776,6 +1150,8 @@
           "commits": 1
         }
       ],
+      "firstCommitAt": "2025-11-02T12:27:28Z",
+      "firstCommitRepo": "kaspanet/rusty-kaspa",
       "lastCommitAt": "2025-11-02T12:27:28Z",
       "repoCount": 1
     },
@@ -790,6 +1166,8 @@
           "commits": 1
         }
       ],
+      "firstCommitAt": "2025-09-04T05:25:13Z",
+      "firstCommitRepo": "kaspanet/rusty-kaspa",
       "lastCommitAt": "2025-09-04T05:25:13Z",
       "repoCount": 1
     },
@@ -804,6 +1182,8 @@
           "commits": 1
         }
       ],
+      "firstCommitAt": "2025-07-16T08:20:47Z",
+      "firstCommitRepo": "kaspanet/rusty-kaspa",
       "lastCommitAt": "2025-07-16T08:20:47Z",
       "repoCount": 1
     },
@@ -818,7 +1198,57 @@
           "commits": 1
         }
       ],
+      "firstCommitAt": "2026-06-23T01:35:26Z",
+      "firstCommitRepo": "kaspanet/docs",
       "lastCommitAt": "2026-06-23T01:35:26Z",
+      "repoCount": 1
+    },
+    {
+      "login": "lAmeR1",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/42315864?v=4",
+      "htmlUrl": "https://github.com/lAmeR1",
+      "commits": 1,
+      "repos": [
+        {
+          "repo": "lAmeR1/kaspa-explorer-ng",
+          "commits": 1
+        }
+      ],
+      "firstCommitAt": "2026-03-04T11:13:50Z",
+      "firstCommitRepo": "lAmeR1/kaspa-explorer-ng",
+      "lastCommitAt": "2026-03-04T11:13:50Z",
+      "repoCount": 1
+    },
+    {
+      "login": "jgonzis",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/38668405?v=4",
+      "htmlUrl": "https://github.com/jgonzis",
+      "commits": 1,
+      "repos": [
+        {
+          "repo": "Lolliedieb/lolMiner-releases",
+          "commits": 1
+        }
+      ],
+      "firstCommitAt": "2025-08-23T07:23:30Z",
+      "firstCommitRepo": "Lolliedieb/lolMiner-releases",
+      "lastCommitAt": "2025-08-23T07:23:30Z",
+      "repoCount": 1
+    },
+    {
+      "login": "develsoftware",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/8962939?v=4",
+      "htmlUrl": "https://github.com/develsoftware",
+      "commits": 1,
+      "repos": [
+        {
+          "repo": "develsoftware/GMinerRelease",
+          "commits": 1
+        }
+      ],
+      "firstCommitAt": "2026-07-14T13:51:49Z",
+      "firstCommitRepo": "develsoftware/GMinerRelease",
+      "lastCommitAt": "2026-07-14T13:51:49Z",
       "repoCount": 1
     },
     {
@@ -832,6 +1262,8 @@
           "commits": 1
         }
       ],
+      "firstCommitAt": "2026-07-03T08:54:44Z",
+      "firstCommitRepo": "forbole/kastle",
       "lastCommitAt": "2026-07-03T08:54:44Z",
       "repoCount": 1
     },
@@ -846,7 +1278,41 @@
           "commits": 1
         }
       ],
+      "firstCommitAt": "2025-08-29T10:08:12Z",
+      "firstCommitRepo": "forbole/kastle",
       "lastCommitAt": "2025-08-29T10:08:12Z",
+      "repoCount": 1
+    },
+    {
+      "login": "pokey682r",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/117471236?v=4",
+      "htmlUrl": "https://github.com/pokey682r",
+      "commits": 1,
+      "repos": [
+        {
+          "repo": "kasware-wallet/extension",
+          "commits": 1
+        }
+      ],
+      "firstCommitAt": "2026-07-23T09:18:55Z",
+      "firstCommitRepo": "kasware-wallet/extension",
+      "lastCommitAt": "2026-07-23T09:18:55Z",
+      "repoCount": 1
+    },
+    {
+      "login": "fbeutin-ledger",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/101576048?v=4",
+      "htmlUrl": "https://github.com/fbeutin-ledger",
+      "commits": 1,
+      "repos": [
+        {
+          "repo": "coderofstuff/app-kaspa",
+          "commits": 1
+        }
+      ],
+      "firstCommitAt": "2025-07-23T08:21:24Z",
+      "firstCommitRepo": "coderofstuff/app-kaspa",
+      "lastCommitAt": "2025-07-23T08:21:24Z",
       "repoCount": 1
     },
     {
@@ -860,7 +1326,25 @@
           "commits": 1
         }
       ],
+      "firstCommitAt": "2025-08-25T06:09:57Z",
+      "firstCommitRepo": "kasplex/evm-l2-audit",
       "lastCommitAt": "2025-08-25T06:09:57Z",
+      "repoCount": 1
+    },
+    {
+      "login": "WolfieOC",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/42899846?v=4",
+      "htmlUrl": "https://github.com/WolfieOC",
+      "commits": 1,
+      "repos": [
+        {
+          "repo": "michaelsutton/argent",
+          "commits": 1
+        }
+      ],
+      "firstCommitAt": "2026-07-12T11:12:47Z",
+      "firstCommitRepo": "michaelsutton/argent",
+      "lastCommitAt": "2026-07-12T11:12:47Z",
       "repoCount": 1
     }
   ]

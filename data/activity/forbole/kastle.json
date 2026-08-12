@@ -1,15 +1,15 @@
 {
   "repo": "forbole/kastle",
-  "generatedAt": "2026-08-12T05:02:01.992097+00:00",
+  "generatedAt": "2026-08-12T11:17:55.398683+00:00",
   "lookbackDays": 400,
   "series": [
     {
       "date": "2025-07-08",
-      "commits": 3,
-      "prs": 3,
+      "commits": 0,
+      "prs": 0,
       "issues": 0,
-      "releases": 1,
-      "activeDevs": 2
+      "releases": 0,
+      "activeDevs": 0
     },
     {
       "date": "2025-07-09",
@@ -3226,6 +3226,29 @@
       "forks": 3,
       "watchers": 2,
       "openIssues": 11
+    }
+  ],
+  "identifiedCommits": 141,
+  "topContributors": [
+    {
+      "login": "dadamu",
+      "commits": 90
+    },
+    {
+      "login": "forbole-release-please-bot[bot]",
+      "commits": 40
+    },
+    {
+      "login": "dependabot[bot]",
+      "commits": 4
+    },
+    {
+      "login": "leobragaz",
+      "commits": 3
+    },
+    {
+      "login": "github-actions[bot]",
+      "commits": 2
     }
   ]
 }

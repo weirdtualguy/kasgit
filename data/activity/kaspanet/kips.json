@@ -1,6 +1,6 @@
 {
   "repo": "kaspanet/kips",
-  "generatedAt": "2026-08-12T05:02:01.992097+00:00",
+  "generatedAt": "2026-08-12T11:17:55.398683+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3226,6 +3226,25 @@
       "forks": 27,
       "watchers": 15,
       "openIssues": 16
+    }
+  ],
+  "identifiedCommits": 12,
+  "topContributors": [
+    {
+      "login": "michaelsutton",
+      "commits": 5
+    },
+    {
+      "login": "saefstroem",
+      "commits": 5
+    },
+    {
+      "login": "someone235",
+      "commits": 1
+    },
+    {
+      "login": "coderofstuff",
+      "commits": 1
     }
   ]
 }

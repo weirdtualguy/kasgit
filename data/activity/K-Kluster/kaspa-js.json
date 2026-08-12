@@ -1,6 +1,6 @@
 {
   "repo": "K-Kluster/kaspa-js",
-  "generatedAt": "2026-08-12T05:02:01.992097+00:00",
+  "generatedAt": "2026-08-12T11:17:55.398683+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3226,6 +3226,17 @@
       "forks": 5,
       "watchers": 3,
       "openIssues": 7
+    }
+  ],
+  "identifiedCommits": 19,
+  "topContributors": [
+    {
+      "login": "IzioDev",
+      "commits": 16
+    },
+    {
+      "login": "turbobot-temp",
+      "commits": 3
     }
   ]
 }
