@@ -1,621 +1,621 @@
 {
-  "generatedAt": "2026-08-12T11:17:55.398683+00:00",
+  "generatedAt": "2026-08-13T05:03:53.246708+00:00",
   "repos": {
     "kaspanet/rusty-kaspa": {
       "stars": 842,
       "forks": 292,
       "watchers": 72,
       "openIssues": 198,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/silverscript": {
       "stars": 46,
       "forks": 23,
       "watchers": 6,
       "openIssues": 24,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/kaspa-python-sdk": {
       "stars": 8,
       "forks": 4,
       "watchers": 1,
       "openIssues": 17,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/vprogs": {
       "stars": 52,
       "forks": 10,
       "watchers": 4,
       "openIssues": 25,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/kccs": {
       "stars": 7,
       "forks": 4,
       "watchers": 1,
       "openIssues": 6,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/kips": {
       "stars": 56,
       "forks": 27,
       "watchers": 15,
       "openIssues": 16,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/docs": {
       "stars": 66,
       "forks": 29,
       "watchers": 7,
       "openIssues": 16,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/kaspad": {
       "stars": 528,
       "forks": 243,
       "watchers": 58,
       "openIssues": 177,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/research": {
       "stars": 14,
       "forks": 7,
       "watchers": 5,
       "openIssues": 6,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/dnsseeder": {
       "stars": 34,
       "forks": 41,
       "watchers": 10,
       "openIssues": 5,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/rusty-kaspa-corpus": {
       "stars": 4,
       "forks": 3,
       "watchers": 5,
       "openIssues": 1,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/whitepaper": {
       "stars": 11,
       "forks": 4,
       "watchers": 6,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/go-secp256k1": {
       "stars": 5,
       "forks": 13,
       "watchers": 7,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/go-muhash": {
       "stars": 5,
       "forks": 13,
       "watchers": 5,
       "openIssues": 1,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/quick-start": {
       "stars": 3,
       "forks": 3,
       "watchers": 7,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/procedures": {
       "stars": 2,
       "forks": 2,
       "watchers": 8,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/cpuminer": {
       "stars": 1,
       "forks": 4,
       "watchers": 0,
       "openIssues": 2,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/workflow-perf-monitor-rs": {
       "stars": 1,
       "forks": 1,
       "watchers": 0,
       "openIssues": 1,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/faucet": {
       "stars": 8,
       "forks": 4,
       "watchers": 3,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/secp256k1": {
       "stars": 3,
       "forks": 3,
       "watchers": 0,
       "openIssues": 1,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/protoc-gen-doc": {
       "stars": 2,
       "forks": 1,
       "watchers": 0,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/kasparov": {
       "stars": 6,
       "forks": 6,
       "watchers": 3,
       "openIssues": 3,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/golang-lru": {
       "stars": 2,
       "forks": 1,
       "watchers": 0,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspanet/compose": {
       "stars": 3,
       "forks": 2,
       "watchers": 0,
       "openIssues": 1,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "aspectron/kaspa-ng": {
       "stars": 103,
       "forks": 31,
       "watchers": 8,
       "openIssues": 12,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "aspectron/kaspa-wasm": {
       "stars": 1,
       "forks": 1,
       "watchers": 1,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "aspectron/kaspa-resolver": {
       "stars": 4,
       "forks": 11,
       "watchers": 1,
       "openIssues": 1,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "aspectron/kaspa-wallet-cli": {
       "stars": 2,
       "forks": 5,
       "watchers": 5,
       "openIssues": 2,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "aspectron/kaspa-wallet": {
       "stars": 1,
       "forks": 1,
       "watchers": 1,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "aspectron/kdx": {
       "stars": 31,
       "forks": 26,
       "watchers": 8,
       "openIssues": 23,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspa-live/kaspa-graph-inspector": {
       "stars": 12,
       "forks": 21,
       "watchers": 4,
       "openIssues": 10,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspa-ng/kaspa-rest-server": {
       "stars": 8,
       "forks": 25,
       "watchers": 1,
       "openIssues": 11,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "supertypo/simply-kaspa-indexer": {
       "stars": 31,
       "forks": 22,
       "watchers": 2,
       "openIssues": 4,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "supertypo/kaspa-db-filler-migration": {
       "stars": 0,
       "forks": 0,
       "watchers": 1,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "lAmeR1/kaspa-explorer": {
       "stars": 42,
       "forks": 41,
       "watchers": 5,
       "openIssues": 9,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "lAmeR1/kaspa-explorer-ng": {
       "stars": 11,
       "forks": 4,
       "watchers": 3,
       "openIssues": 5,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "lAmeR1/kaspa-rest-server-deprecated": {
       "stars": 9,
       "forks": 19,
       "watchers": 5,
       "openIssues": 5,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "lAmeR1/kaspa-db-filler": {
       "stars": 7,
       "forks": 23,
       "watchers": 3,
       "openIssues": 2,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "lAmeR1/kaspa-socket-server": {
       "stars": 2,
       "forks": 15,
       "watchers": 1,
       "openIssues": 1,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "lAmeR1/py-kaspad-client": {
       "stars": 2,
       "forks": 2,
       "watchers": 2,
       "openIssues": 1,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "lAmeR1/kas-point": {
       "stars": 0,
       "forks": 2,
       "watchers": 1,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "tmrlvi/kaspa-miner": {
       "stars": 104,
       "forks": 37,
       "watchers": 8,
       "openIssues": 7,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "RuFiOx/kasop": {
       "stars": 2,
       "forks": 0,
       "watchers": 0,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "onemorebsmith/kaspa-stratum-bridge": {
       "stars": 68,
       "forks": 109,
       "watchers": 10,
       "openIssues": 25,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "bzminer/bzminer": {
       "stars": 288,
       "forks": 38,
       "watchers": 28,
       "openIssues": 283,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "Lolliedieb/lolMiner-releases": {
       "stars": 2890,
       "forks": 610,
       "watchers": 144,
       "openIssues": 336,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "doktor83/SRBMiner-Multi": {
       "stars": 682,
       "forks": 175,
       "watchers": 75,
       "openIssues": 32,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "todxx/teamredminer": {
       "stars": 993,
       "forks": 207,
       "watchers": 77,
       "openIssues": 546,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "develsoftware/GMinerRelease": {
       "stars": 1982,
       "forks": 328,
       "watchers": 121,
       "openIssues": 744,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "rigelminer/rigel": {
       "stars": 278,
       "forks": 21,
       "watchers": 31,
       "openIssues": 19,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "forbole/kastle": {
       "stars": 16,
       "forks": 3,
       "watchers": 2,
       "openIssues": 11,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kasware-wallet/extension": {
       "stars": 51,
       "forks": 21,
       "watchers": 5,
       "openIssues": 9,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "azbuky/kaspium_wallet": {
       "stars": 62,
       "forks": 44,
       "watchers": 8,
       "openIssues": 38,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "KASPACOM/kaspacom-web-wallet": {
       "stars": 10,
       "forks": 1,
       "watchers": 2,
       "openIssues": 7,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "ScopeLift/kaspa-wallet": {
       "stars": 4,
       "forks": 3,
       "watchers": 1,
       "openIssues": 41,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "coderofstuff/kasvault": {
       "stars": 11,
       "forks": 18,
       "watchers": 2,
       "openIssues": 10,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "coderofstuff/hw-app-kaspa": {
       "stars": 3,
       "forks": 4,
       "watchers": 1,
       "openIssues": 1,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "coderofstuff/app-kaspa": {
       "stars": 4,
       "forks": 6,
       "watchers": 1,
       "openIssues": 4,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kasplex/sdk-kiwi": {
       "stars": 8,
       "forks": 2,
       "watchers": 3,
       "openIssues": 2,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kasplex/go-krc20d": {
       "stars": 1,
       "forks": 0,
       "watchers": 1,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kasplex/indexer-executor": {
       "stars": 13,
       "forks": 3,
       "watchers": 2,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kasplex/evm-l2-relayer": {
       "stars": 13,
       "forks": 2,
       "watchers": 0,
       "openIssues": 1,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kasplex/evm-l2-nodes-docker": {
       "stars": 3,
       "forks": 0,
       "watchers": 0,
       "openIssues": 1,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kasplex/evm-l2-audit": {
       "stars": 2,
       "forks": 0,
       "watchers": 0,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "KaffinPX/KasplexBuilder": {
       "stars": 8,
       "forks": 5,
       "watchers": 1,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "KaffinPX/Kaspian-KRC20": {
       "stars": 5,
       "forks": 3,
       "watchers": 1,
       "openIssues": 1,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "KaffinPX/KStratum": {
       "stars": 18,
       "forks": 17,
       "watchers": 2,
       "openIssues": 4,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "svarogg/kaspaper": {
       "stars": 26,
       "forks": 15,
       "watchers": 1,
       "openIssues": 8,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspacom/swap-widget": {
       "stars": 1,
       "forks": 0,
       "watchers": 0,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "thesheepcat/K-indexer": {
       "stars": 6,
       "forks": 3,
       "watchers": 1,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "karlsen-network/karlsen-explorer": {
       "stars": 3,
       "forks": 6,
       "watchers": 2,
       "openIssues": 1,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "ghost-wallet/web-extension": {
       "stars": 2,
       "forks": 1,
       "watchers": 2,
       "openIssues": 1,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "coinchimp/kaspa-krc20-apps": {
       "stars": 24,
       "forks": 12,
       "watchers": 3,
       "openIssues": 2,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "michaelsutton/argent": {
       "stars": 19,
       "forks": 5,
       "watchers": 1,
       "openIssues": 1,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "K-Kluster/kaspa-js": {
       "stars": 21,
       "forks": 5,
       "watchers": 3,
       "openIssues": 7,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "0xhappyboy/kaspa-sdk": {
       "stars": 0,
       "forks": 0,
       "watchers": 0,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "coderofstuff/kas-demo-wallet": {
       "stars": 3,
       "forks": 1,
       "watchers": 1,
       "openIssues": 1,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "kaspagang/kaspad-py-explorer": {
       "stars": 10,
       "forks": 10,
       "watchers": 4,
       "openIssues": 1,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "KeenHero/kaspa-wallet": {
       "stars": 2,
       "forks": 0,
       "watchers": 0,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "biryukovmaxim/kaspa-xmss": {
       "stars": 4,
       "forks": 1,
       "watchers": 0,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "trillskillz/OpenSilver": {
       "stars": 8,
       "forks": 0,
       "watchers": 1,
       "openIssues": 2,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "NukeThemAII/KasDraw": {
       "stars": 1,
       "forks": 0,
       "watchers": 0,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "w00c00/kaspa-arena": {
       "stars": 1,
       "forks": 0,
       "watchers": 1,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "cosmasken/kaspa402": {
       "stars": 0,
       "forks": 1,
       "watchers": 0,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "Dr-Liberty/Kaspa-University-KU-Protocol": {
       "stars": 2,
       "forks": 1,
       "watchers": 0,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "Aaditya1273/K-SYNCHRONY": {
       "stars": 0,
       "forks": 1,
       "watchers": 0,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "edenbd1/oracle-kaspa": {
       "stars": 1,
       "forks": 1,
       "watchers": 0,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     },
     "on3ir0s/KRC20-ForestSeeker": {
       "stars": 1,
       "forks": 0,
       "watchers": 1,
       "openIssues": 0,
-      "capturedAt": "2026-08-12T11:17:55.398683+00:00"
+      "capturedAt": "2026-08-13T05:03:53.246708+00:00"
     }
   }
 }

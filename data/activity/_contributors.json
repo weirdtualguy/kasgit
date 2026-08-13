@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T11:17:55.398683+00:00",
+  "generatedAt": "2026-08-13T05:03:53.246708+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector \u2014 there is no per-day breakdown per contributor, only per repo. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window.",
   "contributors": [

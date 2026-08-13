@@ -1,16 +1,8 @@
 {
   "repo": "onemorebsmith/kaspa-stratum-bridge",
-  "generatedAt": "2026-08-12T11:17:55.398683+00:00",
+  "generatedAt": "2026-08-13T05:03:53.246708+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-07-08",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-07-09",
       "commits": 0,
@@ -3210,11 +3202,26 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-08-13",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "starHistory": [
     {
       "date": "2026-08-12",
+      "stars": 68,
+      "forks": 109,
+      "watchers": 10,
+      "openIssues": 25
+    },
+    {
+      "date": "2026-08-13",
       "stars": 68,
       "forks": 109,
       "watchers": 10,
