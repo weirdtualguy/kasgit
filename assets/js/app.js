@@ -167,7 +167,8 @@
   function statusBadge(status) {
     const map = {
       Active: "badge-emerald",
-      Verify: "badge-amber",
+      Unconfirmed: "badge-slate",
+      Unreachable: "badge-amber",
       Slowing: "badge-cyan",
       Stale: "badge-slate",
       Deprecated: "badge-rose",
@@ -177,16 +178,54 @@
     return `<span class="badge ${cls}">${escapeHtml(status)}</span>`;
   }
 
-  function confidenceBadge(confidence) {
-    const map = {
-      High: "badge-emerald",
-      "Medium-High": "badge-cyan",
-      Medium: "badge-cyan",
-      "Low-Medium": "badge-amber",
-      Low: "badge-slate"
-    };
-    const cls = map[confidence] || "badge-slate";
-    return `<span class="badge ${cls}">${escapeHtml(confidence)}</span>`;
+  const STATUS_ACTIVE_DAYS = 30;
+  const STATUS_SLOWING_DAYS = 120;
+
+  /**
+   * The status actually shown everywhere in the UI — live GitHub data first,
+   * the registry CSV's status only as a fallback for rows outside live
+   * ingestion scope. Precedence, highest first:
+   *   1. Deprecated in the CSV — a human call ("this is superseded") that
+   *      commit recency can't see and shouldn't override.
+   *   2. Ingestion targeted this repo but the GitHub API call itself failed
+   *      (dead URL, renamed, gone private) — "Unreachable", not silently
+   *      hidden, since that's a genuinely actionable signal.
+   *   3. GitHub reports the repo as archived (real API field, not a guess).
+   *   4. Live commit recency — Active/Slowing/Stale, computed from the same
+   *      per-repo series everything else on this dashboard already uses.
+   *   5. No live data at all (row excluded from ingestion scope) — whatever
+   *      the registry CSV says, which by now is only ever "Unconfirmed"
+   *      unless a human set something more specific.
+   * Cached per render pass (see statusCache in updateDashboard) since it's
+   * called from several render functions for the same repos.
+   */
+  function effectiveRepoStatus(repo) {
+    if (statusCache.has(repo.repoPath)) return statusCache.get(repo.repoPath);
+
+    let result;
+    if (repo.status === "Deprecated") {
+      result = { label: "Deprecated", reason: null };
+    } else if (LIVE.failedRepoSet?.has(repo.repoPath)) {
+      result = {
+        label: "Unreachable",
+        reason: "GitHub ingestion failed for this repo's URL on the last run — it may have moved, gone private, or been deleted."
+      };
+    } else {
+      const liveRecord = LIVE.repos[repo.repoPath];
+      if (!liveRecord) {
+        result = { label: repo.status, reason: null };
+      } else if (liveRecord.archived === true) {
+        result = { label: "Archived", reason: null };
+      } else {
+        const days = repoLastCommitDays(repo);
+        if (days === null) result = { label: "Stale", reason: null };
+        else if (days <= STATUS_ACTIVE_DAYS) result = { label: "Active", reason: null };
+        else if (days <= STATUS_SLOWING_DAYS) result = { label: "Slowing", reason: null };
+        else result = { label: "Stale", reason: null };
+      }
+    }
+    statusCache.set(repo.repoPath, result);
+    return result;
   }
 
   function categoryBadge(category) {
@@ -197,6 +236,35 @@
   function avatarColor(seedText) {
     const hue = hashString(seedText) % 360;
     return `hsl(${hue} 75% 62%)`;
+  }
+
+  /**
+   * Avatar markup shared by every contributor/idea-author list. Always uses
+   * a Kaspicon (https://github.com/weirdtualguy/kaspicon) deterministic pixel
+   * identicon generated from the handle — NOT GitHub's own avatar_url. GitHub
+   * always returns an avatar_url, including for accounts with no uploaded
+   * photo (it points at GitHub's own generated identicon in that case), so
+   * there's no reliable "do they actually have a real photo" signal to key a
+   * GitHub-photo-vs-Kaspicon fallback on — an earlier version of this
+   * function tried exactly that and Kaspicon effectively never rendered
+   * because of it. `{ preset: "list" }` is Kaspicon's own recommended bundle
+   * for this case (many small avatars shown together, spectrum palette so
+   * they're distinguishable at a glance). Falls back to a colored-initials
+   * tile only if window.Kaspicon itself isn't available (script failed to
+   * load, or threw) — see the script tag in index.html.
+   */
+  function avatarMarkup(seedText, sizeClass, textSizeClass = "text-[10px]") {
+    if (typeof window.Kaspicon !== "undefined") {
+      try {
+        const dataUri = window.Kaspicon.toDataURL(seedText, { preset: "list" });
+        return `<img src="${escapeHtml(dataUri)}" alt="" class="${sizeClass} shrink-0" loading="lazy" />`;
+      } catch (err) {
+        // Falls through to the initials tile below.
+      }
+    }
+    const initials = seedText.split(/[_-]/).slice(0, 2).map(part => part[0]?.toUpperCase() || "").join("");
+    const color = avatarColor(seedText);
+    return `<div class="${sizeClass} flex items-center justify-center ${textSizeClass} font-bold text-black/80 shrink-0" style="background:${color}">${escapeHtml(initials)}</div>`;
   }
 
   function filteredRepos({ query = "", category = state.category } = {}) {
@@ -265,6 +333,13 @@
   // every one of those re-fetches/re-generates the same data (see audit). Cleared
   // at the top of updateDashboard() below.
   let seriesCache = new Map();
+
+  // effectiveRepoStatus() cache — same per-render-pass rationale as
+  // seriesCache above (it's called from renderKpis, renderRepoTable,
+  // renderRegistryTable, renderStartHere, renderNeedsBuilder, and
+  // renderBusFactorWatch, all for the same repos in one pass). Cleared
+  // alongside seriesCache in updateDashboard().
+  let statusCache = new Map();
 
   function getRepoDailySeries(repo, days) {
     const cacheKey = `${repo.id}:${days}`;
@@ -350,6 +425,36 @@
     const currentSum = sum(current);
     const pct = priorSum > 0 ? ((currentSum - priorSum) / priorSum) * 100 : (currentSum > 0 ? 100 : 0);
     return { priorSum, currentSum, pct };
+  }
+
+  /**
+   * Distinct-contributor period delta: current `days`-day window vs. the
+   * equal-length window immediately before it, using each contributor's real
+   * activeDates (every distinct UTC day they committed anywhere, from
+   * ingestion — see _contributors.json). This is a genuine set-membership
+   * check, not a sum, so someone active in both windows is correctly counted
+   * once in each rather than double-counted or dropped. hasData is false
+   * when LIVE.contributors is empty or predates activeDates being ingested —
+   * callers must show "--" rather than a delta computed from nothing.
+   */
+  function contributorsPeriodDelta(days) {
+    const doubled = dateKeysForRange(days * 2);
+    const priorKeys = new Set(doubled.slice(0, days));
+    const currentKeys = new Set(doubled.slice(days));
+
+    let priorCount = 0;
+    let currentCount = 0;
+    let hasData = false;
+    LIVE.contributors.forEach(entry => {
+      const dates = entry.activeDates;
+      if (!Array.isArray(dates)) return;
+      hasData = true;
+      if (dates.some(d => priorKeys.has(d))) priorCount += 1;
+      if (dates.some(d => currentKeys.has(d))) currentCount += 1;
+    });
+
+    const pct = priorCount > 0 ? ((currentCount - priorCount) / priorCount) * 100 : (currentCount > 0 ? 100 : 0);
+    return { priorCount, currentCount, pct, hasData };
   }
 
   function repoMetrics(repo, days) {
@@ -540,16 +645,36 @@
       el.textContent = `${positive ? "▲" : "▼"} ${Math.abs(value)}% vs previous period`;
     });
 
-    // Repos and Contributors aren't a time series over the range in the same
-    // sense, so they don't get a period-comparison delta — leave them at "--"
-    // rather than fabricate one.
-    ["deltaRepos", "deltaDevs"].forEach(id => {
-      const el = document.getElementById(id);
-      if (el) { el.className = "mt-1 text-xs text-slate-500"; el.textContent = "--"; }
-    });
+    // Repos isn't a time series over the range in the same sense as the four
+    // fields above (the registry's size doesn't change with the range
+    // selector), so it stays "--" rather than fabricate a delta. Contributors
+    // gets a real one — see contributorsPeriodDelta — but only when live
+    // per-contributor activeDates data actually exists.
+    const reposEl = document.getElementById("deltaRepos");
+    if (reposEl) { reposEl.className = "mt-1 text-xs text-slate-500"; reposEl.textContent = "--"; }
 
-    const activeCount = REPOS.filter(repo => repo.status === "Active").length;
-    const verifyCount = REPOS.filter(repo => repo.status === "Verify").length;
+    const devsEl = document.getElementById("deltaDevs");
+    if (devsEl) {
+      const { priorCount, currentCount, pct, hasData } = contributorsPeriodDelta(state.range);
+      if (!hasData) {
+        devsEl.className = "mt-1 text-xs text-slate-500";
+        devsEl.textContent = "--";
+      } else if (priorCount === 0 && currentCount === 0) {
+        devsEl.className = "mt-1 text-xs font-medium text-slate-500";
+        devsEl.textContent = "No activity in either period";
+      } else {
+        const value = Math.round(pct * 10) / 10;
+        const positive = value >= 0;
+        devsEl.className = `mt-1 text-xs font-medium ${positive ? "text-emerald-300" : "text-rose-300"}`;
+        devsEl.textContent = `${positive ? "▲" : "▼"} ${Math.abs(value)}% vs previous period`;
+      }
+    }
+
+    const activeCount = REPOS.filter(repo => effectiveRepoStatus(repo).label === "Active").length;
+    const needsLookCount = REPOS.filter(repo => {
+      const label = effectiveRepoStatus(repo).label;
+      return label === "Unconfirmed" || label === "Unreachable";
+    }).length;
     const totalRows = REGISTRY_ROWS.length;
 
     // The six KPI tiles above sum live-ingested + modeled numbers together with
@@ -566,7 +691,7 @@
 
     document.getElementById("registryCoverage").textContent = `${totalRows} resources`;
     document.getElementById("verifiedActiveRepos").textContent = `${activeCount} repo${activeCount === 1 ? "" : "s"}`;
-    document.getElementById("needsVerification").textContent = `${verifyCount} repos`;
+    document.getElementById("needsVerification").textContent = `${needsLookCount} repo${needsLookCount === 1 ? "" : "s"}`;
   }
 
   function renderActivityChart() {
@@ -827,7 +952,7 @@
       </td>
       <td>${categoryBadge(repo.category)}${variant === "full" ? ` ${liveIndicator(metrics.isLive)} ${busFactorBadge(repo)}` : ""}</td>
       ${variant === "full" ? `<td class="font-mono text-slate-300">Tier ${repo.tier}</td>` : ""}
-      <td>${statusBadge(repo.status)}</td>
+      <td>${statusBadge(effectiveRepoStatus(repo).label)}</td>
       ${variant === "full" ? `<td class="text-right font-mono ${metrics.starsLive ? "text-emerald-200" : "text-slate-200"}" title="${metrics.starsLive ? "Live star count" : "Modeled placeholder"}">${formatNumber(metrics.stars)}</td>` : ""}
       <td class="text-right font-mono text-slate-200">${formatNumber(metrics.commits)}</td>
       <td class="text-right font-mono text-slate-200">${formatNumber(metrics.prs)}</td>
@@ -895,12 +1020,8 @@
     const topCommits = rows[0]?.metrics.commits || 1;
 
     root.innerHTML = rows.map((row, index) => {
-      const initials = row.handle.split(/[_-]/).slice(0, 2).map(part => part[0]?.toUpperCase() || "").join("");
-      const color = avatarColor(row.handle);
       const focus = Math.min(100, Math.round((row.metrics.commits / topCommits) * 100));
-      const avatar = row.avatarUrl
-        ? `<img src="${escapeHtml(row.avatarUrl)}" alt="" class="h-9 w-9 rounded-2xl shrink-0" loading="lazy" />`
-        : `<div class="h-9 w-9 rounded-2xl flex items-center justify-center text-[11px] font-bold text-black/80 shrink-0" style="background:${color}">${escapeHtml(initials)}</div>`;
+      const avatar = avatarMarkup(row.handle, "h-9 w-9 rounded-2xl", "text-[11px]");
       const nameLabel = row.htmlUrl
         ? `<a href="${escapeHtml(row.htmlUrl)}" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-slate-100 truncate font-mono hover:underline">${escapeHtml(row.handle)}</a>`
         : `<span class="text-sm font-medium text-slate-100 truncate font-mono">${escapeHtml(row.handle)}</span>`;
@@ -953,13 +1074,9 @@
     }
 
     tbody.innerHTML = rows.map((row, index) => {
-      const initials = row.handle.split(/[_-]/).slice(0, 2).map(part => part[0]?.toUpperCase() || "").join("");
-      const color = avatarColor(row.handle);
       const lastActiveLabel = row.metrics.lastActive === null ? "—"
         : row.metrics.lastActive === 0 ? "Today" : `${row.metrics.lastActive}d ago`;
-      const avatar = row.avatarUrl
-        ? `<img src="${escapeHtml(row.avatarUrl)}" alt="" class="h-8 w-8 rounded-xl shrink-0" loading="lazy" />`
-        : `<div class="h-8 w-8 rounded-xl flex items-center justify-center text-[10px] font-bold text-black/80 shrink-0" style="background:${color}">${escapeHtml(initials)}</div>`;
+      const avatar = avatarMarkup(row.handle, "h-8 w-8 rounded-xl", "text-[10px]");
       const nameLabel = row.htmlUrl
         ? `<a href="${escapeHtml(row.htmlUrl)}" target="_blank" rel="noopener noreferrer" class="font-mono text-slate-100 hover:underline">${escapeHtml(row.handle)}</a>`
         : `<span class="font-mono text-slate-100">${escapeHtml(row.handle)}</span>`;
@@ -1002,7 +1119,7 @@
     const normalizedQuery = state.registryQuery.trim().toLowerCase();
 
     const rows = REGISTRY_ROWS.filter(row => {
-      const matchesStatus = state.registryStatus === "All" || row.status === state.registryStatus;
+      const matchesStatus = state.registryStatus === "All" || effectiveRepoStatus(row).label === state.registryStatus;
       const matchesQuery =
         !normalizedQuery ||
         row.name.toLowerCase().includes(normalizedQuery) ||
@@ -1013,7 +1130,7 @@
     });
 
     if (rows.length === 0) {
-      tbody.innerHTML = `<tr><td colspan="8" class="text-center text-slate-500 py-6">No registry entries match your search.</td></tr>`;
+      tbody.innerHTML = `<tr><td colspan="6" class="text-center text-slate-500 py-6">No registry entries match your search.</td></tr>`;
       return;
     }
 
@@ -1028,11 +1145,7 @@
         <td>${row.type === "Org" ? `<span class="badge badge-cyan">Org</span>` : `<span class="badge badge-slate">Repo</span>`}</td>
         <td>${categoryBadge(row.category)}</td>
         <td class="font-mono text-slate-300">Tier ${row.tier}</td>
-        <td>${statusBadge(row.status)}</td>
-        <td>${confidenceBadge(row.confidence)}</td>
-        <td>${row.verified
-          ? `<span class="badge badge-emerald" title="${row.verifiedAt ? `Verified ${escapeHtml(row.verifiedAt)}` : "Manually verified"}">✓ Verified</span>`
-          : `<span class="badge badge-slate" title="From AI-assisted research, not yet manually checked">Unverified</span>`}</td>
+        <td>${statusBadge(effectiveRepoStatus(row).label)}</td>
         <td>
           <div class="flex flex-wrap gap-1.5">
             ${row.tags.map(tag => `<span class="badge badge-slate">${escapeHtml(tag)}</span>`).join("")}
@@ -1079,7 +1192,11 @@
     const selectRoot = document.getElementById("registryStatus");
     if (!selectRoot) return;
 
-    const statusesPresent = Array.from(new Set(REGISTRY_ROWS.map(r => r.status))).sort();
+    // Computed from effectiveRepoStatus (live-first), not the raw registry
+    // CSV status — otherwise a repo showing "Active" in the table wouldn't
+    // actually appear when filtering by "Active", since almost every repo's
+    // raw CSV status differs from its live-corrected one.
+    const statusesPresent = Array.from(new Set(REGISTRY_ROWS.map(r => effectiveRepoStatus(r).label))).sort();
     const statuses = ["All", ...statusesPresent];
 
     selectRoot.innerHTML = statuses.map(status => `
@@ -1221,11 +1338,7 @@
 
       newBuildersEl.innerHTML = newBuilders.length
         ? newBuilders.map(row => {
-            const initials = row.handle.split(/[_-]/).slice(0, 2).map(part => part[0]?.toUpperCase() || "").join("");
-            const color = avatarColor(row.handle);
-            const avatar = row.avatarUrl
-              ? `<img src="${escapeHtml(row.avatarUrl)}" alt="" class="h-7 w-7 rounded-lg shrink-0" loading="lazy" />`
-              : `<div class="h-7 w-7 rounded-lg flex items-center justify-center text-[10px] font-bold text-black/80 shrink-0" style="background:${color}">${escapeHtml(initials)}</div>`;
+            const avatar = avatarMarkup(row.handle, "h-7 w-7 rounded-lg", "text-[10px]");
             const nameLabel = row.htmlUrl
               ? `<a href="${escapeHtml(row.htmlUrl)}" target="_blank" rel="noreferrer noopener" class="text-xs font-mono text-slate-100 hover:underline truncate">${escapeHtml(row.handle)}</a>`
               : `<span class="text-xs font-mono text-slate-100 truncate">${escapeHtml(row.handle)}</span>`;
@@ -1252,11 +1365,11 @@
     if (!root) return;
 
     const picks = START_HERE_CATEGORIES.map(category => {
-      const candidates = REPOS.filter(repo => repo.category === category && repo.status !== "Archived" && repo.status !== "Deprecated");
+      const candidates = REPOS.filter(repo => repo.category === category && effectiveRepoStatus(repo).label !== "Archived" && effectiveRepoStatus(repo).label !== "Deprecated");
       if (!candidates.length) return null;
 
       const best = [...candidates].sort((a, b) => {
-        const statusRank = (repo) => (repo.status === "Active" ? 1 : 0);
+        const statusRank = (repo) => (effectiveRepoStatus(repo).label === "Active" ? 1 : 0);
         if (statusRank(b) !== statusRank(a)) return statusRank(b) - statusRank(a);
         const confDiff = (CONFIDENCE_RANK[b.confidence] || 0) - (CONFIDENCE_RANK[a.confidence] || 0);
         if (confDiff !== 0) return confDiff;
@@ -1272,7 +1385,7 @@
              class="block rounded-xl border border-white/[0.06] bg-white/[0.02] px-3 py-2 hover:bg-white/[0.04] transition">
             <div class="flex items-center justify-between gap-2">
               ${categoryBadge(category)}
-              ${statusBadge(repo.status)}
+              ${statusBadge(effectiveRepoStatus(repo).label)}
             </div>
             <span class="text-sm text-slate-100 font-medium mt-1.5 block truncate">${escapeHtml(repo.name)}</span>
             <span class="text-xs text-slate-500 mt-0.5 block truncate" title="${escapeHtml(repo.description)}">${escapeHtml(repo.description)}</span>
@@ -1321,7 +1434,7 @@
 
     const byCategory = categories.map(category => {
       const repos = REPOS.filter(repo =>
-        repo.category === category && repo.status !== "Archived" && repo.status !== "Deprecated"
+        repo.category === category && effectiveRepoStatus(repo).label !== "Archived" && effectiveRepoStatus(repo).label !== "Deprecated"
       );
       const withLastCommit = repos
         .map(repo => ({ repo, lastCommitDays: repoLastCommitDays(repo) }))
@@ -1424,11 +1537,7 @@
     listEl.innerHTML = ideas.length
       ? ideas.map(idea => {
           const login = idea.author?.login || "unknown";
-          const initials = login.slice(0, 2).toUpperCase();
-          const color = avatarColor(login);
-          const avatar = idea.author?.avatarUrl
-            ? `<img src="${escapeHtml(idea.author.avatarUrl)}" alt="" class="h-7 w-7 rounded-lg shrink-0" loading="lazy" />`
-            : `<div class="h-7 w-7 rounded-lg flex items-center justify-center text-[10px] font-bold text-black/80 shrink-0" style="background:${color}">${escapeHtml(initials)}</div>`;
+          const avatar = avatarMarkup(login, "h-7 w-7 rounded-lg", "text-[10px]");
           const labelBadges = (idea.labels || [])
             .filter(label => label !== IDEAS_LABEL)
             .slice(0, 3)
@@ -1479,7 +1588,7 @@
     const liveRepoCount = REPOS.filter(repo => LIVE.repos[repo.repoPath]).length;
 
     const flagged = REPOS
-      .filter(repo => repo.status !== "Archived" && repo.status !== "Deprecated")
+      .filter(repo => effectiveRepoStatus(repo).label !== "Archived" && effectiveRepoStatus(repo).label !== "Deprecated")
       .map(repo => ({ repo, risk: repoBusFactor(repo) }))
       .filter(item => item.risk)
       .sort((a, b) => b.risk.identifiedCommits - a.risk.identifiedCommits)
@@ -1531,13 +1640,15 @@
   }
 
   function updateDashboard() {
-    // Both caches are only valid within a single render pass — state (range,
+    // These caches are only valid within a single render pass — state (range,
     // category, nonce) may change on the next call, so start clean each time.
     seriesCache = new Map();
     ecosystemSeriesCache = new Map();
+    statusCache = new Map();
 
     renderRangeButtons();
     renderCategoryControls();
+    renderRegistryStatusControl();
     renderKpis();
     renderActivityChart();
     renderCategoryChart();
@@ -1572,6 +1683,11 @@
 
       const repoIndex = repoIndexRes.ok ? await repoIndexRes.json() : {};
       LIVE.meta = metaRes.ok ? await metaRes.json() : null;
+      // Repos ingestion actually attempted (via _meta.json's failed list) but
+      // the GitHub API call itself errored on — see effectiveRepoStatus()'s
+      // "Unreachable" status. Distinct from a repo simply outside live
+      // ingestion scope, which isn't in this list at all.
+      LIVE.failedRepoSet = new Set(Array.isArray(LIVE.meta?.failed) ? LIVE.meta.failed : []);
 
       const entries = Object.entries(repoIndex).filter(([repoPath]) =>
         REPOS.some(repo => repo.repoPath === repoPath)
@@ -1669,8 +1785,7 @@
         repository: repo.name,
         url: repo.url,
         category: repo.category,
-        status: repo.status,
-        confidence: repo.confidence,
+        status: effectiveRepoStatus(repo).label,
         selectedRangeDays: state.range,
         // isLive: true means commits/prs/issues/releases/activeDevs came from the
         // real GitHub API ingestion, not the deterministic modeled generator —
@@ -1793,7 +1908,6 @@
 
   async function boot() {
     renderTabs();
-    renderRegistryStatusControl();
     initCharts();
     bindEvents();
     switchView("overview");

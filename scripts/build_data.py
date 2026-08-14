@@ -55,10 +55,10 @@ def map_status(raw):
     if "slowing" in r:
         return "Slowing"
     if "active-ish" in r or "uncertain" in r:
-        return "Verify"
+        return "Unconfirmed"
     if r.strip().startswith("active"):
         return "Active"
-    return "Verify"
+    return "Unconfirmed"
 
 CONF_ORDER = ["Medium-High", "Low-Medium", "High", "Medium", "Low"]
 

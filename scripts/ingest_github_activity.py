@@ -411,8 +411,10 @@ def ingest_repo_activity(owner, repo_name, since_dt):
                 "commits": 0,
                 "firstCommitAt": author_date,
                 "lastCommitAt": author_date,
+                "activeDates": set(),
             })
             entry["commits"] += 1
+            entry["activeDates"].add(bucket)
             if author_date and (not entry["lastCommitAt"] or author_date > entry["lastCommitAt"]):
                 entry["lastCommitAt"] = author_date
             if author_date and (not entry["firstCommitAt"] or author_date < entry["firstCommitAt"]):
@@ -496,7 +498,11 @@ def zero_filled_series(days_map, since_dt, until_dt):
 
 
 def fetch_repo_snapshot(owner, repo_name):
-    """Point-in-time repo metadata: stars, forks, watchers, open issues."""
+    """Point-in-time repo metadata: stars, forks, watchers, open issues,
+    archived flag. The archived flag feeds effectiveRepoStatus() in app.js —
+    a repo GitHub itself reports as archived shows that status regardless of
+    how recently it was committed to, taking priority over commit-recency
+    buckets (Active/Slowing/Stale)."""
     data = api_get_json(f"{API_ROOT}/repos/{owner}/{repo_name}")
     if not data:
         return None
@@ -505,6 +511,7 @@ def fetch_repo_snapshot(owner, repo_name):
         "forks": data.get("forks_count", 0),
         "watchers": data.get("subscribers_count", data.get("watchers_count", 0)),
         "openIssues": data.get("open_issues_count", 0),
+        "archived": bool(data.get("archived", False)),
     }
 
 
@@ -729,6 +736,7 @@ def main():
                 "firstCommitAt": None,
                 "firstCommitRepo": None,
                 "lastCommitAt": None,
+                "activeDates": set(),
             })
             # A contributor's avatar/profile URL can't change mid-run, but keep
             # the most recently seen non-null value just in case an earlier
@@ -737,6 +745,7 @@ def main():
             agg["htmlUrl"] = agg["htmlUrl"] or info["htmlUrl"]
             agg["commits"] += info["commits"]
             agg["repos"][full] = agg["repos"].get(full, 0) + info["commits"]
+            agg["activeDates"] |= info["activeDates"]
             if info["lastCommitAt"] and (not agg["lastCommitAt"] or info["lastCommitAt"] > agg["lastCommitAt"]):
                 agg["lastCommitAt"] = info["lastCommitAt"]
             # Earliest commit across every tracked repo, within the ingestion's
@@ -778,6 +787,12 @@ def main():
                 "lookbackDays": LOOKBACK_DAYS,
                 "series": series,
                 "starHistory": star_history,
+                # From fetch_repo_snapshot's GitHub response; null if the
+                # snapshot call itself failed (rate limit, transient error) —
+                # distinct from false, which means GitHub confirmed it's NOT
+                # archived. app.js's effectiveRepoStatus() only trusts a
+                # literal true/false, never treats null as either.
+                "archived": snapshot.get("archived") if snapshot else None,
                 # Per-repo contributor concentration, uncapped (unlike the
                 # org-wide top-100 in _contributors.json, which could miss a
                 # niche repo's dominant author if they're not otherwise very
@@ -851,6 +866,13 @@ def main():
             {"repo": repo, "commits": count}
             for repo, count in sorted(entry["repos"].items(), key=lambda kv: kv[1], reverse=True)
         ]
+        # Sorted list of every distinct day (UTC, "YYYY-MM-DD") this person
+        # committed to any tracked repo, within LOOKBACK_DAYS. This is what
+        # lets the front end compute a real "distinct contributors active in
+        # this period vs. the one before it" delta (period membership is a
+        # date-range containment check against this list) instead of either
+        # fabricating one or leaving it blank.
+        entry["activeDates"] = sorted(entry["activeDates"])
 
     with open(os.path.join(OUTPUT_DIR, "_contributors.json"), "w", encoding="utf-8") as fh:
         json.dump({
@@ -858,14 +880,15 @@ def main():
             "lookbackDays": LOOKBACK_DAYS,
             "note": (
                 "Commit counts are cumulative over lookbackDays, not sliced by "
-                "the dashboard's 7/30/90/365-day range selector — there is no "
-                "per-day breakdown per contributor, only per repo. Only commits "
+                "the dashboard's 7/30/90/365-day range selector. Only commits "
                 "linked to a real GitHub account are included; commits from an "
                 "email with no linked account are excluded, not attributed by "
                 "guesswork. firstCommitAt is the earliest commit seen for that "
                 "login within lookbackDays, used as a 'new contributor' signal "
                 "on the front end — not a claim about their GitHub history "
-                "before this window."
+                "before this window. activeDates is every distinct day (UTC) "
+                "they committed to any tracked repo, used to compute real "
+                "period-over-period distinct-contributor deltas."
             ),
             "contributors": contributors_out,
         }, fh, indent=2)
@@ -938,7 +961,8 @@ def main():
                     "format": "json",
                     "description": (
                         "Per-repo daily commit/PR/issue/release series, star history, and "
-                        "identifiedCommits/topContributors (used for the Bus Factor Watch signal). One file "
+                        "identifiedCommits/topContributors (used for the Bus Factor Watch signal), and the "
+                        "archived flag (used for effective status — see Methodology). One file "
                         "per repo listed in repoIndex — repos outside live ingestion scope have no file here."
                     ),
                 },
@@ -964,7 +988,8 @@ def main():
                     "path": "data/activity/_contributors.json",
                     "format": "json",
                     "description": (
-                        "Org-wide contributor list (commits, first/last commit date, repos touched), capped "
+                        "Org-wide contributor list (commits, first/last commit date, every distinct active "
+                        "day, repos touched), capped "
                         "to the top 100 by total commits. For a specific repo's own contributor breakdown "
                         "(uncapped), use that repo's file via repoIndex instead."
                     ),

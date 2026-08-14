@@ -51,18 +51,18 @@
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js" integrity="sha384-o5uz97et3bErHvpKfD4Jz4n0JfhJDWABFuF4NP+iEEDxE1VwMWJ19QGR0lqFZnr6" crossorigin="anonymous"></script>
   <!--
     Kaspicon (https://github.com/weirdtualguy/kaspicon) — deterministic
-    pixel-identicon fallback avatars for contributors/idea authors without a
-    GitHub photo (see avatarMarkup() in app.js). Pinned to @main rather than
-    a release tag: the project hasn't cut a GitHub Release/tag yet, so a
-    version pin (e.g. @v1.1.0) 404s on jsDelivr as of this writing. No
-    integrity hash for the same reason — SRI needs a fixed file to hash
-    against, which a branch pin doesn't give you. Once a tagged release
-    exists, switch this to `@vX.Y.Z` and add integrity, matching the echarts
-    line above. app.js falls back to a colored-initials tile if this script
-    fails to load or doesn't resolve, so its absence degrades gracefully
-    rather than breaking anything.
+    pixel-identicon avatars for contributors/idea authors (see avatarMarkup()
+    in app.js). Pinned to the v1.1.0 tag now that one exists. No integrity
+    hash yet — computing SRI correctly requires hashing the exact bytes
+    jsDelivr actually serves, which isn't something to guess at from here.
+    Generate it yourself and add crossorigin="anonymous" integrity="...":
+      curl -s https://cdn.jsdelivr.net/gh/weirdtualguy/kaspicon@v1.1.0/src/kaspicon.js \
+        | openssl dgst -sha384 -binary | openssl base64 -A
+    then prefix the output with "sha384-", matching the echarts line above.
+    app.js falls back to a colored-initials tile if this script fails to
+    load, so its absence degrades gracefully rather than breaking anything.
   -->
-  <script src="https://cdn.jsdelivr.net/gh/weirdtualguy/kaspicon@main/src/kaspicon.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/weirdtualguy/kaspicon@v1.1.0/src/kaspicon.js"></script>
 </head>
 
 <body class="font-sans text-slate-200 antialiased min-h-screen selection:bg-cyan-300/20">
@@ -264,11 +264,11 @@
                 <span class="text-xs font-semibold text-emerald-300" id="registryCoverage">--</span>
               </div>
               <div class="flex items-center justify-between rounded-2xl border border-white/[0.06] bg-white/[0.02] px-3 py-3">
-                <span class="text-xs text-slate-400">Verified active repos</span>
+                <span class="text-xs text-slate-400">Active repos</span>
                 <span class="text-xs font-semibold text-sky-300" id="verifiedActiveRepos">--</span>
               </div>
               <div class="flex items-center justify-between rounded-2xl border border-white/[0.06] bg-white/[0.02] px-3 py-3">
-                <span class="text-xs text-slate-400">Needs verification</span>
+                <span class="text-xs text-slate-400">Couldn't confirm live</span>
                 <span class="text-xs font-semibold text-amber-300" id="needsVerification">--</span>
               </div>
             </div>
@@ -443,7 +443,8 @@
           <div>
             <h2 class="text-xl font-semibold text-white">Contributors</h2>
             <p class="text-sm text-slate-400 mt-1">
-              Placeholder contributor analytics for Phase 1 UI. Connect real GitHub identities later.
+              Real GitHub commit authors for every live-ingested repo — login, avatar, commits, first/last commit date. Falls back to
+              a modeled placeholder only where no ingestion data exists yet at all.
             </p>
           </div>
           <div class="w-full md:w-80">
@@ -481,7 +482,8 @@
           <div>
             <h2 class="text-xl font-semibold text-white">Phase 1 Registry</h2>
             <p class="text-sm text-slate-400 mt-1">
-              Curated Kaspa git resources, inclusion status, and verification confidence — sourced from AI-assisted research, pending manual verification.
+              Every Kaspa git resource this dashboard tracks, with a live-first status: real GitHub commit activity where a repo is
+              live-ingested, the registry's own record otherwise.
             </p>
           </div>
 
@@ -502,8 +504,6 @@
                 <th>Category</th>
                 <th>Priority</th>
                 <th>Status</th>
-                <th>Confidence</th>
-                <th>Verified</th>
                 <th>Tags</th>
               </tr>
             </thead>
@@ -553,9 +553,12 @@
         <div class="mt-6 rounded-3xl border border-amber-300/15 bg-amber-300/[0.05] p-5">
           <h3 class="text-sm font-semibold text-amber-100">What's live vs. modeled in this build</h3>
           <p class="text-sm text-slate-300 mt-2 max-w-4xl">
-            The <span class="font-mono text-amber-200">Registry</span> and <span class="font-mono text-amber-200">Repositories</span> tabs
-            (name, URL, category, org type, status, confidence) are sourced from an AI-assisted research pass over public GitHub data
-            and still need manual verification — see each row's confidence badge.
+            The <span class="font-mono text-amber-200">Registry</span> and <span class="font-mono text-amber-200">Repositories</span>
+            tabs' name/URL/category/org-type fields come from an AI-assisted research pass over public GitHub data and may still have
+            rough edges — but a repo's <span class="font-mono text-amber-200">Status</span> badge (Active/Slowing/Stale/Archived/
+            Unreachable) is computed from real GitHub data wherever the repo is live-ingested, not from that initial research pass.
+            Only the small number of repos outside live ingestion scope fall back to a CSV-recorded status, shown as
+            <span class="badge badge-slate align-middle">Unconfirmed</span> unless a human has set something more specific.
           </p>
           <p class="text-sm text-slate-300 mt-3 max-w-4xl">
             Commit/PR/issue/release activity — and star/fork/watcher counts — are ingested daily from the real GitHub API for
@@ -589,9 +592,11 @@
               <li class="flex gap-2"><span class="text-sky-300">•</span> Exclude forks, archived repos, and generated repos by default.</li>
               <li class="flex gap-2"><span class="text-sky-300">•</span> Label repos by category: core, wallet, explorer, mining, docs, etc.</li>
               <li class="flex gap-2"><span class="text-sky-300">•</span> Add community repos after manual review.</li>
-              <li class="flex gap-2"><span class="text-sky-300">•</span> "Verified" in the Registry tab means a human checked that specific
-                row against GitHub — set via the CSV's <span class="font-mono text-slate-200">verified</span>/<span class="font-mono text-slate-200">verified_at</span>
-                columns, independent of the AI-research confidence score.</li>
+              <li class="flex gap-2"><span class="text-sky-300">•</span> The CSV's <span class="font-mono text-slate-200">verified</span>/<span class="font-mono text-slate-200">verified_at</span>
+                columns record whether a human has actually checked a specific row against GitHub. They're not shown as a separate
+                public badge — once a repo is live-ingested, its real commit activity is a stronger integrity signal than a one-time
+                manual check — but <span class="font-mono text-slate-200">verified=no</span> still excludes a row from live ingestion
+                entirely (see Ingestion pipeline below).</li>
             </ul>
           </article>
 
@@ -664,11 +669,13 @@
             who actually dominates a smaller repo). Live-ingested repos only — no modeled guess at who wrote what.
           </p>
           <p class="text-sm text-slate-300 mt-3 max-w-4xl">
-            Contributor and idea-author avatars without a GitHub photo fall back to a
+            Every contributor and idea-author avatar is a
             <a href="https://github.com/weirdtualguy/kaspicon" target="_blank" rel="noreferrer noopener" class="text-sky-200 hover:underline">Kaspicon</a>
-            identicon — a deterministic pixel avatar generated from the handle itself, so the same person always gets the same face
-            across visits rather than a recomputed color tile. If that script hasn't loaded, everything falls back to the plain
-            colored-initials tile instead — nothing breaks either way.
+            identicon — a deterministic pixel avatar generated from the handle itself, not GitHub's own avatar photo. GitHub always
+            returns an avatar_url even for accounts with no uploaded photo (it just points at GitHub's own generated identicon in
+            that case), so there's no reliable way to tell "real photo" from "GitHub default" and prefer the former — Kaspicon is
+            used consistently instead. If that script hasn't loaded, everything falls back to a plain colored-initials tile —
+            nothing breaks either way.
           </p>
         </div>
 
@@ -699,7 +706,7 @@
   <footer class="max-w-[1680px] mx-auto px-4 lg:px-8 pb-8">
     <div class="card px-5 py-4 flex flex-col md:flex-row md:items-center justify-between gap-3">
       <p class="text-xs text-slate-500">
-        Phase 1 Kaspa GitHub Ecosystem UI • Registry from AI-assisted research, pending manual verification • Activity metrics are modeled placeholders
+        Kaspa GitHub Ecosystem Dashboard • Registry curated from AI-assisted research • Status and activity are live GitHub data where ingested, modeled placeholders elsewhere
       </p>
       <div class="flex items-center gap-3 text-xs text-slate-400">
         <span class="badge badge-slate">Public GitHub data only</span>
