@@ -1104,7 +1104,7 @@
           <td>${lastActiveLabel}</td>
           <td>
             <div class="w-24 h-1.5 rounded-full bg-white/[0.06] overflow-hidden">
-              <div class="h-full rounded-full" style="width:${Math.min(100, Math.round(row.metrics.commits / (rows[0]?.metrics.commits || 1) * 100))}%; background:${color}"></div>
+              <div class="h-full rounded-full" style="width:${Math.min(100, Math.round(row.metrics.commits / (rows[0]?.metrics.commits || 1) * 100))}%; background:linear-gradient(90deg,#2dd4bf,#38bdf8)"></div>
             </div>
           </td>
         </tr>
