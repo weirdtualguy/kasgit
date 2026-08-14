@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/silverscript",
-  "generatedAt": "2026-08-13T05:03:53.246708+00:00",
+  "generatedAt": "2026-08-14T03:02:03.791130+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-07-09",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-07-10",
       "commits": 0,
@@ -3205,6 +3197,14 @@
     },
     {
       "date": "2026-08-13",
+      "commits": 1,
+      "prs": 1,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 1
+    },
+    {
+      "date": "2026-08-14",
       "commits": 0,
       "prs": 0,
       "issues": 0,
@@ -3233,13 +3233,21 @@
       "forks": 23,
       "watchers": 6,
       "openIssues": 24
+    },
+    {
+      "date": "2026-08-14",
+      "stars": 46,
+      "forks": 23,
+      "watchers": 6,
+      "openIssues": 23
     }
   ],
-  "identifiedCommits": 155,
+  "archived": false,
+  "identifiedCommits": 156,
   "topContributors": [
     {
       "login": "someone235",
-      "commits": 124
+      "commits": 125
     },
     {
       "login": "michaelsutton",

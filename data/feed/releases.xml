@@ -4,7 +4,14 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Thu, 13 Aug 2026 05:03:53 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 03:02:03 +0000</lastBuildDate>
+    <item>
+      <title>forbole/kastle — v2.59.1</title>
+      <link>https://github.com/forbole/kastle/releases/tag/v2.59.1</link>
+      <guid isPermaLink="true">https://github.com/forbole/kastle/releases/tag/v2.59.1</guid>
+      <pubDate>Thu, 13 Aug 2026 18:22:39 +0000</pubDate>
+      <description>v2.59.1</description>
+    </item>
     <item>
       <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.5.4</title>
       <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.5.4</link>
@@ -209,6 +216,13 @@
       <description>v25.0.0b8</description>
     </item>
     <item>
+      <title>kaspa-ng/kaspa-rest-server — v2.2.2</title>
+      <link>https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.2.2</link>
+      <guid isPermaLink="true">https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.2.2</guid>
+      <pubDate>Fri, 26 Jun 2026 09:43:06 +0000</pubDate>
+      <description>v2.2.2</description>
+    </item>
+    <item>
       <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.4.1</title>
       <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.4.1</link>
       <guid isPermaLink="true">https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.4.1</guid>
@@ -221,6 +235,13 @@
       <guid isPermaLink="true">https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.4.0</guid>
       <pubDate>Wed, 24 Jun 2026 19:32:27 +0000</pubDate>
       <description>3.4.0</description>
+    </item>
+    <item>
+      <title>kaspa-ng/kaspa-rest-server — v2.2.1</title>
+      <link>https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.2.1</link>
+      <guid isPermaLink="true">https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.2.1</guid>
+      <pubDate>Tue, 23 Jun 2026 22:18:40 +0000</pubDate>
+      <description>v2.2.1</description>
     </item>
     <item>
       <title>kaspa-ng/kaspa-rest-server — v2.2.0</title>
@@ -816,13 +837,6 @@
       <guid isPermaLink="true">https://github.com/thesheepcat/K-indexer/releases/tag/v0.1.18</guid>
       <pubDate>Sun, 15 Feb 2026 10:18:33 +0000</pubDate>
       <description>v0.1.18</description>
-    </item>
-    <item>
-      <title>thesheepcat/K-indexer — Release 0.1.17</title>
-      <link>https://github.com/thesheepcat/K-indexer/releases/tag/v0.1.17</link>
-      <guid isPermaLink="true">https://github.com/thesheepcat/K-indexer/releases/tag/v0.1.17</guid>
-      <pubDate>Sat, 14 Feb 2026 19:56:28 +0000</pubDate>
-      <description>v0.1.17</description>
     </item>
   </channel>
 </rss>
