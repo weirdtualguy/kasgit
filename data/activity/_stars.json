@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-08-14T03:41:14.277638+00:00",
+  "generatedAt": "2026-08-14T05:01:26.169221+00:00",
   "repos": {
-    "kaspanet/silverscript": {
-      "stars": 46,
-      "forks": 23,
-      "watchers": 6,
-      "openIssues": 23,
-      "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
-    },
     "kaspanet/rusty-kaspa": {
       "stars": 841,
       "forks": 292,
       "watchers": 72,
       "openIssues": 198,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
+    },
+    "kaspanet/silverscript": {
+      "stars": 46,
+      "forks": 23,
+      "watchers": 6,
+      "openIssues": 23,
+      "archived": false,
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspanet/kaspa-python-sdk": {
       "stars": 8,
@@ -23,7 +23,7 @@
       "watchers": 1,
       "openIssues": 17,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspanet/vprogs": {
       "stars": 52,
@@ -31,7 +31,7 @@
       "watchers": 4,
       "openIssues": 25,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspanet/kccs": {
       "stars": 7,
@@ -39,7 +39,7 @@
       "watchers": 1,
       "openIssues": 6,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspanet/kips": {
       "stars": 56,
@@ -47,7 +47,7 @@
       "watchers": 15,
       "openIssues": 16,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspanet/docs": {
       "stars": 66,
@@ -55,7 +55,7 @@
       "watchers": 7,
       "openIssues": 16,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspanet/kaspad": {
       "stars": 528,
@@ -63,7 +63,7 @@
       "watchers": 58,
       "openIssues": 177,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspanet/research": {
       "stars": 14,
@@ -71,7 +71,7 @@
       "watchers": 5,
       "openIssues": 6,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspanet/dnsseeder": {
       "stars": 34,
@@ -79,7 +79,7 @@
       "watchers": 10,
       "openIssues": 5,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspanet/rusty-kaspa-corpus": {
       "stars": 4,
@@ -87,7 +87,7 @@
       "watchers": 5,
       "openIssues": 1,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspanet/whitepaper": {
       "stars": 11,
@@ -95,7 +95,7 @@
       "watchers": 6,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspanet/go-secp256k1": {
       "stars": 5,
@@ -103,7 +103,7 @@
       "watchers": 7,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspanet/go-muhash": {
       "stars": 5,
@@ -111,7 +111,7 @@
       "watchers": 5,
       "openIssues": 1,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspanet/quick-start": {
       "stars": 3,
@@ -119,7 +119,7 @@
       "watchers": 7,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspanet/procedures": {
       "stars": 2,
@@ -127,7 +127,7 @@
       "watchers": 8,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspanet/cpuminer": {
       "stars": 1,
@@ -135,7 +135,7 @@
       "watchers": 0,
       "openIssues": 2,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspanet/workflow-perf-monitor-rs": {
       "stars": 1,
@@ -143,7 +143,7 @@
       "watchers": 0,
       "openIssues": 1,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspanet/faucet": {
       "stars": 8,
@@ -151,7 +151,7 @@
       "watchers": 3,
       "openIssues": 0,
       "archived": true,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspanet/secp256k1": {
       "stars": 3,
@@ -159,7 +159,7 @@
       "watchers": 0,
       "openIssues": 1,
       "archived": true,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspanet/protoc-gen-doc": {
       "stars": 2,
@@ -167,7 +167,7 @@
       "watchers": 0,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspanet/kasparov": {
       "stars": 6,
@@ -175,7 +175,7 @@
       "watchers": 3,
       "openIssues": 3,
       "archived": true,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspanet/golang-lru": {
       "stars": 2,
@@ -183,7 +183,7 @@
       "watchers": 0,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspanet/compose": {
       "stars": 3,
@@ -191,7 +191,7 @@
       "watchers": 0,
       "openIssues": 1,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "aspectron/kaspa-ng": {
       "stars": 103,
@@ -199,7 +199,7 @@
       "watchers": 8,
       "openIssues": 12,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "aspectron/kaspa-wasm": {
       "stars": 1,
@@ -207,7 +207,7 @@
       "watchers": 1,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "aspectron/kaspa-resolver": {
       "stars": 4,
@@ -215,7 +215,7 @@
       "watchers": 1,
       "openIssues": 1,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "aspectron/kaspa-wallet-cli": {
       "stars": 2,
@@ -223,7 +223,7 @@
       "watchers": 5,
       "openIssues": 2,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "aspectron/kaspa-wallet": {
       "stars": 1,
@@ -231,7 +231,7 @@
       "watchers": 1,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "aspectron/kdx": {
       "stars": 31,
@@ -239,7 +239,7 @@
       "watchers": 8,
       "openIssues": 23,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspa-live/kaspa-graph-inspector": {
       "stars": 12,
@@ -247,7 +247,7 @@
       "watchers": 4,
       "openIssues": 10,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspa-ng/kaspa-rest-server": {
       "stars": 8,
@@ -255,7 +255,7 @@
       "watchers": 1,
       "openIssues": 11,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "supertypo/simply-kaspa-indexer": {
       "stars": 31,
@@ -263,7 +263,7 @@
       "watchers": 2,
       "openIssues": 4,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "supertypo/kaspa-db-filler-migration": {
       "stars": 0,
@@ -271,7 +271,7 @@
       "watchers": 1,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "lAmeR1/kaspa-explorer": {
       "stars": 42,
@@ -279,7 +279,7 @@
       "watchers": 5,
       "openIssues": 9,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "lAmeR1/kaspa-explorer-ng": {
       "stars": 11,
@@ -287,7 +287,7 @@
       "watchers": 3,
       "openIssues": 5,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "lAmeR1/kaspa-rest-server-deprecated": {
       "stars": 9,
@@ -295,7 +295,7 @@
       "watchers": 5,
       "openIssues": 5,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "lAmeR1/kaspa-db-filler": {
       "stars": 7,
@@ -303,7 +303,7 @@
       "watchers": 3,
       "openIssues": 2,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "lAmeR1/kaspa-socket-server": {
       "stars": 2,
@@ -311,7 +311,7 @@
       "watchers": 1,
       "openIssues": 1,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "lAmeR1/py-kaspad-client": {
       "stars": 2,
@@ -319,7 +319,7 @@
       "watchers": 2,
       "openIssues": 1,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "lAmeR1/kas-point": {
       "stars": 0,
@@ -327,7 +327,7 @@
       "watchers": 1,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "tmrlvi/kaspa-miner": {
       "stars": 104,
@@ -335,7 +335,7 @@
       "watchers": 8,
       "openIssues": 7,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "RuFiOx/kasop": {
       "stars": 2,
@@ -343,7 +343,7 @@
       "watchers": 0,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "onemorebsmith/kaspa-stratum-bridge": {
       "stars": 68,
@@ -351,7 +351,7 @@
       "watchers": 10,
       "openIssues": 25,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "bzminer/bzminer": {
       "stars": 288,
@@ -359,7 +359,7 @@
       "watchers": 28,
       "openIssues": 283,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "Lolliedieb/lolMiner-releases": {
       "stars": 2890,
@@ -367,7 +367,7 @@
       "watchers": 144,
       "openIssues": 336,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "doktor83/SRBMiner-Multi": {
       "stars": 682,
@@ -375,7 +375,7 @@
       "watchers": 75,
       "openIssues": 32,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "todxx/teamredminer": {
       "stars": 993,
@@ -383,7 +383,7 @@
       "watchers": 77,
       "openIssues": 546,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "develsoftware/GMinerRelease": {
       "stars": 1982,
@@ -391,7 +391,7 @@
       "watchers": 121,
       "openIssues": 744,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "rigelminer/rigel": {
       "stars": 278,
@@ -399,7 +399,7 @@
       "watchers": 31,
       "openIssues": 19,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "forbole/kastle": {
       "stars": 16,
@@ -407,7 +407,7 @@
       "watchers": 2,
       "openIssues": 11,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kasware-wallet/extension": {
       "stars": 51,
@@ -415,7 +415,7 @@
       "watchers": 5,
       "openIssues": 9,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "azbuky/kaspium_wallet": {
       "stars": 62,
@@ -423,7 +423,7 @@
       "watchers": 8,
       "openIssues": 38,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "KASPACOM/kaspacom-web-wallet": {
       "stars": 10,
@@ -431,7 +431,7 @@
       "watchers": 2,
       "openIssues": 7,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "ScopeLift/kaspa-wallet": {
       "stars": 4,
@@ -439,7 +439,7 @@
       "watchers": 1,
       "openIssues": 41,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "coderofstuff/kasvault": {
       "stars": 11,
@@ -447,7 +447,7 @@
       "watchers": 2,
       "openIssues": 10,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "coderofstuff/hw-app-kaspa": {
       "stars": 3,
@@ -455,7 +455,7 @@
       "watchers": 1,
       "openIssues": 1,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "coderofstuff/app-kaspa": {
       "stars": 4,
@@ -463,7 +463,7 @@
       "watchers": 1,
       "openIssues": 4,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kasplex/sdk-kiwi": {
       "stars": 8,
@@ -471,7 +471,7 @@
       "watchers": 3,
       "openIssues": 2,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kasplex/go-krc20d": {
       "stars": 1,
@@ -479,7 +479,7 @@
       "watchers": 1,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kasplex/indexer-executor": {
       "stars": 13,
@@ -487,7 +487,7 @@
       "watchers": 2,
       "openIssues": 0,
       "archived": true,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kasplex/evm-l2-relayer": {
       "stars": 13,
@@ -495,7 +495,7 @@
       "watchers": 0,
       "openIssues": 1,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kasplex/evm-l2-nodes-docker": {
       "stars": 3,
@@ -503,7 +503,7 @@
       "watchers": 0,
       "openIssues": 1,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kasplex/evm-l2-audit": {
       "stars": 2,
@@ -511,7 +511,7 @@
       "watchers": 0,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "KaffinPX/KasplexBuilder": {
       "stars": 8,
@@ -519,7 +519,7 @@
       "watchers": 1,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "KaffinPX/Kaspian-KRC20": {
       "stars": 5,
@@ -527,7 +527,7 @@
       "watchers": 1,
       "openIssues": 1,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "KaffinPX/KStratum": {
       "stars": 18,
@@ -535,7 +535,7 @@
       "watchers": 2,
       "openIssues": 4,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "svarogg/kaspaper": {
       "stars": 26,
@@ -543,7 +543,7 @@
       "watchers": 1,
       "openIssues": 8,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspacom/swap-widget": {
       "stars": 1,
@@ -551,7 +551,7 @@
       "watchers": 0,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "thesheepcat/K-indexer": {
       "stars": 6,
@@ -559,7 +559,7 @@
       "watchers": 1,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "karlsen-network/karlsen-explorer": {
       "stars": 3,
@@ -567,7 +567,7 @@
       "watchers": 2,
       "openIssues": 1,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "ghost-wallet/web-extension": {
       "stars": 2,
@@ -575,7 +575,7 @@
       "watchers": 2,
       "openIssues": 1,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "coinchimp/kaspa-krc20-apps": {
       "stars": 24,
@@ -583,7 +583,7 @@
       "watchers": 3,
       "openIssues": 2,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "michaelsutton/argent": {
       "stars": 19,
@@ -591,7 +591,7 @@
       "watchers": 1,
       "openIssues": 1,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "K-Kluster/kaspa-js": {
       "stars": 21,
@@ -599,7 +599,7 @@
       "watchers": 3,
       "openIssues": 7,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "0xhappyboy/kaspa-sdk": {
       "stars": 0,
@@ -607,7 +607,7 @@
       "watchers": 0,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "coderofstuff/kas-demo-wallet": {
       "stars": 3,
@@ -615,7 +615,7 @@
       "watchers": 1,
       "openIssues": 1,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "kaspagang/kaspad-py-explorer": {
       "stars": 10,
@@ -623,7 +623,7 @@
       "watchers": 4,
       "openIssues": 1,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "KeenHero/kaspa-wallet": {
       "stars": 2,
@@ -631,7 +631,7 @@
       "watchers": 0,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "biryukovmaxim/kaspa-xmss": {
       "stars": 4,
@@ -639,7 +639,7 @@
       "watchers": 0,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "trillskillz/OpenSilver": {
       "stars": 8,
@@ -647,7 +647,7 @@
       "watchers": 1,
       "openIssues": 2,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "NukeThemAII/KasDraw": {
       "stars": 1,
@@ -655,7 +655,7 @@
       "watchers": 0,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "w00c00/kaspa-arena": {
       "stars": 1,
@@ -663,7 +663,7 @@
       "watchers": 1,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "cosmasken/kaspa402": {
       "stars": 0,
@@ -671,7 +671,7 @@
       "watchers": 0,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "Dr-Liberty/Kaspa-University-KU-Protocol": {
       "stars": 2,
@@ -679,7 +679,7 @@
       "watchers": 0,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "Aaditya1273/K-SYNCHRONY": {
       "stars": 0,
@@ -687,7 +687,7 @@
       "watchers": 0,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "edenbd1/oracle-kaspa": {
       "stars": 1,
@@ -695,7 +695,7 @@
       "watchers": 0,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     },
     "on3ir0s/KRC20-ForestSeeker": {
       "stars": 1,
@@ -703,7 +703,7 @@
       "watchers": 1,
       "openIssues": 0,
       "archived": false,
-      "capturedAt": "2026-08-14T03:41:14.277638+00:00"
+      "capturedAt": "2026-08-14T05:01:26.169221+00:00"
     }
   }
 }
