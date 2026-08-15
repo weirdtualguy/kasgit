@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generator": "kasgit ingest_github_activity.py",
+  "sourceRepo": "weirdtualguy/kasgit",
+  "license": "This manifest and the resources it lists are derived from the public GitHub API (commit/PR/issue/release metadata, star counts, public repo listings) and from this project's own hand-maintained registry CSV. Treat the GitHub-derived fields as a mirror of that public data, subject to GitHub's Terms of Service (https://docs.github.com/site-policy/github-terms/github-terms-of-service). This project's own code and registry curation are under the LICENSE file in the repo root.",
+  "notes": [
+    "All paths are relative to this site's root (e.g. https://<owner>.github.io/<repo>/<path>).",
+    "Static files \u2014 no auth, no API key, no rate limit imposed by this project. Normal HTTP caching applies; see _meta.json's generatedAt or this file's generatedAt for freshness.",
+    "Updated once daily by the ingest-activity.yml GitHub Actions workflow.",
+    "schemaVersion only bumps on a breaking change (a field renamed, removed, or changed meaning) to a resource already listed here \u2014 a new optional field or a new resource does not bump it, so pin to a schemaVersion rather than an exact field list if you build something long-lived on this."
+  ],
+  "resources": [
+    {
+      "id": "repoIndex",
+      "path": "data/activity/_repos.json",
+      "format": "json",
+      "description": "Map of every live-ingested repo (\"owner/repo\") to the relative path of its own activity file. Start here to discover what's actually being ingested this run."
+    },
+    {
+      "id": "repoActivity",
+      "path": "data/activity/{owner}/{repo}.json",
+      "format": "json",
+      "description": "Per-repo daily commit/PR/issue/release series, star history, and identifiedCommits/topContributors (used for the Bus Factor Watch signal), and the archived flag (used for effective status \u2014 see Methodology). One file per repo listed in repoIndex \u2014 repos outside live ingestion scope have no file here."
+    },
+    {
+      "id": "orgSummary",
+      "path": "data/activity/_summary.json",
+      "format": "json",
+      "description": "Org-wide daily activity series, pre-aggregated across every ingested repo. The dashboard's own frontend does NOT use this (it recomputes totals client-side from repoActivity by design \u2014 see Methodology) \u2014 this exists for external consumers who want a ready-made rollup instead of summing every repo file themselves."
+    },
+    {
+      "id": "orgStars",
+      "path": "data/activity/_stars.json",
+      "format": "json",
+      "description": "Current star count per ingested repo, as of this run."
+    },
+    {
+      "id": "contributors",
+      "path": "data/activity/_contributors.json",
+      "format": "json",
+      "description": "Org-wide contributor list (commits, first/last commit date, every distinct active day, repos touched), capped to the top 100 by total commits. For a specific repo's own contributor breakdown (uncapped), use that repo's file via repoIndex instead."
+    },
+    {
+      "id": "ideas",
+      "path": "data/activity/ideas.json",
+      "format": "json",
+      "description": "Open issues labeled 'idea' on weirdtualguy/kasgit"
+    },
+    {
+      "id": "releaseFeedJson",
+      "path": "data/feed/releases.json",
+      "format": "json",
+      "description": "Combined release feed across every ingested repo, newest first."
+    },
+    {
+      "id": "releaseFeedRss",
+      "path": "data/feed/releases.xml",
+      "format": "rss",
+      "description": "The same release feed as standard RSS 2.0 \u2014 subscribe directly in any feed reader."
+    },
+    {
+      "id": "registryCsv",
+      "path": "data/kaspa_github_ecosystem_inventory.csv",
+      "format": "csv",
+      "description": "The hand-maintained source registry (project name, category, org type, status, verified flag) that ingestion targets are computed from \u2014 the ground truth for what's tracked at all, live or modeled."
+    },
+    {
+      "id": "runMeta",
+      "path": "data/activity/_meta.json",
+      "format": "json",
+      "description": "This run's own stats \u2014 repo/contributor/idea counts, failures, timing. Useful for a freshness/health check before trusting the rest."
+    }
+  ]
+}

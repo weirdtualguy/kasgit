@@ -1,5 +1,5 @@
 {
-  "repo": "Aaditya1273/K-SYNCHRONY",
+  "repo": "xiaohuasheng0x1/blockchains",
   "generatedAt": "2026-08-15T04:25:39.783247+00:00",
   "lookbackDays": 400,
   "series": [
@@ -933,11 +933,11 @@
     },
     {
       "date": "2025-11-04",
-      "commits": 2,
+      "commits": 0,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 1
+      "activeDevs": 0
     },
     {
       "date": "2025-11-05",
@@ -1717,19 +1717,19 @@
     },
     {
       "date": "2026-02-10",
-      "commits": 4,
+      "commits": 0,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 1
+      "activeDevs": 0
     },
     {
       "date": "2026-02-11",
-      "commits": 27,
+      "commits": 0,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 1
+      "activeDevs": 0
     },
     {
       "date": "2026-02-12",
@@ -1741,27 +1741,27 @@
     },
     {
       "date": "2026-02-13",
-      "commits": 2,
+      "commits": 0,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 1
+      "activeDevs": 0
     },
     {
       "date": "2026-02-14",
-      "commits": 4,
+      "commits": 0,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 1
+      "activeDevs": 0
     },
     {
       "date": "2026-02-15",
-      "commits": 1,
+      "commits": 0,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 1
+      "activeDevs": 0
     },
     {
       "date": "2026-02-16",
@@ -3214,48 +3214,15 @@
   ],
   "starHistory": [
     {
-      "date": "2026-08-11",
-      "stars": 0,
-      "forks": 1,
-      "watchers": 0,
-      "openIssues": 0
-    },
-    {
-      "date": "2026-08-12",
-      "stars": 0,
-      "forks": 1,
-      "watchers": 0,
-      "openIssues": 0
-    },
-    {
-      "date": "2026-08-13",
-      "stars": 0,
-      "forks": 1,
-      "watchers": 0,
-      "openIssues": 0
-    },
-    {
-      "date": "2026-08-14",
-      "stars": 0,
-      "forks": 1,
-      "watchers": 0,
-      "openIssues": 0
-    },
-    {
       "date": "2026-08-15",
-      "stars": 0,
-      "forks": 1,
-      "watchers": 0,
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
       "openIssues": 0
     }
   ],
-  "starHistoryQuality": null,
+  "starHistoryQuality": "partial",
   "archived": false,
-  "identifiedCommits": 40,
-  "topContributors": [
-    {
-      "login": "Aaditya1273",
-      "commits": 40
-    }
-  ]
+  "identifiedCommits": 0,
+  "topContributors": []
 }

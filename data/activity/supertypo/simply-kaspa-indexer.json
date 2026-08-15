@@ -1,6 +1,6 @@
 {
   "repo": "supertypo/simply-kaspa-indexer",
-  "generatedAt": "2026-08-15T03:54:12.071202+00:00",
+  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3242,6 +3242,7 @@
       "openIssues": 4
     }
   ],
+  "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 142,
   "topContributors": [
