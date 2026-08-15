@@ -163,3 +163,109 @@ def test_backfill_complete_with_zero_stargazers(fake_session):
     history, quality = ing.backfill_star_history("owner", "repo")
     assert quality == "complete"
     assert history == []
+
+
+# ---------------------------------------------------------------------
+# Bus factor: minimum contributors covering 50% of identified commits
+# ---------------------------------------------------------------------
+
+def contributor(login, commits):
+    return {"login": login, "commits": commits}
+
+
+def test_bus_factor_single_dominant_contributor():
+    contributors = {"a": contributor("a", 90), "b": contributor("b", 10)}
+    assert ing.compute_bus_factor(contributors) == 1
+
+
+def test_bus_factor_requires_multiple_contributors_for_half():
+    # 40, 35, 15, 10 -> cumulative 40, 75 crosses 50 (of 100) at the 2nd.
+    contributors = {
+        "a": contributor("a", 40), "b": contributor("b", 35),
+        "c": contributor("c", 15), "d": contributor("d", 10),
+    }
+    assert ing.compute_bus_factor(contributors) == 2
+
+
+def test_bus_factor_evenly_distributed():
+    # 5 contributors at 20 each: need 3 to reach >= 50 of 100.
+    contributors = {c: contributor(c, 20) for c in "abcde"}
+    assert ing.compute_bus_factor(contributors) == 3
+
+
+def test_bus_factor_none_when_no_identified_commits():
+    assert ing.compute_bus_factor({}) is None
+
+
+def test_bus_factor_needs_all_contributors_to_reach_half():
+    # 3 contributors, evenly split 34/33/33 out of 100: the top 2 alone
+    # (34+33=67) already clear 50, so this should NOT need all 3.
+    contributors = {"a": contributor("a", 34), "b": contributor("b", 33), "c": contributor("c", 33)}
+    assert ing.compute_bus_factor(contributors) == 2
+
+    # A single contributor is a trivial "needs all 1" case.
+    assert ing.compute_bus_factor({"solo": contributor("solo", 42)}) == 1
+
+
+# ---------------------------------------------------------------------
+# Repo metadata enrichment: snapshot fields free on the repo response,
+# and the separate /languages call
+# ---------------------------------------------------------------------
+
+def test_fetch_repo_snapshot_extracts_free_metadata(fake_session):
+    payload = {
+        "stargazers_count": 42, "forks_count": 7, "subscribers_count": 3,
+        "open_issues_count": 5, "archived": False,
+        "language": "Rust", "topics": ["blockchain", "kaspa"],
+        "license": {"spdx_id": "MIT"}, "default_branch": "main",
+        "homepage": "https://kaspa.org", "created_at": "2021-01-01T00:00:00Z",
+        "pushed_at": "2026-08-01T00:00:00Z",
+    }
+    fake_session([FakeResponse(200, payload)])
+    snap = ing.fetch_repo_snapshot("owner", "repo")
+    assert snap["stars"] == 42
+    assert snap["primaryLanguage"] == "Rust"
+    assert snap["topics"] == ["blockchain", "kaspa"]
+    assert snap["license"] == "MIT"
+    assert snap["defaultBranch"] == "main"
+    assert snap["homepage"] == "https://kaspa.org"
+
+
+def test_fetch_repo_snapshot_treats_noassertion_license_as_none(fake_session):
+    """GitHub returns spdx_id "NOASSERTION" for a repo with a LICENSE file
+    GitHub couldn't confidently match to a known license — that's not a
+    real license identifier and shouldn't be presented as one."""
+    payload = {
+        "stargazers_count": 1, "forks_count": 0, "open_issues_count": 0,
+        "archived": False, "language": None, "topics": [],
+        "license": {"spdx_id": "NOASSERTION"},
+    }
+    fake_session([FakeResponse(200, payload)])
+    snap = ing.fetch_repo_snapshot("owner", "repo")
+    assert snap["license"] is None
+
+
+def test_fetch_repo_snapshot_handles_missing_license(fake_session):
+    payload = {"stargazers_count": 1, "forks_count": 0, "open_issues_count": 0, "archived": False}
+    fake_session([FakeResponse(200, payload)])
+    snap = ing.fetch_repo_snapshot("owner", "repo")
+    assert snap["license"] is None
+    assert snap["topics"] == []
+
+
+def test_fetch_repo_snapshot_404_returns_none(fake_session):
+    fake_session([FakeResponse(404, {})])
+    assert ing.fetch_repo_snapshot("owner", "repo") is None
+
+
+def test_fetch_repo_languages_returns_byte_counts(fake_session):
+    fake_session([FakeResponse(200, {"Rust": 120000, "TypeScript": 3400})])
+    langs = ing.fetch_repo_languages("owner", "repo")
+    assert langs == {"Rust": 120000, "TypeScript": 3400}
+
+
+def test_fetch_repo_languages_returns_empty_dict_on_failure(fake_session):
+    """Never None — callers sum languages.items() unconditionally."""
+    fake_session([FakeResponse(404, {})])
+    assert ing.fetch_repo_languages("owner", "repo") == {}
+

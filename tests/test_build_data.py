@@ -19,8 +19,9 @@ def rows():
 
 REQUIRED_ROW_KEYS = {
     "id", "name", "repoPath", "url", "description", "category",
-    "rawCategory", "orgType", "rawOrgType", "tier", "status", "rawStatus",
-    "confidence", "rawConfidence", "type", "tags", "verified", "verifiedAt",
+    "rawCategory", "orgType", "rawOrgType", "orgTypeNote", "tier", "status",
+    "rawStatus", "confidence", "rawConfidence", "confidenceNote",
+    "programmabilitySubcategory", "type", "tags", "verified", "verifiedAt",
 }
 
 VALID_TIERS = {1, 2, 3}
@@ -74,6 +75,22 @@ def test_repo_rows_have_owner_slash_repo_path(rows):
 
 def test_kaspanet_org_is_always_represented(rows):
     assert any(r["repoPath"] == "kaspanet" and r["type"] == "Org" for r in rows)
+
+
+def test_programmability_subcategory_only_set_where_grounded(rows):
+    """programmabilitySubcategory should be non-null only for the handful
+    of repos explicitly listed in PROGRAMMABILITY_SUBCATEGORY_MAP, and
+    null for everything else — never inferred from top-level category."""
+    tagged = {r["name"]: r["programmabilitySubcategory"] for r in rows if r["programmabilitySubcategory"]}
+    assert tagged == build_data.PROGRAMMABILITY_SUBCATEGORY_MAP
+
+    for row in rows:
+        if row["name"] not in build_data.PROGRAMMABILITY_SUBCATEGORY_MAP:
+            assert row["programmabilitySubcategory"] is None, (
+                f"{row['name']} has an unexpected programmabilitySubcategory "
+                f"— add it to PROGRAMMABILITY_SUBCATEGORY_MAP with a cited "
+                "source line, or this is an unintended assignment."
+            )
 
 
 def test_row_count_matches_csv_plus_synthetic_kaspanet_row():
