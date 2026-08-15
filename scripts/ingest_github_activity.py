@@ -521,7 +521,15 @@ def backfill_star_history(owner, repo_name):
     stargazer). Bounded to STARGAZER_BACKFILL_MAX_PAGES pages to avoid
     blowing the rate limit on very popular repos — if a repo has more
     stargazers than that, this returns a partial (oldest-missing) history
-    and the daily snapshot mechanism fills in the rest going forward."""
+    and the daily snapshot mechanism fills in the rest going forward.
+
+    Returns (history, quality) where quality is "complete" if every
+    stargazer was walked (the API's own pagination ended the loop) or
+    "partial" if STARGAZER_BACKFILL_MAX_PAGES was hit while GitHub still
+    had more pages to give — i.e. the earliest portion of history is
+    missing and the curve should not be presented as the repo's full
+    star history.
+    """
     full = f"{owner}/{repo_name}"
     url = f"{API_ROOT}/repos/{full}/stargazers"
     headers = {"Accept": "application/vnd.github.star+json"}
@@ -531,14 +539,20 @@ def backfill_star_history(owner, repo_name):
     page_count = 0
     next_url = url
     next_params = params
+    incomplete = False
 
     while next_url and page_count < STARGAZER_BACKFILL_MAX_PAGES:
         resp = SESSION.get(next_url, params=next_params, headers={**SESSION.headers, **headers}, timeout=REQUEST_TIMEOUT)
         page_count += 1
         if resp.status_code != 200:
+            # Stopped short due to a transient/rate-limit error, not because
+            # we reached the end of the stargazer list — the walk is
+            # unverified, so don't label it complete.
+            incomplete = True
             break
         page = resp.json()
         if not isinstance(page, list) or not page:
+            next_url = None
             break
         for entry in page:
             starred_at = entry.get("starred_at") if isinstance(entry, dict) else None
@@ -554,8 +568,13 @@ def backfill_star_history(owner, repo_name):
                 next_url = part[part.find("<") + 1: part.find(">")]
                 break
 
+    # Incomplete if we bailed on an error mid-walk, or hit the page cap
+    # while GitHub still had a next page queued up — either way the
+    # earliest stargazers were never fetched.
+    quality = "partial" if (incomplete or (page_count >= STARGAZER_BACKFILL_MAX_PAGES and next_url)) else "complete"
+
     if not daily_counts:
-        return []
+        return [], quality
 
     # Convert daily new-star counts into a cumulative history.
     ordered_days = sorted(daily_counts.keys())
@@ -564,18 +583,18 @@ def backfill_star_history(owner, repo_name):
     for day in ordered_days:
         cumulative += daily_counts[day]
         history.append({"date": day, "stars": cumulative, "forks": None, "watchers": None, "openIssues": None})
-    return history
+    return history, quality
 
 
 def load_existing_star_history(out_path):
     if not os.path.exists(out_path):
-        return []
+        return [], None
     try:
         with open(out_path, encoding="utf-8") as fh:
             existing = json.load(fh)
-        return existing.get("starHistory", [])
+        return existing.get("starHistory", []), existing.get("starHistoryQuality")
     except (json.JSONDecodeError, OSError):
-        return []
+        return [], None
 
 
 def append_star_point(history, date_key, snapshot):
@@ -648,6 +667,39 @@ def write_release_feed(release_items, generated_at):
         fh.write(rss)
 
     return len(recent)
+
+
+def accumulate_summary_day(summary_days, date_key, day_totals, day_authors):
+    """Merge one repo's one-day totals into the ecosystem-wide summary
+    bucket for that date. day_authors is the set of distinct authors
+    active on that repo on that day (from days_map, before
+    zero_filled_series collapses it down to a bare count) — unioned into
+    the summary bucket so a developer active on two repos the same day
+    counts once ecosystem-wide, not twice."""
+    bucket = summary_days[date_key]
+    bucket["commits"] += day_totals["commits"]
+    bucket["prs"] += day_totals["prs"]
+    bucket["issues"] += day_totals["issues"]
+    bucket["releases"] += day_totals["releases"]
+    bucket["_authors"].update(day_authors)
+
+
+def finalize_summary_series(summary_days):
+    """summary_days (date -> accumulated bucket) -> the sorted list of
+    per-day records written to _summary.json. activeDevs is the true
+    distinct-author count for that date across every tracked repo."""
+    summary_series = []
+    for date_key in sorted(summary_days.keys()):
+        bucket = summary_days[date_key]
+        summary_series.append({
+            "date": date_key,
+            "commits": bucket["commits"],
+            "prs": bucket["prs"],
+            "issues": bucket["issues"],
+            "releases": bucket["releases"],
+            "activeDevs": len(bucket["_authors"]),
+        })
+    return summary_series
 
 
 def main():
@@ -759,10 +811,10 @@ def main():
                 agg["firstCommitAt"] = info["firstCommitAt"]
                 agg["firstCommitRepo"] = full
 
-        star_history = load_existing_star_history(out_path)
+        star_history, star_history_quality = load_existing_star_history(out_path)
         if not star_history:
             try:
-                backfilled = backfill_star_history(owner, repo_name)
+                backfilled, star_history_quality = backfill_star_history(owner, repo_name)
                 if backfilled:
                     star_history = backfilled
                     star_backfills_performed += 1
@@ -787,6 +839,14 @@ def main():
                 "lookbackDays": LOOKBACK_DAYS,
                 "series": series,
                 "starHistory": star_history,
+                # "complete" = every stargazer was walked via the timestamped
+                # stargazers API; "partial" = STARGAZER_BACKFILL_MAX_PAGES was
+                # hit (or the walk errored) before reaching the repo's
+                # earliest stargazers, so the start of this curve is missing
+                # — don't render it as if it were the full history. null
+                # means backfill was never attempted (e.g. history already
+                # existed from a prior run before this field was added).
+                "starHistoryQuality": star_history_quality,
                 # From fetch_repo_snapshot's GitHub response; null if the
                 # snapshot call itself failed (rate limit, transient error) —
                 # distinct from false, which means GitHub confirmed it's NOT
@@ -812,29 +872,16 @@ def main():
         ingested_count += 1
 
         for day in series:
-            bucket = summary_days[day["date"]]
-            bucket["commits"] += day["commits"]
-            bucket["prs"] += day["prs"]
-            bucket["issues"] += day["issues"]
-            bucket["releases"] += day["releases"]
-            # Union of authors isn't tracked at summary level (per-repo files
-            # already collapsed to counts); approximate with max day activeDevs.
-            bucket["_authors"].add(day["activeDevs"])
+            accumulate_summary_day(
+                summary_days,
+                day["date"],
+                day,
+                days_map.get(day["date"], {}).get("_authors", set()),
+            )
 
     feed_count = write_release_feed(all_release_items, now)
 
-    summary_series = []
-    for date_key in sorted(summary_days.keys()):
-        bucket = summary_days[date_key]
-        approx_active_devs = max(bucket["_authors"]) if bucket["_authors"] else 0
-        summary_series.append({
-            "date": date_key,
-            "commits": bucket["commits"],
-            "prs": bucket["prs"],
-            "issues": bucket["issues"],
-            "releases": bucket["releases"],
-            "activeDevs": approx_active_devs,
-        })
+    summary_series = finalize_summary_series(summary_days)
 
     with open(os.path.join(OUTPUT_DIR, "_summary.json"), "w", encoding="utf-8") as fh:
         json.dump({

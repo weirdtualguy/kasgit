@@ -67,7 +67,7 @@
   // Live GitHub activity data, populated asynchronously by loadLiveActivity()
   // from data/activity/*.json (written by the scheduled ingestion workflow).
   // Any repo not present here falls back to modeled placeholder data.
-  const LIVE = { repos: {}, meta: null, releases: [], contributors: [], ideas: [] };
+  const LIVE = { repos: {}, meta: null, summary: null, stars: null, releases: [], contributors: [], ideas: [] };
 
   // Set to "owner/repo" if this dashboard is hosted on a custom domain —
   // resolveRepoSlug() can only auto-detect the repo on the default
@@ -388,6 +388,20 @@
     const cached = ecosystemSeriesCache.get(cacheKey);
     if (cached) return cached;
 
+    // Fast path: unfiltered view with a live _summary.json already loaded
+    // (fetched up front, independent of the ~5MB per-repo batch) — skip
+    // iterating all 91 repo records entirely.
+    if (state.category === "All" && LIVE.summary?.series?.length) {
+      const keys = dateKeysForRange(days);
+      const byDate = new Map(LIVE.summary.series.map(day => [day.date, day]));
+      const result = keys.map(key => {
+        const day = byDate.get(key) || { commits: 0, prs: 0, issues: 0, releases: 0, activeDevs: 0 };
+        return { date: new Date(`${key}T00:00:00Z`), commits: day.commits, prs: day.prs, issues: day.issues, releases: day.releases, activeDevs: day.activeDevs };
+      });
+      ecosystemSeriesCache.set(cacheKey, result);
+      return result;
+    }
+
     const keys = dateKeysForRange(days);
     const repos = filteredRepos();
     const totals = new Map(keys.map(key => [key, { commits: 0, prs: 0, issues: 0, releases: 0, activeDevs: 0 }]));
@@ -469,20 +483,27 @@
       ? Math.max(1, Math.round(sumSeries(activeDaysWithCommits, "activeDevs") / activeDaysWithCommits.length))
       : (isLive ? 0 : 1);
 
-    // Star counts: use the real latest snapshot when the ingestion pipeline
-    // has captured one (data/activity/<owner>/<repo>.json starHistory),
-    // otherwise fall back to a deterministic modeled figure.
+    // Star counts: prefer the real latest snapshot from the per-repo file
+    // (data/activity/<owner>/<repo>.json starHistory) when it's loaded;
+    // that batch is fetched lazily in the background, so before it lands
+    // fall back to the cheap _stars.json snapshot (fetched up front) —
+    // same current count, just no history/trend — before finally falling
+    // back to a modeled figure if neither is available yet.
     const categoryIntensity = CATEGORY_META[repo.category]?.intensity || 0.35;
     const liveRecord = LIVE.repos[repo.repoPath];
     const starHistory = liveRecord?.starHistory;
     const latestStarPoint = Array.isArray(starHistory) && starHistory.length
       ? starHistory[starHistory.length - 1]
       : null;
+    const starsSnapshot = LIVE.stars?.repos?.[repo.repoPath];
 
     let stars;
     let starsLive = false;
     if (latestStarPoint) {
       stars = latestStarPoint.stars;
+      starsLive = true;
+    } else if (starsSnapshot && typeof starsSnapshot.stars === "number") {
+      stars = starsSnapshot.stars;
       starsLive = true;
     } else {
       const starSeed = hashString(`stars:${repo.id}:${state.nonce}`);
@@ -1676,13 +1697,17 @@
    */
   async function loadLiveActivity() {
     try {
-      const [repoIndexRes, metaRes] = await Promise.all([
+      const [repoIndexRes, metaRes, summaryRes, starsRes] = await Promise.all([
         fetch("data/activity/_repos.json", { cache: "no-store" }),
-        fetch("data/activity/_meta.json", { cache: "no-store" })
+        fetch("data/activity/_meta.json", { cache: "no-store" }),
+        fetch("data/activity/_summary.json", { cache: "no-store" }),
+        fetch("data/activity/_stars.json", { cache: "no-store" })
       ]);
 
       const repoIndex = repoIndexRes.ok ? await repoIndexRes.json() : {};
       LIVE.meta = metaRes.ok ? await metaRes.json() : null;
+      LIVE.summary = summaryRes.ok ? await summaryRes.json() : null;
+      LIVE.stars = starsRes.ok ? await starsRes.json() : null;
       // Repos ingestion actually attempted (via _meta.json's failed list) but
       // the GitHub API call itself errored on — see effectiveRepoStatus()'s
       // "Unreachable" status. Distinct from a repo simply outside live
@@ -1693,23 +1718,41 @@
         REPOS.some(repo => repo.repoPath === repoPath)
       );
 
-      const fetched = await Promise.all(entries.map(async ([repoPath, relativePath]) => {
-        try {
-          const res = await fetch(`data/${relativePath}`, { cache: "no-store" });
-          if (!res.ok) return null;
-          const payload = await res.json();
-          return [repoPath, payload];
-        } catch (err) {
-          return null;
-        }
-      }));
-
-      fetched.forEach(entry => {
-        if (entry) LIVE.repos[entry[0]] = entry[1];
-      });
+      // Per-repo files (~56KB each, ~5MB total) power category filtering,
+      // repo-detail views, bus-factor/contributor concentration, etc. — but
+      // the unfiltered Overview (the common case) can render immediately
+      // from _summary.json above. So: don't block on this batch. Fetch it
+      // in the background and repaint once it lands; ecosystemSeries()
+      // falls back to LIVE.summary until then when unfiltered.
+      fetchAllRepoActivity(entries);
     } catch (err) {
       console.warn("Live activity data unavailable — using modeled placeholders.", err);
     }
+  }
+
+  let repoActivityFetchStarted = false;
+
+  function fetchAllRepoActivity(entries) {
+    if (repoActivityFetchStarted) return;
+    repoActivityFetchStarted = true;
+    Promise.all(entries.map(async ([repoPath, relativePath]) => {
+      try {
+        const res = await fetch(`data/${relativePath}`, { cache: "no-store" });
+        if (!res.ok) return null;
+        const payload = await res.json();
+        return [repoPath, payload];
+      } catch (err) {
+        return null;
+      }
+    })).then(fetched => {
+      fetched.forEach(entry => {
+        if (entry) LIVE.repos[entry[0]] = entry[1];
+      });
+      ecosystemSeriesCache.clear();
+      seriesCache.clear();
+      statusCache.clear();
+      updateDashboard();
+    });
   }
 
   /**

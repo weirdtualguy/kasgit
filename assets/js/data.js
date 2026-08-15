@@ -1685,8 +1685,8 @@ const REGISTRY_ROWS = [
   {
     "id": "kaspa-xiaohuasheng0x1-blockchains",
     "name": "kaspa (xiaohuasheng0x1/blockchains)",
-    "repoPath": "kaspa (xiaohuasheng0x1/blockchains)",
-    "url": "https://pkg.go.dev/github.com/xiaohuasheng0x1/blockchains/coins/kaspa",
+    "repoPath": "xiaohuasheng0x1/blockchains",
+    "url": "https://github.com/xiaohuasheng0x1/blockchains",
     "description": "Go package for interacting with the Kaspa blockchain (multi-chain wallet SDK submodule)",
     "category": "SDK",
     "rawCategory": "SDK/library",

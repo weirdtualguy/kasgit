@@ -36,11 +36,25 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/ingest_github_activity.py
 
+      - name: Verify expected artifacts were generated
+        run: |
+          missing=0
+          for f in data/activity/_repos.json data/activity/_meta.json data/activity/_summary.json data/activity/_stars.json data/activity/_contributors.json data/api/index.json; do
+            if [ ! -f "$f" ]; then
+              echo "::error::Expected generated file missing: $f"
+              missing=1
+            fi
+          done
+          if [ "$missing" -ne 0 ]; then
+            echo "One or more expected artifacts were not written by ingest_github_activity.py — failing before commit so a partial/broken run never gets pushed."
+            exit 1
+          fi
+
       - name: Commit updated activity data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/activity data/feed
+          git add data/activity data/feed data/api
           if git diff --cached --quiet; then
             echo "No activity changes to commit."
           else

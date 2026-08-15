@@ -1,0 +1,45 @@
+name: Validate registry & generated data
+
+on:
+  pull_request:
+    paths:
+      - "data/kaspa_github_ecosystem_inventory.csv"
+      - "scripts/build_data.py"
+      - "scripts/ingest_github_activity.py"
+      - "assets/js/data.js"
+      - "tests/**"
+  push:
+    branches: [main]
+    paths:
+      - "data/kaspa_github_ecosystem_inventory.csv"
+      - "scripts/build_data.py"
+      - "scripts/ingest_github_activity.py"
+      - "assets/js/data.js"
+      - "tests/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements-dev.txt
+
+      - name: Run test suite
+        run: pytest tests/ -v
+
+      - name: Rebuild data.js from registry CSV
+        run: python3 scripts/build_data.py
+
+      - name: Fail if generated data.js differs from committed version
+        run: |
+          if ! git diff --exit-code -- assets/js/data.js; then
+            echo "::error::assets/js/data.js is out of date with data/kaspa_github_ecosystem_inventory.csv."
+            echo "Run 'python3 scripts/build_data.py' locally and commit the result."
+            exit 1
+          fi
