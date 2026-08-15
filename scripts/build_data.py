@@ -67,6 +67,35 @@ def map_status(raw):
 
 CONF_ORDER = ["Medium-High", "Low-Medium", "High", "Medium", "Low"]
 
+# Programmability subcategory — an orthogonal tag, not a replacement for
+# the top-level `category` column. Keyed by exact registry `name` and
+# applied only where the row's own description already states the
+# subcategory directly (see the source line quoted in each comment below)
+# — never inferred from category alone, since "Programmability" repos
+# genuinely span several different concerns. vprogs is included even
+# though its top-level category is "core protocol" (a legitimate,
+# separate classification of its own) because its description
+# unambiguously places it in this domain too.
+PROGRAMMABILITY_SUBCATEGORY_MAP = {
+    # "a covenant/smart-contract scripting language for Kaspa"
+    "silverscript": "Script / SilverScript",
+    # "framework for provable computation on Kaspa, incl. transaction
+    # scheduling, execution runtime, and state management"
+    "vprogs": "VProgs",
+    # "Experimental actor-style language/frontend for multi-contract
+    # Kaspa covenant apps; lowers into Silverscript"
+    "argent (michaelsutton)": "Developer tooling",
+    # "Research experiment implementing XMSS signatures within a Kaspa
+    # covenant, using KIP-20 Covenant IDs"
+    "kaspa-xmss": "Covenants",
+    # "aiming to make secure L1 covenants the path of least resistance
+    # for builders"
+    "OpenSilver": "Covenants",
+    # "Rust compiler workspace for deterministic Kaspa contract
+    # artifacts, aiming to make covenant construc[tion easier]"
+    "kaspa-script": "Developer tooling",
+}
+
 def map_confidence(raw):
     r = raw
     for token in CONF_ORDER:
@@ -102,10 +131,12 @@ def build_rows(csv_path=CSV_PATH):
             name = raw["name"].strip()
             url = raw["url"].strip()
             org_type_raw = raw["org_type"].strip()
+            org_type_note = (raw.get("org_type_note") or "").strip()
             category_raw = raw["category"].strip()
             description = raw["description"].strip()
             last_activity_raw = raw["last_activity"].strip()
             confidence_raw = raw["confidence"].strip()
+            confidence_note = (raw.get("confidence_note") or "").strip()
             verified_raw = (raw.get("verified") or "").strip().lower()
             verified_at_raw = (raw.get("verified_at") or "").strip()
             verified = verified_raw in ("yes", "true", "1", "y")
@@ -138,11 +169,14 @@ def build_rows(csv_path=CSV_PATH):
                 "rawCategory": category_raw,
                 "orgType": org_type,
                 "rawOrgType": org_type_raw,
+                "orgTypeNote": org_type_note or None,
                 "tier": tier,
                 "status": status,
                 "rawStatus": last_activity_raw,
                 "confidence": confidence,
                 "rawConfidence": confidence_raw,
+                "confidenceNote": confidence_note or None,
+                "programmabilitySubcategory": PROGRAMMABILITY_SUBCATEGORY_MAP.get(name),
                 "type": entry_type,
                 "tags": tags,
                 "verified": verified,
@@ -160,12 +194,15 @@ def build_rows(csv_path=CSV_PATH):
             "category": "Core",
             "rawCategory": "core protocol",
             "orgType": "Official",
-            "rawOrgType": "official (kaspanet org)",
+            "rawOrgType": "official",
+            "orgTypeNote": "kaspanet org",
             "tier": 1,
             "status": "Active",
             "rawStatus": "Active — primary organization",
             "confidence": "High",
             "rawConfidence": "High",
+            "confidenceNote": None,
+            "programmabilitySubcategory": None,
             "type": "Org",
             "tags": ["official", "core"],
             "verified": False,

@@ -122,6 +122,13 @@ def api_get(url, params=None, headers=None, stop_when=None):
     don't support a `since` filter, so we can bound how many pages we pull
     by watching a sort-order-derived cutoff instead of fetching full history
     every run (see ingest_repo_activity).
+
+    Returns (results, quality) where quality is "complete" if pagination
+    ran to a natural end (no more Link: rel="next", a 404, or stop_when
+    firing — all cases where we know we have everything in scope) or
+    "partial" if it was abandoned after exhausting retries — in that case
+    `results` holds whatever was fetched before the failure, silently
+    covering less than the intended window unless a caller checks quality.
     """
     results = []
     next_url = url
@@ -144,25 +151,25 @@ def api_get(url, params=None, headers=None, stop_when=None):
                 time.sleep(2 ** attempt)
                 continue
             if resp.status_code == 404:
-                return results
+                return results, "complete"
             if resp.status_code >= 500:
                 time.sleep(2 ** attempt)
                 continue
             resp.raise_for_status()
         else:
             log(f"Giving up on {next_url} after retries")
-            return results
+            return results, "partial"
 
         if resp.status_code != 200:
-            return results
+            return results, "partial"
 
         page_data = resp.json()
         if isinstance(page_data, list):
             results.extend(page_data)
             if stop_when and stop_when(page_data):
-                return results
+                return results, "complete"
         else:
-            return page_data
+            return page_data, "complete"
 
         next_url = None
         next_params = None
@@ -172,7 +179,7 @@ def api_get(url, params=None, headers=None, stop_when=None):
                 next_url = part[part.find("<") + 1: part.find(">")]
                 break
 
-    return results
+    return results, "complete"
 
 
 def api_get_json(url, params=None, headers=None):
@@ -222,10 +229,10 @@ def list_owner_repos(owner):
     param on the user fallback path.
     """
     org_params = {"type": "public", "per_page": PER_PAGE, "sort": "pushed"}
-    repos = api_get(f"{API_ROOT}/orgs/{owner}/repos", org_params)
+    repos, _quality = api_get(f"{API_ROOT}/orgs/{owner}/repos", org_params)
     if not repos:
         user_params = {"type": "owner", "per_page": PER_PAGE, "sort": "pushed"}
-        repos = api_get(f"{API_ROOT}/users/{owner}/repos", user_params)
+        repos, _quality = api_get(f"{API_ROOT}/users/{owner}/repos", user_params)
         # /users/.../repos with an unauthenticated or low-scope token already
         # only returns public repos, but filter defensively in case a PAT
         # with broader access is ever used to run this script.
@@ -251,7 +258,7 @@ def fetch_idea_issues(owner, repo):
     'someone should build this' board. Excludes pull requests (the /issues
     endpoint returns both; PRs carry a "pull_request" key issues don't).
     Returns normalized dicts, newest first, capped to IDEAS_MAX_ITEMS."""
-    raw_issues = api_get(
+    raw_issues, _quality = api_get(
         f"{API_ROOT}/repos/{owner}/{repo}/issues",
         {"labels": IDEAS_LABEL, "state": "open", "per_page": PER_PAGE,
          "sort": "created", "direction": "desc"},
@@ -388,7 +395,7 @@ def ingest_repo_activity(owner, repo_name, since_dt):
     # free-text commit author name.
     contributors = {}
 
-    commits = api_get(
+    commits, commits_quality = api_get(
         f"{API_ROOT}/repos/{full}/commits",
         {"since": since_iso, "per_page": PER_PAGE},
     )
@@ -420,7 +427,7 @@ def ingest_repo_activity(owner, repo_name, since_dt):
             if author_date and (not entry["firstCommitAt"] or author_date < entry["firstCommitAt"]):
                 entry["firstCommitAt"] = author_date
 
-    pulls = api_get(
+    pulls, prs_quality = api_get(
         f"{API_ROOT}/repos/{full}/pulls",
         {"state": "closed", "per_page": PER_PAGE, "sort": "updated", "direction": "desc"},
         # /pulls has no `since` filter, so without this every run would
@@ -441,7 +448,7 @@ def ingest_repo_activity(owner, repo_name, since_dt):
         if bucket:
             days[bucket]["prs"] += 1
 
-    issues = api_get(
+    issues, issues_quality = api_get(
         f"{API_ROOT}/repos/{full}/issues",
         {"state": "all", "since": since_iso, "per_page": PER_PAGE},
     )
@@ -452,7 +459,7 @@ def ingest_repo_activity(owner, repo_name, since_dt):
         if bucket:
             days[bucket]["issues"] += 1
 
-    releases = api_get(f"{API_ROOT}/repos/{full}/releases", {"per_page": PER_PAGE})
+    releases, releases_quality = api_get(f"{API_ROOT}/repos/{full}/releases", {"per_page": PER_PAGE})
     release_items = []
     for release in releases:
         published = release.get("published_at")
@@ -472,7 +479,14 @@ def ingest_repo_activity(owner, repo_name, since_dt):
             "prerelease": bool(release.get("prerelease")),
         })
 
-    return days, release_items, contributors
+    data_quality = {
+        "commits": {"status": commits_quality, "lookbackDays": LOOKBACK_DAYS},
+        "prs": {"status": prs_quality, "lookbackDays": LOOKBACK_DAYS},
+        "issues": {"status": issues_quality, "lookbackDays": LOOKBACK_DAYS},
+        "releases": {"status": releases_quality, "lookbackDays": LOOKBACK_DAYS},
+    }
+
+    return days, release_items, contributors, data_quality
 
 
 def zero_filled_series(days_map, since_dt, until_dt):
@@ -498,21 +512,71 @@ def zero_filled_series(days_map, since_dt, until_dt):
 
 
 def fetch_repo_snapshot(owner, repo_name):
-    """Point-in-time repo metadata: stars, forks, watchers, open issues,
-    archived flag. The archived flag feeds effectiveRepoStatus() in app.js —
-    a repo GitHub itself reports as archived shows that status regardless of
-    how recently it was committed to, taking priority over commit-recency
+    """Point-in-time repo metadata. GitHub's repo endpoint already returns
+    far more than the activity dashboard was using — language/topics/
+    license/timestamps below cost nothing extra since they're on the same
+    response as stars/forks/archived, just previously discarded.
+
+    The archived flag feeds effectiveRepoStatus() in app.js — a repo
+    GitHub itself reports as archived shows that status regardless of how
+    recently it was committed to, taking priority over commit-recency
     buckets (Active/Slowing/Stale)."""
     data = api_get_json(f"{API_ROOT}/repos/{owner}/{repo_name}")
     if not data:
         return None
+    license_info = data.get("license") or {}
     return {
         "stars": data.get("stargazers_count", 0),
         "forks": data.get("forks_count", 0),
         "watchers": data.get("subscribers_count", data.get("watchers_count", 0)),
         "openIssues": data.get("open_issues_count", 0),
         "archived": bool(data.get("archived", False)),
+        "primaryLanguage": data.get("language"),
+        "topics": data.get("topics") or [],
+        "license": license_info.get("spdx_id") if license_info.get("spdx_id") not in (None, "NOASSERTION") else None,
+        "defaultBranch": data.get("default_branch"),
+        "homepage": data.get("homepage") or None,
+        "createdAt": data.get("created_at"),
+        "pushedAt": data.get("pushed_at"),
     }
+
+
+def fetch_repo_languages(owner, repo_name):
+    """Bytes of code per language (GET /repos/{o}/{r}/languages) — GitHub's
+    own basis for the "languages" bar on a repo page. One extra call per
+    repo per run; cheap relative to the commits/PRs/issues/releases calls
+    already made for the same repo, and it's the only way to get the full
+    breakdown rather than just the single dominant `language` field above.
+    Returns {} (not None) on failure so callers can treat "no breakdown
+    available" and "genuinely no code" the same way."""
+    data = api_get_json(f"{API_ROOT}/repos/{owner}/{repo_name}/languages")
+    return data if isinstance(data, dict) else {}
+
+
+def compute_bus_factor(repo_contributors):
+    """Minimum number of contributors whose combined commits reach at
+    least 50% of a repo's identified commits — a much more informative
+    signal than a fixed "one person did >=85%" threshold: a repo where
+    the top 4 contributors are needed to cover half the history is
+    meaningfully healthier than one where the top 1 alone does, even
+    though neither would trip an 85% single-author check.
+
+    Returns None if there are no identified commits to rank at all
+    (repo_contributors empty) — never a modeled guess.
+    """
+    commit_counts = sorted(
+        (c["commits"] for c in repo_contributors.values()), reverse=True
+    )
+    total = sum(commit_counts)
+    if total <= 0:
+        return None
+    target = total / 2
+    cumulative = 0
+    for i, commits in enumerate(commit_counts, start=1):
+        cumulative += commits
+        if cumulative >= target:
+            return i
+    return len(commit_counts)
 
 
 def backfill_star_history(owner, repo_name):
@@ -757,6 +821,17 @@ def main():
     contributors_agg = {}
     ingested_count = 0
     stars_captured_count = 0
+    # Ecosystem-wide rollup of which repos hit a partial fetch this run,
+    # per datatype — lets _summary.json (and data/api/index.json) surface
+    # "N repos have incomplete PR data this run" without a consumer having
+    # to fetch and inspect all ~90 individual repo files.
+    partial_data_repos = {"commits": [], "prs": [], "issues": [], "releases": []}
+    # Ecosystem-wide rollup of what's already computed above — total bytes
+    # per language and repo counts per topic — so the frontend can render a
+    # "tech stack across the ecosystem" view from one small file instead of
+    # fetching all ~90 per-repo files just to sum up their languages/topics.
+    languages_agg = defaultdict(int)
+    topics_agg = defaultdict(int)
     star_backfills_performed = 0
     failed = []
 
@@ -769,12 +844,16 @@ def main():
         out_path = os.path.join(owner_dir, f"{repo_name}.json")
 
         try:
-            days_map, release_items, repo_contributors = ingest_repo_activity(owner, repo_name, since_dt)
+            days_map, release_items, repo_contributors, data_quality = ingest_repo_activity(owner, repo_name, since_dt)
             series = zero_filled_series(days_map, since_dt, now)
         except Exception as exc:  # noqa: BLE001
             log(f"  activity fetch failed: {exc}")
             failed.append(full)
             continue
+
+        for datatype, info in data_quality.items():
+            if info["status"] == "partial":
+                partial_data_repos[datatype].append(full)
 
         all_release_items.extend(release_items)
 
@@ -827,10 +906,21 @@ def main():
         except Exception as exc:  # noqa: BLE001
             log(f"  star snapshot failed: {exc}")
 
+        languages = {}
+        try:
+            languages = fetch_repo_languages(owner, repo_name)
+        except Exception as exc:  # noqa: BLE001
+            log(f"  language breakdown failed: {exc}")
+
         if snapshot:
             star_history = append_star_point(star_history, today_key, snapshot)
             stars_captured_count += 1
             stars_summary[full] = {**snapshot, "capturedAt": now.isoformat()}
+            for topic in snapshot.get("topics", []):
+                topics_agg[topic] += 1
+
+        for lang, byte_count in languages.items():
+            languages_agg[lang] += byte_count
 
         with open(out_path, "w", encoding="utf-8") as fh:
             json.dump({
@@ -838,6 +928,27 @@ def main():
                 "generatedAt": now.isoformat(),
                 "lookbackDays": LOOKBACK_DAYS,
                 "series": series,
+                # Repo metadata beyond activity counts — language/topics/
+                # license/timestamps come free on the same API response as
+                # stars/forks/archived (fetch_repo_snapshot); languages is
+                # one extra call for the full per-language byte breakdown.
+                "primaryLanguage": (snapshot or {}).get("primaryLanguage"),
+                "languages": languages,
+                "topics": (snapshot or {}).get("topics", []),
+                "license": (snapshot or {}).get("license"),
+                "defaultBranch": (snapshot or {}).get("defaultBranch"),
+                "homepage": (snapshot or {}).get("homepage"),
+                "createdAt": (snapshot or {}).get("createdAt"),
+                "pushedAt": (snapshot or {}).get("pushedAt"),
+                # Per-datatype fetch completeness for this run's lookback
+                # window — "complete" means pagination ran to a natural end
+                # (or GitHub's own stop condition), "partial" means retries
+                # were exhausted mid-walk and this datatype covers less than
+                # lookbackDays worth of history. Consumers (the frontend,
+                # or anyone building on data/api/index.json) should treat a
+                # "Live" badge next to a partial datatype as "live, but
+                # incomplete" rather than "we have everything".
+                "dataQuality": data_quality,
                 "starHistory": star_history,
                 # "complete" = every stargazer was walked via the timestamped
                 # stargazers API; "partial" = STARGAZER_BACKFILL_MAX_PAGES was
@@ -862,6 +973,13 @@ def main():
                 # unlinked-email commits) have no author to attribute.
                 # See repoBusFactor() in app.js.
                 "identifiedCommits": sum(c["commits"] for c in repo_contributors.values()),
+                # Real bus-factor: the minimum number of contributors whose
+                # combined commits reach 50% of identifiedCommits — see
+                # compute_bus_factor(). null if identifiedCommits is 0.
+                # Superseded the old "does contributor #1 alone have >=85%"
+                # heuristic, which only ever detected the single-maintainer
+                # case and said nothing about repos with 2-3 core devs.
+                "busFactor": compute_bus_factor(repo_contributors),
                 "topContributors": [
                     {"login": c["login"], "commits": c["commits"]}
                     for c in sorted(repo_contributors.values(), key=lambda c: c["commits"], reverse=True)[:5]
@@ -890,6 +1008,9 @@ def main():
             "orgs": ORGS,
             "repoCount": ingested_count,
             "series": summary_series,
+            "partialDataRepos": partial_data_repos,
+            "languages": dict(sorted(languages_agg.items(), key=lambda kv: kv[1], reverse=True)),
+            "topics": dict(sorted(topics_agg.items(), key=lambda kv: kv[1], reverse=True)),
         }, fh, indent=2)
 
     with open(os.path.join(OUTPUT_DIR, "_repos.json"), "w", encoding="utf-8") as fh:
@@ -1007,10 +1128,15 @@ def main():
                     "path": "data/activity/{owner}/{repo}.json",
                     "format": "json",
                     "description": (
-                        "Per-repo daily commit/PR/issue/release series, star history, and "
-                        "identifiedCommits/topContributors (used for the Bus Factor Watch signal), and the "
-                        "archived flag (used for effective status — see Methodology). One file "
-                        "per repo listed in repoIndex — repos outside live ingestion scope have no file here."
+                        "Per-repo daily commit/PR/issue/release series, star history "
+                        "(with starHistoryQuality: \"complete\"/\"partial\"/null — see Methodology), "
+                        "dataQuality (per-datatype fetch completeness for this run's lookback window), "
+                        "identifiedCommits/topContributors/busFactor (minimum contributors covering "
+                        "50% of identified commits — see Methodology), primaryLanguage/languages "
+                        "(byte breakdown)/topics/license/defaultBranch/homepage/createdAt/pushedAt, "
+                        "and the archived flag (used for effective status — see Methodology). One "
+                        "file per repo listed in repoIndex — repos outside live ingestion scope have "
+                        "no file here."
                     ),
                 },
                 {
@@ -1018,10 +1144,11 @@ def main():
                     "path": "data/activity/_summary.json",
                     "format": "json",
                     "description": (
-                        "Org-wide daily activity series, pre-aggregated across every ingested repo. The "
-                        "dashboard's own frontend does NOT use this (it recomputes totals client-side from "
-                        "repoActivity by design — see Methodology) — this exists for external consumers who "
-                        "want a ready-made rollup instead of summing every repo file themselves."
+                        "Org-wide daily activity series pre-aggregated across every ingested repo "
+                        "(the dashboard's own frontend uses this directly for its unfiltered Overview "
+                        "chart — see Methodology), plus partialDataRepos (which repos hit a partial "
+                        "fetch this run, per datatype) and languages/topics (ecosystem-wide rollups of "
+                        "the same fields in each repoActivity file)."
                     ),
                 },
                 {
@@ -1065,9 +1192,13 @@ def main():
                     "path": "data/kaspa_github_ecosystem_inventory.csv",
                     "format": "csv",
                     "description": (
-                        "The hand-maintained source registry (project name, category, org type, status, "
-                        "verified flag) that ingestion targets are computed from — the ground truth for "
-                        "what's tracked at all, live or modeled."
+                        "The hand-maintained source registry (project name, category, org_type/"
+                        "org_type_note, status, confidence/confidence_note, verified flag) that "
+                        "ingestion targets are computed from — the ground truth for what's tracked "
+                        "at all, live or modeled. org_type_note/confidence_note hold the free-text "
+                        "explanation split out from the classification value itself (see "
+                        "scripts/migrate_split_notes.py) — the classification columns are meant to "
+                        "stay short, enumerable values."
                     ),
                 },
                 {

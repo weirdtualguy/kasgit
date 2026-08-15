@@ -164,7 +164,8 @@
     requestAnimationFrame(tick);
   }
 
-  function statusBadge(status) {
+  function statusBadge(effectiveStatus) {
+    const status = effectiveStatus.label;
     const map = {
       Active: "badge-emerald",
       Unconfirmed: "badge-slate",
@@ -175,7 +176,16 @@
       Archived: "badge-rose"
     };
     const cls = map[status] || "badge-slate";
-    return `<span class="badge ${cls}">${escapeHtml(status)}</span>`;
+    // "Stale"/"Slowing" on a structurally normal repo (repoState "Normal")
+    // just means no recent commits — not necessarily a problem, e.g. a
+    // protocol repo that's feature-complete and stable. Only add that
+    // clarifying tooltip in that specific case; a Stale/Slowing repo
+    // that's Archived/Deprecated/Unreachable needs no extra caveat since
+    // its badge already says so directly.
+    const title = effectiveStatus.repoState === "Normal" && (status === "Stale" || status === "Slowing")
+      ? ` title="No recent commits — doesn't necessarily indicate a problem; some repos (e.g. a stable protocol library) are simply feature-complete."`
+      : "";
+    return `<span class="badge ${cls}"${title}>${escapeHtml(status)}</span>`;
   }
 
   const STATUS_ACTIVE_DAYS = 30;
@@ -199,29 +209,51 @@
    * Cached per render pass (see statusCache in updateDashboard) since it's
    * called from several render functions for the same repos.
    */
+  /**
+   * Repo status, disentangled into two independent signals the review
+   * flagged as conflated: activityLevel (derived purely from commit
+   * recency — "how busy is this repo right now") and repoState
+   * (structural facts independent of recent activity — deprecated,
+   * archived, unreachable, or normal). A protocol repo with 0 commits in
+   * 60 days because it's stable is activityLevel "Stale" but repoState
+   * "Normal" — genuinely different from a repo that's Stale *because*
+   * it's Deprecated or Archived, which the old single-label model
+   * couldn't distinguish.
+   *
+   * `label` is preserved with its exact prior derivation so every
+   * existing filter/sort/badge call site (registryStatus filter, table
+   * columns, category-leader picking, etc.) keeps working unchanged —
+   * this only adds the two new fields for anything that wants the
+   * finer-grained signal (e.g. a future maintenance-risk view, or
+   * data/api/index.json consumers).
+   */
   function effectiveRepoStatus(repo) {
     if (statusCache.has(repo.repoPath)) return statusCache.get(repo.repoPath);
 
     let result;
     if (repo.status === "Deprecated") {
-      result = { label: "Deprecated", reason: null };
+      result = { label: "Deprecated", reason: null, repoState: "Deprecated", activityLevel: null };
     } else if (LIVE.failedRepoSet?.has(repo.repoPath)) {
       result = {
         label: "Unreachable",
-        reason: "GitHub ingestion failed for this repo's URL on the last run — it may have moved, gone private, or been deleted."
+        reason: "GitHub ingestion failed for this repo's URL on the last run — it may have moved, gone private, or been deleted.",
+        repoState: "Unreachable",
+        activityLevel: null,
       };
     } else {
       const liveRecord = LIVE.repos[repo.repoPath];
       if (!liveRecord) {
-        result = { label: repo.status, reason: null };
+        result = { label: repo.status, reason: null, repoState: repo.status, activityLevel: null };
       } else if (liveRecord.archived === true) {
-        result = { label: "Archived", reason: null };
+        result = { label: "Archived", reason: null, repoState: "Archived", activityLevel: null };
       } else {
         const days = repoLastCommitDays(repo);
-        if (days === null) result = { label: "Stale", reason: null };
-        else if (days <= STATUS_ACTIVE_DAYS) result = { label: "Active", reason: null };
-        else if (days <= STATUS_SLOWING_DAYS) result = { label: "Slowing", reason: null };
-        else result = { label: "Stale", reason: null };
+        let activityLevel;
+        if (days === null) activityLevel = "Stale";
+        else if (days <= STATUS_ACTIVE_DAYS) activityLevel = "Active";
+        else if (days <= STATUS_SLOWING_DAYS) activityLevel = "Slowing";
+        else activityLevel = "Stale";
+        result = { label: activityLevel, reason: null, repoState: "Normal", activityLevel };
       }
     }
     statusCache.set(repo.repoPath, result);
@@ -925,25 +957,25 @@
     root.innerHTML = html;
   }
 
-  const BUS_FACTOR_MIN_COMMITS = 5;      // ignore repos too new/quiet to say anything meaningful
-  const BUS_FACTOR_SHARE_THRESHOLD = 0.85; // top contributor's share of identified commits
+  const BUS_FACTOR_MIN_COMMITS = 5;   // ignore repos too new/quiet to say anything meaningful
+  const BUS_FACTOR_WARN_MAX = 2;      // surface a badge when 1-2 people cover half the history
 
   /**
-   * Single-maintainer risk for a repo, from real per-repo contributor data
-   * (see topContributors/identifiedCommits in ingest_github_activity.py).
-   * Returns null when there's no live data, too little identified commit
-   * history to say anything meaningful, or the top contributor's share is
-   * below threshold — never a modeled guess, since fabricating "who wrote
-   * this" would be actively misleading rather than just incomplete.
+   * Single-maintainer / small-core-team risk for a repo, from the real
+   * bus factor computed server-side (compute_bus_factor() in
+   * ingest_github_activity.py, over the repo's *full* contributor list —
+   * not just the top-5 topContributors this file also carries for
+   * display). Returns null when there's no live data or too little
+   * identified commit history to say anything meaningful — never a
+   * modeled guess, since fabricating "who wrote this" would be actively
+   * misleading rather than just incomplete.
    */
   function repoBusFactor(repo) {
     const liveRecord = LIVE.repos[repo.repoPath];
-    const top = liveRecord?.topContributors?.[0];
+    const busFactor = liveRecord?.busFactor;
     const identified = liveRecord?.identifiedCommits || 0;
-    if (!top || identified < BUS_FACTOR_MIN_COMMITS) return null;
-    const share = top.commits / identified;
-    if (share < BUS_FACTOR_SHARE_THRESHOLD) return null;
-    return { login: top.login, share, identifiedCommits: identified };
+    if (typeof busFactor !== "number" || identified < BUS_FACTOR_MIN_COMMITS) return null;
+    return { busFactor, identifiedCommits: identified, topContributors: liveRecord.topContributors || [] };
   }
 
   function liveIndicator(isLive) {
@@ -954,9 +986,12 @@
 
   function busFactorBadge(repo) {
     const risk = repoBusFactor(repo);
-    if (!risk) return "";
-    const pct = Math.round(risk.share * 100);
-    return `<span class="badge badge-amber" title="${escapeHtml(`@${risk.login} authored ${pct}% of this repo's identified commits`)}">⚠ Bus factor 1</span>`;
+    if (!risk || risk.busFactor > BUS_FACTOR_WARN_MAX) return "";
+    const names = risk.topContributors.slice(0, risk.busFactor).map(c => `@${c.login}`).join(", ");
+    const title = risk.busFactor === 1
+      ? `${names} authored at least half of this repo's identified commits`
+      : `${names} together authored at least half of this repo's identified commits`;
+    return `<span class="badge badge-amber" title="${escapeHtml(title)}">⚠ Bus factor ${risk.busFactor}</span>`;
   }
 
   function repoRowMarkup(repo, metrics, color, variant) {
@@ -973,7 +1008,7 @@
       </td>
       <td>${categoryBadge(repo.category)}${variant === "full" ? ` ${liveIndicator(metrics.isLive)} ${busFactorBadge(repo)}` : ""}</td>
       ${variant === "full" ? `<td class="font-mono text-slate-300">Tier ${repo.tier}</td>` : ""}
-      <td>${statusBadge(effectiveRepoStatus(repo).label)}</td>
+      <td>${statusBadge(effectiveRepoStatus(repo))}</td>
       ${variant === "full" ? `<td class="text-right font-mono ${metrics.starsLive ? "text-emerald-200" : "text-slate-200"}" title="${metrics.starsLive ? "Live star count" : "Modeled placeholder"}">${formatNumber(metrics.stars)}</td>` : ""}
       <td class="text-right font-mono text-slate-200">${formatNumber(metrics.commits)}</td>
       <td class="text-right font-mono text-slate-200">${formatNumber(metrics.prs)}</td>
@@ -1166,7 +1201,7 @@
         <td>${row.type === "Org" ? `<span class="badge badge-cyan">Org</span>` : `<span class="badge badge-slate">Repo</span>`}</td>
         <td>${categoryBadge(row.category)}</td>
         <td class="font-mono text-slate-300">Tier ${row.tier}</td>
-        <td>${statusBadge(effectiveRepoStatus(row).label)}</td>
+        <td>${statusBadge(effectiveRepoStatus(row))}</td>
         <td>
           <div class="flex flex-wrap gap-1.5">
             ${row.tags.map(tag => `<span class="badge badge-slate">${escapeHtml(tag)}</span>`).join("")}
@@ -1406,7 +1441,7 @@
              class="block rounded-xl border border-white/[0.06] bg-white/[0.02] px-3 py-2 hover:bg-white/[0.04] transition">
             <div class="flex items-center justify-between gap-2">
               ${categoryBadge(category)}
-              ${statusBadge(effectiveRepoStatus(repo).label)}
+              ${statusBadge(effectiveRepoStatus(repo))}
             </div>
             <span class="text-sm text-slate-100 font-medium mt-1.5 block truncate">${escapeHtml(repo.name)}</span>
             <span class="text-xs text-slate-500 mt-0.5 block truncate" title="${escapeHtml(repo.description)}">${escapeHtml(repo.description)}</span>
@@ -1611,8 +1646,8 @@
     const flagged = REPOS
       .filter(repo => effectiveRepoStatus(repo).label !== "Archived" && effectiveRepoStatus(repo).label !== "Deprecated")
       .map(repo => ({ repo, risk: repoBusFactor(repo) }))
-      .filter(item => item.risk)
-      .sort((a, b) => b.risk.identifiedCommits - a.risk.identifiedCommits)
+      .filter(item => item.risk && item.risk.busFactor <= BUS_FACTOR_WARN_MAX)
+      .sort((a, b) => a.risk.busFactor - b.risk.busFactor || b.risk.identifiedCommits - a.risk.identifiedCommits)
       .slice(0, BUS_FACTOR_WATCH_MAX_ITEMS);
 
     if (badgeEl) {
@@ -1623,22 +1658,22 @@
 
     root.innerHTML = flagged.length
       ? flagged.map(({ repo, risk }) => {
-          const pct = Math.round(risk.share * 100);
+          const names = risk.topContributors.slice(0, risk.busFactor).map(c => `@${c.login}`).join(", ");
           return `
             <a href="${escapeHtml(safeUrl(repo.url))}" target="_blank" rel="noreferrer noopener"
                class="block rounded-xl border border-white/[0.06] bg-white/[0.02] px-3 py-2.5 hover:bg-white/[0.04] transition">
               <div class="flex items-center justify-between gap-2 mb-1">
                 ${categoryBadge(repo.category)}
-                <span class="text-[10px] uppercase tracking-wide font-medium text-amber-300">${pct}%</span>
+                <span class="text-[10px] uppercase tracking-wide font-medium text-amber-300">Bus factor ${risk.busFactor}</span>
               </div>
               <p class="text-sm font-medium text-slate-100 truncate">${escapeHtml(repo.name)}</p>
-              <p class="text-xs text-slate-400 mt-1">@${escapeHtml(risk.login)} authored ${pct}% of ${formatNumber(risk.identifiedCommits)} identified commits</p>
+              <p class="text-xs text-slate-400 mt-1">${escapeHtml(names)} account for at least half of ${formatNumber(risk.identifiedCommits)} identified commits</p>
             </a>
           `;
         }).join("")
       : `<p class="text-xs text-slate-500 md:col-span-2 xl:col-span-3">${
           liveRepoCount > 0
-            ? "No single-maintainer risk detected among live-ingested repos."
+            ? "No single-maintainer / small-core-team risk detected among live-ingested repos."
             : "Needs live ingestion data to compute — see Methodology."
         }</p>`;
   }
@@ -1695,24 +1730,49 @@
    * workflow has ever run — every fetch failure is caught and the
    * dashboard simply keeps using modeled placeholder data.
    */
-  async function loadLiveActivity() {
-    try {
-      const [repoIndexRes, metaRes, summaryRes, starsRes] = await Promise.all([
-        fetch("data/activity/_repos.json", { cache: "no-store" }),
-        fetch("data/activity/_meta.json", { cache: "no-store" }),
-        fetch("data/activity/_summary.json", { cache: "no-store" }),
-        fetch("data/activity/_stars.json", { cache: "no-store" })
-      ]);
+  // Cache-busting token for this ingestion run, learned from _meta.json's
+  // generatedAt before anything else loads. Every other generated data
+  // file is fetched as `path?v=<DATA_VERSION>` instead of with
+  // `cache: "no-store"` — the URL itself changes exactly when the day's
+  // ingestion actually produces new data, so the browser (and GitHub
+  // Pages' CDN) can cache normally between visits instead of re-fetching
+  // several megabytes on every single page load. Falls back to no-store
+  // if _meta.json itself couldn't be read, so an unversioned request never
+  // silently serves a stale cached copy forever.
+  let DATA_VERSION = null;
 
-      const repoIndex = repoIndexRes.ok ? await repoIndexRes.json() : {};
-      LIVE.meta = metaRes.ok ? await metaRes.json() : null;
-      LIVE.summary = summaryRes.ok ? await summaryRes.json() : null;
-      LIVE.stars = starsRes.ok ? await starsRes.json() : null;
+  function fetchVersioned(path) {
+    return DATA_VERSION
+      ? fetch(`${path}?v=${encodeURIComponent(DATA_VERSION)}`)
+      : fetch(path, { cache: "no-store" });
+  }
+
+  async function loadDataVersion() {
+    try {
+      const res = await fetch("data/activity/_meta.json", { cache: "no-store" });
+      LIVE.meta = res.ok ? await res.json() : null;
+      DATA_VERSION = LIVE.meta?.generatedAt || null;
       // Repos ingestion actually attempted (via _meta.json's failed list) but
       // the GitHub API call itself errored on — see effectiveRepoStatus()'s
       // "Unreachable" status. Distinct from a repo simply outside live
       // ingestion scope, which isn't in this list at all.
       LIVE.failedRepoSet = new Set(Array.isArray(LIVE.meta?.failed) ? LIVE.meta.failed : []);
+    } catch (err) {
+      console.warn("Could not read _meta.json — falling back to uncached fetches.", err);
+    }
+  }
+
+  async function loadLiveActivity() {
+    try {
+      const [repoIndexRes, summaryRes, starsRes] = await Promise.all([
+        fetchVersioned("data/activity/_repos.json"),
+        fetchVersioned("data/activity/_summary.json"),
+        fetchVersioned("data/activity/_stars.json")
+      ]);
+
+      const repoIndex = repoIndexRes.ok ? await repoIndexRes.json() : {};
+      LIVE.summary = summaryRes.ok ? await summaryRes.json() : null;
+      LIVE.stars = starsRes.ok ? await starsRes.json() : null;
 
       const entries = Object.entries(repoIndex).filter(([repoPath]) =>
         REPOS.some(repo => repo.repoPath === repoPath)
@@ -1737,7 +1797,7 @@
     repoActivityFetchStarted = true;
     Promise.all(entries.map(async ([repoPath, relativePath]) => {
       try {
-        const res = await fetch(`data/${relativePath}`, { cache: "no-store" });
+        const res = await fetchVersioned(`data/${relativePath}`);
         if (!res.ok) return null;
         const payload = await res.json();
         return [repoPath, payload];
@@ -1762,7 +1822,7 @@
    */
   async function loadReleaseFeed() {
     try {
-      const res = await fetch("data/feed/releases.json", { cache: "no-store" });
+      const res = await fetchVersioned("data/feed/releases.json");
       if (!res.ok) return;
       const payload = await res.json();
       LIVE.releases = Array.isArray(payload.releases) ? payload.releases : [];
@@ -1779,7 +1839,7 @@
    */
   async function loadLiveContributors() {
     try {
-      const res = await fetch("data/activity/_contributors.json", { cache: "no-store" });
+      const res = await fetchVersioned("data/activity/_contributors.json");
       if (!res.ok) return;
       const payload = await res.json();
       LIVE.contributors = Array.isArray(payload.contributors) ? payload.contributors : [];
@@ -1796,7 +1856,7 @@
    */
   async function loadIdeas() {
     try {
-      const res = await fetch("data/activity/ideas.json", { cache: "no-store" });
+      const res = await fetchVersioned("data/activity/ideas.json");
       if (!res.ok) return;
       const payload = await res.json();
       LIVE.ideas = Array.isArray(payload.ideas) ? payload.ideas : [];
@@ -1956,6 +2016,7 @@
     switchView("overview");
     updateDashboard(); // paint immediately with modeled fallback data
 
+    await loadDataVersion();
     await Promise.all([loadLiveActivity(), loadReleaseFeed(), loadLiveContributors(), loadIdeas()]);
     updateDashboard(); // repaint with any live-ingested data merged in
   }

@@ -149,6 +149,14 @@ export GITHUB_TOKEN=ghp_your_token_here   # a plain public-repo read token is en
 python3 scripts/ingest_github_activity.py
 ```
 
+## Data API
+
+Everything this project ingests is published as static, versioned JSON —
+no auth, no key, no rate limit beyond GitHub Pages itself. Start at
+[`data/api/index.json`](data/api/index.json) (machine-readable, always
+current); see [`docs/API.md`](docs/API.md) for a human-readable guide to
+every resource, field-by-field.
+
 ## Running locally
 
 No build step required. Any static file server works, e.g.:
