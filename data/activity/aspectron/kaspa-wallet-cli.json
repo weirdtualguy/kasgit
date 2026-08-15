@@ -1,16 +1,8 @@
 {
   "repo": "aspectron/kaspa-wallet-cli",
-  "generatedAt": "2026-08-14T05:01:26.169221+00:00",
+  "generatedAt": "2026-08-15T03:54:12.071202+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-07-10",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-07-11",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-08-15",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "starHistory": [
@@ -3236,6 +3236,13 @@
     },
     {
       "date": "2026-08-14",
+      "stars": 2,
+      "forks": 5,
+      "watchers": 5,
+      "openIssues": 2
+    },
+    {
+      "date": "2026-08-15",
       "stars": 2,
       "forks": 5,
       "watchers": 5,

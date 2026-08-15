@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-14T05:01:26.169221+00:00",
+  "generatedAt": "2026-08-15T03:54:12.071202+00:00",
   "lookbackDays": 180,
   "releases": [
     {
@@ -936,22 +936,6 @@
       "tag": "v24.0.1",
       "publishedAt": "2026-02-16T21:24:54Z",
       "url": "https://github.com/bzminer/bzminer/releases/tag/v24.0.1",
-      "prerelease": false
-    },
-    {
-      "repo": "doktor83/SRBMiner-Multi",
-      "name": "SRBMiner-MULTI v3.1.4",
-      "tag": "3.1.4",
-      "publishedAt": "2026-02-15T14:12:17Z",
-      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.1.4",
-      "prerelease": false
-    },
-    {
-      "repo": "thesheepcat/K-indexer",
-      "name": "Release 0.1.18",
-      "tag": "v0.1.18",
-      "publishedAt": "2026-02-15T10:18:33Z",
-      "url": "https://github.com/thesheepcat/K-indexer/releases/tag/v0.1.18",
       "prerelease": false
     }
   ]
