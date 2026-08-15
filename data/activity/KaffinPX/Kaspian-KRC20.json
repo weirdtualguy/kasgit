@@ -1,6 +1,6 @@
 {
   "repo": "KaffinPX/Kaspian-KRC20",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,37 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 41019,
+    "CSS": 2500,
+    "JavaScript": 2112,
+    "HTML": 302
+  },
+  "topics": [],
+  "license": "GPL-2.0",
+  "defaultBranch": "main",
+  "homepage": "https://kaffinpx.github.io/Kaspian-KRC20/",
+  "createdAt": "2024-09-03T00:39:39Z",
+  "pushedAt": "2024-09-21T17:49:57Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-12",
@@ -3245,5 +3276,6 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 0,
+  "busFactor": null,
   "topContributors": []
 }

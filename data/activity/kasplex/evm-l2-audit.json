@@ -1,6 +1,6 @@
 {
   "repo": "kasplex/evm-l2-audit",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,32 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": null,
+  "languages": {},
+  "topics": [],
+  "license": null,
+  "defaultBranch": "main",
+  "homepage": null,
+  "createdAt": "2025-08-25T06:08:12Z",
+  "pushedAt": "2025-08-25T06:09:58Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-11",
@@ -3252,6 +3278,7 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 1,
+  "busFactor": 1,
   "topContributors": [
     {
       "login": "jeanku",

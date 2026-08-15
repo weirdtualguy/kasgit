@@ -1,6 +1,6 @@
 {
   "repo": "lAmeR1/kas-point",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,36 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "JavaScript",
+  "languages": {
+    "JavaScript": 1912,
+    "HTML": 1721,
+    "CSS": 930
+  },
+  "topics": [],
+  "license": "MIT",
+  "defaultBranch": "main",
+  "homepage": null,
+  "createdAt": "2023-04-24T21:23:48Z",
+  "pushedAt": "2023-04-24T22:02:50Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-12",
@@ -3245,5 +3275,6 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 0,
+  "busFactor": null,
   "topContributors": []
 }

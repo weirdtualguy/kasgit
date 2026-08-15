@@ -1,6 +1,6 @@
 {
   "repo": "kaspanet/kasparov",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,37 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "Go",
+  "languages": {
+    "Go": 153146,
+    "Dockerfile": 2920
+  },
+  "topics": [
+    "core"
+  ],
+  "license": "ISC",
+  "defaultBranch": "master",
+  "homepage": null,
+  "createdAt": "2019-12-17T07:33:43Z",
+  "pushedAt": "2020-12-16T12:31:55Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-12",
@@ -3245,5 +3276,6 @@
   "starHistoryQuality": null,
   "archived": true,
   "identifiedCommits": 0,
+  "busFactor": null,
   "topContributors": []
 }

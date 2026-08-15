@@ -1,6 +1,6 @@
 {
   "repo": "lAmeR1/kaspa-db-filler",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,36 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "Python",
+  "languages": {
+    "Python": 44481,
+    "Dockerfile": 587,
+    "Procfile": 19
+  },
+  "topics": [],
+  "license": "GPL-3.0",
+  "defaultBranch": "main",
+  "homepage": null,
+  "createdAt": "2022-09-21T21:49:15Z",
+  "pushedAt": "2024-01-04T17:48:11Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-12",
@@ -3245,5 +3275,6 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 0,
+  "busFactor": null,
   "topContributors": []
 }

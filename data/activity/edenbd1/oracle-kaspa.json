@@ -1,6 +1,6 @@
 {
   "repo": "edenbd1/oracle-kaspa",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,39 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 561623,
+    "HTML": 38347,
+    "CSS": 3710,
+    "Shell": 815,
+    "JavaScript": 652,
+    "Dockerfile": 475
+  },
+  "topics": [],
+  "license": "ISC",
+  "defaultBranch": "main",
+  "homepage": "https://oracle-kaspa.vercel.app",
+  "createdAt": "2026-01-30T23:54:15Z",
+  "pushedAt": "2026-02-18T09:57:10Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-12",
@@ -3245,6 +3278,7 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 31,
+  "busFactor": 1,
   "topContributors": [
     {
       "login": "edenbd1",

@@ -1,6 +1,6 @@
 {
   "repo": "doktor83/SRBMiner-Multi",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3205,13 +3205,43 @@
     },
     {
       "date": "2026-08-15",
-      "commits": 0,
+      "commits": 1,
       "prs": 0,
       "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
+      "releases": 1,
+      "activeDevs": 1
     }
   ],
+  "primaryLanguage": null,
+  "languages": {},
+  "topics": [
+    "cpumining",
+    "cryptocurrency",
+    "gpumining"
+  ],
+  "license": null,
+  "defaultBranch": "master",
+  "homepage": "http://www.srbminer.com",
+  "createdAt": "2019-09-09T06:41:09Z",
+  "pushedAt": "2026-08-15T11:18:55Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-12",
@@ -3236,7 +3266,7 @@
     },
     {
       "date": "2026-08-15",
-      "stars": 684,
+      "stars": 685,
       "forks": 174,
       "watchers": 75,
       "openIssues": 32
@@ -3244,11 +3274,12 @@
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 45,
+  "identifiedCommits": 46,
+  "busFactor": 1,
   "topContributors": [
     {
       "login": "doktor83",
-      "commits": 45
+      "commits": 46
     }
   ]
 }

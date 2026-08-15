@@ -1,6 +1,6 @@
 {
   "repo": "ScopeLift/kaspa-wallet",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,44 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "JavaScript",
+  "languages": {
+    "JavaScript": 162936,
+    "Vue": 73743,
+    "TypeScript": 39746,
+    "HTML": 3823,
+    "CSS": 2539
+  },
+  "topics": [
+    "blockchain",
+    "crypto",
+    "cryptocurrency",
+    "dags",
+    "kaspa"
+  ],
+  "license": null,
+  "defaultBranch": "master",
+  "homepage": null,
+  "createdAt": "2020-06-22T18:41:19Z",
+  "pushedAt": "2022-01-22T13:15:22Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-11",
@@ -3252,5 +3290,6 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 0,
+  "busFactor": null,
   "topContributors": []
 }

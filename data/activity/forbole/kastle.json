@@ -1,15 +1,15 @@
 {
   "repo": "forbole/kastle",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
       "date": "2025-07-11",
-      "commits": 2,
-      "prs": 2,
+      "commits": 0,
+      "prs": 0,
       "issues": 0,
-      "releases": 1,
-      "activeDevs": 2
+      "releases": 0,
+      "activeDevs": 0
     },
     {
       "date": "2025-07-12",
@@ -3207,11 +3207,48 @@
       "date": "2026-08-15",
       "commits": 0,
       "prs": 0,
-      "issues": 0,
+      "issues": 1,
       "releases": 0,
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 1114437,
+    "JavaScript": 539889,
+    "CSS": 1069,
+    "HTML": 349
+  },
+  "topics": [
+    "browser-extension",
+    "cryptocurrency",
+    "kaspa",
+    "source-available-license",
+    "wallet"
+  ],
+  "license": null,
+  "defaultBranch": "main",
+  "homepage": "https://kastle.cc",
+  "createdAt": "2025-02-03T08:20:39Z",
+  "pushedAt": "2026-08-13T18:22:39Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-11",
@@ -3246,16 +3283,17 @@
       "stars": 16,
       "forks": 3,
       "watchers": 2,
-      "openIssues": 11
+      "openIssues": 12
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 143,
+  "identifiedCommits": 142,
+  "busFactor": 1,
   "topContributors": [
     {
       "login": "dadamu",
-      "commits": 90
+      "commits": 89
     },
     {
       "login": "forbole-release-please-bot[bot]",

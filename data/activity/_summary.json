@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "orgs": [
     "kaspanet"
@@ -8,11 +8,11 @@
   "series": [
     {
       "date": "2025-07-11",
-      "commits": 15,
-      "prs": 3,
+      "commits": 0,
+      "prs": 0,
       "issues": 0,
-      "releases": 1,
-      "activeDevs": 4
+      "releases": 0,
+      "activeDevs": 0
     },
     {
       "date": "2025-07-12",
@@ -3048,11 +3048,11 @@
     },
     {
       "date": "2026-07-26",
-      "commits": 4,
+      "commits": 5,
       "prs": 2,
       "issues": 7,
       "releases": 0,
-      "activeDevs": 1
+      "activeDevs": 2
     },
     {
       "date": "2026-07-27",
@@ -3072,19 +3072,19 @@
     },
     {
       "date": "2026-07-29",
-      "commits": 9,
+      "commits": 10,
       "prs": 4,
       "issues": 1,
       "releases": 0,
-      "activeDevs": 3
+      "activeDevs": 4
     },
     {
       "date": "2026-07-30",
-      "commits": 8,
+      "commits": 11,
       "prs": 3,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 2
+      "activeDevs": 3
     },
     {
       "date": "2026-07-31",
@@ -3096,19 +3096,19 @@
     },
     {
       "date": "2026-08-01",
-      "commits": 0,
+      "commits": 2,
       "prs": 0,
       "issues": 1,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-08-02",
-      "commits": 16,
+      "commits": 20,
       "prs": 14,
       "issues": 1,
       "releases": 1,
-      "activeDevs": 3
+      "activeDevs": 4
     },
     {
       "date": "2026-08-03",
@@ -3152,11 +3152,11 @@
     },
     {
       "date": "2026-08-08",
-      "commits": 0,
+      "commits": 1,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-08-09",
@@ -3176,11 +3176,11 @@
     },
     {
       "date": "2026-08-11",
-      "commits": 4,
+      "commits": 9,
       "prs": 2,
       "issues": 0,
       "releases": 1,
-      "activeDevs": 2
+      "activeDevs": 3
     },
     {
       "date": "2026-08-12",
@@ -3192,27 +3192,127 @@
     },
     {
       "date": "2026-08-13",
-      "commits": 3,
+      "commits": 5,
       "prs": 3,
       "issues": 0,
       "releases": 1,
-      "activeDevs": 3
+      "activeDevs": 4
     },
     {
       "date": "2026-08-14",
-      "commits": 0,
+      "commits": 1,
       "prs": 0,
       "issues": 1,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-08-15",
-      "commits": 0,
+      "commits": 1,
       "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
+      "issues": 1,
+      "releases": 1,
+      "activeDevs": 1
     }
-  ]
+  ],
+  "partialDataRepos": {
+    "commits": [],
+    "prs": [],
+    "issues": [],
+    "releases": []
+  },
+  "languages": {
+    "Rust": 19717201,
+    "TypeScript": 9716446,
+    "Go": 7291156,
+    "JavaScript": 5391177,
+    "C": 2501435,
+    "Python": 2256337,
+    "Dart": 2152675,
+    "Jupyter Notebook": 1767442,
+    "C++": 906268,
+    "HTML": 675685,
+    "SCSS": 369768,
+    "VHDL": 188774,
+    "Assembly": 179160,
+    "Shell": 145970,
+    "Tcl": 138059,
+    "MDX": 122859,
+    "CSS": 112296,
+    "SystemVerilog": 89980,
+    "Sage": 79590,
+    "Vue": 73743,
+    "TeX": 61099,
+    "M4": 54645,
+    "Solidity": 30760,
+    "Makefile": 25162,
+    "Lua": 23322,
+    "Dockerfile": 23026,
+    "Cuda": 12915,
+    "Groovy": 11492,
+    "Less": 10781,
+    "Tree-sitter Query": 10621,
+    "PowerShell": 8011,
+    "CMake": 7101,
+    "PLpgSQL": 4417,
+    "Swift": 2455,
+    "Cadence": 1218,
+    "Ruby": 320,
+    "Procfile": 237,
+    "Kotlin": 145,
+    "Objective-C": 38,
+    "RenderScript": 2
+  },
+  "topics": {
+    "kaspa": 10,
+    "cryptocurrency": 7,
+    "core": 3,
+    "wallet": 3,
+    "rust": 2,
+    "wasm": 2,
+    "mining": 2,
+    "krc-20": 2,
+    "consensus-protocol": 1,
+    "golang": 1,
+    "hacktoberfest": 1,
+    "doc": 1,
+    "app": 1,
+    "node": 1,
+    "p2p": 1,
+    "visualizer": 1,
+    "blockdag": 1,
+    "cryptomining": 1,
+    "cpumining": 1,
+    "gpumining": 1,
+    "cuckoocycle": 1,
+    "equihash": 1,
+    "ethash": 1,
+    "kawpow": 1,
+    "progpow": 1,
+    "browser-extension": 1,
+    "source-available-license": 1,
+    "chrome-extension-wallet": 1,
+    "hd-wallet": 1,
+    "blockchain": 1,
+    "crypto": 1,
+    "dags": 1,
+    "proxy": 1,
+    "stratum": 1,
+    "explorer": 1,
+    "ghostdag": 1,
+    "karlsen": 1,
+    "phantom": 1,
+    "extension": 1,
+    "krc20": 1,
+    "internet-speed": 1,
+    "covenants": 1,
+    "groth16": 1,
+    "kip-20": 1,
+    "l1": 1,
+    "openzeppelin-like": 1,
+    "silverscript": 1,
+    "smart-contracts": 1,
+    "typescript": 1,
+    "zero-knowledge": 1
+  }
 }

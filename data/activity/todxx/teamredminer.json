@@ -1,6 +1,6 @@
 {
   "repo": "todxx/teamredminer",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,32 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": null,
+  "languages": {},
+  "topics": [],
+  "license": null,
+  "defaultBranch": "master",
+  "homepage": null,
+  "createdAt": "2018-09-13T02:42:26Z",
+  "pushedAt": "2024-05-06T13:44:43Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-12",
@@ -3245,5 +3271,6 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 0,
+  "busFactor": null,
   "topContributors": []
 }

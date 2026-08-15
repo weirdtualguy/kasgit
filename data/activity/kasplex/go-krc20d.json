@@ -1,6 +1,6 @@
 {
   "repo": "kasplex/go-krc20d",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,37 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "Go",
+  "languages": {
+    "Go": 267748,
+    "C": 161015,
+    "Lua": 21557,
+    "Dockerfile": 192
+  },
+  "topics": [],
+  "license": "MIT",
+  "defaultBranch": "main",
+  "homepage": null,
+  "createdAt": "2026-03-02T07:22:05Z",
+  "pushedAt": "2026-06-22T09:11:24Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-11",
@@ -3252,6 +3283,7 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 37,
+  "busFactor": 1,
   "topContributors": [
     {
       "login": "5bb55b",

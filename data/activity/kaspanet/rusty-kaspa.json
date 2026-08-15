@@ -1,6 +1,6 @@
 {
   "repo": "kaspanet/rusty-kaspa",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,48 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "Rust",
+  "languages": {
+    "Rust": 8594123,
+    "JavaScript": 188322,
+    "Jupyter Notebook": 142013,
+    "Assembly": 49527,
+    "HTML": 47955,
+    "Shell": 17013,
+    "TypeScript": 11008,
+    "CSS": 8368,
+    "PowerShell": 464,
+    "RenderScript": 2
+  },
+  "topics": [
+    "consensus-protocol",
+    "cryptocurrency",
+    "rust",
+    "wasm"
+  ],
+  "license": "ISC",
+  "defaultBranch": "master",
+  "homepage": null,
+  "createdAt": "2022-07-17T23:32:26Z",
+  "pushedAt": "2026-08-14T04:36:12Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-11",
@@ -3244,7 +3286,7 @@
     {
       "date": "2026-08-15",
       "stars": 840,
-      "forks": 293,
+      "forks": 294,
       "watchers": 72,
       "openIssues": 202
     }
@@ -3252,6 +3294,7 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 226,
+  "busFactor": 3,
   "topContributors": [
     {
       "login": "someone235",

@@ -1,6 +1,6 @@
 {
   "repo": "KaffinPX/KaspianKRC20",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,9 +3212,36 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": null,
+  "languages": {},
+  "topics": [],
+  "license": null,
+  "defaultBranch": null,
+  "homepage": null,
+  "createdAt": null,
+  "pushedAt": null,
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [],
   "starHistoryQuality": "partial",
   "archived": null,
   "identifiedCommits": 0,
+  "busFactor": null,
   "topContributors": []
 }

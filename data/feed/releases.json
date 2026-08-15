@@ -1,7 +1,15 @@
 {
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.5.5",
+      "tag": "3.5.5",
+      "publishedAt": "2026-08-15T11:17:57Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.5.5",
+      "prerelease": false
+    },
     {
       "repo": "forbole/kastle",
       "name": "v2.59.1",

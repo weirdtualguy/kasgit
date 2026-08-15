@@ -1,6 +1,6 @@
 {
   "repo": "KaffinPX/KasplexBuilder",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,34 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 4385
+  },
+  "topics": [],
+  "license": "GPL-2.0",
+  "defaultBranch": "main",
+  "homepage": null,
+  "createdAt": "2024-08-06T23:22:06Z",
+  "pushedAt": "2025-06-24T10:46:28Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-12",
@@ -3245,5 +3273,6 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 0,
+  "busFactor": null,
   "topContributors": []
 }

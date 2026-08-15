@@ -1,6 +1,6 @@
 {
   "repo": "aspectron/kaspa-wasm",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,38 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "Shell",
+  "languages": {
+    "Shell": 8356,
+    "Rust": 7744,
+    "JavaScript": 2189,
+    "HTML": 170,
+    "TypeScript": 148
+  },
+  "topics": [],
+  "license": "ISC",
+  "defaultBranch": "master",
+  "homepage": null,
+  "createdAt": "2023-04-12T06:17:50Z",
+  "pushedAt": "2024-08-03T01:25:05Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-11",
@@ -3252,5 +3284,6 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 0,
+  "busFactor": null,
   "topContributors": []
 }

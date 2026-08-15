@@ -1,6 +1,6 @@
 {
   "repo": "on3ir0s/KRC20-ForestSeeker",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,34 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "Python",
+  "languages": {
+    "Python": 28925
+  },
+  "topics": [],
+  "license": "MIT",
+  "defaultBranch": "main",
+  "homepage": null,
+  "createdAt": "2025-01-11T00:52:38Z",
+  "pushedAt": "2025-03-02T08:47:27Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-12",
@@ -3245,5 +3273,6 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 0,
+  "busFactor": null,
   "topContributors": []
 }

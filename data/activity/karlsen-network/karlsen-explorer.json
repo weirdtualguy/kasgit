@@ -1,6 +1,6 @@
 {
   "repo": "karlsen-network/karlsen-explorer",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,43 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "JavaScript",
+  "languages": {
+    "JavaScript": 176994,
+    "SCSS": 19872,
+    "HTML": 2795,
+    "CSS": 947,
+    "Procfile": 19
+  },
+  "topics": [
+    "explorer",
+    "ghostdag",
+    "karlsen",
+    "phantom"
+  ],
+  "license": "MIT",
+  "defaultBranch": "main",
+  "homepage": "https://explorer.karlsencoin.com",
+  "createdAt": "2023-10-30T22:30:40Z",
+  "pushedAt": "2024-11-28T07:58:12Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-12",
@@ -3245,5 +3282,6 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 0,
+  "busFactor": null,
   "topContributors": []
 }

@@ -1,6 +1,6 @@
 {
   "repo": "K-Kluster/kaspa-js",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,42 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 109652,
+    "JavaScript": 12445,
+    "Python": 10415,
+    "CSS": 6962,
+    "HTML": 649
+  },
+  "topics": [
+    "internet-speed",
+    "kaspa",
+    "wasm"
+  ],
+  "license": "ISC",
+  "defaultBranch": "master",
+  "homepage": null,
+  "createdAt": "2025-10-27T23:12:45Z",
+  "pushedAt": "2026-01-09T02:44:52Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-11",
@@ -3252,6 +3288,7 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 19,
+  "busFactor": 1,
   "topContributors": [
     {
       "login": "IzioDev",

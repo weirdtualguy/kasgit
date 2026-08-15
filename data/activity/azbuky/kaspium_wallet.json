@@ -1,6 +1,6 @@
 {
   "repo": "azbuky/kaspium_wallet",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3045,11 +3045,11 @@
     },
     {
       "date": "2026-07-26",
-      "commits": 0,
+      "commits": 1,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-07-27",
@@ -3069,19 +3069,19 @@
     },
     {
       "date": "2026-07-29",
-      "commits": 0,
+      "commits": 1,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-07-30",
-      "commits": 0,
+      "commits": 3,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-07-31",
@@ -3093,19 +3093,19 @@
     },
     {
       "date": "2026-08-01",
-      "commits": 0,
+      "commits": 2,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-08-02",
-      "commits": 0,
+      "commits": 4,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-08-03",
@@ -3149,11 +3149,11 @@
     },
     {
       "date": "2026-08-08",
-      "commits": 0,
+      "commits": 1,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-08-09",
@@ -3173,11 +3173,11 @@
     },
     {
       "date": "2026-08-11",
-      "commits": 0,
+      "commits": 5,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-08-12",
@@ -3189,19 +3189,19 @@
     },
     {
       "date": "2026-08-13",
-      "commits": 0,
+      "commits": 2,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-08-14",
-      "commits": 0,
+      "commits": 1,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-08-15",
@@ -3212,6 +3212,37 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "Dart",
+  "languages": {
+    "Dart": 2152675,
+    "Swift": 2455,
+    "Kotlin": 145,
+    "Objective-C": 38
+  },
+  "topics": [],
+  "license": null,
+  "defaultBranch": "main",
+  "homepage": null,
+  "createdAt": "2023-01-19T15:59:01Z",
+  "pushedAt": "2026-08-15T11:21:28Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-12",
@@ -3244,11 +3275,12 @@
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 66,
+  "identifiedCommits": 86,
+  "busFactor": 1,
   "topContributors": [
     {
       "login": "azbuky",
-      "commits": 65
+      "commits": 85
     },
     {
       "login": "HLXEasy",

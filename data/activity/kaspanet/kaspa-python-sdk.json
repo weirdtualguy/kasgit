@@ -1,6 +1,6 @@
 {
   "repo": "kaspanet/kaspa-python-sdk",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,36 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "Rust",
+  "languages": {
+    "Rust": 583416,
+    "Python": 527490,
+    "Shell": 6850
+  },
+  "topics": [],
+  "license": "ISC",
+  "defaultBranch": "main",
+  "homepage": "https://kaspanet.github.io/kaspa-python-sdk/latest/",
+  "createdAt": "2026-01-19T15:41:25Z",
+  "pushedAt": "2026-07-31T13:22:57Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-11",
@@ -3252,6 +3282,7 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 60,
+  "busFactor": 1,
   "topContributors": [
     {
       "login": "smartgoo",

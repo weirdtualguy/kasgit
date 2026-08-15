@@ -1,6 +1,6 @@
 {
   "repo": "kaspa-live/kaspa-graph-inspector",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,43 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 190266,
+    "Go": 125360,
+    "Shell": 5984,
+    "Dockerfile": 1806,
+    "HTML": 958,
+    "CSS": 955,
+    "JavaScript": 526
+  },
+  "topics": [
+    "blockdag",
+    "kaspa"
+  ],
+  "license": "ISC",
+  "defaultBranch": "master",
+  "homepage": "http://kgi.kaspad.net",
+  "createdAt": "2021-02-25T12:05:29Z",
+  "pushedAt": "2026-05-11T12:39:42Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-11",
@@ -3252,6 +3289,7 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 38,
+  "busFactor": 1,
   "topContributors": [
     {
       "login": "tiram88",

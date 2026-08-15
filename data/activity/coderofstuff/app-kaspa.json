@@ -1,6 +1,6 @@
 {
   "repo": "coderofstuff/app-kaspa",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,40 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "C",
+  "languages": {
+    "C": 254820,
+    "Python": 61350,
+    "CMake": 7101,
+    "Shell": 6065,
+    "Makefile": 4164,
+    "Ruby": 320,
+    "Dockerfile": 287
+  },
+  "topics": [],
+  "license": "MIT",
+  "defaultBranch": "develop",
+  "homepage": null,
+  "createdAt": "2023-04-01T19:39:27Z",
+  "pushedAt": "2025-11-02T03:57:45Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-12",
@@ -3245,6 +3279,7 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 5,
+  "busFactor": 1,
   "topContributors": [
     {
       "login": "tdejoigny-ledger",

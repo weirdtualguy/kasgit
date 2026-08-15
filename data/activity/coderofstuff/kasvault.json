@@ -1,6 +1,6 @@
 {
   "repo": "coderofstuff/kasvault",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,37 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "JavaScript",
+  "languages": {
+    "JavaScript": 189091,
+    "TypeScript": 116204,
+    "CSS": 8497,
+    "HTML": 659
+  },
+  "topics": [],
+  "license": "MIT",
+  "defaultBranch": "main",
+  "homepage": "https://kasvault.io",
+  "createdAt": "2023-05-03T19:50:03Z",
+  "pushedAt": "2026-06-25T23:34:28Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-12",
@@ -3245,6 +3276,7 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 1,
+  "busFactor": 1,
   "topContributors": [
     {
       "login": "coderofstuff",

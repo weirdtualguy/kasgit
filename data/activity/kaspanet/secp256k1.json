@@ -1,6 +1,6 @@
 {
   "repo": "kaspanet/secp256k1",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,41 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "C",
+  "languages": {
+    "C": 945711,
+    "Sage": 39795,
+    "M4": 28810,
+    "Assembly": 28178,
+    "C++": 10299,
+    "Makefile": 5382,
+    "Shell": 2302,
+    "Dockerfile": 510
+  },
+  "topics": [],
+  "license": "MIT",
+  "defaultBranch": "master",
+  "homepage": null,
+  "createdAt": "2020-02-17T10:37:07Z",
+  "pushedAt": "2021-03-16T12:49:58Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-12",
@@ -3245,5 +3280,6 @@
   "starHistoryQuality": null,
   "archived": true,
   "identifiedCommits": 0,
+  "busFactor": null,
   "topContributors": []
 }

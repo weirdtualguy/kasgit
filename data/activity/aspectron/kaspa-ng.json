@@ -1,6 +1,6 @@
 {
   "repo": "aspectron/kaspa-ng",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,45 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "Rust",
+  "languages": {
+    "Rust": 1041891,
+    "JavaScript": 16447,
+    "HTML": 10583,
+    "CSS": 3061,
+    "Shell": 1276
+  },
+  "topics": [
+    "cryptocurrency",
+    "kaspa",
+    "node",
+    "p2p",
+    "visualizer",
+    "wallet"
+  ],
+  "license": null,
+  "defaultBranch": "master",
+  "homepage": "https://aspectron.org/en/projects/kaspa-ng.html",
+  "createdAt": "2023-09-05T19:04:57Z",
+  "pushedAt": "2026-06-29T13:17:53Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-11",
@@ -3252,6 +3291,7 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 9,
+  "busFactor": 1,
   "topContributors": [
     {
       "login": "aspect",

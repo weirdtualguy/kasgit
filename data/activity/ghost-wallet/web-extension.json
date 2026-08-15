@@ -1,6 +1,6 @@
 {
   "repo": "ghost-wallet/web-extension",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,43 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "JavaScript",
+  "languages": {
+    "JavaScript": 463355,
+    "TypeScript": 384002,
+    "CSS": 1815,
+    "HTML": 637
+  },
+  "topics": [
+    "extension",
+    "kaspa",
+    "krc-20",
+    "krc20",
+    "wallet"
+  ],
+  "license": "GPL-3.0",
+  "defaultBranch": "main",
+  "homepage": "https://ghostwallet.org/",
+  "createdAt": "2024-10-08T17:17:26Z",
+  "pushedAt": "2024-12-30T22:31:51Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-12",
@@ -3245,5 +3282,6 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 0,
+  "busFactor": null,
   "topContributors": []
 }

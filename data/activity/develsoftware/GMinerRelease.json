@@ -1,6 +1,6 @@
 {
   "repo": "develsoftware/GMinerRelease",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,39 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": null,
+  "languages": {},
+  "topics": [
+    "cuckoocycle",
+    "equihash",
+    "ethash",
+    "kawpow",
+    "mining",
+    "progpow"
+  ],
+  "license": null,
+  "defaultBranch": "master",
+  "homepage": "https://bitcointalk.org/index.php?topic=5034735.0",
+  "createdAt": "2019-02-14T19:44:54Z",
+  "pushedAt": "2026-07-14T13:51:50Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-12",
@@ -3245,6 +3278,7 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 1,
+  "busFactor": 1,
   "topContributors": [
     {
       "login": "develsoftware",

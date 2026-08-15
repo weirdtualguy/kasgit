@@ -1,6 +1,6 @@
 {
   "repo": "lAmeR1/kaspa-explorer-ng",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,37 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 138813,
+    "CSS": 1683,
+    "JavaScript": 836,
+    "Dockerfile": 599
+  },
+  "topics": [],
+  "license": null,
+  "defaultBranch": "main",
+  "homepage": "https://kaspa-explorer-ng.vercel.app",
+  "createdAt": "2025-03-24T21:51:56Z",
+  "pushedAt": "2026-06-12T06:02:18Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-12",
@@ -3245,6 +3276,7 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 1,
+  "busFactor": 1,
   "topContributors": [
     {
       "login": "lAmeR1",

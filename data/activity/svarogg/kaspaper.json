@@ -1,6 +1,6 @@
 {
   "repo": "svarogg/kaspaper",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,35 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "HTML",
+  "languages": {
+    "HTML": 10887,
+    "Go": 4945
+  },
+  "topics": [],
+  "license": "GPL-3.0",
+  "defaultBranch": "main",
+  "homepage": null,
+  "createdAt": "2021-12-07T13:26:00Z",
+  "pushedAt": "2023-12-16T20:51:59Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-12",
@@ -3245,5 +3274,6 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 0,
+  "busFactor": null,
   "topContributors": []
 }

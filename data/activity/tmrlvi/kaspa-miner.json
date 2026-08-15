@@ -1,6 +1,6 @@
 {
   "repo": "tmrlvi/kaspa-miner",
-  "generatedAt": "2026-08-15T04:25:39.783247+00:00",
+  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
   "lookbackDays": 400,
   "series": [
     {
@@ -3212,6 +3212,38 @@
       "activeDevs": 0
     }
   ],
+  "primaryLanguage": "Rust",
+  "languages": {
+    "Rust": 201784,
+    "C": 24172,
+    "Assembly": 11875,
+    "Shell": 6954,
+    "Cuda": 6655
+  },
+  "topics": [],
+  "license": "Apache-2.0",
+  "defaultBranch": "main",
+  "homepage": null,
+  "createdAt": "2021-12-06T15:24:19Z",
+  "pushedAt": "2023-05-29T22:15:19Z",
+  "dataQuality": {
+    "commits": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "prs": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "issues": {
+      "status": "complete",
+      "lookbackDays": 400
+    },
+    "releases": {
+      "status": "complete",
+      "lookbackDays": 400
+    }
+  },
   "starHistory": [
     {
       "date": "2026-08-12",
@@ -3245,5 +3277,6 @@
   "starHistoryQuality": null,
   "archived": false,
   "identifiedCommits": 0,
+  "busFactor": null,
   "topContributors": []
 }
