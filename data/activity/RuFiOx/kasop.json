@@ -1,16 +1,8 @@
 {
   "repo": "RuFiOx/kasop",
-  "generatedAt": "2026-08-15T16:23:22.684465+00:00",
+  "generatedAt": "2026-08-16T03:58:46.769954+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-07-11",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-07-12",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-08-16",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "Rust",
@@ -3277,6 +3277,13 @@
     },
     {
       "date": "2026-08-15",
+      "stars": 2,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0
+    },
+    {
+      "date": "2026-08-16",
       "stars": 2,
       "forks": 0,
       "watchers": 0,
