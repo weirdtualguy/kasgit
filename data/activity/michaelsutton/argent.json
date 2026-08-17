@@ -1,16 +1,8 @@
 {
   "repo": "michaelsutton/argent",
-  "generatedAt": "2026-08-16T03:58:46.769954+00:00",
+  "generatedAt": "2026-08-17T04:01:54.294595+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-07-12",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-07-13",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-08-17",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "Rust",
@@ -3223,7 +3223,7 @@
   "defaultBranch": "master",
   "homepage": null,
   "createdAt": "2026-06-16T21:05:47Z",
-  "pushedAt": "2026-08-14T14:21:20Z",
+  "pushedAt": "2026-08-16T13:55:42Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3276,6 +3276,13 @@
       "stars": 20,
       "forks": 5,
       "watchers": 1,
+      "openIssues": 2
+    },
+    {
+      "date": "2026-08-17",
+      "stars": 20,
+      "forks": 5,
+      "watchers": 2,
       "openIssues": 2
     }
   ],

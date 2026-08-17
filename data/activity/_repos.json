@@ -1,6 +1,6 @@
 {
-  "kaspanet/rusty-kaspa": "activity/kaspanet/rusty-kaspa.json",
   "kaspanet/silverscript": "activity/kaspanet/silverscript.json",
+  "kaspanet/rusty-kaspa": "activity/kaspanet/rusty-kaspa.json",
   "kaspanet/kaspa-python-sdk": "activity/kaspanet/kaspa-python-sdk.json",
   "kaspanet/vprogs": "activity/kaspanet/vprogs.json",
   "kaspanet/kccs": "activity/kaspanet/kccs.json",
