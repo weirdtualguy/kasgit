@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T04:01:54.294595+00:00",
+  "generatedAt": "2026-08-18T03:57:30.507893+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -408,11 +408,11 @@
       "login": "michaelsutton",
       "avatarUrl": "https://avatars.githubusercontent.com/u/6299204?v=4",
       "htmlUrl": "https://github.com/michaelsutton",
-      "commits": 158,
+      "commits": 159,
       "repos": [
         {
           "repo": "michaelsutton/argent",
-          "commits": 73
+          "commits": 74
         },
         {
           "repo": "kaspanet/rusty-kaspa",
@@ -445,7 +445,7 @@
       ],
       "firstCommitAt": "2025-07-14T10:54:33Z",
       "firstCommitRepo": "kaspanet/kips",
-      "lastCommitAt": "2026-08-02T17:34:23Z",
+      "lastCommitAt": "2026-08-17T09:13:06Z",
       "activeDates": [
         "2025-07-14",
         "2025-09-11",
@@ -517,7 +517,8 @@
         "2026-07-29",
         "2026-07-30",
         "2026-07-31",
-        "2026-08-02"
+        "2026-08-02",
+        "2026-08-17"
       ],
       "repoCount": 8
     },
@@ -994,59 +995,19 @@
       "repoCount": 1
     },
     {
-      "login": "hmoog",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/3293976?v=4",
-      "htmlUrl": "https://github.com/hmoog",
-      "commits": 46,
-      "repos": [
-        {
-          "repo": "kaspanet/vprogs",
-          "commits": 45
-        },
-        {
-          "repo": "kaspanet/rusty-kaspa",
-          "commits": 1
-        }
-      ],
-      "firstCommitAt": "2026-01-21T13:41:27Z",
-      "firstCommitRepo": "kaspanet/vprogs",
-      "lastCommitAt": "2026-07-02T17:50:21Z",
-      "activeDates": [
-        "2026-01-21",
-        "2026-01-22",
-        "2026-01-23",
-        "2026-02-06",
-        "2026-02-17",
-        "2026-03-01",
-        "2026-04-15",
-        "2026-04-16",
-        "2026-05-12",
-        "2026-05-15",
-        "2026-05-18",
-        "2026-05-19",
-        "2026-05-20",
-        "2026-06-04",
-        "2026-06-16",
-        "2026-06-18",
-        "2026-07-01",
-        "2026-07-02"
-      ],
-      "repoCount": 2
-    },
-    {
       "login": "doktor83",
       "avatarUrl": "https://avatars.githubusercontent.com/u/6808360?v=4",
       "htmlUrl": "https://github.com/doktor83",
-      "commits": 46,
+      "commits": 47,
       "repos": [
         {
           "repo": "doktor83/SRBMiner-Multi",
-          "commits": 46
+          "commits": 47
         }
       ],
       "firstCommitAt": "2025-07-27T14:00:23Z",
       "firstCommitRepo": "doktor83/SRBMiner-Multi",
-      "lastCommitAt": "2026-08-15T11:18:55Z",
+      "lastCommitAt": "2026-08-17T09:34:35Z",
       "activeDates": [
         "2025-07-27",
         "2025-08-19",
@@ -1085,9 +1046,50 @@
         "2026-08-02",
         "2026-08-05",
         "2026-08-10",
-        "2026-08-15"
+        "2026-08-15",
+        "2026-08-17"
       ],
       "repoCount": 1
+    },
+    {
+      "login": "hmoog",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/3293976?v=4",
+      "htmlUrl": "https://github.com/hmoog",
+      "commits": 46,
+      "repos": [
+        {
+          "repo": "kaspanet/vprogs",
+          "commits": 45
+        },
+        {
+          "repo": "kaspanet/rusty-kaspa",
+          "commits": 1
+        }
+      ],
+      "firstCommitAt": "2026-01-21T13:41:27Z",
+      "firstCommitRepo": "kaspanet/vprogs",
+      "lastCommitAt": "2026-07-02T17:50:21Z",
+      "activeDates": [
+        "2026-01-21",
+        "2026-01-22",
+        "2026-01-23",
+        "2026-02-06",
+        "2026-02-17",
+        "2026-03-01",
+        "2026-04-15",
+        "2026-04-16",
+        "2026-05-12",
+        "2026-05-15",
+        "2026-05-18",
+        "2026-05-19",
+        "2026-05-20",
+        "2026-06-04",
+        "2026-06-16",
+        "2026-06-18",
+        "2026-07-01",
+        "2026-07-02"
+      ],
+      "repoCount": 2
     },
     {
       "login": "forbole-release-please-bot[bot]",
