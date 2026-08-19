@@ -1,23 +1,15 @@
 {
   "repo": "KASPACOM/kaspacom-web-wallet",
-  "generatedAt": "2026-08-18T03:57:30.507893+00:00",
+  "generatedAt": "2026-08-19T03:58:14.320515+00:00",
   "lookbackDays": 400,
   "series": [
     {
-      "date": "2025-07-14",
+      "date": "2025-07-15",
       "commits": 0,
       "prs": 0,
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
-    },
-    {
-      "date": "2025-07-15",
-      "commits": 1,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 1
     },
     {
       "date": "2025-07-16",
@@ -3085,7 +3077,7 @@
     },
     {
       "date": "2026-08-03",
-      "commits": 10,
+      "commits": 14,
       "prs": 0,
       "issues": 0,
       "releases": 0,
@@ -3093,7 +3085,7 @@
     },
     {
       "date": "2026-08-04",
-      "commits": 4,
+      "commits": 7,
       "prs": 2,
       "issues": 0,
       "releases": 0,
@@ -3109,11 +3101,11 @@
     },
     {
       "date": "2026-08-06",
-      "commits": 3,
+      "commits": 7,
       "prs": 1,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 1
+      "activeDevs": 2
     },
     {
       "date": "2026-08-07",
@@ -3197,14 +3189,22 @@
     },
     {
       "date": "2026-08-17",
-      "commits": 0,
+      "commits": 10,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-08-18",
+      "commits": 20,
+      "prs": 5,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 2
+    },
+    {
+      "date": "2026-08-19",
       "commits": 0,
       "prs": 0,
       "issues": 0,
@@ -3214,17 +3214,17 @@
   ],
   "primaryLanguage": "TypeScript",
   "languages": {
-    "TypeScript": 1844209,
+    "TypeScript": 1890628,
     "JavaScript": 527274,
-    "HTML": 448572,
-    "SCSS": 330474
+    "HTML": 453595,
+    "SCSS": 331584
   },
   "topics": [],
   "license": "MIT",
   "defaultBranch": "develop",
   "homepage": null,
   "createdAt": "2024-11-24T23:08:28Z",
-  "pushedAt": "2026-08-17T19:53:50Z",
+  "pushedAt": "2026-08-18T13:58:27Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3299,16 +3299,23 @@
       "forks": 1,
       "watchers": 2,
       "openIssues": 7
+    },
+    {
+      "date": "2026-08-19",
+      "stars": 10,
+      "forks": 1,
+      "watchers": 2,
+      "openIssues": 3
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 516,
+  "identifiedCommits": 526,
   "busFactor": 2,
   "topContributors": [
     {
       "login": "giladm11",
-      "commits": 249
+      "commits": 258
     },
     {
       "login": "ems-aleksandar",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-18T03:57:30.507893+00:00",
+  "generatedAt": "2026-08-19T03:58:14.320515+00:00",
   "generator": "kasgit ingest_github_activity.py",
   "sourceRepo": "weirdtualguy/kasgit",
   "license": "This manifest and the resources it lists are derived from the public GitHub API (commit/PR/issue/release metadata, star counts, public repo listings) and from this project's own hand-maintained registry CSV. Treat the GitHub-derived fields as a mirror of that public data, subject to GitHub's Terms of Service (https://docs.github.com/site-policy/github-terms/github-terms-of-service). This project's own code and registry curation are under the LICENSE file in the repo root.",

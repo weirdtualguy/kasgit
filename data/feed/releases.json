@@ -1,7 +1,15 @@
 {
-  "generatedAt": "2026-08-18T03:57:30.507893+00:00",
+  "generatedAt": "2026-08-19T03:58:14.320515+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.5.7",
+      "tag": "3.5.7",
+      "publishedAt": "2026-08-18T16:46:42Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.5.7",
+      "prerelease": false
+    },
     {
       "repo": "doktor83/SRBMiner-Multi",
       "name": "SRBMiner-MULTI v3.5.6",

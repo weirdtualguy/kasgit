@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T03:57:30.507893+00:00",
+  "generatedAt": "2026-08-19T03:58:14.320515+00:00",
   "lookbackDays": 400,
   "orgs": [
     "kaspanet"
@@ -7,20 +7,12 @@
   "repoCount": 92,
   "series": [
     {
-      "date": "2025-07-14",
-      "commits": 3,
-      "prs": 2,
-      "issues": 1,
-      "releases": 1,
-      "activeDevs": 3
-    },
-    {
       "date": "2025-07-15",
-      "commits": 1,
+      "commits": 0,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 1
+      "activeDevs": 0
     },
     {
       "date": "2025-07-16",
@@ -3088,7 +3080,7 @@
     },
     {
       "date": "2026-08-03",
-      "commits": 21,
+      "commits": 25,
       "prs": 11,
       "issues": 2,
       "releases": 0,
@@ -3096,7 +3088,7 @@
     },
     {
       "date": "2026-08-04",
-      "commits": 5,
+      "commits": 8,
       "prs": 2,
       "issues": 0,
       "releases": 0,
@@ -3112,11 +3104,11 @@
     },
     {
       "date": "2026-08-06",
-      "commits": 3,
+      "commits": 7,
       "prs": 1,
       "issues": 0,
       "releases": 2,
-      "activeDevs": 1
+      "activeDevs": 2
     },
     {
       "date": "2026-08-07",
@@ -3200,14 +3192,22 @@
     },
     {
       "date": "2026-08-17",
-      "commits": 2,
+      "commits": 12,
       "prs": 1,
       "issues": 0,
       "releases": 1,
-      "activeDevs": 2
+      "activeDevs": 3
     },
     {
       "date": "2026-08-18",
+      "commits": 22,
+      "prs": 6,
+      "issues": 1,
+      "releases": 1,
+      "activeDevs": 4
+    },
+    {
+      "date": "2026-08-19",
       "commits": 0,
       "prs": 0,
       "issues": 0,
@@ -3222,17 +3222,17 @@
     "releases": []
   },
   "languages": {
-    "Rust": 19737599,
-    "TypeScript": 9716446,
+    "Rust": 19750216,
+    "TypeScript": 9762865,
     "Go": 7291156,
-    "JavaScript": 5391163,
+    "JavaScript": 5391160,
     "C": 2501435,
     "Python": 2256337,
     "Dart": 2152675,
     "Jupyter Notebook": 1767442,
     "C++": 906268,
-    "HTML": 675685,
-    "SCSS": 369768,
+    "HTML": 680708,
+    "SCSS": 370878,
     "VHDL": 188774,
     "Assembly": 179160,
     "Shell": 145970,
