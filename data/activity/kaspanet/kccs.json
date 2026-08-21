@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/kccs",
-  "generatedAt": "2026-08-20T03:58:15.772058+00:00",
+  "generatedAt": "2026-08-21T04:00:12.305598+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-07-16",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-07-17",
       "commits": 0,
@@ -3205,9 +3197,17 @@
     },
     {
       "date": "2026-08-20",
+      "commits": 4,
+      "prs": 4,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 3
+    },
+    {
+      "date": "2026-08-21",
       "commits": 0,
       "prs": 0,
-      "issues": 0,
+      "issues": 1,
       "releases": 0,
       "activeDevs": 0
     }
@@ -3219,7 +3219,7 @@
   "defaultBranch": "main",
   "homepage": null,
   "createdAt": "2026-07-15T12:21:31Z",
-  "pushedAt": "2026-07-15T12:32:27Z",
+  "pushedAt": "2026-08-20T23:18:28Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3308,19 +3308,30 @@
       "forks": 4,
       "watchers": 1,
       "openIssues": 6
+    },
+    {
+      "date": "2026-08-21",
+      "stars": 8,
+      "forks": 5,
+      "watchers": 1,
+      "openIssues": 4
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 3,
-  "busFactor": 1,
+  "identifiedCommits": 7,
+  "busFactor": 2,
   "topContributors": [
     {
       "login": "michaelsutton",
-      "commits": 2
+      "commits": 3
     },
     {
       "login": "IzioDev",
+      "commits": 3
+    },
+    {
+      "login": "Manyfestation",
       "commits": 1
     }
   ]
