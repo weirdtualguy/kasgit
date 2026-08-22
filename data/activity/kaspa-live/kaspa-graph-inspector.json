@@ -1,16 +1,8 @@
 {
   "repo": "kaspa-live/kaspa-graph-inspector",
-  "generatedAt": "2026-08-21T04:00:12.305598+00:00",
+  "generatedAt": "2026-08-22T03:55:48.405997+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-07-17",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-07-18",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-08-22",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "TypeScript",
@@ -3322,6 +3322,13 @@
     },
     {
       "date": "2026-08-21",
+      "stars": 12,
+      "forks": 21,
+      "watchers": 4,
+      "openIssues": 10
+    },
+    {
+      "date": "2026-08-22",
       "stars": 12,
       "forks": 21,
       "watchers": 4,

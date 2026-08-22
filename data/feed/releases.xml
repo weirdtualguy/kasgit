@@ -4,7 +4,14 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Fri, 21 Aug 2026 04:00:12 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2026 03:55:48 +0000</lastBuildDate>
+    <item>
+      <title>azbuky/kaspium_wallet — Kaspium v1.3.0</title>
+      <link>https://github.com/azbuky/kaspium_wallet/releases/tag/v1.3.0</link>
+      <guid isPermaLink="true">https://github.com/azbuky/kaspium_wallet/releases/tag/v1.3.0</guid>
+      <pubDate>Fri, 21 Aug 2026 10:24:16 +0000</pubDate>
+      <description>v1.3.0</description>
+    </item>
     <item>
       <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.5.8</title>
       <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.5.8</link>

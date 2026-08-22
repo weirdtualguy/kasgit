@@ -1,7 +1,15 @@
 {
-  "generatedAt": "2026-08-21T04:00:12.305598+00:00",
+  "generatedAt": "2026-08-22T03:55:48.405997+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "azbuky/kaspium_wallet",
+      "name": "Kaspium v1.3.0",
+      "tag": "v1.3.0",
+      "publishedAt": "2026-08-21T10:24:16Z",
+      "url": "https://github.com/azbuky/kaspium_wallet/releases/tag/v1.3.0",
+      "prerelease": false
+    },
     {
       "repo": "doktor83/SRBMiner-Multi",
       "name": "SRBMiner-MULTI v3.5.8",

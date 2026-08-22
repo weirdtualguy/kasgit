@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/rusty-kaspa",
-  "generatedAt": "2026-08-21T04:00:12.305598+00:00",
+  "generatedAt": "2026-08-22T03:55:48.405997+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-07-17",
-      "commits": 0,
-      "prs": 0,
-      "issues": 1,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-07-18",
       "commits": 0,
@@ -3205,6 +3197,14 @@
     },
     {
       "date": "2026-08-21",
+      "commits": 1,
+      "prs": 1,
+      "issues": 1,
+      "releases": 0,
+      "activeDevs": 1
+    },
+    {
+      "date": "2026-08-22",
       "commits": 0,
       "prs": 0,
       "issues": 0,
@@ -3214,7 +3214,7 @@
   ],
   "primaryLanguage": "Rust",
   "languages": {
-    "Rust": 8498615,
+    "Rust": 8489638,
     "JavaScript": 188322,
     "Jupyter Notebook": 142013,
     "Assembly": 49527,
@@ -3235,7 +3235,7 @@
   "defaultBranch": "master",
   "homepage": null,
   "createdAt": "2022-07-17T23:32:26Z",
-  "pushedAt": "2026-08-20T21:03:38Z",
+  "pushedAt": "2026-08-21T15:19:55Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3331,11 +3331,18 @@
       "forks": 294,
       "watchers": 73,
       "openIssues": 196
+    },
+    {
+      "date": "2026-08-22",
+      "stars": 841,
+      "forks": 294,
+      "watchers": 73,
+      "openIssues": 196
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 231,
+  "identifiedCommits": 232,
   "busFactor": 3,
   "topContributors": [
     {
@@ -3352,7 +3359,7 @@
     },
     {
       "login": "biryukovmaxim",
-      "commits": 28
+      "commits": 29
     },
     {
       "login": "LiveLaughLove13",
