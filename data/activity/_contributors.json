@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22T03:55:48.405997+00:00",
+  "generatedAt": "2026-08-23T04:00:17.169956+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -641,18 +641,17 @@
       "login": "dadamu",
       "avatarUrl": "https://avatars.githubusercontent.com/u/26020018?v=4",
       "htmlUrl": "https://github.com/dadamu",
-      "commits": 88,
+      "commits": 86,
       "repos": [
         {
           "repo": "forbole/kastle",
-          "commits": 88
+          "commits": 86
         }
       ],
-      "firstCommitAt": "2025-07-18T09:14:31Z",
+      "firstCommitAt": "2025-07-21T04:29:59Z",
       "firstCommitRepo": "forbole/kastle",
       "lastCommitAt": "2026-07-10T09:56:24Z",
       "activeDates": [
-        "2025-07-18",
         "2025-07-21",
         "2025-07-23",
         "2025-07-29",

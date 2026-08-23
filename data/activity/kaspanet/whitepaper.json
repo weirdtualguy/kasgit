@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/whitepaper",
-  "generatedAt": "2026-08-22T03:55:48.405997+00:00",
+  "generatedAt": "2026-08-23T04:00:17.169956+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-07-18",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-07-19",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-08-23",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": null,
@@ -3318,6 +3318,13 @@
     },
     {
       "date": "2026-08-22",
+      "stars": 11,
+      "forks": 4,
+      "watchers": 6,
+      "openIssues": 0
+    },
+    {
+      "date": "2026-08-23",
       "stars": 11,
       "forks": 4,
       "watchers": 6,
