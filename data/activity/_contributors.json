@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T04:00:17.169956+00:00",
+  "generatedAt": "2026-08-24T04:05:08.117339+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -7,11 +7,11 @@
       "login": "giladm11",
       "avatarUrl": "https://avatars.githubusercontent.com/u/13984392?v=4",
       "htmlUrl": "https://github.com/giladm11",
-      "commits": 360,
+      "commits": 397,
       "repos": [
         {
           "repo": "KASPACOM/kaspacom-web-wallet",
-          "commits": 268
+          "commits": 305
         },
         {
           "repo": "kaspacom/swap-widget",
@@ -20,7 +20,7 @@
       ],
       "firstCommitAt": "2025-07-20T18:15:40Z",
       "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
-      "lastCommitAt": "2026-08-19T12:52:19Z",
+      "lastCommitAt": "2026-08-23T21:54:46Z",
       "activeDates": [
         "2025-07-20",
         "2025-09-01",
@@ -67,6 +67,7 @@
         "2026-01-24",
         "2026-01-30",
         "2026-02-09",
+        "2026-02-10",
         "2026-02-26",
         "2026-03-06",
         "2026-03-27",
@@ -114,7 +115,8 @@
         "2026-08-10",
         "2026-08-11",
         "2026-08-18",
-        "2026-08-19"
+        "2026-08-19",
+        "2026-08-23"
       ],
       "repoCount": 2
     },
@@ -122,15 +124,15 @@
       "login": "supertypo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/6649964?v=4",
       "htmlUrl": "https://github.com/supertypo",
-      "commits": 245,
+      "commits": 237,
       "repos": [
         {
           "repo": "supertypo/simply-kaspa-indexer",
-          "commits": 142
+          "commits": 140
         },
         {
           "repo": "kaspa-ng/kaspa-rest-server",
-          "commits": 100
+          "commits": 94
         },
         {
           "repo": "kaspanet/cpuminer",
@@ -141,11 +143,10 @@
           "commits": 1
         }
       ],
-      "firstCommitAt": "2025-07-19T10:21:37Z",
+      "firstCommitAt": "2025-07-20T10:18:37Z",
       "firstCommitRepo": "supertypo/simply-kaspa-indexer",
       "lastCommitAt": "2026-07-07T19:57:03Z",
       "activeDates": [
-        "2025-07-19",
         "2025-07-20",
         "2025-07-22",
         "2025-08-11",
@@ -413,15 +414,15 @@
       "login": "michaelsutton",
       "avatarUrl": "https://avatars.githubusercontent.com/u/6299204?v=4",
       "htmlUrl": "https://github.com/michaelsutton",
-      "commits": 159,
+      "commits": 162,
       "repos": [
         {
           "repo": "michaelsutton/argent",
-          "commits": 74
+          "commits": 76
         },
         {
           "repo": "kaspanet/rusty-kaspa",
-          "commits": 48
+          "commits": 49
         },
         {
           "repo": "kaspanet/silverscript",
@@ -450,7 +451,7 @@
       ],
       "firstCommitAt": "2025-09-11T13:11:53Z",
       "firstCommitRepo": "kaspanet/research",
-      "lastCommitAt": "2026-08-20T23:18:28Z",
+      "lastCommitAt": "2026-08-24T02:24:54Z",
       "activeDates": [
         "2025-09-11",
         "2025-10-29",
@@ -523,7 +524,9 @@
         "2026-07-31",
         "2026-08-02",
         "2026-08-17",
-        "2026-08-20"
+        "2026-08-20",
+        "2026-08-23",
+        "2026-08-24"
       ],
       "repoCount": 8
     },
@@ -799,7 +802,7 @@
       "login": "IzioDev",
       "avatarUrl": "https://avatars.githubusercontent.com/u/9900846?v=4",
       "htmlUrl": "https://github.com/IzioDev",
-      "commits": 65,
+      "commits": 68,
       "repos": [
         {
           "repo": "kaspanet/rusty-kaspa",
@@ -811,7 +814,7 @@
         },
         {
           "repo": "kaspanet/silverscript",
-          "commits": 5
+          "commits": 8
         },
         {
           "repo": "kaspanet/kccs",
@@ -840,7 +843,7 @@
       ],
       "firstCommitAt": "2025-08-06T22:06:32Z",
       "firstCommitRepo": "thesheepcat/K-indexer",
-      "lastCommitAt": "2026-08-20T20:31:48Z",
+      "lastCommitAt": "2026-08-23T12:56:23Z",
       "activeDates": [
         "2025-08-06",
         "2025-08-08",
@@ -878,7 +881,8 @@
         "2026-07-07",
         "2026-07-09",
         "2026-07-15",
-        "2026-08-20"
+        "2026-08-20",
+        "2026-08-23"
       ],
       "repoCount": 9
     },
@@ -955,11 +959,11 @@
       "login": "VeselinovicAleksandar",
       "avatarUrl": "https://avatars.githubusercontent.com/u/17344601?v=4",
       "htmlUrl": "https://github.com/VeselinovicAleksandar",
-      "commits": 54,
+      "commits": 59,
       "repos": [
         {
           "repo": "KASPACOM/kaspacom-web-wallet",
-          "commits": 54
+          "commits": 59
         }
       ],
       "firstCommitAt": "2025-12-08T16:38:23Z",
@@ -967,6 +971,7 @@
       "lastCommitAt": "2026-08-04T08:32:15Z",
       "activeDates": [
         "2025-12-08",
+        "2025-12-15",
         "2025-12-24",
         "2025-12-25",
         "2026-01-01",
@@ -983,11 +988,13 @@
         "2026-05-08",
         "2026-05-12",
         "2026-05-13",
+        "2026-05-14",
         "2026-05-15",
         "2026-05-18",
         "2026-05-26",
         "2026-05-28",
         "2026-06-03",
+        "2026-06-04",
         "2026-06-11",
         "2026-06-18",
         "2026-06-19",
@@ -1100,6 +1107,41 @@
       "repoCount": 2
     },
     {
+      "login": "marciano147",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/89093969?v=4",
+      "htmlUrl": "https://github.com/marciano147",
+      "commits": 44,
+      "repos": [
+        {
+          "repo": "KASPACOM/kaspacom-web-wallet",
+          "commits": 44
+        }
+      ],
+      "firstCommitAt": "2025-12-08T13:35:54Z",
+      "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
+      "lastCommitAt": "2026-08-23T14:53:59Z",
+      "activeDates": [
+        "2025-12-08",
+        "2025-12-12",
+        "2025-12-31",
+        "2026-01-05",
+        "2026-02-04",
+        "2026-03-07",
+        "2026-03-09",
+        "2026-03-10",
+        "2026-03-30",
+        "2026-04-20",
+        "2026-05-20",
+        "2026-06-26",
+        "2026-07-07",
+        "2026-07-21",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-08-23"
+      ],
+      "repoCount": 1
+    },
+    {
       "login": "forbole-release-please-bot[bot]",
       "avatarUrl": "https://avatars.githubusercontent.com/u/32561566?v=4",
       "htmlUrl": "https://github.com/apps/forbole-release-please-bot",
@@ -1181,6 +1223,31 @@
       "repoCount": 1
     },
     {
+      "login": "DorZion51",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/37267616?v=4",
+      "htmlUrl": "https://github.com/DorZion51",
+      "commits": 38,
+      "repos": [
+        {
+          "repo": "KASPACOM/kaspacom-web-wallet",
+          "commits": 38
+        }
+      ],
+      "firstCommitAt": "2025-08-30T20:32:39Z",
+      "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
+      "lastCommitAt": "2026-02-10T19:04:45Z",
+      "activeDates": [
+        "2025-08-30",
+        "2025-11-10",
+        "2025-11-25",
+        "2025-11-26",
+        "2025-12-23",
+        "2026-01-24",
+        "2026-02-10"
+      ],
+      "repoCount": 1
+    },
+    {
       "login": "5bb55b",
       "avatarUrl": "https://avatars.githubusercontent.com/u/179454876?v=4",
       "htmlUrl": "https://github.com/5bb55b",
@@ -1257,63 +1324,6 @@
         "2026-05-11"
       ],
       "repoCount": 2
-    },
-    {
-      "login": "DorZion51",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/37267616?v=4",
-      "htmlUrl": "https://github.com/DorZion51",
-      "commits": 35,
-      "repos": [
-        {
-          "repo": "KASPACOM/kaspacom-web-wallet",
-          "commits": 35
-        }
-      ],
-      "firstCommitAt": "2025-08-30T20:32:39Z",
-      "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
-      "lastCommitAt": "2026-02-10T19:04:45Z",
-      "activeDates": [
-        "2025-08-30",
-        "2025-11-10",
-        "2025-11-25",
-        "2025-11-26",
-        "2025-12-23",
-        "2026-01-24",
-        "2026-02-10"
-      ],
-      "repoCount": 1
-    },
-    {
-      "login": "marciano147",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/89093969?v=4",
-      "htmlUrl": "https://github.com/marciano147",
-      "commits": 31,
-      "repos": [
-        {
-          "repo": "KASPACOM/kaspacom-web-wallet",
-          "commits": 31
-        }
-      ],
-      "firstCommitAt": "2025-12-08T13:35:54Z",
-      "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
-      "lastCommitAt": "2026-07-24T07:52:09Z",
-      "activeDates": [
-        "2025-12-08",
-        "2025-12-12",
-        "2026-01-05",
-        "2026-03-07",
-        "2026-03-09",
-        "2026-03-10",
-        "2026-03-30",
-        "2026-04-20",
-        "2026-05-20",
-        "2026-06-26",
-        "2026-07-07",
-        "2026-07-21",
-        "2026-07-23",
-        "2026-07-24"
-      ],
-      "repoCount": 1
     },
     {
       "login": "JSmithOner",
@@ -1430,16 +1440,16 @@
       "login": "BenBeri",
       "avatarUrl": "https://avatars.githubusercontent.com/u/4749232?v=4",
       "htmlUrl": "https://github.com/BenBeri",
-      "commits": 17,
+      "commits": 19,
       "repos": [
         {
           "repo": "KASPACOM/kaspacom-web-wallet",
-          "commits": 17
+          "commits": 19
         }
       ],
       "firstCommitAt": "2025-08-20T11:14:53Z",
       "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
-      "lastCommitAt": "2025-11-25T22:59:54Z",
+      "lastCommitAt": "2025-12-09T11:33:40Z",
       "activeDates": [
         "2025-08-20",
         "2025-08-24",
@@ -1453,7 +1463,8 @@
         "2025-11-13",
         "2025-11-21",
         "2025-11-23",
-        "2025-11-25"
+        "2025-11-25",
+        "2025-12-09"
       ],
       "repoCount": 1
     },

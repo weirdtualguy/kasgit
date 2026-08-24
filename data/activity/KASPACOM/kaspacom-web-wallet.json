@@ -1,16 +1,8 @@
 {
   "repo": "KASPACOM/kaspacom-web-wallet",
-  "generatedAt": "2026-08-23T04:00:17.169956+00:00",
+  "generatedAt": "2026-08-24T04:05:08.117339+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-07-19",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-07-20",
       "commits": 2,
@@ -1149,11 +1141,11 @@
     },
     {
       "date": "2025-12-09",
-      "commits": 1,
+      "commits": 3,
       "prs": 2,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 1
+      "activeDevs": 2
     },
     {
       "date": "2025-12-10",
@@ -1197,11 +1189,11 @@
     },
     {
       "date": "2025-12-15",
-      "commits": 0,
+      "commits": 1,
       "prs": 1,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2025-12-16",
@@ -1269,7 +1261,7 @@
     },
     {
       "date": "2025-12-24",
-      "commits": 5,
+      "commits": 6,
       "prs": 4,
       "issues": 0,
       "releases": 0,
@@ -1277,7 +1269,7 @@
     },
     {
       "date": "2025-12-25",
-      "commits": 2,
+      "commits": 3,
       "prs": 2,
       "issues": 0,
       "releases": 0,
@@ -1325,11 +1317,11 @@
     },
     {
       "date": "2025-12-31",
-      "commits": 0,
+      "commits": 1,
       "prs": 1,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-01-01",
@@ -1365,7 +1357,7 @@
     },
     {
       "date": "2026-01-05",
-      "commits": 4,
+      "commits": 6,
       "prs": 4,
       "issues": 0,
       "releases": 0,
@@ -1421,7 +1413,7 @@
     },
     {
       "date": "2026-01-12",
-      "commits": 2,
+      "commits": 3,
       "prs": 2,
       "issues": 0,
       "releases": 0,
@@ -1437,7 +1429,7 @@
     },
     {
       "date": "2026-01-14",
-      "commits": 8,
+      "commits": 11,
       "prs": 7,
       "issues": 0,
       "releases": 0,
@@ -1477,7 +1469,7 @@
     },
     {
       "date": "2026-01-19",
-      "commits": 8,
+      "commits": 9,
       "prs": 4,
       "issues": 0,
       "releases": 0,
@@ -1517,7 +1509,7 @@
     },
     {
       "date": "2026-01-24",
-      "commits": 9,
+      "commits": 12,
       "prs": 4,
       "issues": 0,
       "releases": 0,
@@ -1605,11 +1597,11 @@
     },
     {
       "date": "2026-02-04",
-      "commits": 0,
+      "commits": 1,
       "prs": 1,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-02-05",
@@ -1653,11 +1645,11 @@
     },
     {
       "date": "2026-02-10",
-      "commits": 2,
+      "commits": 3,
       "prs": 2,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 1
+      "activeDevs": 2
     },
     {
       "date": "2026-02-11",
@@ -2397,11 +2389,11 @@
     },
     {
       "date": "2026-05-14",
-      "commits": 5,
+      "commits": 6,
       "prs": 1,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 1
+      "activeDevs": 2
     },
     {
       "date": "2026-05-15",
@@ -2565,11 +2557,11 @@
     },
     {
       "date": "2026-06-04",
-      "commits": 0,
+      "commits": 1,
       "prs": 1,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-06-05",
@@ -2733,7 +2725,7 @@
     },
     {
       "date": "2026-06-25",
-      "commits": 7,
+      "commits": 8,
       "prs": 3,
       "issues": 0,
       "releases": 0,
@@ -2741,7 +2733,7 @@
     },
     {
       "date": "2026-06-26",
-      "commits": 4,
+      "commits": 6,
       "prs": 4,
       "issues": 0,
       "releases": 0,
@@ -2757,7 +2749,7 @@
     },
     {
       "date": "2026-06-28",
-      "commits": 2,
+      "commits": 3,
       "prs": 2,
       "issues": 0,
       "releases": 0,
@@ -2765,7 +2757,7 @@
     },
     {
       "date": "2026-06-29",
-      "commits": 6,
+      "commits": 9,
       "prs": 6,
       "issues": 0,
       "releases": 0,
@@ -2773,7 +2765,7 @@
     },
     {
       "date": "2026-06-30",
-      "commits": 4,
+      "commits": 5,
       "prs": 2,
       "issues": 0,
       "releases": 0,
@@ -3205,6 +3197,14 @@
     },
     {
       "date": "2026-08-23",
+      "commits": 50,
+      "prs": 23,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 3
+    },
+    {
+      "date": "2026-08-24",
       "commits": 0,
       "prs": 0,
       "issues": 0,
@@ -3214,17 +3214,17 @@
   ],
   "primaryLanguage": "TypeScript",
   "languages": {
-    "TypeScript": 1906378,
-    "JavaScript": 527274,
-    "HTML": 454562,
-    "SCSS": 333250
+    "TypeScript": 1943804,
+    "JavaScript": 530632,
+    "HTML": 466750,
+    "SCSS": 344649
   },
   "topics": [],
   "license": "MIT",
   "defaultBranch": "develop",
   "homepage": null,
   "createdAt": "2024-11-24T23:08:28Z",
-  "pushedAt": "2026-08-19T12:52:21Z",
+  "pushedAt": "2026-08-23T21:55:12Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3334,16 +3334,23 @@
       "forks": 1,
       "watchers": 2,
       "openIssues": 2
+    },
+    {
+      "date": "2026-08-24",
+      "stars": 10,
+      "forks": 1,
+      "watchers": 2,
+      "openIssues": 1
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 536,
+  "identifiedCommits": 596,
   "busFactor": 1,
   "topContributors": [
     {
       "login": "giladm11",
-      "commits": 268
+      "commits": 305
     },
     {
       "login": "ems-aleksandar",
@@ -3351,15 +3358,15 @@
     },
     {
       "login": "VeselinovicAleksandar",
-      "commits": 54
-    },
-    {
-      "login": "DorZion51",
-      "commits": 35
+      "commits": 59
     },
     {
       "login": "marciano147",
-      "commits": 31
+      "commits": 44
+    },
+    {
+      "login": "DorZion51",
+      "commits": 38
     }
   ]
 }

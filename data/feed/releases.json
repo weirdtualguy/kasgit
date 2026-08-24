@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T04:00:17.169956+00:00",
+  "generatedAt": "2026-08-24T04:05:08.117339+00:00",
   "lookbackDays": 180,
   "releases": [
     {
@@ -952,14 +952,6 @@
       "tag": "v2.43.2",
       "publishedAt": "2026-02-26T08:37:58Z",
       "url": "https://github.com/forbole/kastle/releases/tag/v2.43.2",
-      "prerelease": false
-    },
-    {
-      "repo": "doktor83/SRBMiner-Multi",
-      "name": "SRBMiner-MULTI v3.1.7",
-      "tag": "3.1.7",
-      "publishedAt": "2026-02-24T21:09:01Z",
-      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.1.7",
       "prerelease": false
     }
   ]

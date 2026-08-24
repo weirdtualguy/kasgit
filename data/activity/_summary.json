@@ -1,19 +1,11 @@
 {
-  "generatedAt": "2026-08-23T04:00:17.169956+00:00",
+  "generatedAt": "2026-08-24T04:05:08.117339+00:00",
   "lookbackDays": 400,
   "orgs": [
     "kaspanet"
   ],
   "repoCount": 92,
   "series": [
-    {
-      "date": "2025-07-19",
-      "commits": 8,
-      "prs": 4,
-      "issues": 0,
-      "releases": 1,
-      "activeDevs": 1
-    },
     {
       "date": "2025-07-20",
       "commits": 3,
@@ -1152,11 +1144,11 @@
     },
     {
       "date": "2025-12-09",
-      "commits": 3,
+      "commits": 5,
       "prs": 4,
       "issues": 1,
       "releases": 0,
-      "activeDevs": 3
+      "activeDevs": 4
     },
     {
       "date": "2025-12-10",
@@ -1200,11 +1192,11 @@
     },
     {
       "date": "2025-12-15",
-      "commits": 1,
+      "commits": 2,
       "prs": 1,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 1
+      "activeDevs": 2
     },
     {
       "date": "2025-12-16",
@@ -1272,7 +1264,7 @@
     },
     {
       "date": "2025-12-24",
-      "commits": 39,
+      "commits": 40,
       "prs": 12,
       "issues": 1,
       "releases": 2,
@@ -1280,7 +1272,7 @@
     },
     {
       "date": "2025-12-25",
-      "commits": 38,
+      "commits": 39,
       "prs": 3,
       "issues": 0,
       "releases": 0,
@@ -1328,11 +1320,11 @@
     },
     {
       "date": "2025-12-31",
-      "commits": 36,
+      "commits": 37,
       "prs": 3,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 3
+      "activeDevs": 4
     },
     {
       "date": "2026-01-01",
@@ -1368,7 +1360,7 @@
     },
     {
       "date": "2026-01-05",
-      "commits": 21,
+      "commits": 23,
       "prs": 5,
       "issues": 1,
       "releases": 0,
@@ -1424,7 +1416,7 @@
     },
     {
       "date": "2026-01-12",
-      "commits": 18,
+      "commits": 19,
       "prs": 3,
       "issues": 1,
       "releases": 0,
@@ -1440,7 +1432,7 @@
     },
     {
       "date": "2026-01-14",
-      "commits": 52,
+      "commits": 55,
       "prs": 11,
       "issues": 0,
       "releases": 0,
@@ -1480,7 +1472,7 @@
     },
     {
       "date": "2026-01-19",
-      "commits": 18,
+      "commits": 19,
       "prs": 6,
       "issues": 0,
       "releases": 1,
@@ -1520,7 +1512,7 @@
     },
     {
       "date": "2026-01-24",
-      "commits": 18,
+      "commits": 21,
       "prs": 4,
       "issues": 0,
       "releases": 0,
@@ -1608,11 +1600,11 @@
     },
     {
       "date": "2026-02-04",
-      "commits": 2,
+      "commits": 3,
       "prs": 2,
       "issues": 2,
       "releases": 0,
-      "activeDevs": 2
+      "activeDevs": 3
     },
     {
       "date": "2026-02-05",
@@ -1656,11 +1648,11 @@
     },
     {
       "date": "2026-02-10",
-      "commits": 37,
+      "commits": 38,
       "prs": 7,
       "issues": 0,
       "releases": 2,
-      "activeDevs": 11
+      "activeDevs": 12
     },
     {
       "date": "2026-02-11",
@@ -2400,11 +2392,11 @@
     },
     {
       "date": "2026-05-14",
-      "commits": 10,
+      "commits": 11,
       "prs": 6,
       "issues": 1,
       "releases": 0,
-      "activeDevs": 3
+      "activeDevs": 4
     },
     {
       "date": "2026-05-15",
@@ -2568,11 +2560,11 @@
     },
     {
       "date": "2026-06-04",
-      "commits": 14,
+      "commits": 15,
       "prs": 15,
       "issues": 1,
       "releases": 0,
-      "activeDevs": 5
+      "activeDevs": 6
     },
     {
       "date": "2026-06-05",
@@ -2736,7 +2728,7 @@
     },
     {
       "date": "2026-06-25",
-      "commits": 12,
+      "commits": 13,
       "prs": 4,
       "issues": 0,
       "releases": 1,
@@ -2744,7 +2736,7 @@
     },
     {
       "date": "2026-06-26",
-      "commits": 15,
+      "commits": 17,
       "prs": 9,
       "issues": 0,
       "releases": 1,
@@ -2760,7 +2752,7 @@
     },
     {
       "date": "2026-06-28",
-      "commits": 13,
+      "commits": 14,
       "prs": 3,
       "issues": 0,
       "releases": 0,
@@ -2768,7 +2760,7 @@
     },
     {
       "date": "2026-06-29",
-      "commits": 10,
+      "commits": 13,
       "prs": 6,
       "issues": 1,
       "releases": 1,
@@ -2776,7 +2768,7 @@
     },
     {
       "date": "2026-06-30",
-      "commits": 8,
+      "commits": 9,
       "prs": 4,
       "issues": 2,
       "releases": 2,
@@ -3208,11 +3200,19 @@
     },
     {
       "date": "2026-08-23",
-      "commits": 0,
-      "prs": 0,
+      "commits": 55,
+      "prs": 28,
+      "issues": 3,
+      "releases": 0,
+      "activeDevs": 5
+    },
+    {
+      "date": "2026-08-24",
+      "commits": 1,
+      "prs": 1,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     }
   ],
   "partialDataRepos": {
@@ -3222,17 +3222,17 @@
     "releases": []
   },
   "languages": {
-    "Rust": 19707287,
-    "TypeScript": 9778615,
+    "Rust": 19717419,
+    "TypeScript": 9816041,
     "Go": 7291156,
-    "JavaScript": 5391267,
+    "JavaScript": 5395062,
     "C": 2501435,
     "Python": 2256337,
     "Dart": 2152675,
     "Jupyter Notebook": 1767442,
     "C++": 906268,
-    "HTML": 681675,
-    "SCSS": 372544,
+    "HTML": 693863,
+    "SCSS": 383943,
     "VHDL": 188774,
     "Assembly": 179160,
     "Shell": 145970,
@@ -3251,7 +3251,7 @@
     "Cuda": 12915,
     "Groovy": 11492,
     "Less": 10781,
-    "Tree-sitter Query": 10621,
+    "Tree-sitter Query": 10649,
     "PowerShell": 8011,
     "CMake": 7101,
     "PLpgSQL": 4417,
