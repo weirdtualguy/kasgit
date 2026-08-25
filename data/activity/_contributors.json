@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T04:05:08.117339+00:00",
+  "generatedAt": "2026-08-25T03:59:02.284333+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -7,22 +7,21 @@
       "login": "giladm11",
       "avatarUrl": "https://avatars.githubusercontent.com/u/13984392?v=4",
       "htmlUrl": "https://github.com/giladm11",
-      "commits": 397,
+      "commits": 396,
       "repos": [
         {
           "repo": "KASPACOM/kaspacom-web-wallet",
-          "commits": 305
+          "commits": 304
         },
         {
           "repo": "kaspacom/swap-widget",
           "commits": 92
         }
       ],
-      "firstCommitAt": "2025-07-20T18:15:40Z",
-      "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
+      "firstCommitAt": "2025-09-01T16:07:26Z",
+      "firstCommitRepo": "kaspacom/swap-widget",
       "lastCommitAt": "2026-08-23T21:54:46Z",
       "activeDates": [
-        "2025-07-20",
         "2025-09-01",
         "2025-09-02",
         "2025-09-03",
@@ -124,11 +123,11 @@
       "login": "supertypo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/6649964?v=4",
       "htmlUrl": "https://github.com/supertypo",
-      "commits": 237,
+      "commits": 236,
       "repos": [
         {
           "repo": "supertypo/simply-kaspa-indexer",
-          "commits": 140
+          "commits": 139
         },
         {
           "repo": "kaspa-ng/kaspa-rest-server",
@@ -143,11 +142,10 @@
           "commits": 1
         }
       ],
-      "firstCommitAt": "2025-07-20T10:18:37Z",
-      "firstCommitRepo": "supertypo/simply-kaspa-indexer",
+      "firstCommitAt": "2025-07-22T00:24:34Z",
+      "firstCommitRepo": "kaspanet/rusty-kaspa",
       "lastCommitAt": "2026-07-07T19:57:03Z",
       "activeDates": [
-        "2025-07-20",
         "2025-07-22",
         "2025-08-11",
         "2025-08-18",
@@ -802,7 +800,7 @@
       "login": "IzioDev",
       "avatarUrl": "https://avatars.githubusercontent.com/u/9900846?v=4",
       "htmlUrl": "https://github.com/IzioDev",
-      "commits": 68,
+      "commits": 69,
       "repos": [
         {
           "repo": "kaspanet/rusty-kaspa",
@@ -814,7 +812,7 @@
         },
         {
           "repo": "kaspanet/silverscript",
-          "commits": 8
+          "commits": 9
         },
         {
           "repo": "kaspanet/kccs",
@@ -843,7 +841,7 @@
       ],
       "firstCommitAt": "2025-08-06T22:06:32Z",
       "firstCommitRepo": "thesheepcat/K-indexer",
-      "lastCommitAt": "2026-08-23T12:56:23Z",
+      "lastCommitAt": "2026-08-24T07:39:44Z",
       "activeDates": [
         "2025-08-06",
         "2025-08-08",
@@ -882,7 +880,8 @@
         "2026-07-09",
         "2026-07-15",
         "2026-08-20",
-        "2026-08-23"
+        "2026-08-23",
+        "2026-08-24"
       ],
       "repoCount": 9
     },
@@ -1635,6 +1634,40 @@
       "repoCount": 1
     },
     {
+      "login": "elldeeone",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/73735118?v=4",
+      "htmlUrl": "https://github.com/elldeeone",
+      "commits": 11,
+      "repos": [
+        {
+          "repo": "kaspanet/docs",
+          "commits": 6
+        },
+        {
+          "repo": "kaspanet/kaspa-python-sdk",
+          "commits": 3
+        },
+        {
+          "repo": "kaspanet/silverscript",
+          "commits": 2
+        }
+      ],
+      "firstCommitAt": "2026-01-27T00:39:50Z",
+      "firstCommitRepo": "kaspanet/kaspa-python-sdk",
+      "lastCommitAt": "2026-08-07T08:53:38Z",
+      "activeDates": [
+        "2026-01-27",
+        "2026-02-04",
+        "2026-02-28",
+        "2026-04-07",
+        "2026-04-08",
+        "2026-04-20",
+        "2026-06-27",
+        "2026-08-07"
+      ],
+      "repoCount": 3
+    },
+    {
       "login": "saefstroem",
       "avatarUrl": "https://avatars.githubusercontent.com/u/139136798?v=4",
       "htmlUrl": "https://github.com/saefstroem",
@@ -1667,40 +1700,6 @@
         "2026-05-11",
         "2026-05-13",
         "2026-06-23"
-      ],
-      "repoCount": 3
-    },
-    {
-      "login": "elldeeone",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/73735118?v=4",
-      "htmlUrl": "https://github.com/elldeeone",
-      "commits": 11,
-      "repos": [
-        {
-          "repo": "kaspanet/docs",
-          "commits": 6
-        },
-        {
-          "repo": "kaspanet/kaspa-python-sdk",
-          "commits": 3
-        },
-        {
-          "repo": "kaspanet/silverscript",
-          "commits": 2
-        }
-      ],
-      "firstCommitAt": "2026-01-27T00:39:50Z",
-      "firstCommitRepo": "kaspanet/kaspa-python-sdk",
-      "lastCommitAt": "2026-08-07T08:53:38Z",
-      "activeDates": [
-        "2026-01-27",
-        "2026-02-04",
-        "2026-02-28",
-        "2026-04-07",
-        "2026-04-08",
-        "2026-04-20",
-        "2026-06-27",
-        "2026-08-07"
       ],
       "repoCount": 3
     },
@@ -1857,6 +1856,29 @@
       "repoCount": 1
     },
     {
+      "login": "leobragaz",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/26248202?v=4",
+      "htmlUrl": "https://github.com/leobragaz",
+      "commits": 6,
+      "repos": [
+        {
+          "repo": "forbole/kastle",
+          "commits": 6
+        }
+      ],
+      "firstCommitAt": "2025-09-26T11:15:18Z",
+      "firstCommitRepo": "forbole/kastle",
+      "lastCommitAt": "2026-08-24T11:44:02Z",
+      "activeDates": [
+        "2025-09-26",
+        "2025-10-23",
+        "2026-07-29",
+        "2026-08-13",
+        "2026-08-24"
+      ],
+      "repoCount": 1
+    },
+    {
       "login": "scojen",
       "avatarUrl": "https://avatars.githubusercontent.com/u/186877745?v=4",
       "htmlUrl": "https://github.com/scojen",
@@ -1896,28 +1918,6 @@
         "2025-10-29",
         "2026-02-08",
         "2026-03-03"
-      ],
-      "repoCount": 1
-    },
-    {
-      "login": "leobragaz",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/26248202?v=4",
-      "htmlUrl": "https://github.com/leobragaz",
-      "commits": 4,
-      "repos": [
-        {
-          "repo": "forbole/kastle",
-          "commits": 4
-        }
-      ],
-      "firstCommitAt": "2025-09-26T11:15:18Z",
-      "firstCommitRepo": "forbole/kastle",
-      "lastCommitAt": "2026-08-13T16:41:32Z",
-      "activeDates": [
-        "2025-09-26",
-        "2025-10-23",
-        "2026-07-29",
-        "2026-08-13"
       ],
       "repoCount": 1
     },

@@ -1,16 +1,8 @@
 {
   "repo": "brucelei/kaspa-wasm-sign",
-  "generatedAt": "2026-08-24T04:05:08.117339+00:00",
+  "generatedAt": "2026-08-25T03:59:02.284333+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-07-20",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-07-21",
       "commits": 0,
@@ -3205,6 +3197,14 @@
     },
     {
       "date": "2026-08-24",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
+    },
+    {
+      "date": "2026-08-25",
       "commits": 0,
       "prs": 0,
       "issues": 0,
