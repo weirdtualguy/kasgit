@@ -1,7 +1,31 @@
 {
-  "generatedAt": "2026-08-25T03:59:02.284333+00:00",
+  "generatedAt": "2026-08-26T04:02:40.248120+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.59.4",
+      "tag": "v2.59.4",
+      "publishedAt": "2026-08-25T19:13:58Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.59.4",
+      "prerelease": false
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.59.3",
+      "tag": "v2.59.3",
+      "publishedAt": "2026-08-25T14:29:15Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.59.3",
+      "prerelease": false
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.59.2",
+      "tag": "v2.59.2",
+      "publishedAt": "2026-08-25T12:36:54Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.59.2",
+      "prerelease": false
+    },
     {
       "repo": "doktor83/SRBMiner-Multi",
       "name": "SRBMiner-MULTI v3.5.9",
@@ -936,22 +960,6 @@
       "tag": "v2.0.0",
       "publishedAt": "2026-03-01T09:25:05Z",
       "url": "https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.0.0",
-      "prerelease": false
-    },
-    {
-      "repo": "doktor83/SRBMiner-Multi",
-      "name": "SRBMiner-MULTI v3.1.8",
-      "tag": "3.1.8",
-      "publishedAt": "2026-02-26T20:25:32Z",
-      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.1.8",
-      "prerelease": false
-    },
-    {
-      "repo": "forbole/kastle",
-      "name": "v2.43.2",
-      "tag": "v2.43.2",
-      "publishedAt": "2026-02-26T08:37:58Z",
-      "url": "https://github.com/forbole/kastle/releases/tag/v2.43.2",
       "prerelease": false
     }
   ]

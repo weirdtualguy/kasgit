@@ -1,16 +1,8 @@
 {
   "repo": "develsoftware/GMinerRelease",
-  "generatedAt": "2026-08-25T03:59:02.284333+00:00",
+  "generatedAt": "2026-08-26T04:02:40.248120+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-07-21",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-07-22",
       "commits": 0,
@@ -3205,6 +3197,14 @@
     },
     {
       "date": "2026-08-25",
+      "commits": 1,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 1
+    },
+    {
+      "date": "2026-08-26",
       "commits": 0,
       "prs": 0,
       "issues": 0,
@@ -3226,7 +3226,7 @@
   "defaultBranch": "master",
   "homepage": "https://bitcointalk.org/index.php?topic=5034735.0",
   "createdAt": "2019-02-14T19:44:54Z",
-  "pushedAt": "2026-07-14T13:51:50Z",
+  "pushedAt": "2026-08-25T14:35:22Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3343,16 +3343,23 @@
       "forks": 326,
       "watchers": 121,
       "openIssues": 744
+    },
+    {
+      "date": "2026-08-26",
+      "stars": 1981,
+      "forks": 326,
+      "watchers": 121,
+      "openIssues": 744
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 1,
+  "identifiedCommits": 2,
   "busFactor": 1,
   "topContributors": [
     {
       "login": "develsoftware",
-      "commits": 1
+      "commits": 2
     }
   ]
 }

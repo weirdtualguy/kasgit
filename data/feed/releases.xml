@@ -4,7 +4,28 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Tue, 25 Aug 2026 03:59:02 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 04:02:40 +0000</lastBuildDate>
+    <item>
+      <title>forbole/kastle — v2.59.4</title>
+      <link>https://github.com/forbole/kastle/releases/tag/v2.59.4</link>
+      <guid isPermaLink="true">https://github.com/forbole/kastle/releases/tag/v2.59.4</guid>
+      <pubDate>Tue, 25 Aug 2026 19:13:58 +0000</pubDate>
+      <description>v2.59.4</description>
+    </item>
+    <item>
+      <title>forbole/kastle — v2.59.3</title>
+      <link>https://github.com/forbole/kastle/releases/tag/v2.59.3</link>
+      <guid isPermaLink="true">https://github.com/forbole/kastle/releases/tag/v2.59.3</guid>
+      <pubDate>Tue, 25 Aug 2026 14:29:15 +0000</pubDate>
+      <description>v2.59.3</description>
+    </item>
+    <item>
+      <title>forbole/kastle — v2.59.2</title>
+      <link>https://github.com/forbole/kastle/releases/tag/v2.59.2</link>
+      <guid isPermaLink="true">https://github.com/forbole/kastle/releases/tag/v2.59.2</guid>
+      <pubDate>Tue, 25 Aug 2026 12:36:54 +0000</pubDate>
+      <description>v2.59.2</description>
+    </item>
     <item>
       <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.5.9</title>
       <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.5.9</link>
@@ -823,20 +844,6 @@
       <guid isPermaLink="true">https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.0.0</guid>
       <pubDate>Sun, 01 Mar 2026 09:25:05 +0000</pubDate>
       <description>v2.0.0</description>
-    </item>
-    <item>
-      <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.1.8</title>
-      <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.1.8</link>
-      <guid isPermaLink="true">https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.1.8</guid>
-      <pubDate>Thu, 26 Feb 2026 20:25:32 +0000</pubDate>
-      <description>3.1.8</description>
-    </item>
-    <item>
-      <title>forbole/kastle — v2.43.2</title>
-      <link>https://github.com/forbole/kastle/releases/tag/v2.43.2</link>
-      <guid isPermaLink="true">https://github.com/forbole/kastle/releases/tag/v2.43.2</guid>
-      <pubDate>Thu, 26 Feb 2026 08:37:58 +0000</pubDate>
-      <description>v2.43.2</description>
     </item>
   </channel>
 </rss>

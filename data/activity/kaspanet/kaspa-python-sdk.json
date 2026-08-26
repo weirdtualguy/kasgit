@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/kaspa-python-sdk",
-  "generatedAt": "2026-08-25T03:59:02.284333+00:00",
+  "generatedAt": "2026-08-26T04:02:40.248120+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-07-21",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-07-22",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-08-26",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "Rust",
@@ -3343,6 +3343,13 @@
     },
     {
       "date": "2026-08-25",
+      "stars": 8,
+      "forks": 4,
+      "watchers": 1,
+      "openIssues": 17
+    },
+    {
+      "date": "2026-08-26",
       "stars": 8,
       "forks": 4,
       "watchers": 1,
