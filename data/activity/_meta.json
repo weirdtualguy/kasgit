@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T04:02:40.248120+00:00",
+  "generatedAt": "2026-08-27T14:11:25.546045+00:00",
   "orgs": [
     "kaspanet"
   ],
@@ -8,15 +8,16 @@
     "community org"
   ],
   "verifiedTargetCount": 1,
-  "repoCount": 92,
-  "starsCaptured": 89,
+  "repoCount": 91,
+  "starsCaptured": 88,
   "starHistoryBackfills": 0,
-  "releaseFeedItems": 120,
-  "contributorsCaptured": 72,
+  "releaseFeedItems": 125,
+  "contributorsCaptured": 63,
   "ideasCaptured": 0,
   "failed": [
     "kaspanet/big-test-data",
-    "kaspanet/ghostdag-prototype"
+    "kaspanet/ghostdag-prototype",
+    "KASPACOM/kaspacom-web-wallet"
   ],
   "lookbackDays": 400,
   "status": "ok"

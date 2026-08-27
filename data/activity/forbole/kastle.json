@@ -1,23 +1,15 @@
 {
   "repo": "forbole/kastle",
-  "generatedAt": "2026-08-26T04:02:40.248120+00:00",
+  "generatedAt": "2026-08-27T14:11:25.546045+00:00",
   "lookbackDays": 400,
   "series": [
     {
-      "date": "2025-07-22",
+      "date": "2025-07-23",
       "commits": 0,
       "prs": 0,
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
-    },
-    {
-      "date": "2025-07-23",
-      "commits": 3,
-      "prs": 3,
-      "issues": 0,
-      "releases": 1,
-      "activeDevs": 2
     },
     {
       "date": "2025-07-24",
@@ -3205,17 +3197,25 @@
     },
     {
       "date": "2026-08-26",
-      "commits": 0,
-      "prs": 0,
+      "commits": 10,
+      "prs": 10,
       "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
+      "releases": 2,
+      "activeDevs": 3
+    },
+    {
+      "date": "2026-08-27",
+      "commits": 3,
+      "prs": 3,
+      "issues": 0,
+      "releases": 1,
+      "activeDevs": 2
     }
   ],
   "primaryLanguage": "TypeScript",
   "languages": {
-    "TypeScript": 1140799,
-    "JavaScript": 539889,
+    "TypeScript": 1224381,
+    "JavaScript": 539890,
     "Python": 38915,
     "CSS": 1069,
     "HTML": 349
@@ -3231,7 +3231,7 @@
   "defaultBranch": "main",
   "homepage": "https://kastle.cc",
   "createdAt": "2025-02-03T08:20:39Z",
-  "pushedAt": "2026-08-25T19:13:57Z",
+  "pushedAt": "2026-08-27T14:04:46Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3362,28 +3362,35 @@
       "forks": 4,
       "watchers": 2,
       "openIssues": 12
+    },
+    {
+      "date": "2026-08-27",
+      "stars": 16,
+      "forks": 4,
+      "watchers": 2,
+      "openIssues": 10
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 146,
+  "identifiedCommits": 157,
   "busFactor": 1,
   "topContributors": [
     {
       "login": "dadamu",
-      "commits": 85
+      "commits": 83
     },
     {
       "login": "forbole-release-please-bot[bot]",
-      "commits": 44
+      "commits": 47
     },
     {
       "login": "leobragaz",
-      "commits": 9
+      "commits": 14
     },
     {
       "login": "dependabot[bot]",
-      "commits": 4
+      "commits": 9
     },
     {
       "login": "github-actions[bot]",

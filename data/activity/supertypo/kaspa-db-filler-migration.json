@@ -1,16 +1,8 @@
 {
   "repo": "supertypo/kaspa-db-filler-migration",
-  "generatedAt": "2026-08-26T04:02:40.248120+00:00",
+  "generatedAt": "2026-08-27T14:11:25.546045+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-07-22",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-07-23",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-08-27",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "PLpgSQL",
@@ -3341,6 +3341,13 @@
     },
     {
       "date": "2026-08-26",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 1,
+      "openIssues": 0
+    },
+    {
+      "date": "2026-08-27",
       "stars": 0,
       "forks": 0,
       "watchers": 1,

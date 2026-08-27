@@ -1,16 +1,8 @@
 {
   "repo": "michaelsutton/argent",
-  "generatedAt": "2026-08-26T04:02:40.248120+00:00",
+  "generatedAt": "2026-08-27T14:11:25.546045+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-07-22",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-07-23",
       "commits": 0,
@@ -3205,6 +3197,14 @@
     },
     {
       "date": "2026-08-26",
+      "commits": 1,
+      "prs": 1,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 1
+    },
+    {
+      "date": "2026-08-27",
       "commits": 0,
       "prs": 0,
       "issues": 0,
@@ -3214,8 +3214,8 @@
   ],
   "primaryLanguage": "Rust",
   "languages": {
-    "Rust": 1400948,
-    "JavaScript": 60704,
+    "Rust": 1700021,
+    "JavaScript": 67037,
     "Shell": 1754
   },
   "topics": [],
@@ -3223,7 +3223,7 @@
   "defaultBranch": "master",
   "homepage": null,
   "createdAt": "2026-06-16T21:05:47Z",
-  "pushedAt": "2026-08-26T02:14:37Z",
+  "pushedAt": "2026-08-27T13:30:27Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3347,16 +3347,23 @@
       "forks": 6,
       "watchers": 3,
       "openIssues": 2
+    },
+    {
+      "date": "2026-08-27",
+      "stars": 22,
+      "forks": 6,
+      "watchers": 3,
+      "openIssues": 1
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 81,
+  "identifiedCommits": 82,
   "busFactor": 1,
   "topContributors": [
     {
       "login": "michaelsutton",
-      "commits": 77
+      "commits": 78
     },
     {
       "login": "a19q3",
