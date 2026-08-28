@@ -1,7 +1,23 @@
 {
-  "generatedAt": "2026-08-27T14:11:25.546045+00:00",
+  "generatedAt": "2026-08-28T15:21:38.081533+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.59.8",
+      "tag": "v2.59.8",
+      "publishedAt": "2026-08-28T10:36:52Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.59.8",
+      "prerelease": false
+    },
+    {
+      "repo": "bzminer/bzminer",
+      "name": "BzMiner v100.04b1",
+      "tag": "v100.04b1",
+      "publishedAt": "2026-08-28T02:27:23Z",
+      "url": "https://github.com/bzminer/bzminer/releases/tag/v100.04b1",
+      "prerelease": false
+    },
     {
       "repo": "forbole/kastle",
       "name": "v2.59.7",
@@ -984,22 +1000,6 @@
       "tag": "v2.44.0",
       "publishedAt": "2026-03-02T08:19:00Z",
       "url": "https://github.com/forbole/kastle/releases/tag/v2.44.0",
-      "prerelease": false
-    },
-    {
-      "repo": "kaspa-ng/kaspa-rest-server",
-      "name": "v2.0.0",
-      "tag": "v2.0.0",
-      "publishedAt": "2026-03-01T09:30:53Z",
-      "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.0.0",
-      "prerelease": false
-    },
-    {
-      "repo": "supertypo/simply-kaspa-indexer",
-      "name": "v2.0.0",
-      "tag": "v2.0.0",
-      "publishedAt": "2026-03-01T09:25:05Z",
-      "url": "https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.0.0",
       "prerelease": false
     }
   ]

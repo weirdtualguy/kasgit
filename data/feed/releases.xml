@@ -4,7 +4,21 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Thu, 27 Aug 2026 14:11:25 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2026 15:21:38 +0000</lastBuildDate>
+    <item>
+      <title>forbole/kastle — v2.59.8</title>
+      <link>https://github.com/forbole/kastle/releases/tag/v2.59.8</link>
+      <guid isPermaLink="true">https://github.com/forbole/kastle/releases/tag/v2.59.8</guid>
+      <pubDate>Fri, 28 Aug 2026 10:36:52 +0000</pubDate>
+      <description>v2.59.8</description>
+    </item>
+    <item>
+      <title>bzminer/bzminer — BzMiner v100.04b1</title>
+      <link>https://github.com/bzminer/bzminer/releases/tag/v100.04b1</link>
+      <guid isPermaLink="true">https://github.com/bzminer/bzminer/releases/tag/v100.04b1</guid>
+      <pubDate>Fri, 28 Aug 2026 02:27:23 +0000</pubDate>
+      <description>v100.04b1</description>
+    </item>
     <item>
       <title>forbole/kastle — v2.59.7</title>
       <link>https://github.com/forbole/kastle/releases/tag/v2.59.7</link>
@@ -865,20 +879,6 @@
       <guid isPermaLink="true">https://github.com/forbole/kastle/releases/tag/v2.44.0</guid>
       <pubDate>Mon, 02 Mar 2026 08:19:00 +0000</pubDate>
       <description>v2.44.0</description>
-    </item>
-    <item>
-      <title>kaspa-ng/kaspa-rest-server — v2.0.0</title>
-      <link>https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.0.0</link>
-      <guid isPermaLink="true">https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.0.0</guid>
-      <pubDate>Sun, 01 Mar 2026 09:30:53 +0000</pubDate>
-      <description>v2.0.0</description>
-    </item>
-    <item>
-      <title>supertypo/simply-kaspa-indexer — v2.0.0</title>
-      <link>https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.0.0</link>
-      <guid isPermaLink="true">https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.0.0</guid>
-      <pubDate>Sun, 01 Mar 2026 09:25:05 +0000</pubDate>
-      <description>v2.0.0</description>
     </item>
   </channel>
 </rss>
