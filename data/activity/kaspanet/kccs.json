@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/kccs",
-  "generatedAt": "2026-08-28T15:21:38.081533+00:00",
+  "generatedAt": "2026-08-29T10:02:41.210888+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-07-24",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-07-25",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 1
+    },
+    {
+      "date": "2026-08-29",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": null,
@@ -3219,7 +3219,7 @@
   "defaultBranch": "main",
   "homepage": null,
   "createdAt": "2026-07-15T12:21:31Z",
-  "pushedAt": "2026-08-28T08:35:42Z",
+  "pushedAt": "2026-08-29T09:12:43Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3364,6 +3364,13 @@
       "forks": 7,
       "watchers": 1,
       "openIssues": 3
+    },
+    {
+      "date": "2026-08-29",
+      "stars": 10,
+      "forks": 9,
+      "watchers": 1,
+      "openIssues": 6
     }
   ],
   "starHistoryQuality": null,

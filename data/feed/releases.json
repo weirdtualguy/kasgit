@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T15:21:38.081533+00:00",
+  "generatedAt": "2026-08-29T10:02:41.210888+00:00",
   "lookbackDays": 180,
   "releases": [
     {
@@ -992,14 +992,6 @@
       "tag": "v1.1.0",
       "publishedAt": "2026-03-04T15:04:45Z",
       "url": "https://github.com/kaspanet/rusty-kaspa/releases/tag/v1.1.0",
-      "prerelease": false
-    },
-    {
-      "repo": "forbole/kastle",
-      "name": "v2.44.0",
-      "tag": "v2.44.0",
-      "publishedAt": "2026-03-02T08:19:00Z",
-      "url": "https://github.com/forbole/kastle/releases/tag/v2.44.0",
       "prerelease": false
     }
   ]

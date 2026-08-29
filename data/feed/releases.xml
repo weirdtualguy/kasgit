@@ -4,7 +4,7 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Fri, 28 Aug 2026 15:21:38 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2026 10:02:41 +0000</lastBuildDate>
     <item>
       <title>forbole/kastle — v2.59.8</title>
       <link>https://github.com/forbole/kastle/releases/tag/v2.59.8</link>
@@ -872,13 +872,6 @@
       <guid isPermaLink="true">https://github.com/kaspanet/rusty-kaspa/releases/tag/v1.1.0</guid>
       <pubDate>Wed, 04 Mar 2026 15:04:45 +0000</pubDate>
       <description>v1.1.0</description>
-    </item>
-    <item>
-      <title>forbole/kastle — v2.44.0</title>
-      <link>https://github.com/forbole/kastle/releases/tag/v2.44.0</link>
-      <guid isPermaLink="true">https://github.com/forbole/kastle/releases/tag/v2.44.0</guid>
-      <pubDate>Mon, 02 Mar 2026 08:19:00 +0000</pubDate>
-      <description>v2.44.0</description>
     </item>
   </channel>
 </rss>
