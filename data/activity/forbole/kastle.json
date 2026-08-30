@@ -1,16 +1,8 @@
 {
   "repo": "forbole/kastle",
-  "generatedAt": "2026-08-29T10:02:41.210888+00:00",
+  "generatedAt": "2026-08-30T09:13:25.469562+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-07-25",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-07-26",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-08-30",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "TypeScript",
@@ -3379,6 +3379,13 @@
     },
     {
       "date": "2026-08-29",
+      "stars": 16,
+      "forks": 4,
+      "watchers": 2,
+      "openIssues": 8
+    },
+    {
+      "date": "2026-08-30",
       "stars": 16,
       "forks": 4,
       "watchers": 2,
