@@ -1,7 +1,23 @@
 {
-  "generatedAt": "2026-08-30T09:13:25.469562+00:00",
+  "generatedAt": "2026-08-31T09:43:53.148832+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.6.1",
+      "tag": "3.6.1",
+      "publishedAt": "2026-08-30T17:33:36Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.6.1",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspanet/silverscript",
+      "name": "v1-rc1",
+      "tag": "v1-rc1",
+      "publishedAt": "2026-08-30T12:05:43Z",
+      "url": "https://github.com/kaspanet/silverscript/releases/tag/v1-rc1",
+      "prerelease": true
+    },
     {
       "repo": "forbole/kastle",
       "name": "v2.59.8",

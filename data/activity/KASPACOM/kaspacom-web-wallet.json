@@ -1,16 +1,8 @@
 {
   "repo": "KASPACOM/kaspacom-web-wallet",
-  "generatedAt": "2026-08-30T09:13:25.469562+00:00",
+  "generatedAt": "2026-08-31T09:43:53.148832+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-07-26",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-07-27",
       "commits": 1,
@@ -3173,27 +3165,27 @@
     },
     {
       "date": "2026-08-26",
-      "commits": 0,
+      "commits": 2,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-08-27",
-      "commits": 0,
+      "commits": 1,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-08-28",
-      "commits": 0,
+      "commits": 2,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 2
     },
     {
       "date": "2026-08-29",
@@ -3205,6 +3197,14 @@
     },
     {
       "date": "2026-08-30",
+      "commits": 3,
+      "prs": 3,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 2
+    },
+    {
+      "date": "2026-08-31",
       "commits": 0,
       "prs": 0,
       "issues": 0,
@@ -3214,17 +3214,17 @@
   ],
   "primaryLanguage": "TypeScript",
   "languages": {
-    "TypeScript": 1943804,
-    "JavaScript": 530632,
-    "HTML": 466750,
-    "SCSS": 344649
+    "TypeScript": 1947141,
+    "JavaScript": 532613,
+    "HTML": 466944,
+    "SCSS": 344758
   },
   "topics": [],
   "license": "MIT",
   "defaultBranch": "develop",
   "homepage": null,
   "createdAt": "2024-11-24T23:08:28Z",
-  "pushedAt": "2026-08-28T10:52:01Z",
+  "pushedAt": "2026-08-31T09:30:03Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3376,16 +3376,23 @@
       "forks": 1,
       "watchers": 2,
       "openIssues": 4
+    },
+    {
+      "date": "2026-08-31",
+      "stars": 10,
+      "forks": 1,
+      "watchers": 2,
+      "openIssues": 3
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 595,
+  "identifiedCommits": 598,
   "busFactor": 1,
   "topContributors": [
     {
       "login": "giladm11",
-      "commits": 304
+      "commits": 307
     },
     {
       "login": "ems-aleksandar",

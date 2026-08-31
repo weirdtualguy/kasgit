@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/golang-lru",
-  "generatedAt": "2026-08-30T09:13:25.469562+00:00",
+  "generatedAt": "2026-08-31T09:43:53.148832+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-07-26",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-07-27",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-08-31",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "Go",
@@ -3369,6 +3369,13 @@
     },
     {
       "date": "2026-08-30",
+      "stars": 2,
+      "forks": 1,
+      "watchers": 0,
+      "openIssues": 0
+    },
+    {
+      "date": "2026-08-31",
       "stars": 2,
       "forks": 1,
       "watchers": 0,
