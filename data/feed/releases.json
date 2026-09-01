@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T09:43:53.148832+00:00",
+  "generatedAt": "2026-09-01T08:38:29.159066+00:00",
   "lookbackDays": 180,
   "releases": [
     {
@@ -992,22 +992,6 @@
       "tag": "v2.45.0",
       "publishedAt": "2026-03-06T07:47:39Z",
       "url": "https://github.com/forbole/kastle/releases/tag/v2.45.0",
-      "prerelease": false
-    },
-    {
-      "repo": "kaspanet/kaspa-python-sdk",
-      "name": "1.1.0",
-      "tag": "v1.1.0",
-      "publishedAt": "2026-03-04T22:19:13Z",
-      "url": "https://github.com/kaspanet/kaspa-python-sdk/releases/tag/v1.1.0",
-      "prerelease": false
-    },
-    {
-      "repo": "kaspanet/rusty-kaspa",
-      "name": "Release v1.1.0",
-      "tag": "v1.1.0",
-      "publishedAt": "2026-03-04T15:04:45Z",
-      "url": "https://github.com/kaspanet/rusty-kaspa/releases/tag/v1.1.0",
       "prerelease": false
     }
   ]

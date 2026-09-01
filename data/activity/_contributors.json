@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T09:43:53.148832+00:00",
+  "generatedAt": "2026-09-01T08:38:29.159066+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -1014,18 +1014,17 @@
       "login": "doktor83",
       "avatarUrl": "https://avatars.githubusercontent.com/u/6808360?v=4",
       "htmlUrl": "https://github.com/doktor83",
-      "commits": 52,
+      "commits": 51,
       "repos": [
         {
           "repo": "doktor83/SRBMiner-Multi",
-          "commits": 52
+          "commits": 51
         }
       ],
-      "firstCommitAt": "2025-07-27T14:00:23Z",
+      "firstCommitAt": "2025-08-19T16:36:21Z",
       "firstCommitRepo": "doktor83/SRBMiner-Multi",
       "lastCommitAt": "2026-08-27T10:25:21Z",
       "activeDates": [
-        "2025-07-27",
         "2025-08-19",
         "2025-09-04",
         "2025-09-27",
@@ -1965,6 +1964,27 @@
       "repoCount": 1
     },
     {
+      "login": "develsoftware",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/8962939?v=4",
+      "htmlUrl": "https://github.com/develsoftware",
+      "commits": 4,
+      "repos": [
+        {
+          "repo": "develsoftware/GMinerRelease",
+          "commits": 4
+        }
+      ],
+      "firstCommitAt": "2026-07-14T13:51:49Z",
+      "firstCommitRepo": "develsoftware/GMinerRelease",
+      "lastCommitAt": "2026-08-31T14:22:38Z",
+      "activeDates": [
+        "2026-07-14",
+        "2026-08-25",
+        "2026-08-31"
+      ],
+      "repoCount": 1
+    },
+    {
       "login": "tdejoigny-ledger",
       "avatarUrl": "https://avatars.githubusercontent.com/u/123755370?v=4",
       "htmlUrl": "https://github.com/tdejoigny-ledger",
@@ -2123,26 +2143,6 @@
       "activeDates": [
         "2026-01-08",
         "2026-01-14"
-      ],
-      "repoCount": 1
-    },
-    {
-      "login": "develsoftware",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/8962939?v=4",
-      "htmlUrl": "https://github.com/develsoftware",
-      "commits": 2,
-      "repos": [
-        {
-          "repo": "develsoftware/GMinerRelease",
-          "commits": 2
-        }
-      ],
-      "firstCommitAt": "2026-07-14T13:51:49Z",
-      "firstCommitRepo": "develsoftware/GMinerRelease",
-      "lastCommitAt": "2026-08-25T14:35:21Z",
-      "activeDates": [
-        "2026-07-14",
-        "2026-08-25"
       ],
       "repoCount": 1
     },
