@@ -1,16 +1,8 @@
 {
   "repo": "KASPACOM/kaspacom-web-wallet",
-  "generatedAt": "2026-09-01T08:38:29.159066+00:00",
+  "generatedAt": "2026-09-02T07:54:16.170326+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-07-28",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-07-29",
       "commits": 0,
@@ -3173,7 +3165,7 @@
     },
     {
       "date": "2026-08-28",
-      "commits": 2,
+      "commits": 3,
       "prs": 0,
       "issues": 0,
       "releases": 0,
@@ -3197,14 +3189,22 @@
     },
     {
       "date": "2026-08-31",
-      "commits": 0,
+      "commits": 5,
       "prs": 1,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-09-01",
+      "commits": 3,
+      "prs": 1,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 2
+    },
+    {
+      "date": "2026-09-02",
       "commits": 0,
       "prs": 0,
       "issues": 0,
@@ -3214,17 +3214,17 @@
   ],
   "primaryLanguage": "TypeScript",
   "languages": {
-    "TypeScript": 1947141,
-    "JavaScript": 532613,
-    "HTML": 466944,
-    "SCSS": 344758
+    "TypeScript": 1951124,
+    "JavaScript": 532826,
+    "HTML": 479464,
+    "SCSS": 347839
   },
   "topics": [],
   "license": "MIT",
   "defaultBranch": "develop",
   "homepage": null,
   "createdAt": "2024-11-24T23:08:28Z",
-  "pushedAt": "2026-09-01T07:28:20Z",
+  "pushedAt": "2026-09-01T21:09:32Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3390,11 +3390,18 @@
       "forks": 1,
       "watchers": 2,
       "openIssues": 2
+    },
+    {
+      "date": "2026-09-02",
+      "stars": 10,
+      "forks": 1,
+      "watchers": 2,
+      "openIssues": 5
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 598,
+  "identifiedCommits": 599,
   "busFactor": 1,
   "topContributors": [
     {
@@ -3411,7 +3418,7 @@
     },
     {
       "login": "marciano147",
-      "commits": 44
+      "commits": 45
     },
     {
       "login": "DorZion51",

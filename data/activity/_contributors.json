@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T08:38:29.159066+00:00",
+  "generatedAt": "2026-09-02T07:54:16.170326+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -1174,16 +1174,16 @@
       "login": "marciano147",
       "avatarUrl": "https://avatars.githubusercontent.com/u/89093969?v=4",
       "htmlUrl": "https://github.com/marciano147",
-      "commits": 44,
+      "commits": 45,
       "repos": [
         {
           "repo": "KASPACOM/kaspacom-web-wallet",
-          "commits": 44
+          "commits": 45
         }
       ],
       "firstCommitAt": "2025-12-08T13:35:54Z",
       "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
-      "lastCommitAt": "2026-08-23T14:53:59Z",
+      "lastCommitAt": "2026-09-01T11:05:12Z",
       "activeDates": [
         "2025-12-08",
         "2025-12-12",
@@ -1201,7 +1201,8 @@
         "2026-07-21",
         "2026-07-23",
         "2026-07-24",
-        "2026-08-23"
+        "2026-08-23",
+        "2026-09-01"
       ],
       "repoCount": 1
     },
@@ -1712,6 +1713,33 @@
       "repoCount": 1
     },
     {
+      "login": "bzminer",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/83083846?v=4",
+      "htmlUrl": "https://github.com/bzminer",
+      "commits": 12,
+      "repos": [
+        {
+          "repo": "bzminer/bzminer",
+          "commits": 12
+        }
+      ],
+      "firstCommitAt": "2025-12-18T15:12:18Z",
+      "firstCommitRepo": "bzminer/bzminer",
+      "lastCommitAt": "2026-09-02T03:22:36Z",
+      "activeDates": [
+        "2025-12-18",
+        "2026-02-16",
+        "2026-04-17",
+        "2026-04-27",
+        "2026-04-29",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-09-02"
+      ],
+      "repoCount": 1
+    },
+    {
       "login": "elldeeone",
       "avatarUrl": "https://avatars.githubusercontent.com/u/73735118?v=4",
       "htmlUrl": "https://github.com/elldeeone",
@@ -1744,32 +1772,6 @@
         "2026-08-07"
       ],
       "repoCount": 3
-    },
-    {
-      "login": "bzminer",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/83083846?v=4",
-      "htmlUrl": "https://github.com/bzminer",
-      "commits": 11,
-      "repos": [
-        {
-          "repo": "bzminer/bzminer",
-          "commits": 11
-        }
-      ],
-      "firstCommitAt": "2025-12-18T15:12:18Z",
-      "firstCommitRepo": "bzminer/bzminer",
-      "lastCommitAt": "2026-08-28T02:25:29Z",
-      "activeDates": [
-        "2025-12-18",
-        "2026-02-16",
-        "2026-04-17",
-        "2026-04-27",
-        "2026-04-29",
-        "2026-08-26",
-        "2026-08-27",
-        "2026-08-28"
-      ],
-      "repoCount": 1
     },
     {
       "login": "yeren0914",

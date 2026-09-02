@@ -4,7 +4,14 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Tue, 01 Sep 2026 08:38:29 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 07:54:16 +0000</lastBuildDate>
+    <item>
+      <title>bzminer/bzminer — BzMiner v100.10</title>
+      <link>https://github.com/bzminer/bzminer/releases/tag/v100.10</link>
+      <guid isPermaLink="true">https://github.com/bzminer/bzminer/releases/tag/v100.10</guid>
+      <pubDate>Wed, 02 Sep 2026 03:29:20 +0000</pubDate>
+      <description>v100.10</description>
+    </item>
     <item>
       <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.6.1</title>
       <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.6.1</link>
@@ -865,13 +872,6 @@
       <guid isPermaLink="true">https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.1.9</guid>
       <pubDate>Sat, 07 Mar 2026 15:13:54 +0000</pubDate>
       <description>3.1.9</description>
-    </item>
-    <item>
-      <title>forbole/kastle — v2.45.0</title>
-      <link>https://github.com/forbole/kastle/releases/tag/v2.45.0</link>
-      <guid isPermaLink="true">https://github.com/forbole/kastle/releases/tag/v2.45.0</guid>
-      <pubDate>Fri, 06 Mar 2026 07:47:39 +0000</pubDate>
-      <description>v2.45.0</description>
     </item>
   </channel>
 </rss>
