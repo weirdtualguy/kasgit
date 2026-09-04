@@ -1,7 +1,31 @@
 {
-  "generatedAt": "2026-09-03T08:02:20.731039+00:00",
+  "generatedAt": "2026-09-04T07:58:03.780932+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "bzminer/bzminer",
+      "name": "BzMiner v100.11",
+      "tag": "v100.11",
+      "publishedAt": "2026-09-04T03:18:53Z",
+      "url": "https://github.com/bzminer/bzminer/releases/tag/v100.11",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "3.6.2",
+      "tag": "3.6.2",
+      "publishedAt": "2026-09-03T20:44:20Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.6.2",
+      "prerelease": false
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.60.0",
+      "tag": "v2.60.0",
+      "publishedAt": "2026-09-03T15:53:17Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.60.0",
+      "prerelease": false
+    },
     {
       "repo": "bzminer/bzminer",
       "name": "BzMiner v100.10",
@@ -984,14 +1008,6 @@
       "tag": "v1.6.3",
       "publishedAt": "2026-03-08T13:29:01Z",
       "url": "https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v1.6.3",
-      "prerelease": false
-    },
-    {
-      "repo": "doktor83/SRBMiner-Multi",
-      "name": "SRBMiner-MULTI v3.1.9",
-      "tag": "3.1.9",
-      "publishedAt": "2026-03-07T15:13:54Z",
-      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.1.9",
       "prerelease": false
     }
   ]

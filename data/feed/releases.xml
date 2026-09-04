@@ -4,7 +4,28 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Thu, 03 Sep 2026 08:02:20 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 07:58:03 +0000</lastBuildDate>
+    <item>
+      <title>bzminer/bzminer — BzMiner v100.11</title>
+      <link>https://github.com/bzminer/bzminer/releases/tag/v100.11</link>
+      <guid isPermaLink="true">https://github.com/bzminer/bzminer/releases/tag/v100.11</guid>
+      <pubDate>Fri, 04 Sep 2026 03:18:53 +0000</pubDate>
+      <description>v100.11</description>
+    </item>
+    <item>
+      <title>doktor83/SRBMiner-Multi — 3.6.2</title>
+      <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.6.2</link>
+      <guid isPermaLink="true">https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.6.2</guid>
+      <pubDate>Thu, 03 Sep 2026 20:44:20 +0000</pubDate>
+      <description>3.6.2</description>
+    </item>
+    <item>
+      <title>forbole/kastle — v2.60.0</title>
+      <link>https://github.com/forbole/kastle/releases/tag/v2.60.0</link>
+      <guid isPermaLink="true">https://github.com/forbole/kastle/releases/tag/v2.60.0</guid>
+      <pubDate>Thu, 03 Sep 2026 15:53:17 +0000</pubDate>
+      <description>v2.60.0</description>
+    </item>
     <item>
       <title>bzminer/bzminer — BzMiner v100.10</title>
       <link>https://github.com/bzminer/bzminer/releases/tag/v100.10</link>
@@ -865,13 +886,6 @@
       <guid isPermaLink="true">https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v1.6.3</guid>
       <pubDate>Sun, 08 Mar 2026 13:29:01 +0000</pubDate>
       <description>v1.6.3</description>
-    </item>
-    <item>
-      <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.1.9</title>
-      <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.1.9</link>
-      <guid isPermaLink="true">https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.1.9</guid>
-      <pubDate>Sat, 07 Mar 2026 15:13:54 +0000</pubDate>
-      <description>3.1.9</description>
     </item>
   </channel>
 </rss>
