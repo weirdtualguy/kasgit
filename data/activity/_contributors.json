@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T07:58:03.780932+00:00",
+  "generatedAt": "2026-09-05T07:39:39.836848+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -7,11 +7,11 @@
       "login": "giladm11",
       "avatarUrl": "https://avatars.githubusercontent.com/u/13984392?v=4",
       "htmlUrl": "https://github.com/giladm11",
-      "commits": 399,
+      "commits": 400,
       "repos": [
         {
           "repo": "KASPACOM/kaspacom-web-wallet",
-          "commits": 307
+          "commits": 308
         },
         {
           "repo": "kaspacom/swap-widget",
@@ -20,7 +20,7 @@
       ],
       "firstCommitAt": "2025-09-01T16:07:26Z",
       "firstCommitRepo": "kaspacom/swap-widget",
-      "lastCommitAt": "2026-08-30T11:06:54Z",
+      "lastCommitAt": "2026-09-04T15:09:46Z",
       "activeDates": [
         "2025-09-01",
         "2025-09-02",
@@ -117,7 +117,8 @@
         "2026-08-19",
         "2026-08-23",
         "2026-08-28",
-        "2026-08-30"
+        "2026-08-30",
+        "2026-09-04"
       ],
       "repoCount": 2
     },
@@ -1556,6 +1557,35 @@
       "repoCount": 4
     },
     {
+      "login": "bzminer",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/83083846?v=4",
+      "htmlUrl": "https://github.com/bzminer",
+      "commits": 16,
+      "repos": [
+        {
+          "repo": "bzminer/bzminer",
+          "commits": 16
+        }
+      ],
+      "firstCommitAt": "2025-12-18T15:12:18Z",
+      "firstCommitRepo": "bzminer/bzminer",
+      "lastCommitAt": "2026-09-05T04:02:45Z",
+      "activeDates": [
+        "2025-12-18",
+        "2026-02-16",
+        "2026-04-17",
+        "2026-04-27",
+        "2026-04-29",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-09-02",
+        "2026-09-04",
+        "2026-09-05"
+      ],
+      "repoCount": 1
+    },
+    {
       "login": "cosmasken",
       "avatarUrl": "https://avatars.githubusercontent.com/u/15275726?v=4",
       "htmlUrl": "https://github.com/cosmasken",
@@ -1607,34 +1637,6 @@
         "2026-03-08",
         "2026-03-09",
         "2026-08-04"
-      ],
-      "repoCount": 1
-    },
-    {
-      "login": "bzminer",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/83083846?v=4",
-      "htmlUrl": "https://github.com/bzminer",
-      "commits": 13,
-      "repos": [
-        {
-          "repo": "bzminer/bzminer",
-          "commits": 13
-        }
-      ],
-      "firstCommitAt": "2025-12-18T15:12:18Z",
-      "firstCommitRepo": "bzminer/bzminer",
-      "lastCommitAt": "2026-09-04T03:14:01Z",
-      "activeDates": [
-        "2025-12-18",
-        "2026-02-16",
-        "2026-04-17",
-        "2026-04-27",
-        "2026-04-29",
-        "2026-08-26",
-        "2026-08-27",
-        "2026-08-28",
-        "2026-09-02",
-        "2026-09-04"
       ],
       "repoCount": 1
     },
@@ -1783,32 +1785,6 @@
       "repoCount": 3
     },
     {
-      "login": "yeren0914",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/8509626?v=4",
-      "htmlUrl": "https://github.com/yeren0914",
-      "commits": 10,
-      "repos": [
-        {
-          "repo": "kasplex/sdk-kiwi",
-          "commits": 10
-        }
-      ],
-      "firstCommitAt": "2025-07-31T10:30:58Z",
-      "firstCommitRepo": "kasplex/sdk-kiwi",
-      "lastCommitAt": "2026-04-27T08:00:35Z",
-      "activeDates": [
-        "2025-07-31",
-        "2025-08-11",
-        "2025-10-29",
-        "2025-11-04",
-        "2026-01-21",
-        "2026-01-28",
-        "2026-03-02",
-        "2026-04-27"
-      ],
-      "repoCount": 1
-    },
-    {
       "login": "0xhappyboy",
       "avatarUrl": "https://avatars.githubusercontent.com/u/25763248?v=4",
       "htmlUrl": "https://github.com/0xhappyboy",
@@ -1844,6 +1820,31 @@
       "activeDates": [
         "2025-08-29",
         "2026-08-26"
+      ],
+      "repoCount": 1
+    },
+    {
+      "login": "yeren0914",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/8509626?v=4",
+      "htmlUrl": "https://github.com/yeren0914",
+      "commits": 9,
+      "repos": [
+        {
+          "repo": "kasplex/sdk-kiwi",
+          "commits": 9
+        }
+      ],
+      "firstCommitAt": "2025-08-11T06:11:28Z",
+      "firstCommitRepo": "kasplex/sdk-kiwi",
+      "lastCommitAt": "2026-04-27T08:00:35Z",
+      "activeDates": [
+        "2025-08-11",
+        "2025-10-29",
+        "2025-11-04",
+        "2026-01-21",
+        "2026-01-28",
+        "2026-03-02",
+        "2026-04-27"
       ],
       "repoCount": 1
     },
