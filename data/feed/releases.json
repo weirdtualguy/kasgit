@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T07:39:39.836848+00:00",
+  "generatedAt": "2026-09-06T07:53:59.694694+00:00",
   "lookbackDays": 180,
   "releases": [
     {
@@ -993,14 +993,6 @@
       "publishedAt": "2026-03-12T21:19:48Z",
       "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.2.0",
       "prerelease": false
-    },
-    {
-      "repo": "supertypo/simply-kaspa-indexer",
-      "name": "v2.1.0-beta2",
-      "tag": "v2.1.0-beta2",
-      "publishedAt": "2026-03-09T09:15:50Z",
-      "url": "https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.1.0-beta2",
-      "prerelease": true
     }
   ]
 }

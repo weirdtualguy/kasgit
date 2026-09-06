@@ -4,7 +4,7 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Sat, 05 Sep 2026 07:39:39 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 07:53:59 +0000</lastBuildDate>
     <item>
       <title>bzminer/bzminer — BzMiner v100.13</title>
       <link>https://github.com/bzminer/bzminer/releases/tag/v100.13</link>
@@ -872,13 +872,6 @@
       <guid isPermaLink="true">https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.2.0</guid>
       <pubDate>Thu, 12 Mar 2026 21:19:48 +0000</pubDate>
       <description>3.2.0</description>
-    </item>
-    <item>
-      <title>supertypo/simply-kaspa-indexer — v2.1.0-beta2</title>
-      <link>https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.1.0-beta2</link>
-      <guid isPermaLink="true">https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.1.0-beta2</guid>
-      <pubDate>Mon, 09 Mar 2026 09:15:50 +0000</pubDate>
-      <description>v2.1.0-beta2</description>
     </item>
   </channel>
 </rss>
