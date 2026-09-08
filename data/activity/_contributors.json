@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T08:17:16.397471+00:00",
+  "generatedAt": "2026-09-08T08:04:17.760586+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -7,11 +7,11 @@
       "login": "giladm11",
       "avatarUrl": "https://avatars.githubusercontent.com/u/13984392?v=4",
       "htmlUrl": "https://github.com/giladm11",
-      "commits": 400,
+      "commits": 401,
       "repos": [
         {
           "repo": "KASPACOM/kaspacom-web-wallet",
-          "commits": 308
+          "commits": 309
         },
         {
           "repo": "kaspacom/swap-widget",
@@ -20,7 +20,7 @@
       ],
       "firstCommitAt": "2025-09-01T16:07:26Z",
       "firstCommitRepo": "kaspacom/swap-widget",
-      "lastCommitAt": "2026-09-04T15:09:46Z",
+      "lastCommitAt": "2026-09-07T20:45:45Z",
       "activeDates": [
         "2025-09-01",
         "2025-09-02",
@@ -118,7 +118,8 @@
         "2026-08-23",
         "2026-08-28",
         "2026-08-30",
-        "2026-09-04"
+        "2026-09-04",
+        "2026-09-07"
       ],
       "repoCount": 2
     },
@@ -307,11 +308,11 @@
       "login": "someone235",
       "avatarUrl": "https://avatars.githubusercontent.com/u/784957?v=4",
       "htmlUrl": "https://github.com/someone235",
-      "commits": 196,
+      "commits": 198,
       "repos": [
         {
           "repo": "kaspanet/silverscript",
-          "commits": 134
+          "commits": 136
         },
         {
           "repo": "kaspanet/rusty-kaspa",
@@ -332,7 +333,7 @@
       ],
       "firstCommitAt": "2025-10-23T08:51:02Z",
       "firstCommitRepo": "kaspanet/rusty-kaspa",
-      "lastCommitAt": "2026-09-02T11:06:54Z",
+      "lastCommitAt": "2026-09-07T15:34:11Z",
       "activeDates": [
         "2025-10-23",
         "2025-11-10",
@@ -411,7 +412,8 @@
         "2026-08-28",
         "2026-08-29",
         "2026-08-30",
-        "2026-09-02"
+        "2026-09-02",
+        "2026-09-07"
       ],
       "repoCount": 5
     },
@@ -1020,16 +1022,16 @@
       "login": "doktor83",
       "avatarUrl": "https://avatars.githubusercontent.com/u/6808360?v=4",
       "htmlUrl": "https://github.com/doktor83",
-      "commits": 52,
+      "commits": 54,
       "repos": [
         {
           "repo": "doktor83/SRBMiner-Multi",
-          "commits": 52
+          "commits": 54
         }
       ],
       "firstCommitAt": "2025-08-19T16:36:21Z",
       "firstCommitRepo": "doktor83/SRBMiner-Multi",
-      "lastCommitAt": "2026-09-03T20:42:48Z",
+      "lastCommitAt": "2026-09-07T12:28:52Z",
       "activeDates": [
         "2025-08-19",
         "2025-09-04",
@@ -1072,7 +1074,8 @@
         "2026-08-18",
         "2026-08-20",
         "2026-08-27",
-        "2026-09-03"
+        "2026-09-03",
+        "2026-09-07"
       ],
       "repoCount": 1
     },
@@ -1485,6 +1488,37 @@
       "repoCount": 1
     },
     {
+      "login": "bzminer",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/83083846?v=4",
+      "htmlUrl": "https://github.com/bzminer",
+      "commits": 18,
+      "repos": [
+        {
+          "repo": "bzminer/bzminer",
+          "commits": 18
+        }
+      ],
+      "firstCommitAt": "2025-12-18T15:12:18Z",
+      "firstCommitRepo": "bzminer/bzminer",
+      "lastCommitAt": "2026-09-07T15:33:27Z",
+      "activeDates": [
+        "2025-12-18",
+        "2026-02-16",
+        "2026-04-17",
+        "2026-04-27",
+        "2026-04-29",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-09-02",
+        "2026-09-04",
+        "2026-09-05",
+        "2026-09-06",
+        "2026-09-07"
+      ],
+      "repoCount": 1
+    },
+    {
       "login": "leobragaz",
       "avatarUrl": "https://avatars.githubusercontent.com/u/26248202?v=4",
       "htmlUrl": "https://github.com/leobragaz",
@@ -1509,36 +1543,6 @@
         "2026-08-27",
         "2026-08-28",
         "2026-09-03"
-      ],
-      "repoCount": 1
-    },
-    {
-      "login": "bzminer",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/83083846?v=4",
-      "htmlUrl": "https://github.com/bzminer",
-      "commits": 17,
-      "repos": [
-        {
-          "repo": "bzminer/bzminer",
-          "commits": 17
-        }
-      ],
-      "firstCommitAt": "2025-12-18T15:12:18Z",
-      "firstCommitRepo": "bzminer/bzminer",
-      "lastCommitAt": "2026-09-06T21:45:39Z",
-      "activeDates": [
-        "2025-12-18",
-        "2026-02-16",
-        "2026-04-17",
-        "2026-04-27",
-        "2026-04-29",
-        "2026-08-26",
-        "2026-08-27",
-        "2026-08-28",
-        "2026-09-02",
-        "2026-09-04",
-        "2026-09-05",
-        "2026-09-06"
       ],
       "repoCount": 1
     },
@@ -2348,6 +2352,25 @@
       "lastCommitAt": "2025-09-04T05:25:13Z",
       "activeDates": [
         "2025-09-04"
+      ],
+      "repoCount": 1
+    },
+    {
+      "login": "Drcryptodee",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/90338622?v=4",
+      "htmlUrl": "https://github.com/Drcryptodee",
+      "commits": 1,
+      "repos": [
+        {
+          "repo": "kaspanet/silverscript",
+          "commits": 1
+        }
+      ],
+      "firstCommitAt": "2026-09-07T17:18:08Z",
+      "firstCommitRepo": "kaspanet/silverscript",
+      "lastCommitAt": "2026-09-07T17:18:08Z",
+      "activeDates": [
+        "2026-09-07"
       ],
       "repoCount": 1
     },

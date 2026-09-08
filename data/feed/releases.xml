@@ -4,7 +4,21 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Mon, 07 Sep 2026 08:17:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2026 08:04:17 +0000</lastBuildDate>
+    <item>
+      <title>bzminer/bzminer — v100.16</title>
+      <link>https://github.com/bzminer/bzminer/releases/tag/v100.16</link>
+      <guid isPermaLink="true">https://github.com/bzminer/bzminer/releases/tag/v100.16</guid>
+      <pubDate>Mon, 07 Sep 2026 15:35:22 +0000</pubDate>
+      <description>v100.16</description>
+    </item>
+    <item>
+      <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.6.3</title>
+      <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.6.3</link>
+      <guid isPermaLink="true">https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.6.3</guid>
+      <pubDate>Mon, 07 Sep 2026 12:25:56 +0000</pubDate>
+      <description>3.6.3</description>
+    </item>
     <item>
       <title>bzminer/bzminer — BzMiner v100.13</title>
       <link>https://github.com/bzminer/bzminer/releases/tag/v100.13</link>
@@ -20,7 +34,7 @@
       <description>v100.11</description>
     </item>
     <item>
-      <title>doktor83/SRBMiner-Multi — 3.6.2</title>
+      <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.6.2</title>
       <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.6.2</link>
       <guid isPermaLink="true">https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.6.2</guid>
       <pubDate>Thu, 03 Sep 2026 20:44:20 +0000</pubDate>

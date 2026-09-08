@@ -1,7 +1,23 @@
 {
-  "generatedAt": "2026-09-07T08:17:16.397471+00:00",
+  "generatedAt": "2026-09-08T08:04:17.760586+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "bzminer/bzminer",
+      "name": "v100.16",
+      "tag": "v100.16",
+      "publishedAt": "2026-09-07T15:35:22Z",
+      "url": "https://github.com/bzminer/bzminer/releases/tag/v100.16",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.6.3",
+      "tag": "3.6.3",
+      "publishedAt": "2026-09-07T12:25:56Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.6.3",
+      "prerelease": false
+    },
     {
       "repo": "bzminer/bzminer",
       "name": "BzMiner v100.13",
@@ -20,7 +36,7 @@
     },
     {
       "repo": "doktor83/SRBMiner-Multi",
-      "name": "3.6.2",
+      "name": "SRBMiner-MULTI v3.6.2",
       "tag": "3.6.2",
       "publishedAt": "2026-09-03T20:44:20Z",
       "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.6.2",

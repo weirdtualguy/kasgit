@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/silverscript",
-  "generatedAt": "2026-09-07T08:17:16.397471+00:00",
+  "generatedAt": "2026-09-08T08:04:17.760586+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-08-03",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-08-04",
       "commits": 0,
@@ -3205,6 +3197,14 @@
     },
     {
       "date": "2026-09-07",
+      "commits": 3,
+      "prs": 3,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 2
+    },
+    {
+      "date": "2026-09-08",
       "commits": 0,
       "prs": 0,
       "issues": 0,
@@ -3214,8 +3214,8 @@
   ],
   "primaryLanguage": "Rust",
   "languages": {
-    "Rust": 2350303,
-    "JavaScript": 210794,
+    "Rust": 2455180,
+    "JavaScript": 211870,
     "TypeScript": 10739,
     "Tree-sitter Query": 10649,
     "Lua": 1765,
@@ -3226,7 +3226,7 @@
   "defaultBranch": "master",
   "homepage": null,
   "createdAt": "2026-01-29T11:47:13Z",
-  "pushedAt": "2026-08-30T12:05:19Z",
+  "pushedAt": "2026-09-07T17:18:08Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3441,16 +3441,23 @@
       "forks": 27,
       "watchers": 6,
       "openIssues": 35
+    },
+    {
+      "date": "2026-09-08",
+      "stars": 51,
+      "forks": 27,
+      "watchers": 7,
+      "openIssues": 33
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 176,
+  "identifiedCommits": 179,
   "busFactor": 1,
   "topContributors": [
     {
       "login": "someone235",
-      "commits": 134
+      "commits": 136
     },
     {
       "login": "michaelsutton",
