@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T08:04:17.760586+00:00",
+  "generatedAt": "2026-09-09T08:08:14.029815+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -7,11 +7,11 @@
       "login": "giladm11",
       "avatarUrl": "https://avatars.githubusercontent.com/u/13984392?v=4",
       "htmlUrl": "https://github.com/giladm11",
-      "commits": 401,
+      "commits": 402,
       "repos": [
         {
           "repo": "KASPACOM/kaspacom-web-wallet",
-          "commits": 309
+          "commits": 310
         },
         {
           "repo": "kaspacom/swap-widget",
@@ -20,7 +20,7 @@
       ],
       "firstCommitAt": "2025-09-01T16:07:26Z",
       "firstCommitRepo": "kaspacom/swap-widget",
-      "lastCommitAt": "2026-09-07T20:45:45Z",
+      "lastCommitAt": "2026-09-08T09:20:59Z",
       "activeDates": [
         "2025-09-01",
         "2025-09-02",
@@ -119,7 +119,8 @@
         "2026-08-28",
         "2026-08-30",
         "2026-09-04",
-        "2026-09-07"
+        "2026-09-07",
+        "2026-09-08"
       ],
       "repoCount": 2
     },
@@ -698,18 +699,17 @@
       "login": "dadamu",
       "avatarUrl": "https://avatars.githubusercontent.com/u/26020018?v=4",
       "htmlUrl": "https://github.com/dadamu",
-      "commits": 81,
+      "commits": 80,
       "repos": [
         {
           "repo": "forbole/kastle",
-          "commits": 81
+          "commits": 80
         }
       ],
-      "firstCommitAt": "2025-08-05T07:54:02Z",
+      "firstCommitAt": "2025-08-13T07:17:07Z",
       "firstCommitRepo": "forbole/kastle",
       "lastCommitAt": "2026-07-10T09:56:24Z",
       "activeDates": [
-        "2025-08-05",
         "2025-08-13",
         "2025-08-26",
         "2025-08-28",
@@ -1550,7 +1550,7 @@
       "login": "Manyfestation",
       "avatarUrl": "https://avatars.githubusercontent.com/u/240733973?v=4",
       "htmlUrl": "https://github.com/Manyfestation",
-      "commits": 16,
+      "commits": 17,
       "repos": [
         {
           "repo": "kaspanet/silverscript",
@@ -1566,12 +1566,12 @@
         },
         {
           "repo": "michaelsutton/argent",
-          "commits": 1
+          "commits": 2
         }
       ],
       "firstCommitAt": "2025-11-26T15:46:15Z",
       "firstCommitRepo": "kaspanet/rusty-kaspa",
-      "lastCommitAt": "2026-08-28T08:35:42Z",
+      "lastCommitAt": "2026-09-08T14:43:20Z",
       "activeDates": [
         "2025-11-26",
         "2026-01-04",
@@ -1586,7 +1586,8 @@
         "2026-07-22",
         "2026-08-20",
         "2026-08-27",
-        "2026-08-28"
+        "2026-08-28",
+        "2026-09-08"
       ],
       "repoCount": 4
     },

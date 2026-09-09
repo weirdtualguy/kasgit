@@ -1,16 +1,8 @@
 {
   "repo": "KASPACOM/kaspacom-web-wallet",
-  "generatedAt": "2026-09-08T08:04:17.760586+00:00",
+  "generatedAt": "2026-09-09T08:08:14.029815+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-08-04",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-08-05",
       "commits": 0,
@@ -3197,7 +3189,7 @@
     },
     {
       "date": "2026-09-07",
-      "commits": 2,
+      "commits": 3,
       "prs": 1,
       "issues": 0,
       "releases": 0,
@@ -3205,6 +3197,14 @@
     },
     {
       "date": "2026-09-08",
+      "commits": 2,
+      "prs": 2,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 2
+    },
+    {
+      "date": "2026-09-09",
       "commits": 0,
       "prs": 0,
       "issues": 0,
@@ -3214,7 +3214,7 @@
   ],
   "primaryLanguage": "TypeScript",
   "languages": {
-    "TypeScript": 1955652,
+    "TypeScript": 1959593,
     "JavaScript": 532826,
     "HTML": 479464,
     "SCSS": 347839
@@ -3224,7 +3224,7 @@
   "defaultBranch": "develop",
   "homepage": null,
   "createdAt": "2024-11-24T23:08:28Z",
-  "pushedAt": "2026-09-08T07:49:18Z",
+  "pushedAt": "2026-09-09T08:09:27Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3439,16 +3439,23 @@
       "forks": 1,
       "watchers": 2,
       "openIssues": 4
+    },
+    {
+      "date": "2026-09-09",
+      "stars": 10,
+      "forks": 1,
+      "watchers": 2,
+      "openIssues": 4
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 601,
+  "identifiedCommits": 602,
   "busFactor": 1,
   "topContributors": [
     {
       "login": "giladm11",
-      "commits": 309
+      "commits": 310
     },
     {
       "login": "ems-aleksandar",

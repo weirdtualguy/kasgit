@@ -1,16 +1,8 @@
 {
   "repo": "azbuky/kaspium_wallet",
-  "generatedAt": "2026-09-08T08:04:17.760586+00:00",
+  "generatedAt": "2026-09-09T08:08:14.029815+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-08-04",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-08-05",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-09-09",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "Dart",
@@ -3435,6 +3435,13 @@
     },
     {
       "date": "2026-09-08",
+      "stars": 62,
+      "forks": 47,
+      "watchers": 8,
+      "openIssues": 38
+    },
+    {
+      "date": "2026-09-09",
       "stars": 62,
       "forks": 47,
       "watchers": 8,
