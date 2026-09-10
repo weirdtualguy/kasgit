@@ -4,7 +4,21 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Wed, 09 Sep 2026 08:08:14 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 08:07:19 +0000</lastBuildDate>
+    <item>
+      <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.6.4</title>
+      <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.6.4</link>
+      <guid isPermaLink="true">https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.6.4</guid>
+      <pubDate>Wed, 09 Sep 2026 23:05:57 +0000</pubDate>
+      <description>3.6.4</description>
+    </item>
+    <item>
+      <title>kaspanet/silverscript — Silverscript v1.0.0</title>
+      <link>https://github.com/kaspanet/silverscript/releases/tag/v1.0.0</link>
+      <guid isPermaLink="true">https://github.com/kaspanet/silverscript/releases/tag/v1.0.0</guid>
+      <pubDate>Wed, 09 Sep 2026 16:48:31 +0000</pubDate>
+      <description>v1.0.0</description>
+    </item>
     <item>
       <title>bzminer/bzminer — v100.16</title>
       <link>https://github.com/bzminer/bzminer/releases/tag/v100.16</link>

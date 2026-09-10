@@ -1,7 +1,23 @@
 {
-  "generatedAt": "2026-09-09T08:08:14.029815+00:00",
+  "generatedAt": "2026-09-10T08:07:19.748286+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.6.4",
+      "tag": "3.6.4",
+      "publishedAt": "2026-09-09T23:05:57Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.6.4",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspanet/silverscript",
+      "name": "Silverscript v1.0.0",
+      "tag": "v1.0.0",
+      "publishedAt": "2026-09-09T16:48:31Z",
+      "url": "https://github.com/kaspanet/silverscript/releases/tag/v1.0.0",
+      "prerelease": false
+    },
     {
       "repo": "bzminer/bzminer",
       "name": "v100.16",
