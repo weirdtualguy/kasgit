@@ -1,16 +1,8 @@
 {
   "repo": "KASPACOM/kaspacom-web-wallet",
-  "generatedAt": "2026-09-10T08:07:19.748286+00:00",
+  "generatedAt": "2026-09-11T08:02:40.659193+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-08-06",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-08-07",
       "commits": 0,
@@ -3189,22 +3181,30 @@
     },
     {
       "date": "2026-09-08",
-      "commits": 2,
+      "commits": 8,
       "prs": 2,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 3
+    },
+    {
+      "date": "2026-09-09",
+      "commits": 6,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 1
+    },
+    {
+      "date": "2026-09-10",
+      "commits": 8,
+      "prs": 1,
       "issues": 0,
       "releases": 0,
       "activeDevs": 2
     },
     {
-      "date": "2026-09-09",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
-    {
-      "date": "2026-09-10",
+      "date": "2026-09-11",
       "commits": 0,
       "prs": 0,
       "issues": 0,
@@ -3214,17 +3214,17 @@
   ],
   "primaryLanguage": "TypeScript",
   "languages": {
-    "TypeScript": 1959593,
-    "JavaScript": 532826,
-    "HTML": 479464,
-    "SCSS": 347839
+    "TypeScript": 2005596,
+    "JavaScript": 533160,
+    "HTML": 479619,
+    "SCSS": 347945
   },
   "topics": [],
   "license": "MIT",
   "defaultBranch": "develop",
   "homepage": null,
   "createdAt": "2024-11-24T23:08:28Z",
-  "pushedAt": "2026-09-10T08:05:06Z",
+  "pushedAt": "2026-09-10T10:15:06Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3453,11 +3453,18 @@
       "forks": 1,
       "watchers": 2,
       "openIssues": 4
+    },
+    {
+      "date": "2026-09-11",
+      "stars": 10,
+      "forks": 1,
+      "watchers": 2,
+      "openIssues": 4
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 602,
+  "identifiedCommits": 603,
   "busFactor": 1,
   "topContributors": [
     {
@@ -3474,7 +3481,7 @@
     },
     {
       "login": "marciano147",
-      "commits": 45
+      "commits": 46
     },
     {
       "login": "DorZion51",

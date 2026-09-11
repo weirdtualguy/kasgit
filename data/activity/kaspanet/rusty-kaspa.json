@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/rusty-kaspa",
-  "generatedAt": "2026-09-10T08:07:19.748286+00:00",
+  "generatedAt": "2026-09-11T08:02:40.659193+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-08-06",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-08-07",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-09-11",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "Rust",
@@ -3471,6 +3471,13 @@
       "forks": 296,
       "watchers": 73,
       "openIssues": 219
+    },
+    {
+      "date": "2026-09-11",
+      "stars": 846,
+      "forks": 297,
+      "watchers": 73,
+      "openIssues": 220
     }
   ],
   "starHistoryQuality": null,

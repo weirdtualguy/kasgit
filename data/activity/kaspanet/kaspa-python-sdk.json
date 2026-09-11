@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/kaspa-python-sdk",
-  "generatedAt": "2026-09-10T08:07:19.748286+00:00",
+  "generatedAt": "2026-09-11T08:02:40.659193+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-08-06",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-08-07",
       "commits": 0,
@@ -3205,17 +3197,25 @@
     },
     {
       "date": "2026-09-10",
-      "commits": 0,
-      "prs": 0,
+      "commits": 1,
+      "prs": 1,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
+    },
+    {
+      "date": "2026-09-11",
+      "commits": 1,
+      "prs": 1,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 1
     }
   ],
   "primaryLanguage": "Rust",
   "languages": {
-    "Rust": 583416,
-    "Python": 527490,
+    "Rust": 586102,
+    "Python": 538664,
     "Shell": 6850
   },
   "topics": [],
@@ -3223,7 +3223,7 @@
   "defaultBranch": "main",
   "homepage": "https://kaspanet.github.io/kaspa-python-sdk/latest/",
   "createdAt": "2026-01-19T15:41:25Z",
-  "pushedAt": "2026-07-31T13:22:57Z",
+  "pushedAt": "2026-09-11T00:41:40Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3459,20 +3459,31 @@
       "forks": 5,
       "watchers": 1,
       "openIssues": 19
+    },
+    {
+      "date": "2026-09-11",
+      "stars": 8,
+      "forks": 5,
+      "watchers": 1,
+      "openIssues": 18
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 60,
+  "identifiedCommits": 62,
   "busFactor": 1,
   "topContributors": [
     {
       "login": "smartgoo",
-      "commits": 57
+      "commits": 58
     },
     {
       "login": "elldeeone",
       "commits": 3
+    },
+    {
+      "login": "explife365",
+      "commits": 1
     }
   ]
 }
