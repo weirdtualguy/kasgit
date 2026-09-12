@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T08:02:40.659193+00:00",
+  "generatedAt": "2026-09-12T07:54:39.606655+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -900,11 +900,11 @@
       "login": "smartgoo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/11283276?v=4",
       "htmlUrl": "https://github.com/smartgoo",
-      "commits": 63,
+      "commits": 64,
       "repos": [
         {
           "repo": "kaspanet/kaspa-python-sdk",
-          "commits": 58
+          "commits": 59
         },
         {
           "repo": "kaspanet/rusty-kaspa",
@@ -917,7 +917,7 @@
       ],
       "firstCommitAt": "2025-11-29T14:29:35Z",
       "firstCommitRepo": "kaspanet/kaspa-python-sdk",
-      "lastCommitAt": "2026-09-11T00:36:26Z",
+      "lastCommitAt": "2026-09-12T02:20:07Z",
       "activeDates": [
         "2025-11-29",
         "2026-01-07",
@@ -962,7 +962,8 @@
         "2026-07-22",
         "2026-07-23",
         "2026-07-31",
-        "2026-09-11"
+        "2026-09-11",
+        "2026-09-12"
       ],
       "repoCount": 3
     },
@@ -1489,6 +1490,38 @@
       "repoCount": 1
     },
     {
+      "login": "bzminer",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/83083846?v=4",
+      "htmlUrl": "https://github.com/bzminer",
+      "commits": 20,
+      "repos": [
+        {
+          "repo": "bzminer/bzminer",
+          "commits": 20
+        }
+      ],
+      "firstCommitAt": "2025-12-18T15:12:18Z",
+      "firstCommitRepo": "bzminer/bzminer",
+      "lastCommitAt": "2026-09-11T14:25:46Z",
+      "activeDates": [
+        "2025-12-18",
+        "2026-02-16",
+        "2026-04-17",
+        "2026-04-27",
+        "2026-04-29",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-09-02",
+        "2026-09-04",
+        "2026-09-05",
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-11"
+      ],
+      "repoCount": 1
+    },
+    {
       "login": "BenBeri",
       "avatarUrl": "https://avatars.githubusercontent.com/u/4749232?v=4",
       "htmlUrl": "https://github.com/BenBeri",
@@ -1521,37 +1554,6 @@
       "repoCount": 1
     },
     {
-      "login": "bzminer",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/83083846?v=4",
-      "htmlUrl": "https://github.com/bzminer",
-      "commits": 18,
-      "repos": [
-        {
-          "repo": "bzminer/bzminer",
-          "commits": 18
-        }
-      ],
-      "firstCommitAt": "2025-12-18T15:12:18Z",
-      "firstCommitRepo": "bzminer/bzminer",
-      "lastCommitAt": "2026-09-07T15:33:27Z",
-      "activeDates": [
-        "2025-12-18",
-        "2026-02-16",
-        "2026-04-17",
-        "2026-04-27",
-        "2026-04-29",
-        "2026-08-26",
-        "2026-08-27",
-        "2026-08-28",
-        "2026-09-02",
-        "2026-09-04",
-        "2026-09-05",
-        "2026-09-06",
-        "2026-09-07"
-      ],
-      "repoCount": 1
-    },
-    {
       "login": "Manyfestation",
       "avatarUrl": "https://avatars.githubusercontent.com/u/240733973?v=4",
       "htmlUrl": "https://github.com/Manyfestation",
@@ -1562,11 +1564,11 @@
           "commits": 9
         },
         {
-          "repo": "kaspanet/rusty-kaspa",
+          "repo": "kaspanet/kccs",
           "commits": 3
         },
         {
-          "repo": "kaspanet/kccs",
+          "repo": "kaspanet/rusty-kaspa",
           "commits": 3
         },
         {
@@ -1652,46 +1654,6 @@
       "repoCount": 1
     },
     {
-      "login": "coderofstuff",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/114628839?v=4",
-      "htmlUrl": "https://github.com/coderofstuff",
-      "commits": 12,
-      "repos": [
-        {
-          "repo": "kaspanet/rusty-kaspa",
-          "commits": 9
-        },
-        {
-          "repo": "kaspanet/kips",
-          "commits": 1
-        },
-        {
-          "repo": "kaspanet/kaspad",
-          "commits": 1
-        },
-        {
-          "repo": "coderofstuff/kasvault",
-          "commits": 1
-        }
-      ],
-      "firstCommitAt": "2025-12-31T11:49:30Z",
-      "firstCommitRepo": "kaspanet/rusty-kaspa",
-      "lastCommitAt": "2026-08-20T21:03:35Z",
-      "activeDates": [
-        "2025-12-31",
-        "2026-01-14",
-        "2026-01-15",
-        "2026-01-18",
-        "2026-05-27",
-        "2026-05-28",
-        "2026-06-05",
-        "2026-06-25",
-        "2026-08-19",
-        "2026-08-20"
-      ],
-      "repoCount": 4
-    },
-    {
       "login": "saefstroem",
       "avatarUrl": "https://avatars.githubusercontent.com/u/139136798?v=4",
       "htmlUrl": "https://github.com/saefstroem",
@@ -1729,6 +1691,46 @@
         "2026-05-13",
         "2026-06-23",
         "2026-08-27"
+      ],
+      "repoCount": 4
+    },
+    {
+      "login": "coderofstuff",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/114628839?v=4",
+      "htmlUrl": "https://github.com/coderofstuff",
+      "commits": 12,
+      "repos": [
+        {
+          "repo": "kaspanet/rusty-kaspa",
+          "commits": 9
+        },
+        {
+          "repo": "kaspanet/kips",
+          "commits": 1
+        },
+        {
+          "repo": "kaspanet/kaspad",
+          "commits": 1
+        },
+        {
+          "repo": "coderofstuff/kasvault",
+          "commits": 1
+        }
+      ],
+      "firstCommitAt": "2025-12-31T11:49:30Z",
+      "firstCommitRepo": "kaspanet/rusty-kaspa",
+      "lastCommitAt": "2026-08-20T21:03:35Z",
+      "activeDates": [
+        "2025-12-31",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-18",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-06-05",
+        "2026-06-25",
+        "2026-08-19",
+        "2026-08-20"
       ],
       "repoCount": 4
     },
