@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T07:54:39.606655+00:00",
+  "generatedAt": "2026-09-13T08:17:58.838147+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -811,7 +811,7 @@
       "login": "IzioDev",
       "avatarUrl": "https://avatars.githubusercontent.com/u/9900846?v=4",
       "htmlUrl": "https://github.com/IzioDev",
-      "commits": 70,
+      "commits": 69,
       "repos": [
         {
           "repo": "kaspanet/rusty-kaspa",
@@ -844,17 +844,12 @@
         {
           "repo": "aspectron/kaspa-ng",
           "commits": 1
-        },
-        {
-          "repo": "thesheepcat/K-indexer",
-          "commits": 1
         }
       ],
-      "firstCommitAt": "2025-08-08T14:36:23Z",
-      "firstCommitRepo": "thesheepcat/K-indexer",
+      "firstCommitAt": "2025-08-15T02:19:39Z",
+      "firstCommitRepo": "kaspanet/rusty-kaspa",
       "lastCommitAt": "2026-08-27T17:52:38Z",
       "activeDates": [
-        "2025-08-08",
         "2025-08-15",
         "2025-09-11",
         "2025-10-27",
@@ -894,17 +889,17 @@
         "2026-08-24",
         "2026-08-27"
       ],
-      "repoCount": 9
+      "repoCount": 8
     },
     {
       "login": "smartgoo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/11283276?v=4",
       "htmlUrl": "https://github.com/smartgoo",
-      "commits": 64,
+      "commits": 65,
       "repos": [
         {
           "repo": "kaspanet/kaspa-python-sdk",
-          "commits": 59
+          "commits": 60
         },
         {
           "repo": "kaspanet/rusty-kaspa",
@@ -917,7 +912,7 @@
       ],
       "firstCommitAt": "2025-11-29T14:29:35Z",
       "firstCommitRepo": "kaspanet/kaspa-python-sdk",
-      "lastCommitAt": "2026-09-12T02:20:07Z",
+      "lastCommitAt": "2026-09-12T12:16:42Z",
       "activeDates": [
         "2025-11-29",
         "2026-01-07",
@@ -968,6 +963,70 @@
       "repoCount": 3
     },
     {
+      "login": "doktor83",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/6808360?v=4",
+      "htmlUrl": "https://github.com/doktor83",
+      "commits": 59,
+      "repos": [
+        {
+          "repo": "doktor83/SRBMiner-Multi",
+          "commits": 59
+        }
+      ],
+      "firstCommitAt": "2025-08-19T16:36:21Z",
+      "firstCommitRepo": "doktor83/SRBMiner-Multi",
+      "lastCommitAt": "2026-09-13T06:57:53Z",
+      "activeDates": [
+        "2025-08-19",
+        "2025-09-04",
+        "2025-09-27",
+        "2025-10-29",
+        "2025-11-03",
+        "2025-11-06",
+        "2025-12-05",
+        "2025-12-16",
+        "2025-12-17",
+        "2025-12-22",
+        "2026-01-03",
+        "2026-02-09",
+        "2026-02-15",
+        "2026-02-18",
+        "2026-02-23",
+        "2026-02-26",
+        "2026-03-07",
+        "2026-03-12",
+        "2026-03-14",
+        "2026-03-17",
+        "2026-03-27",
+        "2026-03-29",
+        "2026-04-09",
+        "2026-04-21",
+        "2026-04-30",
+        "2026-05-05",
+        "2026-05-21",
+        "2026-05-31",
+        "2026-06-08",
+        "2026-06-13",
+        "2026-06-15",
+        "2026-06-24",
+        "2026-07-03",
+        "2026-08-02",
+        "2026-08-05",
+        "2026-08-10",
+        "2026-08-15",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-20",
+        "2026-08-27",
+        "2026-09-03",
+        "2026-09-07",
+        "2026-09-09",
+        "2026-09-11",
+        "2026-09-13"
+      ],
+      "repoCount": 1
+    },
+    {
       "login": "VeselinovicAleksandar",
       "avatarUrl": "https://avatars.githubusercontent.com/u/17344601?v=4",
       "htmlUrl": "https://github.com/VeselinovicAleksandar",
@@ -1016,69 +1075,6 @@
         "2026-07-16",
         "2026-07-24",
         "2026-08-04"
-      ],
-      "repoCount": 1
-    },
-    {
-      "login": "doktor83",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/6808360?v=4",
-      "htmlUrl": "https://github.com/doktor83",
-      "commits": 57,
-      "repos": [
-        {
-          "repo": "doktor83/SRBMiner-Multi",
-          "commits": 57
-        }
-      ],
-      "firstCommitAt": "2025-08-19T16:36:21Z",
-      "firstCommitRepo": "doktor83/SRBMiner-Multi",
-      "lastCommitAt": "2026-09-11T06:57:18Z",
-      "activeDates": [
-        "2025-08-19",
-        "2025-09-04",
-        "2025-09-27",
-        "2025-10-29",
-        "2025-11-03",
-        "2025-11-06",
-        "2025-12-05",
-        "2025-12-16",
-        "2025-12-17",
-        "2025-12-22",
-        "2026-01-03",
-        "2026-02-09",
-        "2026-02-15",
-        "2026-02-18",
-        "2026-02-23",
-        "2026-02-26",
-        "2026-03-07",
-        "2026-03-12",
-        "2026-03-14",
-        "2026-03-17",
-        "2026-03-27",
-        "2026-03-29",
-        "2026-04-09",
-        "2026-04-21",
-        "2026-04-30",
-        "2026-05-05",
-        "2026-05-21",
-        "2026-05-31",
-        "2026-06-08",
-        "2026-06-13",
-        "2026-06-15",
-        "2026-06-24",
-        "2026-07-03",
-        "2026-08-02",
-        "2026-08-05",
-        "2026-08-10",
-        "2026-08-15",
-        "2026-08-17",
-        "2026-08-18",
-        "2026-08-20",
-        "2026-08-27",
-        "2026-09-03",
-        "2026-09-07",
-        "2026-09-09",
-        "2026-09-11"
       ],
       "repoCount": 1
     },

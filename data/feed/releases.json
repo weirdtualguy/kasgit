@@ -1,7 +1,23 @@
 {
-  "generatedAt": "2026-09-12T07:54:39.606655+00:00",
+  "generatedAt": "2026-09-13T08:17:58.838147+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.6.7",
+      "tag": "3.6.7",
+      "publishedAt": "2026-09-13T06:59:13Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.6.7",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspanet/kaspa-python-sdk",
+      "name": "2.0.2rc2",
+      "tag": "v2.0.2.rc2",
+      "publishedAt": "2026-09-12T12:51:58Z",
+      "url": "https://github.com/kaspanet/kaspa-python-sdk/releases/tag/v2.0.2.rc2",
+      "prerelease": true
+    },
     {
       "repo": "doktor83/SRBMiner-Multi",
       "name": "SRBMiner-MULTI v3.6.6",
@@ -1024,14 +1040,6 @@
       "tag": "v2.0.1",
       "publishedAt": "2026-03-17T21:01:24Z",
       "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.0.1",
-      "prerelease": false
-    },
-    {
-      "repo": "doktor83/SRBMiner-Multi",
-      "name": "SRBMiner-MULTI v3.2.1",
-      "tag": "3.2.1",
-      "publishedAt": "2026-03-16T15:55:11Z",
-      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.2.1",
       "prerelease": false
     }
   ]
