@@ -1,16 +1,8 @@
 {
   "repo": "NukeThemAII/KasDraw",
-  "generatedAt": "2026-09-13T08:17:58.838147+00:00",
+  "generatedAt": "2026-09-14T08:53:59.149067+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-08-09",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-08-10",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-09-14",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "TypeScript",
@@ -3471,6 +3471,13 @@
     },
     {
       "date": "2026-09-13",
+      "stars": 1,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0
+    },
+    {
+      "date": "2026-09-14",
       "stars": 1,
       "forks": 0,
       "watchers": 0,

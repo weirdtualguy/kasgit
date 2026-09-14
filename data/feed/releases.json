@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T08:17:58.838147+00:00",
+  "generatedAt": "2026-09-14T08:53:59.149067+00:00",
   "lookbackDays": 180,
   "releases": [
     {
@@ -1008,38 +1008,6 @@
       "tag": "v2.1.1",
       "publishedAt": "2026-03-24T08:06:22Z",
       "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.1.1",
-      "prerelease": false
-    },
-    {
-      "repo": "kaspa-ng/kaspa-rest-server",
-      "name": "v2.1.0",
-      "tag": "v2.1.0",
-      "publishedAt": "2026-03-18T07:34:22Z",
-      "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.1.0",
-      "prerelease": false
-    },
-    {
-      "repo": "supertypo/simply-kaspa-indexer",
-      "name": "v2.1.0",
-      "tag": "v2.1.0",
-      "publishedAt": "2026-03-18T07:31:32Z",
-      "url": "https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.1.0",
-      "prerelease": false
-    },
-    {
-      "repo": "doktor83/SRBMiner-Multi",
-      "name": "SRBMiner-MULTI v3.2.2",
-      "tag": "3.2.2",
-      "publishedAt": "2026-03-17T22:54:49Z",
-      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.2.2",
-      "prerelease": false
-    },
-    {
-      "repo": "kaspa-ng/kaspa-rest-server",
-      "name": "v2.0.1",
-      "tag": "v2.0.1",
-      "publishedAt": "2026-03-17T21:01:24Z",
-      "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.0.1",
       "prerelease": false
     }
   ]

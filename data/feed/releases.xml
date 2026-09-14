@@ -4,7 +4,7 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Sun, 13 Sep 2026 08:17:58 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 08:53:59 +0000</lastBuildDate>
     <item>
       <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.6.7</title>
       <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.6.7</link>
@@ -886,34 +886,6 @@
       <guid isPermaLink="true">https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.1.1</guid>
       <pubDate>Tue, 24 Mar 2026 08:06:22 +0000</pubDate>
       <description>v2.1.1</description>
-    </item>
-    <item>
-      <title>kaspa-ng/kaspa-rest-server — v2.1.0</title>
-      <link>https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.1.0</link>
-      <guid isPermaLink="true">https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.1.0</guid>
-      <pubDate>Wed, 18 Mar 2026 07:34:22 +0000</pubDate>
-      <description>v2.1.0</description>
-    </item>
-    <item>
-      <title>supertypo/simply-kaspa-indexer — v2.1.0</title>
-      <link>https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.1.0</link>
-      <guid isPermaLink="true">https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.1.0</guid>
-      <pubDate>Wed, 18 Mar 2026 07:31:32 +0000</pubDate>
-      <description>v2.1.0</description>
-    </item>
-    <item>
-      <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.2.2</title>
-      <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.2.2</link>
-      <guid isPermaLink="true">https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.2.2</guid>
-      <pubDate>Tue, 17 Mar 2026 22:54:49 +0000</pubDate>
-      <description>3.2.2</description>
-    </item>
-    <item>
-      <title>kaspa-ng/kaspa-rest-server — v2.0.1</title>
-      <link>https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.0.1</link>
-      <guid isPermaLink="true">https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.0.1</guid>
-      <pubDate>Tue, 17 Mar 2026 21:01:24 +0000</pubDate>
-      <description>v2.0.1</description>
     </item>
   </channel>
 </rss>
