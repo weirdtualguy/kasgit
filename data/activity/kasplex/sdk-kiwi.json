@@ -1,23 +1,15 @@
 {
   "repo": "kasplex/sdk-kiwi",
-  "generatedAt": "2026-09-14T08:53:59.149067+00:00",
+  "generatedAt": "2026-09-15T08:40:08.435864+00:00",
   "lookbackDays": 400,
   "series": [
     {
-      "date": "2025-08-10",
-      "commits": 0,
-      "prs": 0,
-      "issues": 1,
-      "releases": 0,
-      "activeDevs": 0
-    },
-    {
       "date": "2025-08-11",
-      "commits": 1,
+      "commits": 0,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 1
+      "activeDevs": 0
     },
     {
       "date": "2025-08-12",
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-09-15",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "JavaScript",
@@ -3487,16 +3487,23 @@
       "forks": 2,
       "watchers": 3,
       "openIssues": 2
+    },
+    {
+      "date": "2026-09-15",
+      "stars": 8,
+      "forks": 2,
+      "watchers": 3,
+      "openIssues": 2
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 9,
+  "identifiedCommits": 8,
   "busFactor": 1,
   "topContributors": [
     {
       "login": "yeren0914",
-      "commits": 9
+      "commits": 8
     }
   ]
 }

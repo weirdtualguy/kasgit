@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T08:53:59.149067+00:00",
+  "generatedAt": "2026-09-15T08:40:08.435864+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -222,18 +222,17 @@
       "login": "thesheepcat",
       "avatarUrl": "https://avatars.githubusercontent.com/u/68336151?v=4",
       "htmlUrl": "https://github.com/thesheepcat",
-      "commits": 223,
+      "commits": 222,
       "repos": [
         {
           "repo": "thesheepcat/K-indexer",
-          "commits": 223
+          "commits": 222
         }
       ],
-      "firstCommitAt": "2025-08-10T09:37:42Z",
+      "firstCommitAt": "2025-08-11T19:07:44Z",
       "firstCommitRepo": "thesheepcat/K-indexer",
       "lastCommitAt": "2026-07-06T19:44:19Z",
       "activeDates": [
-        "2025-08-10",
         "2025-08-11",
         "2025-08-12",
         "2025-08-13",
@@ -810,7 +809,7 @@
       "login": "IzioDev",
       "avatarUrl": "https://avatars.githubusercontent.com/u/9900846?v=4",
       "htmlUrl": "https://github.com/IzioDev",
-      "commits": 69,
+      "commits": 70,
       "repos": [
         {
           "repo": "kaspanet/rusty-kaspa",
@@ -843,11 +842,15 @@
         {
           "repo": "aspectron/kaspa-ng",
           "commits": 1
+        },
+        {
+          "repo": "michaelsutton/argent",
+          "commits": 1
         }
       ],
       "firstCommitAt": "2025-08-15T02:19:39Z",
       "firstCommitRepo": "kaspanet/rusty-kaspa",
-      "lastCommitAt": "2026-08-27T17:52:38Z",
+      "lastCommitAt": "2026-09-14T20:12:01Z",
       "activeDates": [
         "2025-08-15",
         "2025-09-11",
@@ -886,9 +889,10 @@
         "2026-08-20",
         "2026-08-23",
         "2026-08-24",
-        "2026-08-27"
+        "2026-08-27",
+        "2026-09-14"
       ],
-      "repoCount": 8
+      "repoCount": 9
     },
     {
       "login": "smartgoo",
@@ -1456,6 +1460,39 @@
       "repoCount": 2
     },
     {
+      "login": "bzminer",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/83083846?v=4",
+      "htmlUrl": "https://github.com/bzminer",
+      "commits": 21,
+      "repos": [
+        {
+          "repo": "bzminer/bzminer",
+          "commits": 21
+        }
+      ],
+      "firstCommitAt": "2025-12-18T15:12:18Z",
+      "firstCommitRepo": "bzminer/bzminer",
+      "lastCommitAt": "2026-09-14T15:17:32Z",
+      "activeDates": [
+        "2025-12-18",
+        "2026-02-16",
+        "2026-04-17",
+        "2026-04-27",
+        "2026-04-29",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-09-02",
+        "2026-09-04",
+        "2026-09-05",
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-11",
+        "2026-09-14"
+      ],
+      "repoCount": 1
+    },
+    {
       "login": "VadimGavrilitaMD",
       "avatarUrl": "https://avatars.githubusercontent.com/u/115978814?v=4",
       "htmlUrl": "https://github.com/VadimGavrilitaMD",
@@ -1481,38 +1518,6 @@
         "2025-10-03",
         "2025-10-07",
         "2025-10-09"
-      ],
-      "repoCount": 1
-    },
-    {
-      "login": "bzminer",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/83083846?v=4",
-      "htmlUrl": "https://github.com/bzminer",
-      "commits": 20,
-      "repos": [
-        {
-          "repo": "bzminer/bzminer",
-          "commits": 20
-        }
-      ],
-      "firstCommitAt": "2025-12-18T15:12:18Z",
-      "firstCommitRepo": "bzminer/bzminer",
-      "lastCommitAt": "2026-09-11T14:25:46Z",
-      "activeDates": [
-        "2025-12-18",
-        "2026-02-16",
-        "2026-04-17",
-        "2026-04-27",
-        "2026-04-29",
-        "2026-08-26",
-        "2026-08-27",
-        "2026-08-28",
-        "2026-09-02",
-        "2026-09-04",
-        "2026-09-05",
-        "2026-09-06",
-        "2026-09-07",
-        "2026-09-11"
       ],
       "repoCount": 1
     },
@@ -1835,18 +1840,17 @@
       "login": "yeren0914",
       "avatarUrl": "https://avatars.githubusercontent.com/u/8509626?v=4",
       "htmlUrl": "https://github.com/yeren0914",
-      "commits": 9,
+      "commits": 8,
       "repos": [
         {
           "repo": "kasplex/sdk-kiwi",
-          "commits": 9
+          "commits": 8
         }
       ],
-      "firstCommitAt": "2025-08-11T06:11:28Z",
+      "firstCommitAt": "2025-10-29T07:37:52Z",
       "firstCommitRepo": "kasplex/sdk-kiwi",
       "lastCommitAt": "2026-04-27T08:00:35Z",
       "activeDates": [
-        "2025-08-11",
         "2025-10-29",
         "2025-11-04",
         "2026-01-21",

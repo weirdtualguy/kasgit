@@ -1,16 +1,8 @@
 {
   "repo": "thesheepcat/K-indexer",
-  "generatedAt": "2026-09-14T08:53:59.149067+00:00",
+  "generatedAt": "2026-09-15T08:40:08.435864+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-08-10",
-      "commits": 1,
-      "prs": 1,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 1
-    },
     {
       "date": "2025-08-11",
       "commits": 2,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-09-15",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "Rust",
@@ -3479,16 +3479,23 @@
       "forks": 3,
       "watchers": 1,
       "openIssues": 0
+    },
+    {
+      "date": "2026-09-15",
+      "stars": 6,
+      "forks": 3,
+      "watchers": 1,
+      "openIssues": 0
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 223,
+  "identifiedCommits": 222,
   "busFactor": 1,
   "topContributors": [
     {
       "login": "thesheepcat",
-      "commits": 223
+      "commits": 222
     }
   ]
 }
