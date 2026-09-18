@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T08:38:46.157108+00:00",
+  "generatedAt": "2026-09-18T08:14:20.079110+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -222,18 +222,17 @@
       "login": "thesheepcat",
       "avatarUrl": "https://avatars.githubusercontent.com/u/68336151?v=4",
       "htmlUrl": "https://github.com/thesheepcat",
-      "commits": 219,
+      "commits": 218,
       "repos": [
         {
           "repo": "thesheepcat/K-indexer",
-          "commits": 219
+          "commits": 218
         }
       ],
-      "firstCommitAt": "2025-08-13T10:26:26Z",
+      "firstCommitAt": "2025-08-18T21:14:10Z",
       "firstCommitRepo": "thesheepcat/K-indexer",
       "lastCommitAt": "2026-07-06T19:44:19Z",
       "activeDates": [
-        "2025-08-13",
         "2025-08-18",
         "2025-08-19",
         "2025-08-20",
@@ -761,44 +760,6 @@
       "repoCount": 1
     },
     {
-      "login": "azbuky",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/567277?v=4",
-      "htmlUrl": "https://github.com/azbuky",
-      "commits": 73,
-      "repos": [
-        {
-          "repo": "azbuky/kaspium_wallet",
-          "commits": 73
-        }
-      ],
-      "firstCommitAt": "2025-08-12T12:17:25Z",
-      "firstCommitRepo": "azbuky/kaspium_wallet",
-      "lastCommitAt": "2026-08-14T13:19:39Z",
-      "activeDates": [
-        "2025-08-12",
-        "2025-08-13",
-        "2026-06-17",
-        "2026-06-18",
-        "2026-06-19",
-        "2026-06-20",
-        "2026-06-21",
-        "2026-06-22",
-        "2026-06-27",
-        "2026-06-28",
-        "2026-06-29",
-        "2026-07-26",
-        "2026-07-29",
-        "2026-07-30",
-        "2026-08-01",
-        "2026-08-02",
-        "2026-08-08",
-        "2026-08-11",
-        "2026-08-13",
-        "2026-08-14"
-      ],
-      "repoCount": 1
-    },
-    {
       "login": "IzioDev",
       "avatarUrl": "https://avatars.githubusercontent.com/u/9900846?v=4",
       "htmlUrl": "https://github.com/IzioDev",
@@ -886,6 +847,42 @@
         "2026-09-14"
       ],
       "repoCount": 9
+    },
+    {
+      "login": "azbuky",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/567277?v=4",
+      "htmlUrl": "https://github.com/azbuky",
+      "commits": 70,
+      "repos": [
+        {
+          "repo": "azbuky/kaspium_wallet",
+          "commits": 70
+        }
+      ],
+      "firstCommitAt": "2026-06-17T08:03:51Z",
+      "firstCommitRepo": "azbuky/kaspium_wallet",
+      "lastCommitAt": "2026-08-14T13:19:39Z",
+      "activeDates": [
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-20",
+        "2026-06-21",
+        "2026-06-22",
+        "2026-06-27",
+        "2026-06-28",
+        "2026-06-29",
+        "2026-07-26",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-08-01",
+        "2026-08-02",
+        "2026-08-08",
+        "2026-08-11",
+        "2026-08-13",
+        "2026-08-14"
+      ],
+      "repoCount": 1
     },
     {
       "login": "smartgoo",
@@ -1368,16 +1365,16 @@
       "login": "bzminer",
       "avatarUrl": "https://avatars.githubusercontent.com/u/83083846?v=4",
       "htmlUrl": "https://github.com/bzminer",
-      "commits": 26,
+      "commits": 27,
       "repos": [
         {
           "repo": "bzminer/bzminer",
-          "commits": 26
+          "commits": 27
         }
       ],
       "firstCommitAt": "2025-12-18T15:12:18Z",
       "firstCommitRepo": "bzminer/bzminer",
-      "lastCommitAt": "2026-09-16T16:12:17Z",
+      "lastCommitAt": "2026-09-18T01:52:08Z",
       "activeDates": [
         "2025-12-18",
         "2026-02-16",
@@ -1394,7 +1391,8 @@
         "2026-09-07",
         "2026-09-11",
         "2026-09-14",
-        "2026-09-16"
+        "2026-09-16",
+        "2026-09-18"
       ],
       "repoCount": 1
     },
