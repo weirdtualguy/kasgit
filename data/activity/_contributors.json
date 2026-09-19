@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T08:14:20.079110+00:00",
+  "generatedAt": "2026-09-19T08:02:27.264353+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -760,14 +760,50 @@
       "repoCount": 1
     },
     {
-      "login": "IzioDev",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/9900846?v=4",
-      "htmlUrl": "https://github.com/IzioDev",
+      "login": "azbuky",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/567277?v=4",
+      "htmlUrl": "https://github.com/azbuky",
       "commits": 70,
       "repos": [
         {
+          "repo": "azbuky/kaspium_wallet",
+          "commits": 70
+        }
+      ],
+      "firstCommitAt": "2026-06-17T08:03:51Z",
+      "firstCommitRepo": "azbuky/kaspium_wallet",
+      "lastCommitAt": "2026-08-14T13:19:39Z",
+      "activeDates": [
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-20",
+        "2026-06-21",
+        "2026-06-22",
+        "2026-06-27",
+        "2026-06-28",
+        "2026-06-29",
+        "2026-07-26",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-08-01",
+        "2026-08-02",
+        "2026-08-08",
+        "2026-08-11",
+        "2026-08-13",
+        "2026-08-14"
+      ],
+      "repoCount": 1
+    },
+    {
+      "login": "IzioDev",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/9900846?v=4",
+      "htmlUrl": "https://github.com/IzioDev",
+      "commits": 69,
+      "repos": [
+        {
           "repo": "kaspanet/rusty-kaspa",
-          "commits": 31
+          "commits": 30
         },
         {
           "repo": "K-Kluster/kaspa-js",
@@ -802,11 +838,10 @@
           "commits": 1
         }
       ],
-      "firstCommitAt": "2025-08-15T02:19:39Z",
+      "firstCommitAt": "2025-09-11T03:23:35Z",
       "firstCommitRepo": "kaspanet/rusty-kaspa",
       "lastCommitAt": "2026-09-14T20:12:01Z",
       "activeDates": [
-        "2025-08-15",
         "2025-09-11",
         "2025-10-27",
         "2025-10-28",
@@ -847,42 +882,6 @@
         "2026-09-14"
       ],
       "repoCount": 9
-    },
-    {
-      "login": "azbuky",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/567277?v=4",
-      "htmlUrl": "https://github.com/azbuky",
-      "commits": 70,
-      "repos": [
-        {
-          "repo": "azbuky/kaspium_wallet",
-          "commits": 70
-        }
-      ],
-      "firstCommitAt": "2026-06-17T08:03:51Z",
-      "firstCommitRepo": "azbuky/kaspium_wallet",
-      "lastCommitAt": "2026-08-14T13:19:39Z",
-      "activeDates": [
-        "2026-06-17",
-        "2026-06-18",
-        "2026-06-19",
-        "2026-06-20",
-        "2026-06-21",
-        "2026-06-22",
-        "2026-06-27",
-        "2026-06-28",
-        "2026-06-29",
-        "2026-07-26",
-        "2026-07-29",
-        "2026-07-30",
-        "2026-08-01",
-        "2026-08-02",
-        "2026-08-08",
-        "2026-08-11",
-        "2026-08-13",
-        "2026-08-14"
-      ],
-      "repoCount": 1
     },
     {
       "login": "smartgoo",
@@ -1958,28 +1957,6 @@
       "repoCount": 1
     },
     {
-      "login": "Leon1777",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/168653957?v=4",
-      "htmlUrl": "https://github.com/Leon1777",
-      "commits": 4,
-      "repos": [
-        {
-          "repo": "kaspanet/rusty-kaspa",
-          "commits": 4
-        }
-      ],
-      "firstCommitAt": "2025-08-15T01:23:06Z",
-      "firstCommitRepo": "kaspanet/rusty-kaspa",
-      "lastCommitAt": "2026-03-03T20:29:54Z",
-      "activeDates": [
-        "2025-08-15",
-        "2025-10-29",
-        "2026-02-08",
-        "2026-03-03"
-      ],
-      "repoCount": 1
-    },
-    {
       "login": "develsoftware",
       "avatarUrl": "https://avatars.githubusercontent.com/u/8962939?v=4",
       "htmlUrl": "https://github.com/develsoftware",
@@ -2043,6 +2020,27 @@
         "2026-02-17"
       ],
       "repoCount": 2
+    },
+    {
+      "login": "Leon1777",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/168653957?v=4",
+      "htmlUrl": "https://github.com/Leon1777",
+      "commits": 3,
+      "repos": [
+        {
+          "repo": "kaspanet/rusty-kaspa",
+          "commits": 3
+        }
+      ],
+      "firstCommitAt": "2025-10-29T15:06:01Z",
+      "firstCommitRepo": "kaspanet/rusty-kaspa",
+      "lastCommitAt": "2026-03-03T20:29:54Z",
+      "activeDates": [
+        "2025-10-29",
+        "2026-02-08",
+        "2026-03-03"
+      ],
+      "repoCount": 1
     },
     {
       "login": "rigelminer",
