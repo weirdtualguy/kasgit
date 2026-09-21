@@ -1,16 +1,8 @@
 {
   "repo": "lAmeR1/kaspa-rest-server-deprecated",
-  "generatedAt": "2026-09-20T08:34:28.412309+00:00",
+  "generatedAt": "2026-09-21T08:55:43.590627+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-08-16",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-08-17",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-09-21",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "Python",
@@ -3519,6 +3519,13 @@
     },
     {
       "date": "2026-09-20",
+      "stars": 9,
+      "forks": 19,
+      "watchers": 5,
+      "openIssues": 5
+    },
+    {
+      "date": "2026-09-21",
       "stars": 9,
       "forks": 19,
       "watchers": 5,

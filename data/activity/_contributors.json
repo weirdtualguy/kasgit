@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T08:34:28.412309+00:00",
+  "generatedAt": "2026-09-21T08:55:43.590627+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -302,7 +302,7 @@
       "login": "someone235",
       "avatarUrl": "https://avatars.githubusercontent.com/u/784957?v=4",
       "htmlUrl": "https://github.com/someone235",
-      "commits": 199,
+      "commits": 201,
       "repos": [
         {
           "repo": "kaspanet/silverscript",
@@ -310,7 +310,7 @@
         },
         {
           "repo": "kaspanet/rusty-kaspa",
-          "commits": 58
+          "commits": 60
         },
         {
           "repo": "kaspanet/kccs",
@@ -327,7 +327,7 @@
       ],
       "firstCommitAt": "2025-10-23T08:51:02Z",
       "firstCommitRepo": "kaspanet/rusty-kaspa",
-      "lastCommitAt": "2026-09-09T16:47:25Z",
+      "lastCommitAt": "2026-09-20T12:40:27Z",
       "activeDates": [
         "2025-10-23",
         "2025-11-10",
@@ -408,7 +408,8 @@
         "2026-08-30",
         "2026-09-02",
         "2026-09-07",
-        "2026-09-09"
+        "2026-09-09",
+        "2026-09-20"
       ],
       "repoCount": 5
     },
@@ -1337,6 +1338,42 @@
       "repoCount": 2
     },
     {
+      "login": "bzminer",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/83083846?v=4",
+      "htmlUrl": "https://github.com/bzminer",
+      "commits": 28,
+      "repos": [
+        {
+          "repo": "bzminer/bzminer",
+          "commits": 28
+        }
+      ],
+      "firstCommitAt": "2025-12-18T15:12:18Z",
+      "firstCommitRepo": "bzminer/bzminer",
+      "lastCommitAt": "2026-09-20T15:21:22Z",
+      "activeDates": [
+        "2025-12-18",
+        "2026-02-16",
+        "2026-04-17",
+        "2026-04-27",
+        "2026-04-29",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-09-02",
+        "2026-09-04",
+        "2026-09-05",
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-11",
+        "2026-09-14",
+        "2026-09-16",
+        "2026-09-18",
+        "2026-09-20"
+      ],
+      "repoCount": 1
+    },
+    {
       "login": "JSmithOner",
       "avatarUrl": "https://avatars.githubusercontent.com/u/12628841?v=4",
       "htmlUrl": "https://github.com/JSmithOner",
@@ -1357,41 +1394,6 @@
         "2026-04-21",
         "2026-07-15",
         "2026-08-17"
-      ],
-      "repoCount": 1
-    },
-    {
-      "login": "bzminer",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/83083846?v=4",
-      "htmlUrl": "https://github.com/bzminer",
-      "commits": 27,
-      "repos": [
-        {
-          "repo": "bzminer/bzminer",
-          "commits": 27
-        }
-      ],
-      "firstCommitAt": "2025-12-18T15:12:18Z",
-      "firstCommitRepo": "bzminer/bzminer",
-      "lastCommitAt": "2026-09-18T01:52:08Z",
-      "activeDates": [
-        "2025-12-18",
-        "2026-02-16",
-        "2026-04-17",
-        "2026-04-27",
-        "2026-04-29",
-        "2026-08-26",
-        "2026-08-27",
-        "2026-08-28",
-        "2026-09-02",
-        "2026-09-04",
-        "2026-09-05",
-        "2026-09-06",
-        "2026-09-07",
-        "2026-09-11",
-        "2026-09-14",
-        "2026-09-16",
-        "2026-09-18"
       ],
       "repoCount": 1
     },

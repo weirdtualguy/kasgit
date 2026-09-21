@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/rusty-kaspa",
-  "generatedAt": "2026-09-20T08:34:28.412309+00:00",
+  "generatedAt": "2026-09-21T08:55:43.590627+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-08-16",
-      "commits": 0,
-      "prs": 0,
-      "issues": 1,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-08-17",
       "commits": 0,
@@ -3205,6 +3197,14 @@
     },
     {
       "date": "2026-09-20",
+      "commits": 2,
+      "prs": 2,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 1
+    },
+    {
+      "date": "2026-09-21",
       "commits": 0,
       "prs": 0,
       "issues": 0,
@@ -3214,7 +3214,7 @@
   ],
   "primaryLanguage": "Rust",
   "languages": {
-    "Rust": 8466361,
+    "Rust": 8503441,
     "JavaScript": 188322,
     "Jupyter Notebook": 142013,
     "Assembly": 49527,
@@ -3235,7 +3235,7 @@
   "defaultBranch": "master",
   "homepage": null,
   "createdAt": "2022-07-17T23:32:26Z",
-  "pushedAt": "2026-09-20T07:41:07Z",
+  "pushedAt": "2026-09-20T12:40:49Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3541,16 +3541,23 @@
       "forks": 300,
       "watchers": 73,
       "openIssues": 225
+    },
+    {
+      "date": "2026-09-21",
+      "stars": 849,
+      "forks": 301,
+      "watchers": 73,
+      "openIssues": 224
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 228,
+  "identifiedCommits": 230,
   "busFactor": 3,
   "topContributors": [
     {
       "login": "someone235",
-      "commits": 58
+      "commits": 60
     },
     {
       "login": "michaelsutton",
