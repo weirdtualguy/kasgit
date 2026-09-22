@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T08:55:43.590627+00:00",
+  "generatedAt": "2026-09-22T08:31:52.394905+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -1075,16 +1075,16 @@
       "login": "forbole-release-please-bot[bot]",
       "avatarUrl": "https://avatars.githubusercontent.com/u/32561566?v=4",
       "htmlUrl": "https://github.com/apps/forbole-release-please-bot",
-      "commits": 49,
+      "commits": 50,
       "repos": [
         {
           "repo": "forbole/kastle",
-          "commits": 49
+          "commits": 50
         }
       ],
       "firstCommitAt": "2025-09-25T06:11:23Z",
       "firstCommitRepo": "forbole/kastle",
-      "lastCommitAt": "2026-09-03T15:53:00Z",
+      "lastCommitAt": "2026-09-21T12:53:47Z",
       "activeDates": [
         "2025-09-25",
         "2025-09-26",
@@ -1129,7 +1129,8 @@
         "2026-08-26",
         "2026-08-27",
         "2026-08-28",
-        "2026-09-03"
+        "2026-09-03",
+        "2026-09-21"
       ],
       "repoCount": 1
     },
@@ -1647,6 +1648,48 @@
       "repoCount": 1
     },
     {
+      "login": "saefstroem",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/139136798?v=4",
+      "htmlUrl": "https://github.com/saefstroem",
+      "commits": 13,
+      "repos": [
+        {
+          "repo": "kaspanet/rusty-kaspa",
+          "commits": 5
+        },
+        {
+          "repo": "kaspanet/kips",
+          "commits": 5
+        },
+        {
+          "repo": "kaspanet/kccs",
+          "commits": 2
+        },
+        {
+          "repo": "kaspanet/workflow-perf-monitor-rs",
+          "commits": 1
+        }
+      ],
+      "firstCommitAt": "2025-12-07T07:04:53Z",
+      "firstCommitRepo": "kaspanet/kips",
+      "lastCommitAt": "2026-09-21T13:31:53Z",
+      "activeDates": [
+        "2025-12-07",
+        "2025-12-17",
+        "2026-02-05",
+        "2026-02-08",
+        "2026-04-19",
+        "2026-04-21",
+        "2026-04-27",
+        "2026-05-11",
+        "2026-05-13",
+        "2026-06-23",
+        "2026-08-27",
+        "2026-09-21"
+      ],
+      "repoCount": 4
+    },
+    {
       "login": "coderofstuff",
       "avatarUrl": "https://avatars.githubusercontent.com/u/114628839?v=4",
       "htmlUrl": "https://github.com/coderofstuff",
@@ -1683,47 +1726,6 @@
         "2026-06-25",
         "2026-08-19",
         "2026-08-20"
-      ],
-      "repoCount": 4
-    },
-    {
-      "login": "saefstroem",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/139136798?v=4",
-      "htmlUrl": "https://github.com/saefstroem",
-      "commits": 12,
-      "repos": [
-        {
-          "repo": "kaspanet/rusty-kaspa",
-          "commits": 5
-        },
-        {
-          "repo": "kaspanet/kips",
-          "commits": 5
-        },
-        {
-          "repo": "kaspanet/kccs",
-          "commits": 1
-        },
-        {
-          "repo": "kaspanet/workflow-perf-monitor-rs",
-          "commits": 1
-        }
-      ],
-      "firstCommitAt": "2025-12-07T07:04:53Z",
-      "firstCommitRepo": "kaspanet/kips",
-      "lastCommitAt": "2026-08-27T14:09:58Z",
-      "activeDates": [
-        "2025-12-07",
-        "2025-12-17",
-        "2026-02-05",
-        "2026-02-08",
-        "2026-04-19",
-        "2026-04-21",
-        "2026-04-27",
-        "2026-05-11",
-        "2026-05-13",
-        "2026-06-23",
-        "2026-08-27"
       ],
       "repoCount": 4
     },

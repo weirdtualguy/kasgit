@@ -4,7 +4,21 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Mon, 21 Sep 2026 08:55:43 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 08:31:52 +0000</lastBuildDate>
+    <item>
+      <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.6.9</title>
+      <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.6.9</link>
+      <guid isPermaLink="true">https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.6.9</guid>
+      <pubDate>Mon, 21 Sep 2026 17:36:22 +0000</pubDate>
+      <description>3.6.9</description>
+    </item>
+    <item>
+      <title>forbole/kastle — v2.60.1</title>
+      <link>https://github.com/forbole/kastle/releases/tag/v2.60.1</link>
+      <guid isPermaLink="true">https://github.com/forbole/kastle/releases/tag/v2.60.1</guid>
+      <pubDate>Mon, 21 Sep 2026 12:54:04 +0000</pubDate>
+      <description>v2.60.1</description>
+    </item>
     <item>
       <title>bzminer/bzminer — BzMiner v100.31</title>
       <link>https://github.com/bzminer/bzminer/releases/tag/v100.31</link>
@@ -893,27 +907,6 @@
       <guid isPermaLink="true">https://github.com/forbole/kastle/releases/tag/v2.46.0</guid>
       <pubDate>Fri, 27 Mar 2026 10:09:31 +0000</pubDate>
       <description>v2.46.0</description>
-    </item>
-    <item>
-      <title>kaspa-ng/kaspa-rest-server — v2.1.2</title>
-      <link>https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.1.2</link>
-      <guid isPermaLink="true">https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.1.2</guid>
-      <pubDate>Thu, 26 Mar 2026 07:56:54 +0000</pubDate>
-      <description>v2.1.2</description>
-    </item>
-    <item>
-      <title>supertypo/simply-kaspa-indexer — v2.1.2</title>
-      <link>https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.1.2</link>
-      <guid isPermaLink="true">https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.1.2</guid>
-      <pubDate>Wed, 25 Mar 2026 23:36:01 +0000</pubDate>
-      <description>v2.1.2</description>
-    </item>
-    <item>
-      <title>supertypo/simply-kaspa-indexer — v2.1.1</title>
-      <link>https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.1.1</link>
-      <guid isPermaLink="true">https://github.com/supertypo/simply-kaspa-indexer/releases/tag/v2.1.1</guid>
-      <pubDate>Wed, 25 Mar 2026 20:55:34 +0000</pubDate>
-      <description>v2.1.1</description>
     </item>
   </channel>
 </rss>
