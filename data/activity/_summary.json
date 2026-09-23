@@ -1,19 +1,11 @@
 {
-  "generatedAt": "2026-09-22T08:31:52.394905+00:00",
+  "generatedAt": "2026-09-23T08:33:57.896205+00:00",
   "lookbackDays": 400,
   "orgs": [
     "kaspanet"
   ],
   "repoCount": 92,
   "series": [
-    {
-      "date": "2025-08-18",
-      "commits": 2,
-      "prs": 0,
-      "issues": 1,
-      "releases": 0,
-      "activeDevs": 2
-    },
     {
       "date": "2025-08-19",
       "commits": 5,
@@ -3208,6 +3200,14 @@
     },
     {
       "date": "2026-09-22",
+      "commits": 3,
+      "prs": 3,
+      "issues": 5,
+      "releases": 1,
+      "activeDevs": 2
+    },
+    {
+      "date": "2026-09-23",
       "commits": 0,
       "prs": 0,
       "issues": 0,
@@ -3222,7 +3222,7 @@
     "releases": []
   },
   "languages": {
-    "Rust": 20638103,
+    "Rust": 20711811,
     "TypeScript": 10161735,
     "Go": 7291156,
     "JavaScript": 5405050,

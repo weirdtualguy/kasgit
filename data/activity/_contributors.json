@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T08:31:52.394905+00:00",
+  "generatedAt": "2026-09-23T08:33:57.896205+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -222,18 +222,17 @@
       "login": "thesheepcat",
       "avatarUrl": "https://avatars.githubusercontent.com/u/68336151?v=4",
       "htmlUrl": "https://github.com/thesheepcat",
-      "commits": 218,
+      "commits": 217,
       "repos": [
         {
           "repo": "thesheepcat/K-indexer",
-          "commits": 218
+          "commits": 217
         }
       ],
-      "firstCommitAt": "2025-08-18T21:14:10Z",
+      "firstCommitAt": "2025-08-19T18:28:39Z",
       "firstCommitRepo": "thesheepcat/K-indexer",
       "lastCommitAt": "2026-07-06T19:44:19Z",
       "activeDates": [
-        "2025-08-18",
         "2025-08-19",
         "2025-08-20",
         "2025-08-21",
@@ -302,7 +301,7 @@
       "login": "someone235",
       "avatarUrl": "https://avatars.githubusercontent.com/u/784957?v=4",
       "htmlUrl": "https://github.com/someone235",
-      "commits": 201,
+      "commits": 203,
       "repos": [
         {
           "repo": "kaspanet/silverscript",
@@ -310,7 +309,7 @@
         },
         {
           "repo": "kaspanet/rusty-kaspa",
-          "commits": 60
+          "commits": 62
         },
         {
           "repo": "kaspanet/kccs",
@@ -327,7 +326,7 @@
       ],
       "firstCommitAt": "2025-10-23T08:51:02Z",
       "firstCommitRepo": "kaspanet/rusty-kaspa",
-      "lastCommitAt": "2026-09-20T12:40:27Z",
+      "lastCommitAt": "2026-09-22T13:50:54Z",
       "activeDates": [
         "2025-10-23",
         "2025-11-10",
@@ -409,7 +408,8 @@
         "2026-09-02",
         "2026-09-07",
         "2026-09-09",
-        "2026-09-20"
+        "2026-09-20",
+        "2026-09-22"
       ],
       "repoCount": 5
     },
@@ -1593,6 +1593,33 @@
       "repoCount": 4
     },
     {
+      "login": "KeenHero",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/34964366?v=4",
+      "htmlUrl": "https://github.com/KeenHero",
+      "commits": 16,
+      "repos": [
+        {
+          "repo": "KeenHero/kaspa-wallet",
+          "commits": 15
+        },
+        {
+          "repo": "kaspanet/rusty-kaspa",
+          "commits": 1
+        }
+      ],
+      "firstCommitAt": "2026-02-16T06:57:58Z",
+      "firstCommitRepo": "KeenHero/kaspa-wallet",
+      "lastCommitAt": "2026-09-22T11:27:19Z",
+      "activeDates": [
+        "2026-02-16",
+        "2026-03-08",
+        "2026-03-09",
+        "2026-08-04",
+        "2026-09-22"
+      ],
+      "repoCount": 2
+    },
+    {
       "login": "cosmasken",
       "avatarUrl": "https://avatars.githubusercontent.com/u/15275726?v=4",
       "htmlUrl": "https://github.com/cosmasken",
@@ -1622,28 +1649,6 @@
         "2026-02-14",
         "2026-02-15",
         "2026-02-18"
-      ],
-      "repoCount": 1
-    },
-    {
-      "login": "KeenHero",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/34964366?v=4",
-      "htmlUrl": "https://github.com/KeenHero",
-      "commits": 15,
-      "repos": [
-        {
-          "repo": "KeenHero/kaspa-wallet",
-          "commits": 15
-        }
-      ],
-      "firstCommitAt": "2026-02-16T06:57:58Z",
-      "firstCommitRepo": "KeenHero/kaspa-wallet",
-      "lastCommitAt": "2026-08-04T18:31:20Z",
-      "activeDates": [
-        "2026-02-16",
-        "2026-03-08",
-        "2026-03-09",
-        "2026-08-04"
       ],
       "repoCount": 1
     },

@@ -1,7 +1,15 @@
 {
-  "generatedAt": "2026-09-22T08:31:52.394905+00:00",
+  "generatedAt": "2026-09-23T08:33:57.896205+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "kaspanet/rusty-kaspa",
+      "name": "Rusty Kaspa v2.1.0",
+      "tag": "v2.1.0",
+      "publishedAt": "2026-09-22T13:55:36Z",
+      "url": "https://github.com/kaspanet/rusty-kaspa/releases/tag/v2.1.0",
+      "prerelease": false
+    },
     {
       "repo": "doktor83/SRBMiner-Multi",
       "name": "SRBMiner-MULTI v3.6.9",
