@@ -1,16 +1,8 @@
 {
   "repo": "kaspa-ng/kaspa-rest-server",
-  "generatedAt": "2026-09-23T08:33:57.896205+00:00",
+  "generatedAt": "2026-09-24T08:26:32.937721+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-08-19",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-08-20",
       "commits": 0,
@@ -3205,6 +3197,14 @@
     },
     {
       "date": "2026-09-23",
+      "commits": 2,
+      "prs": 1,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 1
+    },
+    {
+      "date": "2026-09-24",
       "commits": 0,
       "prs": 0,
       "issues": 0,
@@ -3214,7 +3214,7 @@
   ],
   "primaryLanguage": "Python",
   "languages": {
-    "Python": 204121,
+    "Python": 205763,
     "Dockerfile": 460,
     "Procfile": 60
   },
@@ -3223,7 +3223,7 @@
   "defaultBranch": "main",
   "homepage": null,
   "createdAt": "2024-07-16T22:09:56Z",
-  "pushedAt": "2026-07-06T17:40:43Z",
+  "pushedAt": "2026-09-23T19:37:56Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3550,16 +3550,23 @@
       "forks": 26,
       "watchers": 1,
       "openIssues": 11
+    },
+    {
+      "date": "2026-09-24",
+      "stars": 8,
+      "forks": 26,
+      "watchers": 1,
+      "openIssues": 10
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 92,
+  "identifiedCommits": 94,
   "busFactor": 1,
   "topContributors": [
     {
       "login": "supertypo",
-      "commits": 92
+      "commits": 94
     }
   ]
 }

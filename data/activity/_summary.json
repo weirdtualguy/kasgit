@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T08:33:57.896205+00:00",
+  "generatedAt": "2026-09-24T08:26:32.937721+00:00",
   "lookbackDays": 400,
   "orgs": [
     "kaspanet"
@@ -7,17 +7,9 @@
   "repoCount": 92,
   "series": [
     {
-      "date": "2025-08-19",
-      "commits": 5,
-      "prs": 0,
-      "issues": 1,
-      "releases": 1,
-      "activeDevs": 3
-    },
-    {
       "date": "2025-08-20",
       "commits": 3,
-      "prs": 2,
+      "prs": 1,
       "issues": 0,
       "releases": 0,
       "activeDevs": 2
@@ -3208,6 +3200,14 @@
     },
     {
       "date": "2026-09-23",
+      "commits": 3,
+      "prs": 1,
+      "issues": 1,
+      "releases": 1,
+      "activeDevs": 2
+    },
+    {
+      "date": "2026-09-24",
       "commits": 0,
       "prs": 0,
       "issues": 0,
@@ -3227,7 +3227,7 @@
     "Go": 7291156,
     "JavaScript": 5405050,
     "C": 2501435,
-    "Python": 2376491,
+    "Python": 2378133,
     "Dart": 2152675,
     "Jupyter Notebook": 1767442,
     "C++": 906268,
