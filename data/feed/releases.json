@@ -1,7 +1,31 @@
 {
-  "generatedAt": "2026-09-24T08:26:32.937721+00:00",
+  "generatedAt": "2026-09-25T08:48:34.178494+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "kaspanet/kaspa-python-sdk",
+      "name": "2.1.0",
+      "tag": "v2.1.0",
+      "publishedAt": "2026-09-24T23:54:14Z",
+      "url": "https://github.com/kaspanet/kaspa-python-sdk/releases/tag/v2.1.0",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspa-ng/kaspa-rest-server",
+      "name": "v2.4.1",
+      "tag": "v2.4.1",
+      "publishedAt": "2026-09-24T13:30:50Z",
+      "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.4.1",
+      "prerelease": false
+    },
+    {
+      "repo": "kaspa-ng/kaspa-rest-server",
+      "name": "v2.4.0",
+      "tag": "v2.4.0",
+      "publishedAt": "2026-09-24T11:22:46Z",
+      "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.4.0",
+      "prerelease": false
+    },
     {
       "repo": "bzminer/bzminer",
       "name": "BzMiner v100.36",

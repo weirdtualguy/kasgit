@@ -4,7 +4,28 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Thu, 24 Sep 2026 08:26:32 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 08:48:34 +0000</lastBuildDate>
+    <item>
+      <title>kaspanet/kaspa-python-sdk — 2.1.0</title>
+      <link>https://github.com/kaspanet/kaspa-python-sdk/releases/tag/v2.1.0</link>
+      <guid isPermaLink="true">https://github.com/kaspanet/kaspa-python-sdk/releases/tag/v2.1.0</guid>
+      <pubDate>Thu, 24 Sep 2026 23:54:14 +0000</pubDate>
+      <description>v2.1.0</description>
+    </item>
+    <item>
+      <title>kaspa-ng/kaspa-rest-server — v2.4.1</title>
+      <link>https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.4.1</link>
+      <guid isPermaLink="true">https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.4.1</guid>
+      <pubDate>Thu, 24 Sep 2026 13:30:50 +0000</pubDate>
+      <description>v2.4.1</description>
+    </item>
+    <item>
+      <title>kaspa-ng/kaspa-rest-server — v2.4.0</title>
+      <link>https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.4.0</link>
+      <guid isPermaLink="true">https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.4.0</guid>
+      <pubDate>Thu, 24 Sep 2026 11:22:46 +0000</pubDate>
+      <description>v2.4.0</description>
+    </item>
     <item>
       <title>bzminer/bzminer — BzMiner v100.36</title>
       <link>https://github.com/bzminer/bzminer/releases/tag/v100.36</link>
