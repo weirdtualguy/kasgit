@@ -4,7 +4,7 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Fri, 25 Sep 2026 08:48:34 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 08:35:10 +0000</lastBuildDate>
     <item>
       <title>kaspanet/kaspa-python-sdk — 2.1.0</title>
       <link>https://github.com/kaspanet/kaspa-python-sdk/releases/tag/v2.1.0</link>
@@ -907,20 +907,6 @@
       <guid isPermaLink="true">https://github.com/forbole/kastle/releases/tag/v2.47.0</guid>
       <pubDate>Mon, 30 Mar 2026 11:12:46 +0000</pubDate>
       <description>v2.47.0</description>
-    </item>
-    <item>
-      <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.2.4</title>
-      <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.2.4</link>
-      <guid isPermaLink="true">https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.2.4</guid>
-      <pubDate>Sun, 29 Mar 2026 21:24:17 +0000</pubDate>
-      <description>3.2.4</description>
-    </item>
-    <item>
-      <title>kaspa-ng/kaspa-rest-server — v2.1.3</title>
-      <link>https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.1.3</link>
-      <guid isPermaLink="true">https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.1.3</guid>
-      <pubDate>Sun, 29 Mar 2026 13:03:36 +0000</pubDate>
-      <description>v2.1.3</description>
     </item>
   </channel>
 </rss>
