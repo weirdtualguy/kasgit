@@ -1,7 +1,15 @@
 {
-  "generatedAt": "2026-09-26T08:35:10.003361+00:00",
+  "generatedAt": "2026-09-27T09:14:36.036402+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "bzminer/bzminer",
+      "name": "BzMiner v100.40",
+      "tag": "v100.40",
+      "publishedAt": "2026-09-26T15:36:50Z",
+      "url": "https://github.com/bzminer/bzminer/releases/tag/v100.40",
+      "prerelease": false
+    },
     {
       "repo": "kaspanet/kaspa-python-sdk",
       "name": "2.1.0",
@@ -1016,22 +1024,6 @@
       "tag": "3.2.5",
       "publishedAt": "2026-03-31T17:03:46Z",
       "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.2.5",
-      "prerelease": false
-    },
-    {
-      "repo": "kaspa-ng/kaspa-rest-server",
-      "name": "v2.1.4",
-      "tag": "v2.1.4",
-      "publishedAt": "2026-03-30T15:53:36Z",
-      "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.1.4",
-      "prerelease": false
-    },
-    {
-      "repo": "forbole/kastle",
-      "name": "v2.47.0",
-      "tag": "v2.47.0",
-      "publishedAt": "2026-03-30T11:12:46Z",
-      "url": "https://github.com/forbole/kastle/releases/tag/v2.47.0",
       "prerelease": false
     }
   ]
