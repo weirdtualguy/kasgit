@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T09:14:36.036402+00:00",
+  "generatedAt": "2026-09-28T09:45:24.224874+00:00",
   "lookbackDays": 180,
   "releases": [
     {
@@ -1016,14 +1016,6 @@
       "tag": "1.23.2",
       "publishedAt": "2026-04-06T17:49:30Z",
       "url": "https://github.com/rigelminer/rigel/releases/tag/1.23.2",
-      "prerelease": false
-    },
-    {
-      "repo": "doktor83/SRBMiner-Multi",
-      "name": "SRBMiner-MULTI v3.2.5",
-      "tag": "3.2.5",
-      "publishedAt": "2026-03-31T17:03:46Z",
-      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.2.5",
       "prerelease": false
     }
   ]
