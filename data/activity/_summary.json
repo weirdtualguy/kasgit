@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T09:45:24.224874+00:00",
+  "generatedAt": "2026-09-29T09:48:40.289433+00:00",
   "lookbackDays": 400,
   "orgs": [
     "kaspanet"
@@ -7,20 +7,12 @@
   "repoCount": 92,
   "series": [
     {
-      "date": "2025-08-24",
-      "commits": 2,
-      "prs": 1,
-      "issues": 1,
-      "releases": 0,
-      "activeDevs": 2
-    },
-    {
       "date": "2025-08-25",
-      "commits": 2,
+      "commits": 1,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 2
+      "activeDevs": 1
     },
     {
       "date": "2025-08-26",
@@ -3208,8 +3200,16 @@
     },
     {
       "date": "2026-09-28",
-      "commits": 6,
-      "prs": 6,
+      "commits": 10,
+      "prs": 8,
+      "issues": 0,
+      "releases": 1,
+      "activeDevs": 3
+    },
+    {
+      "date": "2026-09-29",
+      "commits": 1,
+      "prs": 1,
       "issues": 0,
       "releases": 0,
       "activeDevs": 1
@@ -3222,10 +3222,10 @@
     "releases": []
   },
   "languages": {
-    "Rust": 20712241,
-    "TypeScript": 10582374,
+    "Rust": 20797897,
+    "TypeScript": 10581800,
     "Go": 7291156,
-    "JavaScript": 5407147,
+    "JavaScript": 5414991,
     "C": 2501435,
     "Python": 2380416,
     "Dart": 2152675,

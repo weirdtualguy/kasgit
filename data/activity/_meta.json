@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T09:45:24.224874+00:00",
+  "generatedAt": "2026-09-29T09:48:40.289433+00:00",
   "orgs": [
     "kaspanet"
   ],
@@ -11,8 +11,8 @@
   "repoCount": 92,
   "starsCaptured": 89,
   "starHistoryBackfills": 0,
-  "releaseFeedItems": 127,
-  "contributorsCaptured": 72,
+  "releaseFeedItems": 128,
+  "contributorsCaptured": 71,
   "ideasCaptured": 0,
   "failed": [
     "kaspanet/big-test-data",
