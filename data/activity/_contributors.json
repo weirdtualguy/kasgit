@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T09:48:40.289433+00:00",
+  "generatedAt": "2026-09-30T09:41:11.127817+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -128,7 +128,7 @@
       "login": "supertypo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/6649964?v=4",
       "htmlUrl": "https://github.com/supertypo",
-      "commits": 240,
+      "commits": 238,
       "repos": [
         {
           "repo": "supertypo/simply-kaspa-indexer",
@@ -136,7 +136,7 @@
         },
         {
           "repo": "kaspa-ng/kaspa-rest-server",
-          "commits": 100
+          "commits": 98
         },
         {
           "repo": "kaspanet/cpuminer",
@@ -149,7 +149,6 @@
       "activeDates": [
         "2025-08-11",
         "2025-08-18",
-        "2025-08-26",
         "2025-08-28",
         "2025-09-16",
         "2025-09-21",
@@ -224,18 +223,17 @@
       "login": "thesheepcat",
       "avatarUrl": "https://avatars.githubusercontent.com/u/68336151?v=4",
       "htmlUrl": "https://github.com/thesheepcat",
-      "commits": 208,
+      "commits": 207,
       "repos": [
         {
           "repo": "thesheepcat/K-indexer",
-          "commits": 208
+          "commits": 207
         }
       ],
-      "firstCommitAt": "2025-08-25T21:17:18Z",
+      "firstCommitAt": "2025-08-26T16:58:15Z",
       "firstCommitRepo": "thesheepcat/K-indexer",
       "lastCommitAt": "2026-07-06T19:44:19Z",
       "activeDates": [
-        "2025-08-25",
         "2025-08-26",
         "2025-08-27",
         "2025-08-30",
@@ -413,11 +411,11 @@
       "login": "michaelsutton",
       "avatarUrl": "https://avatars.githubusercontent.com/u/6299204?v=4",
       "htmlUrl": "https://github.com/michaelsutton",
-      "commits": 174,
+      "commits": 175,
       "repos": [
         {
           "repo": "michaelsutton/argent",
-          "commits": 83
+          "commits": 84
         },
         {
           "repo": "kaspanet/rusty-kaspa",
@@ -450,7 +448,7 @@
       ],
       "firstCommitAt": "2025-09-11T13:11:53Z",
       "firstCommitRepo": "kaspanet/research",
-      "lastCommitAt": "2026-09-10T13:47:00Z",
+      "lastCommitAt": "2026-09-29T22:05:49Z",
       "activeDates": [
         "2025-09-11",
         "2025-10-29",
@@ -532,7 +530,8 @@
         "2026-08-30",
         "2026-08-31",
         "2026-09-02",
-        "2026-09-10"
+        "2026-09-10",
+        "2026-09-29"
       ],
       "repoCount": 8
     },
