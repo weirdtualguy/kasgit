@@ -1,7 +1,15 @@
 {
-  "generatedAt": "2026-09-30T09:41:11.127817+00:00",
+  "generatedAt": "2026-10-01T10:07:05.240489+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "bzminer/bzminer",
+      "name": "BzMiner v100.41",
+      "tag": "v100.41",
+      "publishedAt": "2026-10-01T02:02:55Z",
+      "url": "https://github.com/bzminer/bzminer/releases/tag/v100.41",
+      "prerelease": false
+    },
     {
       "repo": "doktor83/SRBMiner-Multi",
       "name": "SRBMiner-MULTI v3.7.1",

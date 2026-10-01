@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T09:41:11.127817+00:00",
+  "generatedAt": "2026-10-01T10:07:05.240489+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -223,18 +223,17 @@
       "login": "thesheepcat",
       "avatarUrl": "https://avatars.githubusercontent.com/u/68336151?v=4",
       "htmlUrl": "https://github.com/thesheepcat",
-      "commits": 207,
+      "commits": 204,
       "repos": [
         {
           "repo": "thesheepcat/K-indexer",
-          "commits": 207
+          "commits": 204
         }
       ],
-      "firstCommitAt": "2025-08-26T16:58:15Z",
+      "firstCommitAt": "2025-08-27T18:31:10Z",
       "firstCommitRepo": "thesheepcat/K-indexer",
       "lastCommitAt": "2026-07-06T19:44:19Z",
       "activeDates": [
-        "2025-08-26",
         "2025-08-27",
         "2025-08-30",
         "2025-08-31",
@@ -411,11 +410,11 @@
       "login": "michaelsutton",
       "avatarUrl": "https://avatars.githubusercontent.com/u/6299204?v=4",
       "htmlUrl": "https://github.com/michaelsutton",
-      "commits": 175,
+      "commits": 176,
       "repos": [
         {
           "repo": "michaelsutton/argent",
-          "commits": 84
+          "commits": 85
         },
         {
           "repo": "kaspanet/rusty-kaspa",
@@ -448,7 +447,7 @@
       ],
       "firstCommitAt": "2025-09-11T13:11:53Z",
       "firstCommitRepo": "kaspanet/research",
-      "lastCommitAt": "2026-09-29T22:05:49Z",
+      "lastCommitAt": "2026-09-30T10:53:31Z",
       "activeDates": [
         "2025-09-11",
         "2025-10-29",
@@ -531,7 +530,8 @@
         "2026-08-31",
         "2026-09-02",
         "2026-09-10",
-        "2026-09-29"
+        "2026-09-29",
+        "2026-09-30"
       ],
       "repoCount": 8
     },
@@ -648,18 +648,17 @@
       "login": "dadamu",
       "avatarUrl": "https://avatars.githubusercontent.com/u/26020018?v=4",
       "htmlUrl": "https://github.com/dadamu",
-      "commits": 79,
+      "commits": 78,
       "repos": [
         {
           "repo": "forbole/kastle",
-          "commits": 79
+          "commits": 78
         }
       ],
-      "firstCommitAt": "2025-08-26T10:32:04Z",
+      "firstCommitAt": "2025-08-28T07:44:59Z",
       "firstCommitRepo": "forbole/kastle",
       "lastCommitAt": "2026-07-10T09:56:24Z",
       "activeDates": [
-        "2025-08-26",
         "2025-08-28",
         "2025-08-29",
         "2025-09-25",
@@ -1490,33 +1489,6 @@
       "repoCount": 2
     },
     {
-      "login": "VadimGavrilitaMD",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/115978814?v=4",
-      "htmlUrl": "https://github.com/VadimGavrilitaMD",
-      "commits": 19,
-      "repos": [
-        {
-          "repo": "KASPACOM/kaspacom-web-wallet",
-          "commits": 19
-        }
-      ],
-      "firstCommitAt": "2025-08-26T20:06:36Z",
-      "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
-      "lastCommitAt": "2025-10-09T22:55:33Z",
-      "activeDates": [
-        "2025-08-26",
-        "2025-08-29",
-        "2025-09-01",
-        "2025-09-07",
-        "2025-09-22",
-        "2025-10-01",
-        "2025-10-03",
-        "2025-10-07",
-        "2025-10-09"
-      ],
-      "repoCount": 1
-    },
-    {
       "login": "Manyfestation",
       "avatarUrl": "https://avatars.githubusercontent.com/u/240733973?v=4",
       "htmlUrl": "https://github.com/Manyfestation",
@@ -1588,6 +1560,32 @@
         "2025-11-23",
         "2025-11-25",
         "2025-12-09"
+      ],
+      "repoCount": 1
+    },
+    {
+      "login": "VadimGavrilitaMD",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/115978814?v=4",
+      "htmlUrl": "https://github.com/VadimGavrilitaMD",
+      "commits": 17,
+      "repos": [
+        {
+          "repo": "KASPACOM/kaspacom-web-wallet",
+          "commits": 17
+        }
+      ],
+      "firstCommitAt": "2025-08-29T22:54:13Z",
+      "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
+      "lastCommitAt": "2025-10-09T22:55:33Z",
+      "activeDates": [
+        "2025-08-29",
+        "2025-09-01",
+        "2025-09-07",
+        "2025-09-22",
+        "2025-10-01",
+        "2025-10-03",
+        "2025-10-07",
+        "2025-10-09"
       ],
       "repoCount": 1
     },
