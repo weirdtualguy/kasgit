@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T10:07:05.240489+00:00",
+  "generatedAt": "2026-10-02T09:44:58.523657+00:00",
   "lookbackDays": 400,
   "orgs": [
     "kaspanet"
@@ -7,20 +7,12 @@
   "repoCount": 92,
   "series": [
     {
-      "date": "2025-08-27",
-      "commits": 5,
-      "prs": 2,
-      "issues": 1,
-      "releases": 0,
-      "activeDevs": 2
-    },
-    {
       "date": "2025-08-28",
-      "commits": 3,
+      "commits": 2,
       "prs": 1,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 3
+      "activeDevs": 2
     },
     {
       "date": "2025-08-29",
@@ -3208,11 +3200,19 @@
     },
     {
       "date": "2026-10-01",
-      "commits": 0,
-      "prs": 0,
+      "commits": 5,
+      "prs": 5,
       "issues": 0,
       "releases": 1,
-      "activeDevs": 0
+      "activeDevs": 2
+    },
+    {
+      "date": "2026-10-02",
+      "commits": 1,
+      "prs": 1,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 1
     }
   ],
   "partialDataRepos": {
@@ -3223,7 +3223,7 @@
   },
   "languages": {
     "Rust": 20797897,
-    "TypeScript": 10581800,
+    "TypeScript": 10581891,
     "Go": 7291156,
     "JavaScript": 5414991,
     "C": 2501435,
