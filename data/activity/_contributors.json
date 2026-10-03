@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T09:44:58.523657+00:00",
+  "generatedAt": "2026-10-03T09:08:15.070853+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -644,70 +644,6 @@
       "repoCount": 1
     },
     {
-      "login": "dadamu",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/26020018?v=4",
-      "htmlUrl": "https://github.com/dadamu",
-      "commits": 77,
-      "repos": [
-        {
-          "repo": "forbole/kastle",
-          "commits": 77
-        }
-      ],
-      "firstCommitAt": "2025-08-29T08:09:07Z",
-      "firstCommitRepo": "forbole/kastle",
-      "lastCommitAt": "2026-07-10T09:56:24Z",
-      "activeDates": [
-        "2025-08-29",
-        "2025-09-25",
-        "2025-09-26",
-        "2025-09-27",
-        "2025-09-30",
-        "2025-10-02",
-        "2025-10-09",
-        "2025-10-13",
-        "2025-10-21",
-        "2025-10-27",
-        "2025-11-06",
-        "2025-11-10",
-        "2025-11-12",
-        "2025-11-14",
-        "2025-11-17",
-        "2025-12-16",
-        "2025-12-17",
-        "2025-12-24",
-        "2025-12-30",
-        "2026-02-09",
-        "2026-02-10",
-        "2026-02-26",
-        "2026-02-27",
-        "2026-03-02",
-        "2026-03-06",
-        "2026-03-27",
-        "2026-03-30",
-        "2026-04-07",
-        "2026-04-08",
-        "2026-04-14",
-        "2026-04-16",
-        "2026-04-17",
-        "2026-04-20",
-        "2026-04-23",
-        "2026-05-06",
-        "2026-05-20",
-        "2026-05-29",
-        "2026-06-05",
-        "2026-06-11",
-        "2026-06-15",
-        "2026-06-17",
-        "2026-06-18",
-        "2026-07-03",
-        "2026-07-07",
-        "2026-07-09",
-        "2026-07-10"
-      ],
-      "repoCount": 1
-    },
-    {
       "login": "IzioDev",
       "avatarUrl": "https://avatars.githubusercontent.com/u/9900846?v=4",
       "htmlUrl": "https://github.com/IzioDev",
@@ -798,6 +734,69 @@
         "2026-10-01"
       ],
       "repoCount": 9
+    },
+    {
+      "login": "dadamu",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/26020018?v=4",
+      "htmlUrl": "https://github.com/dadamu",
+      "commits": 75,
+      "repos": [
+        {
+          "repo": "forbole/kastle",
+          "commits": 75
+        }
+      ],
+      "firstCommitAt": "2025-09-25T06:09:15Z",
+      "firstCommitRepo": "forbole/kastle",
+      "lastCommitAt": "2026-07-10T09:56:24Z",
+      "activeDates": [
+        "2025-09-25",
+        "2025-09-26",
+        "2025-09-27",
+        "2025-09-30",
+        "2025-10-02",
+        "2025-10-09",
+        "2025-10-13",
+        "2025-10-21",
+        "2025-10-27",
+        "2025-11-06",
+        "2025-11-10",
+        "2025-11-12",
+        "2025-11-14",
+        "2025-11-17",
+        "2025-12-16",
+        "2025-12-17",
+        "2025-12-24",
+        "2025-12-30",
+        "2026-02-09",
+        "2026-02-10",
+        "2026-02-26",
+        "2026-02-27",
+        "2026-03-02",
+        "2026-03-06",
+        "2026-03-27",
+        "2026-03-30",
+        "2026-04-07",
+        "2026-04-08",
+        "2026-04-14",
+        "2026-04-16",
+        "2026-04-17",
+        "2026-04-20",
+        "2026-04-23",
+        "2026-05-06",
+        "2026-05-20",
+        "2026-05-29",
+        "2026-06-05",
+        "2026-06-11",
+        "2026-06-15",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-07-03",
+        "2026-07-07",
+        "2026-07-09",
+        "2026-07-10"
+      ],
+      "repoCount": 1
     },
     {
       "login": "ems-aleksandar",
@@ -1209,6 +1208,41 @@
       "repoCount": 1
     },
     {
+      "login": "leobragaz",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/26248202?v=4",
+      "htmlUrl": "https://github.com/leobragaz",
+      "commits": 40,
+      "repos": [
+        {
+          "repo": "forbole/kastle",
+          "commits": 40
+        }
+      ],
+      "firstCommitAt": "2025-09-26T11:15:18Z",
+      "firstCommitRepo": "forbole/kastle",
+      "lastCommitAt": "2026-10-02T16:40:06Z",
+      "activeDates": [
+        "2025-09-26",
+        "2025-10-23",
+        "2026-07-29",
+        "2026-08-13",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-09-03",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-26",
+        "2026-09-27",
+        "2026-09-28",
+        "2026-10-01",
+        "2026-10-02"
+      ],
+      "repoCount": 1
+    },
+    {
       "login": "Aaditya1273",
       "avatarUrl": "https://avatars.githubusercontent.com/u/189955193?v=4",
       "htmlUrl": "https://github.com/Aaditya1273",
@@ -1231,6 +1265,52 @@
         "2026-02-15"
       ],
       "repoCount": 1
+    },
+    {
+      "login": "5bb55b",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/179454876?v=4",
+      "htmlUrl": "https://github.com/5bb55b",
+      "commits": 39,
+      "repos": [
+        {
+          "repo": "kasplex/go-krc20d",
+          "commits": 38
+        },
+        {
+          "repo": "kasplex/indexer-executor",
+          "commits": 1
+        }
+      ],
+      "firstCommitAt": "2025-10-30T09:45:24Z",
+      "firstCommitRepo": "kasplex/indexer-executor",
+      "lastCommitAt": "2026-10-03T02:29:15Z",
+      "activeDates": [
+        "2025-10-30",
+        "2025-11-10",
+        "2025-12-12",
+        "2025-12-15",
+        "2025-12-16",
+        "2025-12-28",
+        "2026-01-13",
+        "2026-01-28",
+        "2026-01-30",
+        "2026-02-06",
+        "2026-02-09",
+        "2026-02-10",
+        "2026-03-02",
+        "2026-03-04",
+        "2026-03-31",
+        "2026-04-02",
+        "2026-04-03",
+        "2026-04-07",
+        "2026-04-09",
+        "2026-04-12",
+        "2026-04-13",
+        "2026-06-08",
+        "2026-06-16",
+        "2026-10-03"
+      ],
+      "repoCount": 2
     },
     {
       "login": "DorZion51",
@@ -1256,51 +1336,6 @@
         "2026-02-10"
       ],
       "repoCount": 1
-    },
-    {
-      "login": "5bb55b",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/179454876?v=4",
-      "htmlUrl": "https://github.com/5bb55b",
-      "commits": 38,
-      "repos": [
-        {
-          "repo": "kasplex/go-krc20d",
-          "commits": 37
-        },
-        {
-          "repo": "kasplex/indexer-executor",
-          "commits": 1
-        }
-      ],
-      "firstCommitAt": "2025-10-30T09:45:24Z",
-      "firstCommitRepo": "kasplex/indexer-executor",
-      "lastCommitAt": "2026-06-16T07:39:39Z",
-      "activeDates": [
-        "2025-10-30",
-        "2025-11-10",
-        "2025-12-12",
-        "2025-12-15",
-        "2025-12-16",
-        "2025-12-28",
-        "2026-01-13",
-        "2026-01-28",
-        "2026-01-30",
-        "2026-02-06",
-        "2026-02-09",
-        "2026-02-10",
-        "2026-03-02",
-        "2026-03-04",
-        "2026-03-31",
-        "2026-04-02",
-        "2026-04-03",
-        "2026-04-07",
-        "2026-04-09",
-        "2026-04-12",
-        "2026-04-13",
-        "2026-06-08",
-        "2026-06-16"
-      ],
-      "repoCount": 2
     },
     {
       "login": "tiram88",
@@ -1336,53 +1371,19 @@
       "repoCount": 2
     },
     {
-      "login": "leobragaz",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/26248202?v=4",
-      "htmlUrl": "https://github.com/leobragaz",
-      "commits": 36,
-      "repos": [
-        {
-          "repo": "forbole/kastle",
-          "commits": 36
-        }
-      ],
-      "firstCommitAt": "2025-09-26T11:15:18Z",
-      "firstCommitRepo": "forbole/kastle",
-      "lastCommitAt": "2026-10-01T13:34:14Z",
-      "activeDates": [
-        "2025-09-26",
-        "2025-10-23",
-        "2026-07-29",
-        "2026-08-13",
-        "2026-08-24",
-        "2026-08-25",
-        "2026-08-26",
-        "2026-08-27",
-        "2026-08-28",
-        "2026-09-03",
-        "2026-09-09",
-        "2026-09-10",
-        "2026-09-26",
-        "2026-09-27",
-        "2026-09-28",
-        "2026-10-01"
-      ],
-      "repoCount": 1
-    },
-    {
       "login": "bzminer",
       "avatarUrl": "https://avatars.githubusercontent.com/u/83083846?v=4",
       "htmlUrl": "https://github.com/bzminer",
-      "commits": 29,
+      "commits": 30,
       "repos": [
         {
           "repo": "bzminer/bzminer",
-          "commits": 29
+          "commits": 30
         }
       ],
       "firstCommitAt": "2025-12-18T15:12:18Z",
       "firstCommitRepo": "bzminer/bzminer",
-      "lastCommitAt": "2026-09-23T13:16:22Z",
+      "lastCommitAt": "2026-10-02T21:43:17Z",
       "activeDates": [
         "2025-12-18",
         "2026-02-16",
@@ -1402,7 +1403,8 @@
         "2026-09-16",
         "2026-09-18",
         "2026-09-20",
-        "2026-09-23"
+        "2026-09-23",
+        "2026-10-02"
       ],
       "repoCount": 1
     },
@@ -1533,36 +1535,6 @@
       "repoCount": 4
     },
     {
-      "login": "BenBeri",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/4749232?v=4",
-      "htmlUrl": "https://github.com/BenBeri",
-      "commits": 17,
-      "repos": [
-        {
-          "repo": "KASPACOM/kaspacom-web-wallet",
-          "commits": 17
-        }
-      ],
-      "firstCommitAt": "2025-08-28T18:45:22Z",
-      "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
-      "lastCommitAt": "2025-12-09T11:33:40Z",
-      "activeDates": [
-        "2025-08-28",
-        "2025-09-06",
-        "2025-09-08",
-        "2025-09-10",
-        "2025-11-06",
-        "2025-11-09",
-        "2025-11-10",
-        "2025-11-13",
-        "2025-11-21",
-        "2025-11-23",
-        "2025-11-25",
-        "2025-12-09"
-      ],
-      "repoCount": 1
-    },
-    {
       "login": "VadimGavrilitaMD",
       "avatarUrl": "https://avatars.githubusercontent.com/u/115978814?v=4",
       "htmlUrl": "https://github.com/VadimGavrilitaMD",
@@ -1614,6 +1586,35 @@
         "2026-09-22"
       ],
       "repoCount": 2
+    },
+    {
+      "login": "BenBeri",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/4749232?v=4",
+      "htmlUrl": "https://github.com/BenBeri",
+      "commits": 16,
+      "repos": [
+        {
+          "repo": "KASPACOM/kaspacom-web-wallet",
+          "commits": 16
+        }
+      ],
+      "firstCommitAt": "2025-09-06T22:34:37Z",
+      "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
+      "lastCommitAt": "2025-12-09T11:33:40Z",
+      "activeDates": [
+        "2025-09-06",
+        "2025-09-08",
+        "2025-09-10",
+        "2025-11-06",
+        "2025-11-09",
+        "2025-11-10",
+        "2025-11-13",
+        "2025-11-21",
+        "2025-11-23",
+        "2025-11-25",
+        "2025-12-09"
+      ],
+      "repoCount": 1
     },
     {
       "login": "cosmasken",
@@ -2069,6 +2070,26 @@
       "repoCount": 1
     },
     {
+      "login": "nicoletting",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/90247802?v=4",
+      "htmlUrl": "https://github.com/nicoletting",
+      "commits": 3,
+      "repos": [
+        {
+          "repo": "forbole/kastle",
+          "commits": 3
+        }
+      ],
+      "firstCommitAt": "2026-07-03T08:54:44Z",
+      "firstCommitRepo": "forbole/kastle",
+      "lastCommitAt": "2026-10-02T10:17:07Z",
+      "activeDates": [
+        "2026-07-03",
+        "2026-10-02"
+      ],
+      "repoCount": 1
+    },
+    {
       "login": "turbobot-temp",
       "avatarUrl": "https://avatars.githubusercontent.com/u/145653950?v=4",
       "htmlUrl": "https://github.com/turbobot-temp",
@@ -2162,45 +2183,6 @@
       "activeDates": [
         "2026-01-08",
         "2026-01-14"
-      ],
-      "repoCount": 1
-    },
-    {
-      "login": "nicoletting",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/90247802?v=4",
-      "htmlUrl": "https://github.com/nicoletting",
-      "commits": 2,
-      "repos": [
-        {
-          "repo": "forbole/kastle",
-          "commits": 2
-        }
-      ],
-      "firstCommitAt": "2026-07-03T08:54:44Z",
-      "firstCommitRepo": "forbole/kastle",
-      "lastCommitAt": "2026-10-02T09:24:07Z",
-      "activeDates": [
-        "2026-07-03",
-        "2026-10-02"
-      ],
-      "repoCount": 1
-    },
-    {
-      "login": "github-actions[bot]",
-      "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-      "htmlUrl": "https://github.com/apps/github-actions",
-      "commits": 2,
-      "repos": [
-        {
-          "repo": "forbole/kastle",
-          "commits": 2
-        }
-      ],
-      "firstCommitAt": "2025-08-29T08:08:48Z",
-      "firstCommitRepo": "forbole/kastle",
-      "lastCommitAt": "2025-08-29T08:10:42Z",
-      "activeDates": [
-        "2025-08-29"
       ],
       "repoCount": 1
     },

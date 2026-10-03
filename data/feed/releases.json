@@ -1,7 +1,23 @@
 {
-  "generatedAt": "2026-10-02T09:44:58.523657+00:00",
+  "generatedAt": "2026-10-03T09:08:15.070853+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "kasplex/go-krc20d",
+      "name": "Fixed a vulnerability in the script parser",
+      "tag": "krc20d-3.01.260930",
+      "publishedAt": "2026-10-03T02:41:33Z",
+      "url": "https://github.com/kasplex/go-krc20d/releases/tag/krc20d-3.01.260930",
+      "prerelease": false
+    },
+    {
+      "repo": "bzminer/bzminer",
+      "name": "BzMiner v100.45",
+      "tag": "v100.45",
+      "publishedAt": "2026-10-02T21:44:32Z",
+      "url": "https://github.com/bzminer/bzminer/releases/tag/v100.45",
+      "prerelease": false
+    },
     {
       "repo": "bzminer/bzminer",
       "name": "BzMiner v100.41",

@@ -1,23 +1,15 @@
 {
   "repo": "forbole/kastle",
-  "generatedAt": "2026-10-02T09:44:58.523657+00:00",
+  "generatedAt": "2026-10-03T09:08:15.070853+00:00",
   "lookbackDays": 400,
   "series": [
     {
-      "date": "2025-08-28",
-      "commits": 0,
-      "prs": 0,
+      "date": "2025-08-29",
+      "commits": 5,
+      "prs": 4,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
-    },
-    {
-      "date": "2025-08-29",
-      "commits": 9,
-      "prs": 7,
-      "issues": 0,
-      "releases": 2,
-      "activeDevs": 4
+      "activeDevs": 2
     },
     {
       "date": "2025-08-30",
@@ -3205,17 +3197,25 @@
     },
     {
       "date": "2026-10-02",
-      "commits": 1,
-      "prs": 1,
+      "commits": 6,
+      "prs": 6,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 1
+      "activeDevs": 2
+    },
+    {
+      "date": "2026-10-03",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "TypeScript",
   "languages": {
-    "TypeScript": 1818495,
-    "JavaScript": 541987,
+    "TypeScript": 1846186,
+    "JavaScript": 542087,
     "Python": 38915,
     "CSS": 1069,
     "HTML": 564
@@ -3231,7 +3231,7 @@
   "defaultBranch": "main",
   "homepage": "https://kastle.cc",
   "createdAt": "2025-02-03T08:20:39Z",
-  "pushedAt": "2026-10-02T09:45:32Z",
+  "pushedAt": "2026-10-02T16:40:07Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3621,16 +3621,23 @@
       "forks": 3,
       "watchers": 2,
       "openIssues": 23
+    },
+    {
+      "date": "2026-10-03",
+      "stars": 15,
+      "forks": 3,
+      "watchers": 2,
+      "openIssues": 22
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 177,
+  "identifiedCommits": 178,
   "busFactor": 2,
   "topContributors": [
     {
       "login": "dadamu",
-      "commits": 77
+      "commits": 75
     },
     {
       "login": "forbole-release-please-bot[bot]",
@@ -3638,7 +3645,7 @@
     },
     {
       "login": "leobragaz",
-      "commits": 36
+      "commits": 40
     },
     {
       "login": "dependabot[bot]",
@@ -3646,7 +3653,7 @@
     },
     {
       "login": "nicoletting",
-      "commits": 2
+      "commits": 3
     }
   ]
 }

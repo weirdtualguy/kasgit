@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T09:44:58.523657+00:00",
+  "generatedAt": "2026-10-03T09:08:15.070853+00:00",
   "lookbackDays": 400,
   "orgs": [
     "kaspanet"
@@ -7,20 +7,12 @@
   "repoCount": 92,
   "series": [
     {
-      "date": "2025-08-28",
-      "commits": 2,
-      "prs": 1,
+      "date": "2025-08-29",
+      "commits": 6,
+      "prs": 4,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 2
-    },
-    {
-      "date": "2025-08-29",
-      "commits": 11,
-      "prs": 7,
-      "issues": 0,
-      "releases": 3,
-      "activeDevs": 6
+      "activeDevs": 3
     },
     {
       "date": "2025-08-30",
@@ -3074,7 +3066,7 @@
       "date": "2026-09-15",
       "commits": 0,
       "prs": 0,
-      "issues": 1,
+      "issues": 2,
       "releases": 0,
       "activeDevs": 0
     },
@@ -3208,10 +3200,18 @@
     },
     {
       "date": "2026-10-02",
+      "commits": 7,
+      "prs": 6,
+      "issues": 1,
+      "releases": 1,
+      "activeDevs": 3
+    },
+    {
+      "date": "2026-10-03",
       "commits": 1,
-      "prs": 1,
+      "prs": 0,
       "issues": 0,
-      "releases": 0,
+      "releases": 1,
       "activeDevs": 1
     }
   ],
@@ -3223,9 +3223,9 @@
   },
   "languages": {
     "Rust": 20797897,
-    "TypeScript": 10581891,
-    "Go": 7291156,
-    "JavaScript": 5414991,
+    "TypeScript": 10609582,
+    "Go": 7288891,
+    "JavaScript": 5415091,
     "C": 2501435,
     "Python": 2380416,
     "Dart": 2152675,

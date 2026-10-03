@@ -4,7 +4,21 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Fri, 02 Oct 2026 09:44:58 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 09:08:15 +0000</lastBuildDate>
+    <item>
+      <title>kasplex/go-krc20d — Fixed a vulnerability in the script parser</title>
+      <link>https://github.com/kasplex/go-krc20d/releases/tag/krc20d-3.01.260930</link>
+      <guid isPermaLink="true">https://github.com/kasplex/go-krc20d/releases/tag/krc20d-3.01.260930</guid>
+      <pubDate>Sat, 03 Oct 2026 02:41:33 +0000</pubDate>
+      <description>krc20d-3.01.260930</description>
+    </item>
+    <item>
+      <title>bzminer/bzminer — BzMiner v100.45</title>
+      <link>https://github.com/bzminer/bzminer/releases/tag/v100.45</link>
+      <guid isPermaLink="true">https://github.com/bzminer/bzminer/releases/tag/v100.45</guid>
+      <pubDate>Fri, 02 Oct 2026 21:44:32 +0000</pubDate>
+      <description>v100.45</description>
+    </item>
     <item>
       <title>bzminer/bzminer — BzMiner v100.41</title>
       <link>https://github.com/bzminer/bzminer/releases/tag/v100.41</link>

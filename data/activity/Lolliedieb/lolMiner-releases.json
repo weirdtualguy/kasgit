@@ -1,16 +1,8 @@
 {
   "repo": "Lolliedieb/lolMiner-releases",
-  "generatedAt": "2026-10-02T09:44:58.523657+00:00",
+  "generatedAt": "2026-10-03T09:08:15.070853+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-08-28",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-08-29",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-10-03",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": null,
@@ -3599,6 +3599,13 @@
     {
       "date": "2026-10-02",
       "stars": 2892,
+      "forks": 609,
+      "watchers": 143,
+      "openIssues": 339
+    },
+    {
+      "date": "2026-10-03",
+      "stars": 2891,
       "forks": 609,
       "watchers": 143,
       "openIssues": 339
