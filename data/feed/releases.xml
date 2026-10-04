@@ -4,7 +4,7 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Sat, 03 Oct 2026 09:08:15 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2026 09:47:57 +0000</lastBuildDate>
     <item>
       <title>kasplex/go-krc20d — Fixed a vulnerability in the script parser</title>
       <link>https://github.com/kasplex/go-krc20d/releases/tag/krc20d-3.01.260930</link>
@@ -921,13 +921,6 @@
       <guid isPermaLink="true">https://github.com/forbole/kastle/releases/tag/v2.48.0</guid>
       <pubDate>Wed, 08 Apr 2026 11:04:52 +0000</pubDate>
       <description>v2.48.0</description>
-    </item>
-    <item>
-      <title>rigelminer/rigel — Rigel 1.23.2</title>
-      <link>https://github.com/rigelminer/rigel/releases/tag/1.23.2</link>
-      <guid isPermaLink="true">https://github.com/rigelminer/rigel/releases/tag/1.23.2</guid>
-      <pubDate>Mon, 06 Apr 2026 17:49:30 +0000</pubDate>
-      <description>1.23.2</description>
     </item>
   </channel>
 </rss>
