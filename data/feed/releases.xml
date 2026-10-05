@@ -4,7 +4,7 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Sun, 04 Oct 2026 09:47:57 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 10:25:01 +0000</lastBuildDate>
     <item>
       <title>kasplex/go-krc20d — Fixed a vulnerability in the script parser</title>
       <link>https://github.com/kasplex/go-krc20d/releases/tag/krc20d-3.01.260930</link>

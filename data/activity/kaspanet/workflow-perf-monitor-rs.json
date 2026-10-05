@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/workflow-perf-monitor-rs",
-  "generatedAt": "2026-10-04T09:47:57.440036+00:00",
+  "generatedAt": "2026-10-05T10:25:01.801978+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-08-30",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-08-31",
       "commits": 0,
@@ -2389,11 +2381,11 @@
     },
     {
       "date": "2026-06-24",
-      "commits": 0,
+      "commits": 1,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-06-25",
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-10-05",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "Rust",
@@ -3221,7 +3221,7 @@
   "defaultBranch": "master",
   "homepage": null,
   "createdAt": "2026-04-21T08:10:00Z",
-  "pushedAt": "2026-04-21T08:32:35Z",
+  "pushedAt": "2026-10-04T19:41:25Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3618,13 +3618,24 @@
       "forks": 1,
       "watchers": 0,
       "openIssues": 1
+    },
+    {
+      "date": "2026-10-05",
+      "stars": 1,
+      "forks": 1,
+      "watchers": 0,
+      "openIssues": 1
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 1,
+  "identifiedCommits": 2,
   "busFactor": 1,
   "topContributors": [
+    {
+      "login": "michaelsutton",
+      "commits": 1
+    },
     {
       "login": "saefstroem",
       "commits": 1
