@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T10:25:01.801978+00:00",
+  "generatedAt": "2026-10-06T10:16:27.867747+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -7,11 +7,11 @@
       "login": "giladm11",
       "avatarUrl": "https://avatars.githubusercontent.com/u/13984392?v=4",
       "htmlUrl": "https://github.com/giladm11",
-      "commits": 402,
+      "commits": 406,
       "repos": [
         {
           "repo": "KASPACOM/kaspacom-web-wallet",
-          "commits": 310
+          "commits": 314
         },
         {
           "repo": "kaspacom/swap-widget",
@@ -20,7 +20,7 @@
       ],
       "firstCommitAt": "2025-09-01T16:07:26Z",
       "firstCommitRepo": "kaspacom/swap-widget",
-      "lastCommitAt": "2026-09-08T09:20:59Z",
+      "lastCommitAt": "2026-10-05T12:14:35Z",
       "activeDates": [
         "2025-09-01",
         "2025-09-02",
@@ -120,7 +120,10 @@
         "2026-08-30",
         "2026-09-04",
         "2026-09-07",
-        "2026-09-08"
+        "2026-09-08",
+        "2026-09-26",
+        "2026-09-27",
+        "2026-10-05"
       ],
       "repoCount": 2
     },
@@ -339,18 +342,17 @@
       "login": "thesheepcat",
       "avatarUrl": "https://avatars.githubusercontent.com/u/68336151?v=4",
       "htmlUrl": "https://github.com/thesheepcat",
-      "commits": 193,
+      "commits": 192,
       "repos": [
         {
           "repo": "thesheepcat/K-indexer",
-          "commits": 193
+          "commits": 192
         }
       ],
-      "firstCommitAt": "2025-08-31T12:12:15Z",
+      "firstCommitAt": "2025-09-01T20:08:27Z",
       "firstCommitRepo": "thesheepcat/K-indexer",
       "lastCommitAt": "2026-07-06T19:44:19Z",
       "activeDates": [
-        "2025-08-31",
         "2025-09-01",
         "2025-09-02",
         "2025-09-13",
@@ -408,11 +410,11 @@
       "login": "michaelsutton",
       "avatarUrl": "https://avatars.githubusercontent.com/u/6299204?v=4",
       "htmlUrl": "https://github.com/michaelsutton",
-      "commits": 178,
+      "commits": 179,
       "repos": [
         {
           "repo": "michaelsutton/argent",
-          "commits": 86
+          "commits": 87
         },
         {
           "repo": "kaspanet/rusty-kaspa",
@@ -449,7 +451,7 @@
       ],
       "firstCommitAt": "2025-09-11T13:11:53Z",
       "firstCommitRepo": "kaspanet/research",
-      "lastCommitAt": "2026-10-04T12:04:19Z",
+      "lastCommitAt": "2026-10-05T11:48:53Z",
       "activeDates": [
         "2025-09-11",
         "2025-10-29",
@@ -535,7 +537,8 @@
         "2026-09-10",
         "2026-09-29",
         "2026-09-30",
-        "2026-10-04"
+        "2026-10-04",
+        "2026-10-05"
       ],
       "repoCount": 9
     },
@@ -1076,16 +1079,16 @@
       "login": "forbole-release-please-bot[bot]",
       "avatarUrl": "https://avatars.githubusercontent.com/u/32561566?v=4",
       "htmlUrl": "https://github.com/apps/forbole-release-please-bot",
-      "commits": 50,
+      "commits": 51,
       "repos": [
         {
           "repo": "forbole/kastle",
-          "commits": 50
+          "commits": 51
         }
       ],
       "firstCommitAt": "2025-09-25T06:11:23Z",
       "firstCommitRepo": "forbole/kastle",
-      "lastCommitAt": "2026-09-21T12:53:47Z",
+      "lastCommitAt": "2026-10-05T16:21:50Z",
       "activeDates": [
         "2025-09-25",
         "2025-09-26",
@@ -1131,7 +1134,8 @@
         "2026-08-27",
         "2026-08-28",
         "2026-09-03",
-        "2026-09-21"
+        "2026-09-21",
+        "2026-10-05"
       ],
       "repoCount": 1
     },
@@ -1216,16 +1220,16 @@
       "login": "leobragaz",
       "avatarUrl": "https://avatars.githubusercontent.com/u/26248202?v=4",
       "htmlUrl": "https://github.com/leobragaz",
-      "commits": 41,
+      "commits": 43,
       "repos": [
         {
           "repo": "forbole/kastle",
-          "commits": 41
+          "commits": 43
         }
       ],
       "firstCommitAt": "2025-09-26T11:15:18Z",
       "firstCommitRepo": "forbole/kastle",
-      "lastCommitAt": "2026-10-05T09:24:31Z",
+      "lastCommitAt": "2026-10-05T13:30:21Z",
       "activeDates": [
         "2025-09-26",
         "2025-10-23",

@@ -1,16 +1,8 @@
 {
   "repo": "KASPACOM/kaspacom-web-wallet",
-  "generatedAt": "2026-10-05T10:25:01.801978+00:00",
+  "generatedAt": "2026-10-06T10:16:27.867747+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-08-31",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-09-01",
       "commits": 4,
@@ -3133,19 +3125,19 @@
     },
     {
       "date": "2026-09-26",
-      "commits": 0,
+      "commits": 1,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-09-27",
-      "commits": 0,
+      "commits": 2,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-09-28",
@@ -3205,6 +3197,14 @@
     },
     {
       "date": "2026-10-05",
+      "commits": 1,
+      "prs": 1,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 1
+    },
+    {
+      "date": "2026-10-06",
       "commits": 0,
       "prs": 0,
       "issues": 0,
@@ -3214,17 +3214,17 @@
   ],
   "primaryLanguage": "TypeScript",
   "languages": {
-    "TypeScript": 2005596,
+    "TypeScript": 2059120,
     "JavaScript": 533160,
-    "HTML": 479619,
-    "SCSS": 347945
+    "HTML": 492630,
+    "SCSS": 352806
   },
   "topics": [],
   "license": "MIT",
   "defaultBranch": "develop",
   "homepage": null,
   "createdAt": "2024-11-24T23:08:28Z",
-  "pushedAt": "2026-09-27T10:11:08Z",
+  "pushedAt": "2026-10-05T12:14:38Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3628,16 +3628,23 @@
       "forks": 1,
       "watchers": 2,
       "openIssues": 5
+    },
+    {
+      "date": "2026-10-06",
+      "stars": 10,
+      "forks": 1,
+      "watchers": 2,
+      "openIssues": 4
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 583,
+  "identifiedCommits": 587,
   "busFactor": 1,
   "topContributors": [
     {
       "login": "giladm11",
-      "commits": 310
+      "commits": 314
     },
     {
       "login": "ems-aleksandar",

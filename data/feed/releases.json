@@ -1,7 +1,15 @@
 {
-  "generatedAt": "2026-10-05T10:25:01.801978+00:00",
+  "generatedAt": "2026-10-06T10:16:27.867747+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.61.0",
+      "tag": "v2.61.0",
+      "publishedAt": "2026-10-05T16:22:13Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.61.0",
+      "prerelease": false
+    },
     {
       "repo": "kasplex/go-krc20d",
       "name": "Fixed a vulnerability in the script parser",
@@ -1032,22 +1040,6 @@
       "tag": "krc20d-3.01.260412",
       "publishedAt": "2026-04-12T12:24:18Z",
       "url": "https://github.com/kasplex/go-krc20d/releases/tag/krc20d-3.01.260412",
-      "prerelease": false
-    },
-    {
-      "repo": "kasplex/go-krc20d",
-      "name": "krc20d-3.01.260403",
-      "tag": "krc20d-3.01.260403",
-      "publishedAt": "2026-04-09T07:23:19Z",
-      "url": "https://github.com/kasplex/go-krc20d/releases/tag/krc20d-3.01.260403",
-      "prerelease": false
-    },
-    {
-      "repo": "forbole/kastle",
-      "name": "v2.48.0",
-      "tag": "v2.48.0",
-      "publishedAt": "2026-04-08T11:04:52Z",
-      "url": "https://github.com/forbole/kastle/releases/tag/v2.48.0",
       "prerelease": false
     }
   ]
