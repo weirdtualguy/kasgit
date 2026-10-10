@@ -4,7 +4,14 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Fri, 09 Oct 2026 10:32:13 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2026 09:49:17 +0000</lastBuildDate>
+    <item>
+      <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.7.4</title>
+      <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.7.4</link>
+      <guid isPermaLink="true">https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.7.4</guid>
+      <pubDate>Fri, 09 Oct 2026 21:28:16 +0000</pubDate>
+      <description>3.7.4</description>
+    </item>
     <item>
       <title>kaspa-ng/kaspa-rest-server — v2.4.2</title>
       <link>https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.4.2</link>
@@ -928,13 +935,6 @@
       <guid isPermaLink="true">https://github.com/forbole/kastle/releases/tag/v2.49.0</guid>
       <pubDate>Thu, 16 Apr 2026 08:22:13 +0000</pubDate>
       <description>v2.49.0</description>
-    </item>
-    <item>
-      <title>kasplex/go-krc20d — krc20d-3.01.260412</title>
-      <link>https://github.com/kasplex/go-krc20d/releases/tag/krc20d-3.01.260412</link>
-      <guid isPermaLink="true">https://github.com/kasplex/go-krc20d/releases/tag/krc20d-3.01.260412</guid>
-      <pubDate>Sun, 12 Apr 2026 12:24:18 +0000</pubDate>
-      <description>krc20d-3.01.260412</description>
     </item>
   </channel>
 </rss>

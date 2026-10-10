@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T10:32:13.657829+00:00",
+  "generatedAt": "2026-10-10T09:49:17.715222+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -960,18 +960,17 @@
       "login": "doktor83",
       "avatarUrl": "https://avatars.githubusercontent.com/u/6808360?v=4",
       "htmlUrl": "https://github.com/doktor83",
-      "commits": 62,
+      "commits": 61,
       "repos": [
         {
           "repo": "doktor83/SRBMiner-Multi",
-          "commits": 62
+          "commits": 61
         }
       ],
-      "firstCommitAt": "2025-09-04T18:42:39Z",
+      "firstCommitAt": "2025-09-27T13:45:27Z",
       "firstCommitRepo": "doktor83/SRBMiner-Multi",
       "lastCommitAt": "2026-10-07T22:14:56Z",
       "activeDates": [
-        "2025-09-04",
         "2025-09-27",
         "2025-10-29",
         "2025-11-03",
@@ -1510,11 +1509,11 @@
           "commits": 9
         },
         {
-          "repo": "kaspanet/kccs",
+          "repo": "kaspanet/rusty-kaspa",
           "commits": 3
         },
         {
-          "repo": "kaspanet/rusty-kaspa",
+          "repo": "kaspanet/kccs",
           "commits": 3
         },
         {
@@ -2254,25 +2253,6 @@
       "repoCount": 1
     },
     {
-      "login": "explife365",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/279562402?v=4",
-      "htmlUrl": "https://github.com/explife365",
-      "commits": 1,
-      "repos": [
-        {
-          "repo": "kaspanet/kaspa-python-sdk",
-          "commits": 1
-        }
-      ],
-      "firstCommitAt": "2026-09-10T15:47:18Z",
-      "firstCommitRepo": "kaspanet/kaspa-python-sdk",
-      "lastCommitAt": "2026-09-10T15:47:18Z",
-      "activeDates": [
-        "2026-09-10"
-      ],
-      "repoCount": 1
-    },
-    {
       "login": "Zorglub4242",
       "avatarUrl": "https://avatars.githubusercontent.com/u/154317817?v=4",
       "htmlUrl": "https://github.com/Zorglub4242",
@@ -2364,6 +2344,25 @@
       "lastCommitAt": "2025-11-02T12:27:28Z",
       "activeDates": [
         "2025-11-02"
+      ],
+      "repoCount": 1
+    },
+    {
+      "login": "explife365",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/279562402?v=4",
+      "htmlUrl": "https://github.com/explife365",
+      "commits": 1,
+      "repos": [
+        {
+          "repo": "kaspanet/kaspa-python-sdk",
+          "commits": 1
+        }
+      ],
+      "firstCommitAt": "2026-09-10T15:47:18Z",
+      "firstCommitRepo": "kaspanet/kaspa-python-sdk",
+      "lastCommitAt": "2026-09-10T15:47:18Z",
+      "activeDates": [
+        "2026-09-10"
       ],
       "repoCount": 1
     },

@@ -1,7 +1,15 @@
 {
-  "generatedAt": "2026-10-09T10:32:13.657829+00:00",
+  "generatedAt": "2026-10-10T09:49:17.715222+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.7.4",
+      "tag": "3.7.4",
+      "publishedAt": "2026-10-09T21:28:16Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.7.4",
+      "prerelease": false
+    },
     {
       "repo": "kaspa-ng/kaspa-rest-server",
       "name": "v2.4.2",
@@ -1056,14 +1064,6 @@
       "tag": "v2.49.0",
       "publishedAt": "2026-04-16T08:22:13Z",
       "url": "https://github.com/forbole/kastle/releases/tag/v2.49.0",
-      "prerelease": false
-    },
-    {
-      "repo": "kasplex/go-krc20d",
-      "name": "krc20d-3.01.260412",
-      "tag": "krc20d-3.01.260412",
-      "publishedAt": "2026-04-12T12:24:18Z",
-      "url": "https://github.com/kasplex/go-krc20d/releases/tag/krc20d-3.01.260412",
       "prerelease": false
     }
   ]
