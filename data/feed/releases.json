@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T10:34:10.838913+00:00",
+  "generatedAt": "2026-10-14T08:42:09.285428+00:00",
   "lookbackDays": 180,
   "releases": [
     {
@@ -1048,30 +1048,6 @@
       "tag": "v2.52.0",
       "publishedAt": "2026-04-20T12:22:58Z",
       "url": "https://github.com/forbole/kastle/releases/tag/v2.52.0",
-      "prerelease": false
-    },
-    {
-      "repo": "forbole/kastle",
-      "name": "v2.51.0",
-      "tag": "v2.51.0",
-      "publishedAt": "2026-04-17T08:20:36Z",
-      "url": "https://github.com/forbole/kastle/releases/tag/v2.51.0",
-      "prerelease": false
-    },
-    {
-      "repo": "kaspanet/cpuminer",
-      "name": "v0.2.7",
-      "tag": "v0.2.7",
-      "publishedAt": "2026-04-16T18:11:02Z",
-      "url": "https://github.com/kaspanet/cpuminer/releases/tag/v0.2.7",
-      "prerelease": false
-    },
-    {
-      "repo": "forbole/kastle",
-      "name": "v2.50.0",
-      "tag": "v2.50.0",
-      "publishedAt": "2026-04-16T11:57:00Z",
-      "url": "https://github.com/forbole/kastle/releases/tag/v2.50.0",
       "prerelease": false
     }
   ]

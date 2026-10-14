@@ -4,7 +4,7 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Tue, 13 Oct 2026 10:34:10 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 08:42:09 +0000</lastBuildDate>
     <item>
       <title>bzminer/bzminer — BzMiner v100.46</title>
       <link>https://github.com/bzminer/bzminer/releases/tag/v100.46</link>
@@ -921,27 +921,6 @@
       <guid isPermaLink="true">https://github.com/forbole/kastle/releases/tag/v2.52.0</guid>
       <pubDate>Mon, 20 Apr 2026 12:22:58 +0000</pubDate>
       <description>v2.52.0</description>
-    </item>
-    <item>
-      <title>forbole/kastle — v2.51.0</title>
-      <link>https://github.com/forbole/kastle/releases/tag/v2.51.0</link>
-      <guid isPermaLink="true">https://github.com/forbole/kastle/releases/tag/v2.51.0</guid>
-      <pubDate>Fri, 17 Apr 2026 08:20:36 +0000</pubDate>
-      <description>v2.51.0</description>
-    </item>
-    <item>
-      <title>kaspanet/cpuminer — v0.2.7</title>
-      <link>https://github.com/kaspanet/cpuminer/releases/tag/v0.2.7</link>
-      <guid isPermaLink="true">https://github.com/kaspanet/cpuminer/releases/tag/v0.2.7</guid>
-      <pubDate>Thu, 16 Apr 2026 18:11:02 +0000</pubDate>
-      <description>v0.2.7</description>
-    </item>
-    <item>
-      <title>forbole/kastle — v2.50.0</title>
-      <link>https://github.com/forbole/kastle/releases/tag/v2.50.0</link>
-      <guid isPermaLink="true">https://github.com/forbole/kastle/releases/tag/v2.50.0</guid>
-      <pubDate>Thu, 16 Apr 2026 11:57:00 +0000</pubDate>
-      <description>v2.50.0</description>
     </item>
   </channel>
 </rss>
