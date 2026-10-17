@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/compose",
-  "generatedAt": "2026-10-16T08:09:22.356744+00:00",
+  "generatedAt": "2026-10-17T07:46:35.664660+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-09-11",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-09-12",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-10-17",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "Python",
@@ -3702,6 +3702,13 @@
     },
     {
       "date": "2026-10-16",
+      "stars": 3,
+      "forks": 2,
+      "watchers": 0,
+      "openIssues": 1
+    },
+    {
+      "date": "2026-10-17",
       "stars": 3,
       "forks": 2,
       "watchers": 0,

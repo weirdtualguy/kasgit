@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/research",
-  "generatedAt": "2026-10-16T08:09:22.356744+00:00",
+  "generatedAt": "2026-10-17T07:46:35.664660+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-09-11",
-      "commits": 5,
-      "prs": 1,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 2
-    },
     {
       "date": "2025-09-12",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-10-17",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "TeX",
@@ -3709,20 +3709,23 @@
       "forks": 7,
       "watchers": 5,
       "openIssues": 6
+    },
+    {
+      "date": "2026-10-17",
+      "stars": 14,
+      "forks": 7,
+      "watchers": 5,
+      "openIssues": 6
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 12,
+  "identifiedCommits": 7,
   "busFactor": 1,
   "topContributors": [
     {
       "login": "freshair18",
-      "commits": 9
-    },
-    {
-      "login": "michaelsutton",
-      "commits": 3
+      "commits": 7
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T08:09:22.356744+00:00",
+  "generatedAt": "2026-10-17T07:46:35.664660+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -7,22 +7,21 @@
       "login": "giladm11",
       "avatarUrl": "https://avatars.githubusercontent.com/u/13984392?v=4",
       "htmlUrl": "https://github.com/giladm11",
-      "commits": 373,
+      "commits": 358,
       "repos": [
         {
           "repo": "KASPACOM/kaspacom-web-wallet",
-          "commits": 314
+          "commits": 310
         },
         {
           "repo": "kaspacom/swap-widget",
-          "commits": 59
+          "commits": 48
         }
       ],
-      "firstCommitAt": "2025-09-11T11:00:18Z",
+      "firstCommitAt": "2025-09-12T13:39:19Z",
       "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
       "lastCommitAt": "2026-10-05T12:14:35Z",
       "activeDates": [
-        "2025-09-11",
         "2025-09-12",
         "2025-09-14",
         "2025-09-17",
@@ -346,7 +345,7 @@
       "login": "michaelsutton",
       "avatarUrl": "https://avatars.githubusercontent.com/u/6299204?v=4",
       "htmlUrl": "https://github.com/michaelsutton",
-      "commits": 180,
+      "commits": 177,
       "repos": [
         {
           "repo": "michaelsutton/argent",
@@ -377,19 +376,14 @@
           "commits": 3
         },
         {
-          "repo": "kaspanet/research",
-          "commits": 3
-        },
-        {
           "repo": "kaspanet/workflow-perf-monitor-rs",
           "commits": 1
         }
       ],
-      "firstCommitAt": "2025-09-11T13:11:53Z",
-      "firstCommitRepo": "kaspanet/research",
+      "firstCommitAt": "2025-10-29T19:10:20Z",
+      "firstCommitRepo": "kaspanet/rusty-kaspa",
       "lastCommitAt": "2026-10-07T08:24:44Z",
       "activeDates": [
-        "2025-09-11",
         "2025-10-29",
         "2025-11-11",
         "2025-12-02",
@@ -477,7 +471,7 @@
         "2026-10-05",
         "2026-10-07"
       ],
-      "repoCount": 9
+      "repoCount": 8
     },
     {
       "login": "thesheepcat",
@@ -549,7 +543,7 @@
       "login": "biryukovmaxim",
       "avatarUrl": "https://avatars.githubusercontent.com/u/59533214?v=4",
       "htmlUrl": "https://github.com/biryukovmaxim",
-      "commits": 137,
+      "commits": 138,
       "repos": [
         {
           "repo": "biryukovmaxim/kaspa-xmss",
@@ -561,7 +555,7 @@
         },
         {
           "repo": "kaspanet/rusty-kaspa",
-          "commits": 27
+          "commits": 28
         },
         {
           "repo": "aspectron/kaspa-resolver",
@@ -578,7 +572,7 @@
       ],
       "firstCommitAt": "2025-12-09T09:00:46Z",
       "firstCommitRepo": "kaspanet/rusty-kaspa",
-      "lastCommitAt": "2026-08-21T15:19:54Z",
+      "lastCommitAt": "2026-10-16T12:03:36Z",
       "activeDates": [
         "2025-12-09",
         "2026-01-22",
@@ -629,7 +623,8 @@
         "2026-07-27",
         "2026-07-28",
         "2026-08-19",
-        "2026-08-21"
+        "2026-08-21",
+        "2026-10-16"
       ],
       "repoCount": 6
     },
@@ -1549,37 +1544,6 @@
       "repoCount": 2
     },
     {
-      "login": "freshair18",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/139654058?v=4",
-      "htmlUrl": "https://github.com/freshair18",
-      "commits": 16,
-      "repos": [
-        {
-          "repo": "kaspanet/research",
-          "commits": 9
-        },
-        {
-          "repo": "kaspanet/rusty-kaspa",
-          "commits": 7
-        }
-      ],
-      "firstCommitAt": "2025-09-11T13:10:42Z",
-      "firstCommitRepo": "kaspanet/research",
-      "lastCommitAt": "2026-01-17T22:22:53Z",
-      "activeDates": [
-        "2025-09-11",
-        "2025-09-14",
-        "2025-10-07",
-        "2025-10-29",
-        "2025-11-02",
-        "2025-11-13",
-        "2025-12-31",
-        "2026-01-01",
-        "2026-01-17"
-      ],
-      "repoCount": 2
-    },
-    {
       "login": "cosmasken",
       "avatarUrl": "https://avatars.githubusercontent.com/u/15275726?v=4",
       "htmlUrl": "https://github.com/cosmasken",
@@ -1654,6 +1618,36 @@
         "2026-10-07"
       ],
       "repoCount": 4
+    },
+    {
+      "login": "freshair18",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/139654058?v=4",
+      "htmlUrl": "https://github.com/freshair18",
+      "commits": 14,
+      "repos": [
+        {
+          "repo": "kaspanet/rusty-kaspa",
+          "commits": 7
+        },
+        {
+          "repo": "kaspanet/research",
+          "commits": 7
+        }
+      ],
+      "firstCommitAt": "2025-09-14T10:15:30Z",
+      "firstCommitRepo": "kaspanet/research",
+      "lastCommitAt": "2026-01-17T22:22:53Z",
+      "activeDates": [
+        "2025-09-14",
+        "2025-10-07",
+        "2025-10-29",
+        "2025-11-02",
+        "2025-11-13",
+        "2025-12-31",
+        "2026-01-01",
+        "2026-01-17"
+      ],
+      "repoCount": 2
     },
     {
       "login": "BenBeri",
