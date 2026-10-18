@@ -1,16 +1,8 @@
 {
   "repo": "KASPACOM/kaspacom-web-wallet",
-  "generatedAt": "2026-10-17T07:46:35.664660+00:00",
+  "generatedAt": "2026-10-18T08:00:51.443047+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-09-12",
-      "commits": 3,
-      "prs": 2,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 1
-    },
     {
       "date": "2025-09-13",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-10-18",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "TypeScript",
@@ -3712,16 +3712,23 @@
       "forks": 1,
       "watchers": 2,
       "openIssues": 4
+    },
+    {
+      "date": "2026-10-18",
+      "stars": 10,
+      "forks": 1,
+      "watchers": 2,
+      "openIssues": 4
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 574,
+  "identifiedCommits": 571,
   "busFactor": 1,
   "topContributors": [
     {
       "login": "giladm11",
-      "commits": 310
+      "commits": 307
     },
     {
       "login": "ems-aleksandar",
