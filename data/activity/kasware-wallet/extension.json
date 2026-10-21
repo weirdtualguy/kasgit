@@ -1,16 +1,8 @@
 {
   "repo": "kasware-wallet/extension",
-  "generatedAt": "2026-10-20T08:31:21.005445+00:00",
+  "generatedAt": "2026-10-21T08:33:09.522173+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-09-15",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-09-16",
       "commits": 0,
@@ -3197,14 +3189,22 @@
     },
     {
       "date": "2026-10-19",
-      "commits": 0,
+      "commits": 7,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
     },
     {
       "date": "2026-10-20",
+      "commits": 5,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 1
+    },
+    {
+      "date": "2026-10-21",
       "commits": 0,
       "prs": 0,
       "issues": 0,
@@ -3214,7 +3214,7 @@
   ],
   "primaryLanguage": "TypeScript",
   "languages": {
-    "TypeScript": 1703948,
+    "TypeScript": 1803694,
     "JavaScript": 13918,
     "Less": 10781,
     "HTML": 2074,
@@ -3229,7 +3229,7 @@
   "defaultBranch": "main",
   "homepage": "https://www.kasware.xyz",
   "createdAt": "2024-03-12T08:26:33Z",
-  "pushedAt": "2026-07-23T09:27:56Z",
+  "pushedAt": "2026-10-20T17:43:01Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3738,20 +3738,27 @@
       "forks": 21,
       "watchers": 5,
       "openIssues": 9
+    },
+    {
+      "date": "2026-10-21",
+      "stars": 53,
+      "forks": 21,
+      "watchers": 5,
+      "openIssues": 9
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 3,
+  "identifiedCommits": 15,
   "busFactor": 1,
   "topContributors": [
     {
-      "login": "ibrucelei",
-      "commits": 2
+      "login": "pokey682r",
+      "commits": 13
     },
     {
-      "login": "pokey682r",
-      "commits": 1
+      "login": "ibrucelei",
+      "commits": 2
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T08:31:21.005445+00:00",
+  "generatedAt": "2026-10-21T08:33:09.522173+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -1075,16 +1075,16 @@
       "login": "forbole-release-please-bot[bot]",
       "avatarUrl": "https://avatars.githubusercontent.com/u/32561566?v=4",
       "htmlUrl": "https://github.com/apps/forbole-release-please-bot",
-      "commits": 52,
+      "commits": 53,
       "repos": [
         {
           "repo": "forbole/kastle",
-          "commits": 52
+          "commits": 53
         }
       ],
       "firstCommitAt": "2025-09-25T06:11:23Z",
       "firstCommitRepo": "forbole/kastle",
-      "lastCommitAt": "2026-10-14T16:49:11Z",
+      "lastCommitAt": "2026-10-21T07:12:34Z",
       "activeDates": [
         "2025-09-25",
         "2025-09-26",
@@ -1132,7 +1132,8 @@
         "2026-09-03",
         "2026-09-21",
         "2026-10-05",
-        "2026-10-14"
+        "2026-10-14",
+        "2026-10-21"
       ],
       "repoCount": 1
     },
@@ -1140,16 +1141,16 @@
       "login": "leobragaz",
       "avatarUrl": "https://avatars.githubusercontent.com/u/26248202?v=4",
       "htmlUrl": "https://github.com/leobragaz",
-      "commits": 47,
+      "commits": 48,
       "repos": [
         {
           "repo": "forbole/kastle",
-          "commits": 47
+          "commits": 48
         }
       ],
       "firstCommitAt": "2025-09-26T11:15:18Z",
       "firstCommitRepo": "forbole/kastle",
-      "lastCommitAt": "2026-10-14T16:31:04Z",
+      "lastCommitAt": "2026-10-21T06:42:24Z",
       "activeDates": [
         "2025-09-26",
         "2025-10-23",
@@ -1171,7 +1172,8 @@
         "2026-10-05",
         "2026-10-07",
         "2026-10-09",
-        "2026-10-14"
+        "2026-10-14",
+        "2026-10-21"
       ],
       "repoCount": 1
     },
@@ -1615,6 +1617,27 @@
         "2026-10-07"
       ],
       "repoCount": 4
+    },
+    {
+      "login": "pokey682r",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/117471236?v=4",
+      "htmlUrl": "https://github.com/pokey682r",
+      "commits": 13,
+      "repos": [
+        {
+          "repo": "kasware-wallet/extension",
+          "commits": 13
+        }
+      ],
+      "firstCommitAt": "2026-07-23T09:18:55Z",
+      "firstCommitRepo": "kasware-wallet/extension",
+      "lastCommitAt": "2026-10-20T17:33:02Z",
+      "activeDates": [
+        "2026-07-23",
+        "2026-10-19",
+        "2026-10-20"
+      ],
+      "repoCount": 1
     },
     {
       "login": "BenBeri",
@@ -2437,25 +2460,6 @@
       "lastCommitAt": "2026-03-04T11:13:50Z",
       "activeDates": [
         "2026-03-04"
-      ],
-      "repoCount": 1
-    },
-    {
-      "login": "pokey682r",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/117471236?v=4",
-      "htmlUrl": "https://github.com/pokey682r",
-      "commits": 1,
-      "repos": [
-        {
-          "repo": "kasware-wallet/extension",
-          "commits": 1
-        }
-      ],
-      "firstCommitAt": "2026-07-23T09:18:55Z",
-      "firstCommitRepo": "kasware-wallet/extension",
-      "lastCommitAt": "2026-07-23T09:18:55Z",
-      "activeDates": [
-        "2026-07-23"
       ],
       "repoCount": 1
     },
