@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/secp256k1",
-  "generatedAt": "2026-10-21T08:33:09.522173+00:00",
+  "generatedAt": "2026-10-22T08:35:32.169344+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-09-16",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-09-17",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-10-22",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "C",
@@ -3740,6 +3740,13 @@
     },
     {
       "date": "2026-10-21",
+      "stars": 3,
+      "forks": 3,
+      "watchers": 0,
+      "openIssues": 1
+    },
+    {
+      "date": "2026-10-22",
       "stars": 3,
       "forks": 3,
       "watchers": 0,

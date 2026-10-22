@@ -4,7 +4,21 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Wed, 21 Oct 2026 08:33:09 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 08:35:32 +0000</lastBuildDate>
+    <item>
+      <title>bzminer/bzminer — BzMiner v100.50</title>
+      <link>https://github.com/bzminer/bzminer/releases/tag/v100.50</link>
+      <guid isPermaLink="true">https://github.com/bzminer/bzminer/releases/tag/v100.50</guid>
+      <pubDate>Thu, 22 Oct 2026 00:07:55 +0000</pubDate>
+      <description>v100.50</description>
+    </item>
+    <item>
+      <title>forbole/kastle — v2.61.3</title>
+      <link>https://github.com/forbole/kastle/releases/tag/v2.61.3</link>
+      <guid isPermaLink="true">https://github.com/forbole/kastle/releases/tag/v2.61.3</guid>
+      <pubDate>Wed, 21 Oct 2026 09:32:29 +0000</pubDate>
+      <description>v2.61.3</description>
+    </item>
     <item>
       <title>forbole/kastle — v2.61.2</title>
       <link>https://github.com/forbole/kastle/releases/tag/v2.61.2</link>

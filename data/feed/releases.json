@@ -1,7 +1,23 @@
 {
-  "generatedAt": "2026-10-21T08:33:09.522173+00:00",
+  "generatedAt": "2026-10-22T08:35:32.169344+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "bzminer/bzminer",
+      "name": "BzMiner v100.50",
+      "tag": "v100.50",
+      "publishedAt": "2026-10-22T00:07:55Z",
+      "url": "https://github.com/bzminer/bzminer/releases/tag/v100.50",
+      "prerelease": false
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.61.3",
+      "tag": "v2.61.3",
+      "publishedAt": "2026-10-21T09:32:29Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.61.3",
+      "prerelease": false
+    },
     {
       "repo": "forbole/kastle",
       "name": "v2.61.2",
