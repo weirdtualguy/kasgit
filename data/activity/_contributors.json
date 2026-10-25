@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T08:06:48.289107+00:00",
+  "generatedAt": "2026-10-25T08:24:10.542666+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -563,18 +563,17 @@
       "login": "thesheepcat",
       "avatarUrl": "https://avatars.githubusercontent.com/u/68336151?v=4",
       "htmlUrl": "https://github.com/thesheepcat",
-      "commits": 135,
+      "commits": 129,
       "repos": [
         {
           "repo": "thesheepcat/K-indexer",
-          "commits": 135
+          "commits": 129
         }
       ],
-      "firstCommitAt": "2025-09-19T19:29:11Z",
+      "firstCommitAt": "2025-09-20T11:12:37Z",
       "firstCommitRepo": "thesheepcat/K-indexer",
       "lastCommitAt": "2026-07-06T19:44:19Z",
       "activeDates": [
-        "2025-09-19",
         "2025-09-20",
         "2025-09-21",
         "2025-09-25",
@@ -1360,16 +1359,16 @@
       "login": "bzminer",
       "avatarUrl": "https://avatars.githubusercontent.com/u/83083846?v=4",
       "htmlUrl": "https://github.com/bzminer",
-      "commits": 30,
+      "commits": 31,
       "repos": [
         {
           "repo": "bzminer/bzminer",
-          "commits": 30
+          "commits": 31
         }
       ],
       "firstCommitAt": "2025-12-18T15:12:18Z",
       "firstCommitRepo": "bzminer/bzminer",
-      "lastCommitAt": "2026-10-02T21:43:17Z",
+      "lastCommitAt": "2026-10-24T12:55:08Z",
       "activeDates": [
         "2025-12-18",
         "2026-02-16",
@@ -1390,7 +1389,8 @@
         "2026-09-18",
         "2026-09-20",
         "2026-09-23",
-        "2026-10-02"
+        "2026-10-02",
+        "2026-10-24"
       ],
       "repoCount": 1
     },

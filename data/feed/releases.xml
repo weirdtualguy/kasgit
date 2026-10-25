@@ -4,7 +4,14 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Sat, 24 Oct 2026 08:06:48 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 08:24:10 +0000</lastBuildDate>
+    <item>
+      <title>bzminer/bzminer — BzMiner v100.51</title>
+      <link>https://github.com/bzminer/bzminer/releases/tag/v100.51</link>
+      <guid isPermaLink="true">https://github.com/bzminer/bzminer/releases/tag/v100.51</guid>
+      <pubDate>Sat, 24 Oct 2026 13:09:24 +0000</pubDate>
+      <description>v100.51</description>
+    </item>
     <item>
       <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.8.0</title>
       <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.8.0</link>
