@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T09:38:31.191076+00:00",
+  "generatedAt": "2026-10-29T09:57:19.186342+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -951,16 +951,16 @@
       "login": "doktor83",
       "avatarUrl": "https://avatars.githubusercontent.com/u/6808360?v=4",
       "htmlUrl": "https://github.com/doktor83",
-      "commits": 61,
+      "commits": 62,
       "repos": [
         {
           "repo": "doktor83/SRBMiner-Multi",
-          "commits": 61
+          "commits": 62
         }
       ],
       "firstCommitAt": "2025-09-27T13:45:27Z",
       "firstCommitRepo": "doktor83/SRBMiner-Multi",
-      "lastCommitAt": "2026-10-07T22:14:56Z",
+      "lastCommitAt": "2026-10-28T20:00:51Z",
       "activeDates": [
         "2025-09-27",
         "2025-10-29",
@@ -1008,7 +1008,8 @@
         "2026-09-13",
         "2026-09-28",
         "2026-10-06",
-        "2026-10-07"
+        "2026-10-07",
+        "2026-10-28"
       ],
       "repoCount": 1
     },
@@ -1254,11 +1255,11 @@
       "login": "5bb55b",
       "avatarUrl": "https://avatars.githubusercontent.com/u/179454876?v=4",
       "htmlUrl": "https://github.com/5bb55b",
-      "commits": 40,
+      "commits": 41,
       "repos": [
         {
           "repo": "kasplex/go-krc20d",
-          "commits": 39
+          "commits": 40
         },
         {
           "repo": "kasplex/indexer-executor",
@@ -1267,7 +1268,7 @@
       ],
       "firstCommitAt": "2025-10-30T09:45:24Z",
       "firstCommitRepo": "kasplex/indexer-executor",
-      "lastCommitAt": "2026-10-12T10:24:17Z",
+      "lastCommitAt": "2026-10-29T02:25:36Z",
       "activeDates": [
         "2025-10-30",
         "2025-11-10",
@@ -1293,7 +1294,8 @@
         "2026-06-08",
         "2026-06-16",
         "2026-10-03",
-        "2026-10-12"
+        "2026-10-12",
+        "2026-10-29"
       ],
       "repoCount": 2
     },
@@ -2233,6 +2235,30 @@
       "repoCount": 1
     },
     {
+      "login": "Silentpartnercoding",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/179998047?v=4",
+      "htmlUrl": "https://github.com/Silentpartnercoding",
+      "commits": 2,
+      "repos": [
+        {
+          "repo": "kasplex/go-krc20d",
+          "commits": 1
+        },
+        {
+          "repo": "michaelsutton/argent",
+          "commits": 1
+        }
+      ],
+      "firstCommitAt": "2026-10-19T13:04:09Z",
+      "firstCommitRepo": "michaelsutton/argent",
+      "lastCommitAt": "2026-10-27T16:10:00Z",
+      "activeDates": [
+        "2026-10-19",
+        "2026-10-27"
+      ],
+      "repoCount": 2
+    },
+    {
       "login": "hermitsgame",
       "avatarUrl": "https://avatars.githubusercontent.com/u/28503752?v=4",
       "htmlUrl": "https://github.com/hermitsgame",
@@ -2458,25 +2484,6 @@
       "lastCommitAt": "2026-03-04T11:13:50Z",
       "activeDates": [
         "2026-03-04"
-      ],
-      "repoCount": 1
-    },
-    {
-      "login": "Silentpartnercoding",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/179998047?v=4",
-      "htmlUrl": "https://github.com/Silentpartnercoding",
-      "commits": 1,
-      "repos": [
-        {
-          "repo": "michaelsutton/argent",
-          "commits": 1
-        }
-      ],
-      "firstCommitAt": "2026-10-19T13:04:09Z",
-      "firstCommitRepo": "michaelsutton/argent",
-      "lastCommitAt": "2026-10-19T13:04:09Z",
-      "activeDates": [
-        "2026-10-19"
       ],
       "repoCount": 1
     },
