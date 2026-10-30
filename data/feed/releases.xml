@@ -4,7 +4,14 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Thu, 29 Oct 2026 09:57:19 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 09:59:28 +0000</lastBuildDate>
+    <item>
+      <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.8.2</title>
+      <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.8.2</link>
+      <guid isPermaLink="true">https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.8.2</guid>
+      <pubDate>Thu, 29 Oct 2026 13:48:17 +0000</pubDate>
+      <description>3.8.2</description>
+    </item>
     <item>
       <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.8.1</title>
       <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.8.1</link>
