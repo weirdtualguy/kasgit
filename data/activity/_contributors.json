@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T09:59:28.577759+00:00",
+  "generatedAt": "2026-10-31T09:37:58.648374+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -7,7 +7,7 @@
       "login": "giladm11",
       "avatarUrl": "https://avatars.githubusercontent.com/u/13984392?v=4",
       "htmlUrl": "https://github.com/giladm11",
-      "commits": 349,
+      "commits": 346,
       "repos": [
         {
           "repo": "KASPACOM/kaspacom-web-wallet",
@@ -15,15 +15,13 @@
         },
         {
           "repo": "kaspacom/swap-widget",
-          "commits": 42
+          "commits": 39
         }
       ],
-      "firstCommitAt": "2025-09-25T12:17:59Z",
+      "firstCommitAt": "2025-09-28T19:55:49Z",
       "firstCommitRepo": "kaspacom/swap-widget",
       "lastCommitAt": "2026-10-05T12:14:35Z",
       "activeDates": [
-        "2025-09-25",
-        "2025-09-26",
         "2025-09-28",
         "2025-09-30",
         "2025-10-16",
@@ -563,18 +561,17 @@
       "login": "thesheepcat",
       "avatarUrl": "https://avatars.githubusercontent.com/u/68336151?v=4",
       "htmlUrl": "https://github.com/thesheepcat",
-      "commits": 126,
+      "commits": 125,
       "repos": [
         {
           "repo": "thesheepcat/K-indexer",
-          "commits": 126
+          "commits": 125
         }
       ],
-      "firstCommitAt": "2025-09-25T19:36:14Z",
+      "firstCommitAt": "2025-09-27T11:30:02Z",
       "firstCommitRepo": "thesheepcat/K-indexer",
       "lastCommitAt": "2026-07-06T19:44:19Z",
       "activeDates": [
-        "2025-09-25",
         "2025-09-27",
         "2025-09-28",
         "2025-09-29",

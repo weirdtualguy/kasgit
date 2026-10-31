@@ -1,16 +1,8 @@
 {
   "repo": "bzminer/bzminer",
-  "generatedAt": "2026-10-30T09:59:28.577759+00:00",
+  "generatedAt": "2026-10-31T09:37:58.648374+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-09-25",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-09-26",
       "commits": 0,
@@ -3208,6 +3200,14 @@
       "commits": 0,
       "prs": 0,
       "issues": 0,
+      "releases": 1,
+      "activeDevs": 0
+    },
+    {
+      "date": "2026-10-31",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
       "releases": 0,
       "activeDevs": 0
     }
@@ -3219,7 +3219,7 @@
   "defaultBranch": "main",
   "homepage": "https://www.bzminer.com",
   "createdAt": "2021-04-23T15:54:55Z",
-  "pushedAt": "2026-10-27T00:02:18Z",
+  "pushedAt": "2026-10-30T22:47:09Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3801,6 +3801,13 @@
     },
     {
       "date": "2026-10-30",
+      "stars": 298,
+      "forks": 38,
+      "watchers": 29,
+      "openIssues": 287
+    },
+    {
+      "date": "2026-10-31",
       "stars": 298,
       "forks": 38,
       "watchers": 29,
