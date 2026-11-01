@@ -1,19 +1,11 @@
 {
-  "generatedAt": "2026-10-31T09:37:58.648374+00:00",
+  "generatedAt": "2026-11-01T10:26:30.766451+00:00",
   "lookbackDays": 400,
   "orgs": [
     "kaspanet"
   ],
   "repoCount": 92,
   "series": [
-    {
-      "date": "2025-09-26",
-      "commits": 5,
-      "prs": 3,
-      "issues": 0,
-      "releases": 1,
-      "activeDevs": 4
-    },
     {
       "date": "2025-09-27",
       "commits": 19,
@@ -3211,6 +3203,14 @@
       "commits": 0,
       "prs": 0,
       "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
+    },
+    {
+      "date": "2026-11-01",
+      "commits": 0,
+      "prs": 0,
+      "issues": 1,
       "releases": 0,
       "activeDevs": 0
     }
