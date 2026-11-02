@@ -1,16 +1,8 @@
 {
   "repo": "doktor83/SRBMiner-Multi",
-  "generatedAt": "2026-11-01T10:26:30.766451+00:00",
+  "generatedAt": "2026-11-02T11:04:13.038497+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-09-27",
-      "commits": 1,
-      "prs": 0,
-      "issues": 0,
-      "releases": 1,
-      "activeDevs": 1
-    },
     {
       "date": "2025-09-28",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-11-02",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": null,
@@ -3816,16 +3816,23 @@
       "forks": 176,
       "watchers": 86,
       "openIssues": 32
+    },
+    {
+      "date": "2026-11-02",
+      "stars": 763,
+      "forks": 176,
+      "watchers": 86,
+      "openIssues": 32
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 62,
+  "identifiedCommits": 61,
   "busFactor": 1,
   "topContributors": [
     {
       "login": "doktor83",
-      "commits": 62
+      "commits": 61
     }
   ]
 }

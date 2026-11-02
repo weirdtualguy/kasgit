@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T10:26:30.766451+00:00",
+  "generatedAt": "2026-11-02T11:04:13.038497+00:00",
   "lookbackDays": 180,
   "releases": [
     {
@@ -1112,22 +1112,6 @@
       "tag": "v2.1.6",
       "publishedAt": "2026-05-09T19:41:41Z",
       "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.1.6",
-      "prerelease": false
-    },
-    {
-      "repo": "forbole/kastle",
-      "name": "v2.54.0",
-      "tag": "v2.54.0",
-      "publishedAt": "2026-05-06T09:51:32Z",
-      "url": "https://github.com/forbole/kastle/releases/tag/v2.54.0",
-      "prerelease": false
-    },
-    {
-      "repo": "doktor83/SRBMiner-Multi",
-      "name": "SRBMiner-MULTI v3.2.8",
-      "tag": "3.2.8",
-      "publishedAt": "2026-05-05T16:29:10Z",
-      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.2.8",
       "prerelease": false
     }
   ]

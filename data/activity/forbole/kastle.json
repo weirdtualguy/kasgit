@@ -1,16 +1,8 @@
 {
   "repo": "forbole/kastle",
-  "generatedAt": "2026-11-01T10:26:30.766451+00:00",
+  "generatedAt": "2026-11-02T11:04:13.038497+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-09-27",
-      "commits": 2,
-      "prs": 2,
-      "issues": 0,
-      "releases": 1,
-      "activeDevs": 2
-    },
     {
       "date": "2025-09-28",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-11-02",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "TypeScript",
@@ -3831,16 +3831,23 @@
       "forks": 3,
       "watchers": 2,
       "openIssues": 28
+    },
+    {
+      "date": "2026-11-02",
+      "stars": 15,
+      "forks": 3,
+      "watchers": 2,
+      "openIssues": 28
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 187,
+  "identifiedCommits": 185,
   "busFactor": 2,
   "topContributors": [
     {
       "login": "dadamu",
-      "commits": 73
+      "commits": 72
     },
     {
       "login": "leobragaz",
@@ -3848,7 +3855,7 @@
     },
     {
       "login": "forbole-release-please-bot[bot]",
-      "commits": 53
+      "commits": 52
     },
     {
       "login": "dependabot[bot]",
