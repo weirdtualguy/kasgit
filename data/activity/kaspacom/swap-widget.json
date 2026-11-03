@@ -1,16 +1,8 @@
 {
   "repo": "kaspacom/swap-widget",
-  "generatedAt": "2026-11-02T11:04:13.038497+00:00",
+  "generatedAt": "2026-11-03T10:51:02.593585+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-09-28",
-      "commits": 10,
-      "prs": 2,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 1
-    },
     {
       "date": "2025-09-29",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-11-03",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "TypeScript",
@@ -3829,16 +3829,23 @@
       "forks": 0,
       "watchers": 0,
       "openIssues": 0
+    },
+    {
+      "date": "2026-11-03",
+      "stars": 1,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 39,
+  "identifiedCommits": 29,
   "busFactor": 1,
   "topContributors": [
     {
       "login": "giladm11",
-      "commits": 39
+      "commits": 29
     }
   ]
 }
