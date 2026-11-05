@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/faucet",
-  "generatedAt": "2026-11-04T10:53:50.757552+00:00",
+  "generatedAt": "2026-11-05T10:54:30.751651+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-09-30",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-10-01",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-11-05",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "Go",
@@ -3834,6 +3834,13 @@
     },
     {
       "date": "2026-11-04",
+      "stars": 8,
+      "forks": 4,
+      "watchers": 3,
+      "openIssues": 0
+    },
+    {
+      "date": "2026-11-05",
       "stars": 8,
       "forks": 4,
       "watchers": 3,

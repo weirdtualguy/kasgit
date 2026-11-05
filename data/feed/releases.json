@@ -1,7 +1,15 @@
 {
-  "generatedAt": "2026-11-04T10:53:50.757552+00:00",
+  "generatedAt": "2026-11-05T10:54:30.751651+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "bzminer/bzminer",
+      "name": "BzMiner v100.70",
+      "tag": "v100.70",
+      "publishedAt": "2026-11-05T00:40:10Z",
+      "url": "https://github.com/bzminer/bzminer/releases/tag/v100.70",
+      "prerelease": false
+    },
     {
       "repo": "bzminer/bzminer",
       "name": "BzMiner v100.60",
