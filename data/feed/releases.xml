@@ -4,7 +4,14 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Thu, 05 Nov 2026 10:54:30 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 10:51:11 +0000</lastBuildDate>
+    <item>
+      <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.8.4</title>
+      <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.8.4</link>
+      <guid isPermaLink="true">https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.8.4</guid>
+      <pubDate>Thu, 05 Nov 2026 21:30:50 +0000</pubDate>
+      <description>3.8.4</description>
+    </item>
     <item>
       <title>bzminer/bzminer — BzMiner v100.70</title>
       <link>https://github.com/bzminer/bzminer/releases/tag/v100.70</link>
@@ -977,13 +984,6 @@
       <guid isPermaLink="true">https://github.com/kaspanet/rusty-kaspa/releases/tag/tn10-toc2</guid>
       <pubDate>Sat, 16 May 2026 19:09:09 +0000</pubDate>
       <description>tn10-toc2</description>
-    </item>
-    <item>
-      <title>kaspa-ng/kaspa-rest-server — v2.1.6</title>
-      <link>https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.1.6</link>
-      <guid isPermaLink="true">https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.1.6</guid>
-      <pubDate>Sat, 09 May 2026 19:41:41 +0000</pubDate>
-      <description>v2.1.6</description>
     </item>
   </channel>
 </rss>

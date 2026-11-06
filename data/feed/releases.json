@@ -1,7 +1,15 @@
 {
-  "generatedAt": "2026-11-05T10:54:30.751651+00:00",
+  "generatedAt": "2026-11-06T10:51:11.262519+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.8.4",
+      "tag": "3.8.4",
+      "publishedAt": "2026-11-05T21:30:50Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.8.4",
+      "prerelease": false
+    },
     {
       "repo": "bzminer/bzminer",
       "name": "BzMiner v100.70",
@@ -1113,14 +1121,6 @@
       "publishedAt": "2026-05-16T19:09:09Z",
       "url": "https://github.com/kaspanet/rusty-kaspa/releases/tag/tn10-toc2",
       "prerelease": true
-    },
-    {
-      "repo": "kaspa-ng/kaspa-rest-server",
-      "name": "v2.1.6",
-      "tag": "v2.1.6",
-      "publishedAt": "2026-05-09T19:41:41Z",
-      "url": "https://github.com/kaspa-ng/kaspa-rest-server/releases/tag/v2.1.6",
-      "prerelease": false
     }
   ]
 }
