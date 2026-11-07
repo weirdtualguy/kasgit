@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T10:51:11.262519+00:00",
+  "generatedAt": "2026-11-07T10:05:35.335010+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -119,11 +119,11 @@
       "login": "supertypo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/6649964?v=4",
       "htmlUrl": "https://github.com/supertypo",
-      "commits": 223,
+      "commits": 217,
       "repos": [
         {
           "repo": "supertypo/simply-kaspa-indexer",
-          "commits": 124
+          "commits": 118
         },
         {
           "repo": "kaspa-ng/kaspa-rest-server",
@@ -143,7 +143,6 @@
       "lastCommitAt": "2026-10-14T12:30:32Z",
       "activeDates": [
         "2025-09-21",
-        "2025-10-02",
         "2025-10-03",
         "2025-10-04",
         "2025-10-05",
@@ -940,16 +939,16 @@
       "login": "doktor83",
       "avatarUrl": "https://avatars.githubusercontent.com/u/6808360?v=4",
       "htmlUrl": "https://github.com/doktor83",
-      "commits": 62,
+      "commits": 63,
       "repos": [
         {
           "repo": "doktor83/SRBMiner-Multi",
-          "commits": 62
+          "commits": 63
         }
       ],
       "firstCommitAt": "2025-10-29T16:15:04Z",
       "firstCommitRepo": "doktor83/SRBMiner-Multi",
-      "lastCommitAt": "2026-11-05T21:32:01Z",
+      "lastCommitAt": "2026-11-07T08:29:36Z",
       "activeDates": [
         "2025-10-29",
         "2025-11-03",
@@ -998,7 +997,8 @@
         "2026-10-06",
         "2026-10-07",
         "2026-10-28",
-        "2026-11-05"
+        "2026-11-05",
+        "2026-11-07"
       ],
       "repoCount": 1
     },
@@ -1345,16 +1345,16 @@
       "login": "bzminer",
       "avatarUrl": "https://avatars.githubusercontent.com/u/83083846?v=4",
       "htmlUrl": "https://github.com/bzminer",
-      "commits": 32,
+      "commits": 33,
       "repos": [
         {
           "repo": "bzminer/bzminer",
-          "commits": 32
+          "commits": 33
         }
       ],
       "firstCommitAt": "2025-12-18T15:12:18Z",
       "firstCommitRepo": "bzminer/bzminer",
-      "lastCommitAt": "2026-11-05T00:36:39Z",
+      "lastCommitAt": "2026-11-06T15:42:18Z",
       "activeDates": [
         "2025-12-18",
         "2026-02-16",
@@ -1377,7 +1377,8 @@
         "2026-09-23",
         "2026-10-02",
         "2026-10-24",
-        "2026-11-05"
+        "2026-11-05",
+        "2026-11-06"
       ],
       "repoCount": 1
     },
