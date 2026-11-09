@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/vprogs",
-  "generatedAt": "2026-11-08T10:20:15.533855+00:00",
+  "generatedAt": "2026-11-09T11:29:20.774401+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-10-04",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-10-05",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-11-09",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "Rust",
@@ -3222,7 +3222,7 @@
   "defaultBranch": "master",
   "homepage": null,
   "createdAt": "2026-01-19T15:38:04Z",
-  "pushedAt": "2026-11-06T15:53:13Z",
+  "pushedAt": "2026-11-09T09:42:12Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3867,6 +3867,13 @@
     },
     {
       "date": "2026-11-08",
+      "stars": 53,
+      "forks": 10,
+      "watchers": 4,
+      "openIssues": 60
+    },
+    {
+      "date": "2026-11-09",
       "stars": 53,
       "forks": 10,
       "watchers": 4,

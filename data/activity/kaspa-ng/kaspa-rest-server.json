@@ -1,16 +1,8 @@
 {
   "repo": "kaspa-ng/kaspa-rest-server",
-  "generatedAt": "2026-11-08T10:20:15.533855+00:00",
+  "generatedAt": "2026-11-09T11:29:20.774401+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-10-04",
-      "commits": 2,
-      "prs": 2,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 1
-    },
     {
       "date": "2025-10-05",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-11-09",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "Python",
@@ -3872,16 +3872,23 @@
       "forks": 25,
       "watchers": 1,
       "openIssues": 2
+    },
+    {
+      "date": "2026-11-09",
+      "stars": 9,
+      "forks": 25,
+      "watchers": 1,
+      "openIssues": 2
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 96,
+  "identifiedCommits": 92,
   "busFactor": 1,
   "topContributors": [
     {
       "login": "supertypo",
-      "commits": 96
+      "commits": 92
     }
   ]
 }
