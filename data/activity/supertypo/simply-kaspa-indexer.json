@@ -1,23 +1,15 @@
 {
   "repo": "supertypo/simply-kaspa-indexer",
-  "generatedAt": "2026-11-10T11:10:02.383319+00:00",
+  "generatedAt": "2026-11-11T10:55:39.587653+00:00",
   "lookbackDays": 400,
   "series": [
     {
-      "date": "2025-10-06",
-      "commits": 6,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 1
-    },
-    {
       "date": "2025-10-07",
-      "commits": 2,
+      "commits": 0,
       "prs": 0,
       "issues": 0,
       "releases": 0,
-      "activeDevs": 1
+      "activeDevs": 0
     },
     {
       "date": "2025-10-08",
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-11-11",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "Rust",
@@ -3880,16 +3880,23 @@
       "forks": 23,
       "watchers": 3,
       "openIssues": 4
+    },
+    {
+      "date": "2026-11-11",
+      "stars": 30,
+      "forks": 23,
+      "watchers": 3,
+      "openIssues": 4
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 94,
+  "identifiedCommits": 86,
   "busFactor": 1,
   "topContributors": [
     {
       "login": "supertypo",
-      "commits": 94
+      "commits": 86
     }
   ]
 }

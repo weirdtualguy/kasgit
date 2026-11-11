@@ -1,7 +1,23 @@
 {
-  "generatedAt": "2026-11-10T11:10:02.383319+00:00",
+  "generatedAt": "2026-11-11T10:55:39.587653+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.62.2",
+      "tag": "v2.62.2",
+      "publishedAt": "2026-11-11T09:31:11Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.62.2",
+      "prerelease": false
+    },
+    {
+      "repo": "forbole/kastle",
+      "name": "v2.62.1",
+      "tag": "v2.62.1",
+      "publishedAt": "2026-11-11T02:18:40Z",
+      "url": "https://github.com/forbole/kastle/releases/tag/v2.62.1",
+      "prerelease": false
+    },
     {
       "repo": "forbole/kastle",
       "name": "v2.62.0",
