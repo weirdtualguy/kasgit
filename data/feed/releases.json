@@ -1,7 +1,23 @@
 {
-  "generatedAt": "2026-11-11T10:55:39.587653+00:00",
+  "generatedAt": "2026-11-12T11:05:50.606800+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "bzminer/bzminer",
+      "name": "BzMiner v100.80",
+      "tag": "v100.80",
+      "publishedAt": "2026-11-11T21:02:13Z",
+      "url": "https://github.com/bzminer/bzminer/releases/tag/v100.80",
+      "prerelease": false
+    },
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.8.7",
+      "tag": "3.8.7",
+      "publishedAt": "2026-11-11T20:56:15Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.8.7",
+      "prerelease": false
+    },
     {
       "repo": "forbole/kastle",
       "name": "v2.62.2",
