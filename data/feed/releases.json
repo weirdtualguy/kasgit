@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T11:05:50.606800+00:00",
+  "generatedAt": "2026-11-13T10:57:08.270702+00:00",
   "lookbackDays": 180,
   "releases": [
     {
@@ -1169,14 +1169,6 @@
       "publishedAt": "2026-05-20T08:32:58Z",
       "url": "https://github.com/forbole/kastle/releases/tag/v2.54.1",
       "prerelease": false
-    },
-    {
-      "repo": "kaspanet/rusty-kaspa",
-      "name": "tn10-toc2",
-      "tag": "tn10-toc2",
-      "publishedAt": "2026-05-16T19:09:09Z",
-      "url": "https://github.com/kaspanet/rusty-kaspa/releases/tag/tn10-toc2",
-      "prerelease": true
     }
   ]
 }

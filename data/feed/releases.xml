@@ -4,7 +4,7 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Thu, 12 Nov 2026 11:05:50 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 10:57:08 +0000</lastBuildDate>
     <item>
       <title>bzminer/bzminer — BzMiner v100.80</title>
       <link>https://github.com/bzminer/bzminer/releases/tag/v100.80</link>
@@ -1026,13 +1026,6 @@
       <guid isPermaLink="true">https://github.com/forbole/kastle/releases/tag/v2.54.1</guid>
       <pubDate>Wed, 20 May 2026 08:32:58 +0000</pubDate>
       <description>v2.54.1</description>
-    </item>
-    <item>
-      <title>kaspanet/rusty-kaspa — tn10-toc2</title>
-      <link>https://github.com/kaspanet/rusty-kaspa/releases/tag/tn10-toc2</link>
-      <guid isPermaLink="true">https://github.com/kaspanet/rusty-kaspa/releases/tag/tn10-toc2</guid>
-      <pubDate>Sat, 16 May 2026 19:09:09 +0000</pubDate>
-      <description>tn10-toc2</description>
     </item>
   </channel>
 </rss>
