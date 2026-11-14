@@ -1,16 +1,8 @@
 {
   "repo": "doktor83/SRBMiner-Multi",
-  "generatedAt": "2026-11-13T10:57:08.270702+00:00",
+  "generatedAt": "2026-11-14T10:24:12.892087+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-10-09",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-10-10",
       "commits": 0,
@@ -3205,6 +3197,14 @@
     },
     {
       "date": "2026-11-13",
+      "commits": 2,
+      "prs": 0,
+      "issues": 0,
+      "releases": 1,
+      "activeDevs": 1
+    },
+    {
+      "date": "2026-11-14",
       "commits": 0,
       "prs": 0,
       "issues": 0,
@@ -3223,7 +3223,7 @@
   "defaultBranch": "master",
   "homepage": "http://www.srbminer.com",
   "createdAt": "2019-09-09T06:41:09Z",
-  "pushedAt": "2026-11-11T20:56:14Z",
+  "pushedAt": "2026-11-13T21:04:07Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3900,16 +3900,23 @@
       "forks": 176,
       "watchers": 87,
       "openIssues": 32
+    },
+    {
+      "date": "2026-11-14",
+      "stars": 784,
+      "forks": 176,
+      "watchers": 87,
+      "openIssues": 32
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 65,
+  "identifiedCommits": 67,
   "busFactor": 1,
   "topContributors": [
     {
       "login": "doktor83",
-      "commits": 65
+      "commits": 67
     }
   ]
 }

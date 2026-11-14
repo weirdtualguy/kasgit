@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/dnsseeder",
-  "generatedAt": "2026-11-13T10:57:08.270702+00:00",
+  "generatedAt": "2026-11-14T10:24:12.892087+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-10-09",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-10-10",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-11-14",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "Go",
@@ -3904,6 +3904,13 @@
     },
     {
       "date": "2026-11-13",
+      "stars": 33,
+      "forks": 40,
+      "watchers": 10,
+      "openIssues": 5
+    },
+    {
+      "date": "2026-11-14",
       "stars": 33,
       "forks": 40,
       "watchers": 10,
