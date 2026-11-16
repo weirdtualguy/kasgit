@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/rusty-kaspa",
-  "generatedAt": "2026-11-15T10:51:34.644056+00:00",
+  "generatedAt": "2026-11-16T11:15:10.041932+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-10-11",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-10-12",
       "commits": 0,
@@ -3205,8 +3197,16 @@
     },
     {
       "date": "2026-11-15",
+      "commits": 1,
+      "prs": 1,
+      "issues": 1,
+      "releases": 0,
+      "activeDevs": 1
+    },
+    {
+      "date": "2026-11-16",
       "commits": 0,
-      "prs": 0,
+      "prs": 1,
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
@@ -3235,7 +3235,7 @@
   "defaultBranch": "master",
   "homepage": null,
   "createdAt": "2022-07-17T23:32:26Z",
-  "pushedAt": "2026-11-12T22:57:56Z",
+  "pushedAt": "2026-11-16T04:17:31Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3933,16 +3933,23 @@
       "forks": 311,
       "watchers": 74,
       "openIssues": 217
+    },
+    {
+      "date": "2026-11-16",
+      "stars": 880,
+      "forks": 311,
+      "watchers": 74,
+      "openIssues": 218
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 244,
+  "identifiedCommits": 245,
   "busFactor": 3,
   "topContributors": [
     {
       "login": "someone235",
-      "commits": 63
+      "commits": 64
     },
     {
       "login": "michaelsutton",

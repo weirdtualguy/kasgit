@@ -1,16 +1,8 @@
 {
   "repo": "rigelminer/rigel",
-  "generatedAt": "2026-11-15T10:51:34.644056+00:00",
+  "generatedAt": "2026-11-16T11:15:10.041932+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-10-11",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-10-12",
       "commits": 0,
@@ -463,7 +455,7 @@
       "date": "2025-12-07",
       "commits": 0,
       "prs": 0,
-      "issues": 1,
+      "issues": 0,
       "releases": 0,
       "activeDevs": 0
     },
@@ -3207,6 +3199,14 @@
       "date": "2026-11-15",
       "commits": 0,
       "prs": 0,
+      "issues": 1,
+      "releases": 0,
+      "activeDevs": 0
+    },
+    {
+      "date": "2026-11-16",
+      "commits": 0,
+      "prs": 0,
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
@@ -3910,6 +3910,13 @@
       "forks": 21,
       "watchers": 31,
       "openIssues": 21
+    },
+    {
+      "date": "2026-11-16",
+      "stars": 287,
+      "forks": 21,
+      "watchers": 31,
+      "openIssues": 22
     }
   ],
   "starHistoryQuality": null,

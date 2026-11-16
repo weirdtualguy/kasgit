@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T10:51:34.644056+00:00",
+  "generatedAt": "2026-11-16T11:15:10.041932+00:00",
   "lookbackDays": 400,
   "orgs": [
     "kaspanet"
@@ -7,19 +7,11 @@
   "repoCount": 92,
   "series": [
     {
-      "date": "2025-10-11",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
-    {
       "date": "2025-10-12",
-      "commits": 9,
+      "commits": 4,
       "prs": 3,
       "issues": 0,
-      "releases": 1,
+      "releases": 0,
       "activeDevs": 2
     },
     {
@@ -466,7 +458,7 @@
       "date": "2025-12-07",
       "commits": 6,
       "prs": 1,
-      "issues": 3,
+      "issues": 2,
       "releases": 1,
       "activeDevs": 3
     },
@@ -3208,11 +3200,19 @@
     },
     {
       "date": "2026-11-15",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
+      "commits": 1,
+      "prs": 1,
+      "issues": 3,
       "releases": 0,
-      "activeDevs": 0
+      "activeDevs": 1
+    },
+    {
+      "date": "2026-11-16",
+      "commits": 7,
+      "prs": 8,
+      "issues": 0,
+      "releases": 1,
+      "activeDevs": 2
     }
   ],
   "partialDataRepos": {
@@ -3223,15 +3223,15 @@
   },
   "languages": {
     "Rust": 21950453,
-    "TypeScript": 12269302,
+    "TypeScript": 12320675,
     "Go": 7287198,
-    "JavaScript": 5440166,
+    "JavaScript": 5446680,
     "C": 2501435,
     "Python": 2395487,
     "Dart": 2152675,
     "Jupyter Notebook": 1767442,
     "C++": 906268,
-    "HTML": 721480,
+    "HTML": 722155,
     "SCSS": 392100,
     "VHDL": 188774,
     "Assembly": 179160,

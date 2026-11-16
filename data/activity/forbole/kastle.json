@@ -1,16 +1,8 @@
 {
   "repo": "forbole/kastle",
-  "generatedAt": "2026-11-15T10:51:34.644056+00:00",
+  "generatedAt": "2026-11-16T11:15:10.041932+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-10-11",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-10-12",
       "commits": 0,
@@ -3210,14 +3202,22 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-11-16",
+      "commits": 7,
+      "prs": 7,
+      "issues": 0,
+      "releases": 1,
+      "activeDevs": 2
     }
   ],
   "primaryLanguage": "TypeScript",
   "languages": {
-    "TypeScript": 3349796,
-    "JavaScript": 561291,
+    "TypeScript": 3401169,
+    "JavaScript": 567805,
     "Python": 38915,
-    "HTML": 2086,
+    "HTML": 2761,
     "CSS": 1069
   },
   "topics": [
@@ -3231,7 +3231,7 @@
   "defaultBranch": "main",
   "homepage": "https://kastle.cc",
   "createdAt": "2025-02-03T08:20:39Z",
-  "pushedAt": "2026-11-14T12:09:24Z",
+  "pushedAt": "2026-11-16T09:29:05Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3929,16 +3929,23 @@
       "forks": 3,
       "watchers": 2,
       "openIssues": 30
+    },
+    {
+      "date": "2026-11-16",
+      "stars": 15,
+      "forks": 3,
+      "watchers": 2,
+      "openIssues": 29
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 215,
+  "identifiedCommits": 222,
   "busFactor": 2,
   "topContributors": [
     {
       "login": "leobragaz",
-      "commits": 77
+      "commits": 83
     },
     {
       "login": "dadamu",
@@ -3946,7 +3953,7 @@
     },
     {
       "login": "forbole-release-please-bot[bot]",
-      "commits": 52
+      "commits": 53
     },
     {
       "login": "nicoletting",
