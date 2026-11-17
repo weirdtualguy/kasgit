@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/vprogs",
-  "generatedAt": "2026-11-16T11:15:10.041932+00:00",
+  "generatedAt": "2026-11-17T11:50:27.955622+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-10-12",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-10-13",
       "commits": 0,
@@ -3205,6 +3197,14 @@
     },
     {
       "date": "2026-11-16",
+      "commits": 30,
+      "prs": 30,
+      "issues": 1,
+      "releases": 0,
+      "activeDevs": 1
+    },
+    {
+      "date": "2026-11-17",
       "commits": 0,
       "prs": 0,
       "issues": 0,
@@ -3214,7 +3214,7 @@
   ],
   "primaryLanguage": "Rust",
   "languages": {
-    "Rust": 1965364,
+    "Rust": 3025560,
     "Shell": 7876
   },
   "topics": [],
@@ -3222,7 +3222,7 @@
   "defaultBranch": "master",
   "homepage": null,
   "createdAt": "2026-01-19T15:38:04Z",
-  "pushedAt": "2026-11-13T15:11:44Z",
+  "pushedAt": "2026-11-16T19:54:30Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3927,20 +3927,27 @@
       "forks": 10,
       "watchers": 4,
       "openIssues": 64
+    },
+    {
+      "date": "2026-11-17",
+      "stars": 53,
+      "forks": 10,
+      "watchers": 4,
+      "openIssues": 28
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 79,
+  "identifiedCommits": 109,
   "busFactor": 1,
   "topContributors": [
     {
-      "login": "hmoog",
-      "commits": 45
+      "login": "biryukovmaxim",
+      "commits": 64
     },
     {
-      "login": "biryukovmaxim",
-      "commits": 34
+      "login": "hmoog",
+      "commits": 45
     }
   ]
 }
