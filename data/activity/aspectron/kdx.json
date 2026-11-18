@@ -1,16 +1,8 @@
 {
   "repo": "aspectron/kdx",
-  "generatedAt": "2026-11-17T11:50:27.955622+00:00",
+  "generatedAt": "2026-11-18T11:39:59.625095+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-10-13",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-10-14",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-11-18",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "JavaScript",
@@ -3933,6 +3933,13 @@
     },
     {
       "date": "2026-11-17",
+      "stars": 31,
+      "forks": 25,
+      "watchers": 8,
+      "openIssues": 24
+    },
+    {
+      "date": "2026-11-18",
       "stars": 31,
       "forks": 25,
       "watchers": 8,
