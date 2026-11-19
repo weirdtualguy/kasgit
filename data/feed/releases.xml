@@ -4,7 +4,21 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Wed, 18 Nov 2026 11:39:59 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 11:38:07 +0000</lastBuildDate>
+    <item>
+      <title>forbole/kastle — v2.63.2</title>
+      <link>https://github.com/forbole/kastle/releases/tag/v2.63.2</link>
+      <guid isPermaLink="true">https://github.com/forbole/kastle/releases/tag/v2.63.2</guid>
+      <pubDate>Thu, 19 Nov 2026 09:51:09 +0000</pubDate>
+      <description>v2.63.2</description>
+    </item>
+    <item>
+      <title>bzminer/bzminer — BzMiner v100.82</title>
+      <link>https://github.com/bzminer/bzminer/releases/tag/v100.82</link>
+      <guid isPermaLink="true">https://github.com/bzminer/bzminer/releases/tag/v100.82</guid>
+      <pubDate>Wed, 18 Nov 2026 18:58:01 +0000</pubDate>
+      <description>v100.82</description>
+    </item>
     <item>
       <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.8.9</title>
       <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.8.9</link>
@@ -1040,13 +1054,6 @@
       <guid isPermaLink="true">https://github.com/kaspanet/rusty-kaspa/releases/tag/tn10-toc3</guid>
       <pubDate>Wed, 27 May 2026 19:04:15 +0000</pubDate>
       <description>tn10-toc3</description>
-    </item>
-    <item>
-      <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.3.0</title>
-      <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.3.0</link>
-      <guid isPermaLink="true">https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.3.0</guid>
-      <pubDate>Sat, 23 May 2026 12:05:23 +0000</pubDate>
-      <description>3.3.0</description>
     </item>
   </channel>
 </rss>
