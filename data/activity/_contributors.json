@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T11:22:40.677557+00:00",
+  "generatedAt": "2026-11-23T12:36:14.602594+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -7,7 +7,7 @@
       "login": "giladm11",
       "avatarUrl": "https://avatars.githubusercontent.com/u/13984392?v=4",
       "htmlUrl": "https://github.com/giladm11",
-      "commits": 327,
+      "commits": 323,
       "repos": [
         {
           "repo": "KASPACOM/kaspacom-web-wallet",
@@ -15,14 +15,13 @@
         },
         {
           "repo": "kaspacom/swap-widget",
-          "commits": 27
+          "commits": 23
         }
       ],
-      "firstCommitAt": "2025-10-19T11:49:24Z",
-      "firstCommitRepo": "kaspacom/swap-widget",
+      "firstCommitAt": "2025-10-20T14:12:50Z",
+      "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
       "lastCommitAt": "2026-10-05T12:14:35Z",
       "activeDates": [
-        "2025-10-19",
         "2025-10-20",
         "2025-10-21",
         "2025-10-22",
@@ -239,7 +238,7 @@
       "login": "michaelsutton",
       "avatarUrl": "https://avatars.githubusercontent.com/u/6299204?v=4",
       "htmlUrl": "https://github.com/michaelsutton",
-      "commits": 182,
+      "commits": 184,
       "repos": [
         {
           "repo": "michaelsutton/argent",
@@ -270,13 +269,17 @@
           "commits": 3
         },
         {
+          "repo": "kaspanet/kaspa-r0-recursion-legacy",
+          "commits": 2
+        },
+        {
           "repo": "kaspanet/workflow-perf-monitor-rs",
           "commits": 1
         }
       ],
       "firstCommitAt": "2025-10-29T19:10:20Z",
       "firstCommitRepo": "kaspanet/rusty-kaspa",
-      "lastCommitAt": "2026-11-12T22:57:55Z",
+      "lastCommitAt": "2026-11-22T20:53:52Z",
       "activeDates": [
         "2025-10-29",
         "2025-11-11",
@@ -368,9 +371,10 @@
         "2026-11-01",
         "2026-11-04",
         "2026-11-06",
-        "2026-11-12"
+        "2026-11-12",
+        "2026-11-22"
       ],
-      "repoCount": 8
+      "repoCount": 9
     },
     {
       "login": "supertypo",
@@ -574,16 +578,16 @@
       "login": "leobragaz",
       "avatarUrl": "https://avatars.githubusercontent.com/u/26248202?v=4",
       "htmlUrl": "https://github.com/leobragaz",
-      "commits": 86,
+      "commits": 88,
       "repos": [
         {
           "repo": "forbole/kastle",
-          "commits": 86
+          "commits": 88
         }
       ],
       "firstCommitAt": "2025-10-23T09:48:08Z",
       "firstCommitRepo": "forbole/kastle",
-      "lastCommitAt": "2026-11-19T08:49:45Z",
+      "lastCommitAt": "2026-11-23T09:05:24Z",
       "activeDates": [
         "2025-10-23",
         "2026-07-29",
@@ -616,7 +620,8 @@
         "2026-11-12",
         "2026-11-16",
         "2026-11-17",
-        "2026-11-19"
+        "2026-11-19",
+        "2026-11-23"
       ],
       "repoCount": 1
     },
@@ -843,6 +848,77 @@
       "repoCount": 1
     },
     {
+      "login": "doktor83",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/6808360?v=4",
+      "htmlUrl": "https://github.com/doktor83",
+      "commits": 69,
+      "repos": [
+        {
+          "repo": "doktor83/SRBMiner-Multi",
+          "commits": 69
+        }
+      ],
+      "firstCommitAt": "2025-10-29T16:15:04Z",
+      "firstCommitRepo": "doktor83/SRBMiner-Multi",
+      "lastCommitAt": "2026-11-22T14:27:59Z",
+      "activeDates": [
+        "2025-10-29",
+        "2025-11-03",
+        "2025-11-06",
+        "2025-12-05",
+        "2025-12-16",
+        "2025-12-17",
+        "2025-12-22",
+        "2026-01-03",
+        "2026-02-09",
+        "2026-02-15",
+        "2026-02-18",
+        "2026-02-23",
+        "2026-02-26",
+        "2026-03-07",
+        "2026-03-12",
+        "2026-03-14",
+        "2026-03-17",
+        "2026-03-27",
+        "2026-03-29",
+        "2026-04-09",
+        "2026-04-21",
+        "2026-04-30",
+        "2026-05-05",
+        "2026-05-21",
+        "2026-05-31",
+        "2026-06-08",
+        "2026-06-13",
+        "2026-06-15",
+        "2026-06-24",
+        "2026-07-03",
+        "2026-08-02",
+        "2026-08-05",
+        "2026-08-10",
+        "2026-08-15",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-20",
+        "2026-08-27",
+        "2026-09-03",
+        "2026-09-07",
+        "2026-09-09",
+        "2026-09-11",
+        "2026-09-13",
+        "2026-09-28",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-28",
+        "2026-11-05",
+        "2026-11-07",
+        "2026-11-11",
+        "2026-11-13",
+        "2026-11-17",
+        "2026-11-22"
+      ],
+      "repoCount": 1
+    },
+    {
       "login": "smartgoo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/11283276?v=4",
       "htmlUrl": "https://github.com/smartgoo",
@@ -914,76 +990,6 @@
         "2026-11-14"
       ],
       "repoCount": 3
-    },
-    {
-      "login": "doktor83",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/6808360?v=4",
-      "htmlUrl": "https://github.com/doktor83",
-      "commits": 68,
-      "repos": [
-        {
-          "repo": "doktor83/SRBMiner-Multi",
-          "commits": 68
-        }
-      ],
-      "firstCommitAt": "2025-10-29T16:15:04Z",
-      "firstCommitRepo": "doktor83/SRBMiner-Multi",
-      "lastCommitAt": "2026-11-17T14:07:43Z",
-      "activeDates": [
-        "2025-10-29",
-        "2025-11-03",
-        "2025-11-06",
-        "2025-12-05",
-        "2025-12-16",
-        "2025-12-17",
-        "2025-12-22",
-        "2026-01-03",
-        "2026-02-09",
-        "2026-02-15",
-        "2026-02-18",
-        "2026-02-23",
-        "2026-02-26",
-        "2026-03-07",
-        "2026-03-12",
-        "2026-03-14",
-        "2026-03-17",
-        "2026-03-27",
-        "2026-03-29",
-        "2026-04-09",
-        "2026-04-21",
-        "2026-04-30",
-        "2026-05-05",
-        "2026-05-21",
-        "2026-05-31",
-        "2026-06-08",
-        "2026-06-13",
-        "2026-06-15",
-        "2026-06-24",
-        "2026-07-03",
-        "2026-08-02",
-        "2026-08-05",
-        "2026-08-10",
-        "2026-08-15",
-        "2026-08-17",
-        "2026-08-18",
-        "2026-08-20",
-        "2026-08-27",
-        "2026-09-03",
-        "2026-09-07",
-        "2026-09-09",
-        "2026-09-11",
-        "2026-09-13",
-        "2026-09-28",
-        "2026-10-06",
-        "2026-10-07",
-        "2026-10-28",
-        "2026-11-05",
-        "2026-11-07",
-        "2026-11-11",
-        "2026-11-13",
-        "2026-11-17"
-      ],
-      "repoCount": 1
     },
     {
       "login": "dadamu",

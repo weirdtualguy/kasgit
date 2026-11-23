@@ -1,7 +1,15 @@
 {
-  "generatedAt": "2026-11-22T11:22:40.677557+00:00",
+  "generatedAt": "2026-11-23T12:36:14.602594+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "doktor83/SRBMiner-Multi",
+      "name": "SRBMiner-MULTI v3.9.0",
+      "tag": "3.9.0",
+      "publishedAt": "2026-11-22T17:15:10Z",
+      "url": "https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.9.0",
+      "prerelease": false
+    },
     {
       "repo": "forbole/kastle",
       "name": "v2.63.2",
@@ -1192,14 +1200,6 @@
       "tag": "toc-prep",
       "publishedAt": "2026-05-27T20:17:49Z",
       "url": "https://github.com/kaspanet/kaspad/releases/tag/toc-prep",
-      "prerelease": true
-    },
-    {
-      "repo": "kaspanet/rusty-kaspa",
-      "name": "tn10-toc3",
-      "tag": "tn10-toc3",
-      "publishedAt": "2026-05-27T19:04:15Z",
-      "url": "https://github.com/kaspanet/rusty-kaspa/releases/tag/tn10-toc3",
       "prerelease": true
     }
   ]

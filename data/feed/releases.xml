@@ -4,7 +4,14 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Sun, 22 Nov 2026 11:22:40 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 12:36:14 +0000</lastBuildDate>
+    <item>
+      <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.9.0</title>
+      <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.9.0</link>
+      <guid isPermaLink="true">https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.9.0</guid>
+      <pubDate>Sun, 22 Nov 2026 17:15:10 +0000</pubDate>
+      <description>3.9.0</description>
+    </item>
     <item>
       <title>forbole/kastle — v2.63.2</title>
       <link>https://github.com/forbole/kastle/releases/tag/v2.63.2</link>
@@ -1047,13 +1054,6 @@
       <guid isPermaLink="true">https://github.com/kaspanet/kaspad/releases/tag/toc-prep</guid>
       <pubDate>Wed, 27 May 2026 20:17:49 +0000</pubDate>
       <description>toc-prep</description>
-    </item>
-    <item>
-      <title>kaspanet/rusty-kaspa — tn10-toc3</title>
-      <link>https://github.com/kaspanet/rusty-kaspa/releases/tag/tn10-toc3</link>
-      <guid isPermaLink="true">https://github.com/kaspanet/rusty-kaspa/releases/tag/tn10-toc3</guid>
-      <pubDate>Wed, 27 May 2026 19:04:15 +0000</pubDate>
-      <description>tn10-toc3</description>
     </item>
   </channel>
 </rss>

@@ -1,4 +1,5 @@
 {
+  "kaspanet/kaspa-r0-recursion-legacy": "activity/kaspanet/kaspa-r0-recursion-legacy.json",
   "kaspanet/vprogs": "activity/kaspanet/vprogs.json",
   "kaspanet/rusty-kaspa": "activity/kaspanet/rusty-kaspa.json",
   "kaspanet/kaspa-python-sdk": "activity/kaspanet/kaspa-python-sdk.json",
