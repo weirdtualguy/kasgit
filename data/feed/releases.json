@@ -1,7 +1,15 @@
 {
-  "generatedAt": "2026-11-23T12:36:14.602594+00:00",
+  "generatedAt": "2026-11-24T13:41:00.266785+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "kaspanet/silverscript",
+      "name": "Silverscript v1.0.2",
+      "tag": "v1.0.2",
+      "publishedAt": "2026-11-23T22:03:13Z",
+      "url": "https://github.com/kaspanet/silverscript/releases/tag/v1.0.2",
+      "prerelease": false
+    },
     {
       "repo": "doktor83/SRBMiner-Multi",
       "name": "SRBMiner-MULTI v3.9.0",
@@ -1193,14 +1201,6 @@
       "publishedAt": "2026-05-29T10:26:58Z",
       "url": "https://github.com/forbole/kastle/releases/tag/v2.54.2",
       "prerelease": false
-    },
-    {
-      "repo": "kaspanet/kaspad",
-      "name": "toc-prep",
-      "tag": "toc-prep",
-      "publishedAt": "2026-05-27T20:17:49Z",
-      "url": "https://github.com/kaspanet/kaspad/releases/tag/toc-prep",
-      "prerelease": true
     }
   ]
 }

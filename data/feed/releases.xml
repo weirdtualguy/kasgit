@@ -4,7 +4,14 @@
     <title>Kaspa GitHub Ecosystem — Releases</title>
     <description>Recent releases across tracked Kaspa ecosystem repositories.</description>
     <link>https://github.com/kaspanet</link>
-    <lastBuildDate>Mon, 23 Nov 2026 12:36:14 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 13:41:00 +0000</lastBuildDate>
+    <item>
+      <title>kaspanet/silverscript — Silverscript v1.0.2</title>
+      <link>https://github.com/kaspanet/silverscript/releases/tag/v1.0.2</link>
+      <guid isPermaLink="true">https://github.com/kaspanet/silverscript/releases/tag/v1.0.2</guid>
+      <pubDate>Mon, 23 Nov 2026 22:03:13 +0000</pubDate>
+      <description>v1.0.2</description>
+    </item>
     <item>
       <title>doktor83/SRBMiner-Multi — SRBMiner-MULTI v3.9.0</title>
       <link>https://github.com/doktor83/SRBMiner-Multi/releases/tag/3.9.0</link>
@@ -1047,13 +1054,6 @@
       <guid isPermaLink="true">https://github.com/forbole/kastle/releases/tag/v2.54.2</guid>
       <pubDate>Fri, 29 May 2026 10:26:58 +0000</pubDate>
       <description>v2.54.2</description>
-    </item>
-    <item>
-      <title>kaspanet/kaspad — toc-prep</title>
-      <link>https://github.com/kaspanet/kaspad/releases/tag/toc-prep</link>
-      <guid isPermaLink="true">https://github.com/kaspanet/kaspad/releases/tag/toc-prep</guid>
-      <pubDate>Wed, 27 May 2026 20:17:49 +0000</pubDate>
-      <description>toc-prep</description>
     </item>
   </channel>
 </rss>
