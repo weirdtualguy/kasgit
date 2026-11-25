@@ -1,7 +1,15 @@
 {
-  "generatedAt": "2026-11-24T13:41:00.266785+00:00",
+  "generatedAt": "2026-11-25T12:52:28.767731+00:00",
   "lookbackDays": 180,
   "releases": [
+    {
+      "repo": "bzminer/bzminer",
+      "name": "BzMiner v100.83",
+      "tag": "v100.83",
+      "publishedAt": "2026-11-24T20:44:55Z",
+      "url": "https://github.com/bzminer/bzminer/releases/tag/v100.83",
+      "prerelease": false
+    },
     {
       "repo": "kaspanet/silverscript",
       "name": "Silverscript v1.0.2",
@@ -1193,14 +1201,6 @@
       "publishedAt": "2026-05-30T16:49:48Z",
       "url": "https://github.com/bzminer/bzminer/releases/tag/v25.0.0b2",
       "prerelease": true
-    },
-    {
-      "repo": "forbole/kastle",
-      "name": "v2.54.2",
-      "tag": "v2.54.2",
-      "publishedAt": "2026-05-29T10:26:58Z",
-      "url": "https://github.com/forbole/kastle/releases/tag/v2.54.2",
-      "prerelease": false
     }
   ]
 }
