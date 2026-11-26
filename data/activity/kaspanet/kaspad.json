@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/kaspad",
-  "generatedAt": "2026-11-25T12:52:28.767731+00:00",
+  "generatedAt": "2026-11-26T12:31:07.285476+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-10-21",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-10-22",
       "commits": 0,
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-11-26",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "Go",
@@ -3992,6 +3992,13 @@
     },
     {
       "date": "2026-11-25",
+      "stars": 531,
+      "forks": 245,
+      "watchers": 58,
+      "openIssues": 175
+    },
+    {
+      "date": "2026-11-26",
       "stars": 531,
       "forks": 245,
       "watchers": 58,

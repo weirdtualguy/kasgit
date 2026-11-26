@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/docs",
-  "generatedAt": "2026-11-25T12:52:28.767731+00:00",
+  "generatedAt": "2026-11-26T12:31:07.285476+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-10-21",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-10-22",
       "commits": 0,
@@ -3210,22 +3202,30 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 1
+    },
+    {
+      "date": "2026-11-26",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "MDX",
   "languages": {
-    "MDX": 122859,
-    "TypeScript": 19579,
+    "MDX": 141476,
+    "TypeScript": 19799,
     "TeX": 11938,
     "CSS": 8477,
-    "JavaScript": 646
+    "JavaScript": 1073
   },
   "topics": [],
   "license": null,
   "defaultBranch": "main",
   "homepage": "https://docs.kaspa.org",
   "createdAt": "2020-12-06T06:56:01Z",
-  "pushedAt": "2026-11-25T12:23:36Z",
+  "pushedAt": "2026-11-26T00:14:30Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3993,6 +3993,13 @@
       "forks": 28,
       "watchers": 7,
       "openIssues": 18
+    },
+    {
+      "date": "2026-11-26",
+      "stars": 69,
+      "forks": 28,
+      "watchers": 7,
+      "openIssues": 20
     }
   ],
   "starHistoryQuality": null,
