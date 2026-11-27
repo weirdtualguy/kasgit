@@ -1,23 +1,15 @@
 {
   "repo": "kaspanet/rusty-kaspa",
-  "generatedAt": "2026-11-26T12:31:07.285476+00:00",
+  "generatedAt": "2026-11-27T12:16:46.765038+00:00",
   "lookbackDays": 400,
   "series": [
     {
-      "date": "2025-10-22",
+      "date": "2025-10-23",
       "commits": 0,
       "prs": 0,
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
-    },
-    {
-      "date": "2025-10-23",
-      "commits": 1,
-      "prs": 1,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 1
     },
     {
       "date": "2025-10-24",
@@ -3210,6 +3202,14 @@
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
+    },
+    {
+      "date": "2026-11-27",
+      "commits": 0,
+      "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 0
     }
   ],
   "primaryLanguage": "Rust",
@@ -4010,16 +4010,23 @@
       "forks": 313,
       "watchers": 74,
       "openIssues": 226
+    },
+    {
+      "date": "2026-11-27",
+      "stars": 881,
+      "forks": 313,
+      "watchers": 74,
+      "openIssues": 226
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 246,
+  "identifiedCommits": 245,
   "busFactor": 3,
   "topContributors": [
     {
       "login": "someone235",
-      "commits": 64
+      "commits": 63
     },
     {
       "login": "michaelsutton",

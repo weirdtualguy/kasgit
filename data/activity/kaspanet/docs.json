@@ -1,16 +1,8 @@
 {
   "repo": "kaspanet/docs",
-  "generatedAt": "2026-11-26T12:31:07.285476+00:00",
+  "generatedAt": "2026-11-27T12:16:46.765038+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-10-22",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-10-23",
       "commits": 0,
@@ -3197,7 +3189,7 @@
     },
     {
       "date": "2026-11-25",
-      "commits": 3,
+      "commits": 12,
       "prs": 3,
       "issues": 0,
       "releases": 0,
@@ -3205,8 +3197,16 @@
     },
     {
       "date": "2026-11-26",
-      "commits": 0,
+      "commits": 4,
       "prs": 0,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 1
+    },
+    {
+      "date": "2026-11-27",
+      "commits": 0,
+      "prs": 3,
       "issues": 0,
       "releases": 0,
       "activeDevs": 0
@@ -3214,10 +3214,10 @@
   ],
   "primaryLanguage": "MDX",
   "languages": {
-    "MDX": 141476,
-    "TypeScript": 19799,
+    "MDX": 195292,
+    "TypeScript": 21778,
     "TeX": 11938,
-    "CSS": 8477,
+    "CSS": 10340,
     "JavaScript": 1073
   },
   "topics": [],
@@ -3225,7 +3225,7 @@
   "defaultBranch": "main",
   "homepage": "https://docs.kaspa.org",
   "createdAt": "2020-12-06T06:56:01Z",
-  "pushedAt": "2026-11-26T00:14:30Z",
+  "pushedAt": "2026-11-27T08:21:51Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -4000,16 +4000,23 @@
       "forks": 28,
       "watchers": 7,
       "openIssues": 20
+    },
+    {
+      "date": "2026-11-27",
+      "stars": 69,
+      "forks": 28,
+      "watchers": 7,
+      "openIssues": 18
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 16,
-  "busFactor": 2,
+  "identifiedCommits": 29,
+  "busFactor": 1,
   "topContributors": [
     {
       "login": "michaelsutton",
-      "commits": 6
+      "commits": 19
     },
     {
       "login": "elldeeone",

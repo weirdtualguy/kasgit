@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T12:31:07.285476+00:00",
+  "generatedAt": "2026-11-27T12:16:46.765038+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -114,7 +114,7 @@
       "login": "someone235",
       "avatarUrl": "https://avatars.githubusercontent.com/u/784957?v=4",
       "htmlUrl": "https://github.com/someone235",
-      "commits": 210,
+      "commits": 209,
       "repos": [
         {
           "repo": "kaspanet/silverscript",
@@ -122,7 +122,7 @@
         },
         {
           "repo": "kaspanet/rusty-kaspa",
-          "commits": 64
+          "commits": 63
         },
         {
           "repo": "kaspanet/kccs",
@@ -137,11 +137,10 @@
           "commits": 1
         }
       ],
-      "firstCommitAt": "2025-10-23T08:51:02Z",
+      "firstCommitAt": "2025-11-10T18:35:53Z",
       "firstCommitRepo": "kaspanet/rusty-kaspa",
       "lastCommitAt": "2026-11-23T21:44:47Z",
       "activeDates": [
-        "2025-10-23",
         "2025-11-10",
         "2025-11-11",
         "2025-11-12",
@@ -236,7 +235,7 @@
       "login": "michaelsutton",
       "avatarUrl": "https://avatars.githubusercontent.com/u/6299204?v=4",
       "htmlUrl": "https://github.com/michaelsutton",
-      "commits": 189,
+      "commits": 202,
       "repos": [
         {
           "repo": "michaelsutton/argent",
@@ -251,12 +250,12 @@
           "commits": 20
         },
         {
-          "repo": "kaspanet/cpuminer",
-          "commits": 9
+          "repo": "kaspanet/docs",
+          "commits": 19
         },
         {
-          "repo": "kaspanet/docs",
-          "commits": 6
+          "repo": "kaspanet/cpuminer",
+          "commits": 9
         },
         {
           "repo": "kaspanet/kips",
@@ -277,7 +276,7 @@
       ],
       "firstCommitAt": "2025-10-29T19:10:20Z",
       "firstCommitRepo": "kaspanet/rusty-kaspa",
-      "lastCommitAt": "2026-11-25T12:20:44Z",
+      "lastCommitAt": "2026-11-26T13:54:16Z",
       "activeDates": [
         "2025-10-29",
         "2025-11-11",
@@ -373,7 +372,8 @@
         "2026-11-22",
         "2026-11-23",
         "2026-11-24",
-        "2026-11-25"
+        "2026-11-25",
+        "2026-11-26"
       ],
       "repoCount": 9
     },
@@ -579,18 +579,17 @@
       "login": "leobragaz",
       "avatarUrl": "https://avatars.githubusercontent.com/u/26248202?v=4",
       "htmlUrl": "https://github.com/leobragaz",
-      "commits": 97,
+      "commits": 102,
       "repos": [
         {
           "repo": "forbole/kastle",
-          "commits": 97
+          "commits": 102
         }
       ],
-      "firstCommitAt": "2025-10-23T09:48:08Z",
+      "firstCommitAt": "2026-07-29T10:05:17Z",
       "firstCommitRepo": "forbole/kastle",
-      "lastCommitAt": "2026-11-26T10:44:23Z",
+      "lastCommitAt": "2026-11-27T05:18:23Z",
       "activeDates": [
-        "2025-10-23",
         "2026-07-29",
         "2026-08-13",
         "2026-08-24",
@@ -624,7 +623,8 @@
         "2026-11-19",
         "2026-11-23",
         "2026-11-25",
-        "2026-11-26"
+        "2026-11-26",
+        "2026-11-27"
       ],
       "repoCount": 1
     },
@@ -815,6 +815,78 @@
       "repoCount": 1
     },
     {
+      "login": "doktor83",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/6808360?v=4",
+      "htmlUrl": "https://github.com/doktor83",
+      "commits": 71,
+      "repos": [
+        {
+          "repo": "doktor83/SRBMiner-Multi",
+          "commits": 71
+        }
+      ],
+      "firstCommitAt": "2025-10-29T16:15:04Z",
+      "firstCommitRepo": "doktor83/SRBMiner-Multi",
+      "lastCommitAt": "2026-11-26T18:56:14Z",
+      "activeDates": [
+        "2025-10-29",
+        "2025-11-03",
+        "2025-11-06",
+        "2025-12-05",
+        "2025-12-16",
+        "2025-12-17",
+        "2025-12-22",
+        "2026-01-03",
+        "2026-02-09",
+        "2026-02-15",
+        "2026-02-18",
+        "2026-02-23",
+        "2026-02-26",
+        "2026-03-07",
+        "2026-03-12",
+        "2026-03-14",
+        "2026-03-17",
+        "2026-03-27",
+        "2026-03-29",
+        "2026-04-09",
+        "2026-04-21",
+        "2026-04-30",
+        "2026-05-05",
+        "2026-05-21",
+        "2026-05-31",
+        "2026-06-08",
+        "2026-06-13",
+        "2026-06-15",
+        "2026-06-24",
+        "2026-07-03",
+        "2026-08-02",
+        "2026-08-05",
+        "2026-08-10",
+        "2026-08-15",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-20",
+        "2026-08-27",
+        "2026-09-03",
+        "2026-09-07",
+        "2026-09-09",
+        "2026-09-11",
+        "2026-09-13",
+        "2026-09-28",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-28",
+        "2026-11-05",
+        "2026-11-07",
+        "2026-11-11",
+        "2026-11-13",
+        "2026-11-17",
+        "2026-11-22",
+        "2026-11-26"
+      ],
+      "repoCount": 1
+    },
+    {
       "login": "azbuky",
       "avatarUrl": "https://avatars.githubusercontent.com/u/567277?v=4",
       "htmlUrl": "https://github.com/azbuky",
@@ -923,77 +995,6 @@
         "2026-11-24"
       ],
       "repoCount": 3
-    },
-    {
-      "login": "doktor83",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/6808360?v=4",
-      "htmlUrl": "https://github.com/doktor83",
-      "commits": 69,
-      "repos": [
-        {
-          "repo": "doktor83/SRBMiner-Multi",
-          "commits": 69
-        }
-      ],
-      "firstCommitAt": "2025-10-29T16:15:04Z",
-      "firstCommitRepo": "doktor83/SRBMiner-Multi",
-      "lastCommitAt": "2026-11-22T14:27:59Z",
-      "activeDates": [
-        "2025-10-29",
-        "2025-11-03",
-        "2025-11-06",
-        "2025-12-05",
-        "2025-12-16",
-        "2025-12-17",
-        "2025-12-22",
-        "2026-01-03",
-        "2026-02-09",
-        "2026-02-15",
-        "2026-02-18",
-        "2026-02-23",
-        "2026-02-26",
-        "2026-03-07",
-        "2026-03-12",
-        "2026-03-14",
-        "2026-03-17",
-        "2026-03-27",
-        "2026-03-29",
-        "2026-04-09",
-        "2026-04-21",
-        "2026-04-30",
-        "2026-05-05",
-        "2026-05-21",
-        "2026-05-31",
-        "2026-06-08",
-        "2026-06-13",
-        "2026-06-15",
-        "2026-06-24",
-        "2026-07-03",
-        "2026-08-02",
-        "2026-08-05",
-        "2026-08-10",
-        "2026-08-15",
-        "2026-08-17",
-        "2026-08-18",
-        "2026-08-20",
-        "2026-08-27",
-        "2026-09-03",
-        "2026-09-07",
-        "2026-09-09",
-        "2026-09-11",
-        "2026-09-13",
-        "2026-09-28",
-        "2026-10-06",
-        "2026-10-07",
-        "2026-10-28",
-        "2026-11-05",
-        "2026-11-07",
-        "2026-11-11",
-        "2026-11-13",
-        "2026-11-17",
-        "2026-11-22"
-      ],
-      "repoCount": 1
     },
     {
       "login": "dadamu",
@@ -1316,6 +1317,51 @@
       "repoCount": 1
     },
     {
+      "login": "bzminer",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/83083846?v=4",
+      "htmlUrl": "https://github.com/bzminer",
+      "commits": 37,
+      "repos": [
+        {
+          "repo": "bzminer/bzminer",
+          "commits": 37
+        }
+      ],
+      "firstCommitAt": "2025-12-18T15:12:18Z",
+      "firstCommitRepo": "bzminer/bzminer",
+      "lastCommitAt": "2026-11-26T14:29:09Z",
+      "activeDates": [
+        "2025-12-18",
+        "2026-02-16",
+        "2026-04-17",
+        "2026-04-27",
+        "2026-04-29",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-09-02",
+        "2026-09-04",
+        "2026-09-05",
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-11",
+        "2026-09-14",
+        "2026-09-16",
+        "2026-09-18",
+        "2026-09-20",
+        "2026-09-23",
+        "2026-10-02",
+        "2026-10-24",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-11",
+        "2026-11-13",
+        "2026-11-24",
+        "2026-11-26"
+      ],
+      "repoCount": 1
+    },
+    {
       "login": "tiram88",
       "avatarUrl": "https://avatars.githubusercontent.com/u/18632023?v=4",
       "htmlUrl": "https://github.com/tiram88",
@@ -1347,50 +1393,6 @@
         "2026-05-11"
       ],
       "repoCount": 2
-    },
-    {
-      "login": "bzminer",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/83083846?v=4",
-      "htmlUrl": "https://github.com/bzminer",
-      "commits": 36,
-      "repos": [
-        {
-          "repo": "bzminer/bzminer",
-          "commits": 36
-        }
-      ],
-      "firstCommitAt": "2025-12-18T15:12:18Z",
-      "firstCommitRepo": "bzminer/bzminer",
-      "lastCommitAt": "2026-11-24T20:41:28Z",
-      "activeDates": [
-        "2025-12-18",
-        "2026-02-16",
-        "2026-04-17",
-        "2026-04-27",
-        "2026-04-29",
-        "2026-08-26",
-        "2026-08-27",
-        "2026-08-28",
-        "2026-09-02",
-        "2026-09-04",
-        "2026-09-05",
-        "2026-09-06",
-        "2026-09-07",
-        "2026-09-11",
-        "2026-09-14",
-        "2026-09-16",
-        "2026-09-18",
-        "2026-09-20",
-        "2026-09-23",
-        "2026-10-02",
-        "2026-10-24",
-        "2026-11-05",
-        "2026-11-06",
-        "2026-11-11",
-        "2026-11-13",
-        "2026-11-24"
-      ],
-      "repoCount": 1
     },
     {
       "login": "JSmithOner",
