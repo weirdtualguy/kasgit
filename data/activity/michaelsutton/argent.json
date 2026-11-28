@@ -1,16 +1,8 @@
 {
   "repo": "michaelsutton/argent",
-  "generatedAt": "2026-11-27T12:16:46.765038+00:00",
+  "generatedAt": "2026-11-28T11:43:31.012904+00:00",
   "lookbackDays": 400,
   "series": [
-    {
-      "date": "2025-10-23",
-      "commits": 0,
-      "prs": 0,
-      "issues": 0,
-      "releases": 0,
-      "activeDevs": 0
-    },
     {
       "date": "2025-10-24",
       "commits": 0,
@@ -3205,6 +3197,14 @@
     },
     {
       "date": "2026-11-27",
+      "commits": 1,
+      "prs": 1,
+      "issues": 0,
+      "releases": 0,
+      "activeDevs": 1
+    },
+    {
+      "date": "2026-11-28",
       "commits": 0,
       "prs": 0,
       "issues": 0,
@@ -3214,7 +3214,7 @@
   ],
   "primaryLanguage": "Rust",
   "languages": {
-    "Rust": 2807736,
+    "Rust": 2849069,
     "JavaScript": 74881,
     "Shell": 1754
   },
@@ -3223,7 +3223,7 @@
   "defaultBranch": "master",
   "homepage": null,
   "createdAt": "2026-06-16T21:05:47Z",
-  "pushedAt": "2026-11-27T12:02:39Z",
+  "pushedAt": "2026-11-27T12:29:32Z",
   "dataQuality": {
     "commits": {
       "status": "complete",
@@ -3998,16 +3998,23 @@
       "forks": 15,
       "watchers": 4,
       "openIssues": 2
+    },
+    {
+      "date": "2026-11-28",
+      "stars": 28,
+      "forks": 15,
+      "watchers": 4,
+      "openIssues": 1
     }
   ],
   "starHistoryQuality": null,
   "archived": false,
-  "identifiedCommits": 102,
+  "identifiedCommits": 103,
   "busFactor": 1,
   "topContributors": [
     {
       "login": "michaelsutton",
-      "commits": 90
+      "commits": 91
     },
     {
       "login": "IzioDev",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T12:16:46.765038+00:00",
+  "generatedAt": "2026-11-28T11:43:31.012904+00:00",
   "lookbackDays": 400,
   "note": "Commit counts are cumulative over lookbackDays, not sliced by the dashboard's 7/30/90/365-day range selector. Only commits linked to a real GitHub account are included; commits from an email with no linked account are excluded, not attributed by guesswork. firstCommitAt is the earliest commit seen for that login within lookbackDays, used as a 'new contributor' signal on the front end \u2014 not a claim about their GitHub history before this window. activeDates is every distinct day (UTC) they committed to any tracked repo, used to compute real period-over-period distinct-contributor deltas.",
   "contributors": [
@@ -7,22 +7,21 @@
       "login": "giladm11",
       "avatarUrl": "https://avatars.githubusercontent.com/u/13984392?v=4",
       "htmlUrl": "https://github.com/giladm11",
-      "commits": 319,
+      "commits": 317,
       "repos": [
         {
           "repo": "KASPACOM/kaspacom-web-wallet",
-          "commits": 296
+          "commits": 294
         },
         {
           "repo": "kaspacom/swap-widget",
           "commits": 23
         }
       ],
-      "firstCommitAt": "2025-10-23T13:58:56Z",
+      "firstCommitAt": "2025-10-26T15:15:16Z",
       "firstCommitRepo": "KASPACOM/kaspacom-web-wallet",
       "lastCommitAt": "2026-10-05T12:14:35Z",
       "activeDates": [
-        "2025-10-23",
         "2025-10-26",
         "2025-10-27",
         "2025-10-28",
@@ -235,11 +234,11 @@
       "login": "michaelsutton",
       "avatarUrl": "https://avatars.githubusercontent.com/u/6299204?v=4",
       "htmlUrl": "https://github.com/michaelsutton",
-      "commits": 202,
+      "commits": 203,
       "repos": [
         {
           "repo": "michaelsutton/argent",
-          "commits": 90
+          "commits": 91
         },
         {
           "repo": "kaspanet/rusty-kaspa",
@@ -276,7 +275,7 @@
       ],
       "firstCommitAt": "2025-10-29T19:10:20Z",
       "firstCommitRepo": "kaspanet/rusty-kaspa",
-      "lastCommitAt": "2026-11-26T13:54:16Z",
+      "lastCommitAt": "2026-11-27T12:29:32Z",
       "activeDates": [
         "2025-10-29",
         "2025-11-11",
@@ -373,7 +372,8 @@
         "2026-11-23",
         "2026-11-24",
         "2026-11-25",
-        "2026-11-26"
+        "2026-11-26",
+        "2026-11-27"
       ],
       "repoCount": 9
     },
